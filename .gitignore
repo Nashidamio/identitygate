@@ -1,0 +1,46 @@
+# Data — never commit
+data/raw/
+data/cache/
+data/labels/
+checkpoints/
+*.parquet
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Logs and experiment outputs
+logs/
+experiments/*/outputs/
+experiments/*/logs/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Secrets
+*.token
+*.pat
+.env
+.env.*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Large files
+*.mp4
+*.avi
+*.mov
+*.zip
+*.tar
+*.tar.gz
