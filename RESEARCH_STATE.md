@@ -67,3 +67,26 @@ None (no experiments yet).
 
 ## Next required action
 Task 1c: install Miniconda; create thesis conda env; install PyTorch matching a supported CUDA build.
+
+## Week 1 Day 1 (2026-08-16) — COMPLETE
+
+Verified: SAM3 install, both checkpoints, MOSEv2 downloaded (79GB, /mnt/d/thesis_data/mosev2, NOT extracted).
+
+EXP001 tracker probe results:
+- Track A hook VERIFIED (fired frames 0-4 via Sam3MultiplexBase._tracker_update_memories)
+- obj_ptr [1,16,256] bf16 CONFIRMED -> B3 executable, no re-scoping
+- object_score_logits [4,1], pred_masks [4,1,288,288] available
+- maskmem_features [1,256,72,72] is PER-BUCKET not per-object (N2 question open)
+- local_obj_id_to_idx maps obj_id -> bucket slot
+
+Environment notes:
+- use_fa3=False required (FA3 not installed, targets Hopper; we are Ada sm_89)
+- Upstream bug: Sam3BasePredictor.start_session passes offload_state_to_cpu which
+  Sam3MultiplexTrackingWithInteractivity.init_state rejects. Workaround: call
+  predictor.model.init_state() directly, register session manually.
+
+NEXT SESSION PRIORITIES:
+1. VRAM fix: peak 23.31 GB on 16 GB card (spilled to host RAM). Try max_num_objects<16,
+   offload_video_to_cpu=True. Blocks Week 2 caching.
+2. Determine if per-object write blocking is possible given per-bucket maskmem_features.
+3. Verify MOSEv2 SHA256SUMS, join train.tar.gz.a{a,b,c}, extract.
