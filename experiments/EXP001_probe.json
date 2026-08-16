@@ -1,0 +1,765 @@
+{
+  "calls": [
+    {
+      "frame_idx": 0,
+      "n_states": 1,
+      "low_res_masks": {
+        "type": "Tensor",
+        "shape": [
+          4,
+          288,
+          288
+        ],
+        "dtype": "torch.float32",
+        "device": "cuda:0"
+      },
+      "tracker_metadata_keys": [
+        "obj_ids_per_gpu",
+        "obj_ids_all_gpu",
+        "num_obj_per_gpu",
+        "obj_id_to_score",
+        "obj_id_to_sam2_score_frame_wise",
+        "obj_id_to_last_occluded",
+        "max_obj_id",
+        "num_buc_per_gpu",
+        "gpu_metadata",
+        "rank0_metadata"
+      ],
+      "state0_keys": [
+        "num_frames",
+        "offload_video_to_cpu",
+        "offload_state_to_cpu",
+        "video_height",
+        "video_width",
+        "device",
+        "storage_device",
+        "point_inputs_per_obj",
+        "mask_inputs_per_obj",
+        "cached_features",
+        "constants",
+        "obj_id_to_idx",
+        "obj_idx_to_id",
+        "obj_ids",
+        "output_dict",
+        "first_ann_frame_idx",
+        "output_dict_per_obj",
+        "temp_output_dict_per_obj",
+        "consolidated_frame_inds",
+        "tracking_has_started",
+        "frames_already_tracked",
+        "multiplex_state",
+        "backbone_out"
+      ],
+      "state0_obj_ids": {
+        "type": "list",
+        "len": 4,
+        "first": "0"
+      },
+      "state0_output_dict_keys": [
+        "cond_frame_outputs",
+        "non_cond_frame_outputs"
+      ],
+      "output_dict[cond_frame_outputs][0]": {
+        "key:conditioning_objects": "<set>",
+        "key:maskmem_features": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            256,
+            72,
+            72
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:maskmem_pos_enc": {
+          "type": "list",
+          "len": 1,
+          "first": {
+            "type": "Tensor",
+            "shape": [
+              1,
+              256,
+              72,
+              72
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0"
+          }
+        },
+        "key:image_features": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:image_pos_enc": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:obj_ptr": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            16,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:pred_masks": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1,
+            288,
+            288
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:object_score_logits": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:local_obj_id_to_idx": {
+          "key:0": "0",
+          "key:1": "1",
+          "key:2": "2",
+          "key:3": "3"
+        }
+      }
+    },
+    {
+      "frame_idx": 1,
+      "n_states": 1,
+      "low_res_masks": {
+        "type": "Tensor",
+        "shape": [
+          4,
+          288,
+          288
+        ],
+        "dtype": "torch.float32",
+        "device": "cuda:0"
+      },
+      "tracker_metadata_keys": [
+        "obj_ids_per_gpu",
+        "obj_ids_all_gpu",
+        "num_obj_per_gpu",
+        "obj_id_to_score",
+        "obj_id_to_sam2_score_frame_wise",
+        "obj_id_to_last_occluded",
+        "max_obj_id",
+        "num_buc_per_gpu",
+        "gpu_metadata",
+        "rank0_metadata"
+      ],
+      "state0_keys": [
+        "num_frames",
+        "offload_video_to_cpu",
+        "offload_state_to_cpu",
+        "video_height",
+        "video_width",
+        "device",
+        "storage_device",
+        "point_inputs_per_obj",
+        "mask_inputs_per_obj",
+        "cached_features",
+        "constants",
+        "obj_id_to_idx",
+        "obj_idx_to_id",
+        "obj_ids",
+        "output_dict",
+        "first_ann_frame_idx",
+        "output_dict_per_obj",
+        "temp_output_dict_per_obj",
+        "consolidated_frame_inds",
+        "tracking_has_started",
+        "frames_already_tracked",
+        "multiplex_state",
+        "backbone_out"
+      ],
+      "state0_obj_ids": {
+        "type": "list",
+        "len": 4,
+        "first": "0"
+      },
+      "state0_output_dict_keys": [
+        "cond_frame_outputs",
+        "non_cond_frame_outputs"
+      ],
+      "output_dict[cond_frame_outputs][0]": {
+        "key:conditioning_objects": "<set>",
+        "key:maskmem_features": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            256,
+            72,
+            72
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:maskmem_pos_enc": {
+          "type": "list",
+          "len": 1,
+          "first": {
+            "type": "Tensor",
+            "shape": [
+              1,
+              256,
+              72,
+              72
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0"
+          }
+        },
+        "key:image_features": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:image_pos_enc": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:obj_ptr": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            16,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:pred_masks": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1,
+            288,
+            288
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:object_score_logits": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:local_obj_id_to_idx": {
+          "key:0": "0",
+          "key:1": "1",
+          "key:2": "2",
+          "key:3": "3"
+        }
+      }
+    },
+    {
+      "frame_idx": 2,
+      "n_states": 1,
+      "low_res_masks": {
+        "type": "Tensor",
+        "shape": [
+          4,
+          288,
+          288
+        ],
+        "dtype": "torch.float32",
+        "device": "cuda:0"
+      },
+      "tracker_metadata_keys": [
+        "obj_ids_per_gpu",
+        "obj_ids_all_gpu",
+        "num_obj_per_gpu",
+        "obj_id_to_score",
+        "obj_id_to_sam2_score_frame_wise",
+        "obj_id_to_last_occluded",
+        "max_obj_id",
+        "num_buc_per_gpu",
+        "gpu_metadata",
+        "rank0_metadata"
+      ],
+      "state0_keys": [
+        "num_frames",
+        "offload_video_to_cpu",
+        "offload_state_to_cpu",
+        "video_height",
+        "video_width",
+        "device",
+        "storage_device",
+        "point_inputs_per_obj",
+        "mask_inputs_per_obj",
+        "cached_features",
+        "constants",
+        "obj_id_to_idx",
+        "obj_idx_to_id",
+        "obj_ids",
+        "output_dict",
+        "first_ann_frame_idx",
+        "output_dict_per_obj",
+        "temp_output_dict_per_obj",
+        "consolidated_frame_inds",
+        "tracking_has_started",
+        "frames_already_tracked",
+        "multiplex_state",
+        "backbone_out"
+      ],
+      "state0_obj_ids": {
+        "type": "list",
+        "len": 4,
+        "first": "0"
+      },
+      "state0_output_dict_keys": [
+        "cond_frame_outputs",
+        "non_cond_frame_outputs"
+      ],
+      "output_dict[cond_frame_outputs][0]": {
+        "key:conditioning_objects": "<set>",
+        "key:maskmem_features": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            256,
+            72,
+            72
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:maskmem_pos_enc": {
+          "type": "list",
+          "len": 1,
+          "first": {
+            "type": "Tensor",
+            "shape": [
+              1,
+              256,
+              72,
+              72
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0"
+          }
+        },
+        "key:image_features": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:image_pos_enc": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:obj_ptr": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            16,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:pred_masks": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1,
+            288,
+            288
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:object_score_logits": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:local_obj_id_to_idx": {
+          "key:0": "0",
+          "key:1": "1",
+          "key:2": "2",
+          "key:3": "3"
+        }
+      }
+    },
+    {
+      "frame_idx": 3,
+      "n_states": 1,
+      "low_res_masks": {
+        "type": "Tensor",
+        "shape": [
+          4,
+          288,
+          288
+        ],
+        "dtype": "torch.float32",
+        "device": "cuda:0"
+      },
+      "tracker_metadata_keys": [
+        "obj_ids_per_gpu",
+        "obj_ids_all_gpu",
+        "num_obj_per_gpu",
+        "obj_id_to_score",
+        "obj_id_to_sam2_score_frame_wise",
+        "obj_id_to_last_occluded",
+        "max_obj_id",
+        "num_buc_per_gpu",
+        "gpu_metadata",
+        "rank0_metadata"
+      ],
+      "state0_keys": [
+        "num_frames",
+        "offload_video_to_cpu",
+        "offload_state_to_cpu",
+        "video_height",
+        "video_width",
+        "device",
+        "storage_device",
+        "point_inputs_per_obj",
+        "mask_inputs_per_obj",
+        "cached_features",
+        "constants",
+        "obj_id_to_idx",
+        "obj_idx_to_id",
+        "obj_ids",
+        "output_dict",
+        "first_ann_frame_idx",
+        "output_dict_per_obj",
+        "temp_output_dict_per_obj",
+        "consolidated_frame_inds",
+        "tracking_has_started",
+        "frames_already_tracked",
+        "multiplex_state",
+        "backbone_out"
+      ],
+      "state0_obj_ids": {
+        "type": "list",
+        "len": 4,
+        "first": "0"
+      },
+      "state0_output_dict_keys": [
+        "cond_frame_outputs",
+        "non_cond_frame_outputs"
+      ],
+      "output_dict[cond_frame_outputs][0]": {
+        "key:conditioning_objects": "<set>",
+        "key:maskmem_features": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            256,
+            72,
+            72
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:maskmem_pos_enc": {
+          "type": "list",
+          "len": 1,
+          "first": {
+            "type": "Tensor",
+            "shape": [
+              1,
+              256,
+              72,
+              72
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0"
+          }
+        },
+        "key:image_features": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:image_pos_enc": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:obj_ptr": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            16,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:pred_masks": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1,
+            288,
+            288
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:object_score_logits": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:local_obj_id_to_idx": {
+          "key:0": "0",
+          "key:1": "1",
+          "key:2": "2",
+          "key:3": "3"
+        }
+      }
+    },
+    {
+      "frame_idx": 4,
+      "n_states": 1,
+      "low_res_masks": {
+        "type": "Tensor",
+        "shape": [
+          4,
+          288,
+          288
+        ],
+        "dtype": "torch.float32",
+        "device": "cuda:0"
+      },
+      "tracker_metadata_keys": [
+        "obj_ids_per_gpu",
+        "obj_ids_all_gpu",
+        "num_obj_per_gpu",
+        "obj_id_to_score",
+        "obj_id_to_sam2_score_frame_wise",
+        "obj_id_to_last_occluded",
+        "max_obj_id",
+        "num_buc_per_gpu",
+        "gpu_metadata",
+        "rank0_metadata"
+      ],
+      "state0_keys": [
+        "num_frames",
+        "offload_video_to_cpu",
+        "offload_state_to_cpu",
+        "video_height",
+        "video_width",
+        "device",
+        "storage_device",
+        "point_inputs_per_obj",
+        "mask_inputs_per_obj",
+        "cached_features",
+        "constants",
+        "obj_id_to_idx",
+        "obj_idx_to_id",
+        "obj_ids",
+        "output_dict",
+        "first_ann_frame_idx",
+        "output_dict_per_obj",
+        "temp_output_dict_per_obj",
+        "consolidated_frame_inds",
+        "tracking_has_started",
+        "frames_already_tracked",
+        "multiplex_state",
+        "backbone_out"
+      ],
+      "state0_obj_ids": {
+        "type": "list",
+        "len": 4,
+        "first": "0"
+      },
+      "state0_output_dict_keys": [
+        "cond_frame_outputs",
+        "non_cond_frame_outputs"
+      ],
+      "output_dict[cond_frame_outputs][0]": {
+        "key:conditioning_objects": "<set>",
+        "key:maskmem_features": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            256,
+            72,
+            72
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:maskmem_pos_enc": {
+          "type": "list",
+          "len": 1,
+          "first": {
+            "type": "Tensor",
+            "shape": [
+              1,
+              256,
+              72,
+              72
+            ],
+            "dtype": "torch.float32",
+            "device": "cuda:0"
+          }
+        },
+        "key:image_features": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:image_pos_enc": {
+          "type": "Tensor",
+          "shape": [
+            5184,
+            1,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:obj_ptr": {
+          "type": "Tensor",
+          "shape": [
+            1,
+            16,
+            256
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        },
+        "key:pred_masks": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1,
+            288,
+            288
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:object_score_logits": {
+          "type": "Tensor",
+          "shape": [
+            4,
+            1
+          ],
+          "dtype": "torch.float32",
+          "device": "cuda:0"
+        },
+        "key:local_obj_id_to_idx": {
+          "key:0": "0",
+          "key:1": "1",
+          "key:2": "2",
+          "key:3": "3"
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "init_state_keys": [
+    "image_size",
+    "num_frames",
+    "device",
+    "orig_height",
+    "orig_width",
+    "constants",
+    "input_batch",
+    "previous_stages_out",
+    "text_prompt",
+    "per_frame_raw_point_input",
+    "per_frame_raw_box_input",
+    "per_frame_visual_prompt",
+    "per_frame_geometric_prompt",
+    "per_frame_cur_step",
+    "backbone_out",
+    "visual_prompt_embed",
+    "visual_prompt_mask",
+    "sam2_inference_states",
+    "tracker_metadata",
+    "feature_cache",
+    "cached_frame_outputs",
+    "is_image_only",
+    "action_history"
+  ],
+  "add_prompt_response_keys": [
+    "frame_index",
+    "outputs"
+  ],
+  "first_propagate_response_keys": [
+    "frame_index",
+    "outputs"
+  ],
+  "frames_propagated": 30,
+  "peak_vram_gb": 23.31
+}
