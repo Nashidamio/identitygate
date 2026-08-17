@@ -1,0 +1,85 @@
+{
+  "calls": [
+    {
+      "n_args": 0,
+      "kw": [
+        "image",
+        "current_vision_feats",
+        "feat_sizes",
+        "pred_masks_high_res",
+        "object_score_logits",
+        "is_mask_from_pts"
+      ],
+      "arg_shapes": [],
+      "RETURN": {
+        "len": 2,
+        "first": {
+          "shape": [
+            1,
+            64,
+            72,
+            72
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        }
+      }
+    },
+    {
+      "n_args": 0,
+      "kw": [
+        "image",
+        "current_vision_feats",
+        "feat_sizes",
+        "pred_masks_high_res",
+        "object_score_logits",
+        "is_mask_from_pts",
+        "output_dict",
+        "is_init_cond_frame"
+      ],
+      "arg_shapes": [],
+      "RETURN": {
+        "len": 2,
+        "first": {
+          "shape": [
+            1,
+            64,
+            72,
+            72
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        }
+      }
+    },
+    {
+      "n_args": 0,
+      "kw": [
+        "image",
+        "current_vision_feats",
+        "feat_sizes",
+        "pred_masks_high_res",
+        "object_score_logits",
+        "is_mask_from_pts",
+        "output_dict",
+        "is_init_cond_frame"
+      ],
+      "arg_shapes": [],
+      "RETURN": {
+        "len": 2,
+        "first": {
+          "shape": [
+            1,
+            64,
+            72,
+            72
+          ],
+          "dtype": "torch.bfloat16",
+          "device": "cuda:0"
+        }
+      }
+    }
+  ],
+  "peak_vram_gb_propagation": 7.54,
+  "frames": 31
+}
