@@ -1,0 +1,319 @@
+{
+  "peak_vram_gb": 7.54,
+  "n_frames": 31,
+  "n_memory_encodes": 31,
+  "per_frame": [
+    {
+      "frame": 0,
+      "n_objs": 1,
+      "mask_px": 21592
+    },
+    {
+      "frame": 1,
+      "n_objs": 1,
+      "mask_px": 21900
+    },
+    {
+      "frame": 2,
+      "n_objs": 1,
+      "mask_px": 20487
+    },
+    {
+      "frame": 3,
+      "n_objs": 1,
+      "mask_px": 18362
+    },
+    {
+      "frame": 4,
+      "n_objs": 1,
+      "mask_px": 19751
+    },
+    {
+      "frame": 5,
+      "n_objs": 1,
+      "mask_px": 21666
+    },
+    {
+      "frame": 6,
+      "n_objs": 1,
+      "mask_px": 25391
+    },
+    {
+      "frame": 7,
+      "n_objs": 1,
+      "mask_px": 26123
+    },
+    {
+      "frame": 8,
+      "n_objs": 1,
+      "mask_px": 28699
+    },
+    {
+      "frame": 9,
+      "n_objs": 1,
+      "mask_px": 29749
+    },
+    {
+      "frame": 10,
+      "n_objs": 1,
+      "mask_px": 30596
+    },
+    {
+      "frame": 11,
+      "n_objs": 1,
+      "mask_px": 31855
+    },
+    {
+      "frame": 12,
+      "n_objs": 1,
+      "mask_px": 27930
+    },
+    {
+      "frame": 13,
+      "n_objs": 1,
+      "mask_px": 28293
+    },
+    {
+      "frame": 14,
+      "n_objs": 1,
+      "mask_px": 30230
+    },
+    {
+      "frame": 15,
+      "n_objs": 1,
+      "mask_px": 26882
+    },
+    {
+      "frame": 16,
+      "n_objs": 1,
+      "mask_px": 26616
+    },
+    {
+      "frame": 17,
+      "n_objs": 1,
+      "mask_px": 28116
+    },
+    {
+      "frame": 18,
+      "n_objs": 1,
+      "mask_px": 29788
+    },
+    {
+      "frame": 19,
+      "n_objs": 1,
+      "mask_px": 25797
+    },
+    {
+      "frame": 20,
+      "n_objs": 1,
+      "mask_px": 21239
+    },
+    {
+      "frame": 21,
+      "n_objs": 1,
+      "mask_px": 22920
+    },
+    {
+      "frame": 22,
+      "n_objs": 1,
+      "mask_px": 22167
+    },
+    {
+      "frame": 23,
+      "n_objs": 1,
+      "mask_px": 22978
+    },
+    {
+      "frame": 24,
+      "n_objs": 1,
+      "mask_px": 23933
+    },
+    {
+      "frame": 25,
+      "n_objs": 1,
+      "mask_px": 22806
+    },
+    {
+      "frame": 26,
+      "n_objs": 1,
+      "mask_px": 24016
+    },
+    {
+      "frame": 27,
+      "n_objs": 1,
+      "mask_px": 24066
+    },
+    {
+      "frame": 28,
+      "n_objs": 1,
+      "mask_px": 24987
+    },
+    {
+      "frame": 29,
+      "n_objs": 1,
+      "mask_px": 26308
+    },
+    {
+      "frame": 30,
+      "n_objs": 1,
+      "mask_px": 26522
+    }
+  ],
+  "writes": [
+    {
+      "at_frame": -1,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": true
+    },
+    {
+      "at_frame": 0,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 1,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 2,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 3,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 4,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 5,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 6,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 7,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 8,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 9,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 10,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 11,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 12,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 13,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 14,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 15,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 16,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 17,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 18,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 19,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 20,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 21,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 22,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 23,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 24,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 25,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 26,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 27,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 28,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    },
+    {
+      "at_frame": 29,
+      "is_init_cond_frame": false,
+      "is_mask_from_pts": false
+    }
+  ]
+}
