@@ -1,0 +1,1161 @@
+{
+  "name": "IdentityGate development exclusions",
+  "version": 1,
+  "status": "PRE_SPLIT_LOCKED_EXCLUSION_SET",
+  "policy": "Any MOSEv2 video whose model predictions, model-derived metrics, or model-output visualizations were inspected or used for IdentityGate methodological development before final split lock is excluded from final DEV and TEST. GT-only dataset scans do not constitute model exposure.",
+  "historical_p2_reference": {
+    "status": "UNRESOLVED_UNGROUNDED_REFERENCE",
+    "v4_wording": "P2 contaminated 200-video split and P2 600 cache videos never enter DEV or TEST.",
+    "handling": "No concrete P2 definition or video-ID sets were recovered from surviving project evidence. No replacement IDs are fabricated. If authentic P2 IDs are later recovered before TEST lock, they must be unioned into this exclusion set."
+  },
+  "gt_only_not_model_exposure": [
+    "EXP006",
+    "EXP013",
+    "EXP015"
+  ],
+  "counts": {
+    "early_model_output_exposure": 1,
+    "exp009_exploratory": 40,
+    "exp016_headroom": 40,
+    "exp009_exp016_overlap": 0,
+    "total_unique_excluded_videos": 81
+  },
+  "video_ids": [
+    "01e3cec8",
+    "0442a954",
+    "0558d0ed",
+    "0f7r7f3f",
+    "0nrb9vzx",
+    "0ofgxn19",
+    "1w5fyj35",
+    "20ovc8gc",
+    "22e1f53c",
+    "2bacpuqz",
+    "2ujroa82",
+    "34ccea00",
+    "35e0ca09",
+    "3iosxiy5",
+    "5a064706",
+    "5hcafebs",
+    "6042d64a",
+    "61urdhg8",
+    "662487fe",
+    "6bbyqk3u",
+    "6g7h9z6t",
+    "6hwti19r",
+    "6l1wegih",
+    "6ly8os75",
+    "7744dc51",
+    "78a1f4b1",
+    "7f0b7662",
+    "7ktwmep6",
+    "83eig4ml",
+    "86hobt2f",
+    "890ef032",
+    "89b671bb",
+    "9e85179b",
+    "a84c60e6",
+    "b20e6781",
+    "cfc68a82",
+    "d6orfuoz",
+    "duczdfw4",
+    "dz9ct5wb",
+    "e6348d2c",
+    "fc0qnjw2",
+    "fcl5hk5p",
+    "fuy6fkra",
+    "hcb51p0k",
+    "hzpi9pbs",
+    "ikqgio2y",
+    "jnz3z8v3",
+    "jonzenoi",
+    "jvu8a48s",
+    "l26044lk",
+    "ldygfvvl",
+    "lr5lvbrz",
+    "mv8gzra0",
+    "o6h4sn0b",
+    "occp1ier",
+    "onz6n39p",
+    "pgu84vt1",
+    "pq5h4hw1",
+    "q8dd8tfx",
+    "qb8rh6ap",
+    "qc8x8fzb",
+    "qqn1s9p6",
+    "qqo2540r",
+    "qtofcdqp",
+    "ruo4i3o9",
+    "sbyfhl5a",
+    "sfbg4630",
+    "skk68epq",
+    "toff20or",
+    "u3qo7p7m",
+    "vjl6snjk",
+    "vlem9qx0",
+    "vll7155a",
+    "vw1ncc20",
+    "w17yj4f5",
+    "wke7ltxq",
+    "xgnhrifg",
+    "yp6926lu",
+    "zbv4xr1l",
+    "zitg0m11",
+    "zp5m6vgw"
+  ],
+  "records": [
+    {
+      "video_id": "01e3cec8",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "0442a954",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "0558d0ed",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "0f7r7f3f",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "0nrb9vzx",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "0ofgxn19",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "1w5fyj35",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "20ovc8gc",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "22e1f53c",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "2bacpuqz",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "2ujroa82",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "34ccea00",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "35e0ca09",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "3iosxiy5",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "5a064706",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "5hcafebs",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "6042d64a",
+      "category": "EARLY_MODEL_OUTPUT_EXPOSURE",
+      "source_experiments": [
+        "EXP007",
+        "EXP008"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "SAM 3.1 predictions and failure visualizations were inspected during early IdentityGate development."
+    },
+    {
+      "video_id": "61urdhg8",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "662487fe",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "6bbyqk3u",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "6g7h9z6t",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "6hwti19r",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "6l1wegih",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "6ly8os75",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "7744dc51",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "78a1f4b1",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "7f0b7662",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "7ktwmep6",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "83eig4ml",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "86hobt2f",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "890ef032",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "89b671bb",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "9e85179b",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "a84c60e6",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "b20e6781",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "cfc68a82",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "d6orfuoz",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "duczdfw4",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "dz9ct5wb",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "e6348d2c",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "fc0qnjw2",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "fcl5hk5p",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "fuy6fkra",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "hcb51p0k",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "hzpi9pbs",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "ikqgio2y",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "jnz3z8v3",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "jonzenoi",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "jvu8a48s",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "l26044lk",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "ldygfvvl",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "lr5lvbrz",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "mv8gzra0",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "o6h4sn0b",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "occp1ier",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "onz6n39p",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "pgu84vt1",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "pq5h4hw1",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "q8dd8tfx",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "qb8rh6ap",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "qc8x8fzb",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "qqn1s9p6",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "qqo2540r",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "qtofcdqp",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "ruo4i3o9",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "sbyfhl5a",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "sfbg4630",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "skk68epq",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "toff20or",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "u3qo7p7m",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "vjl6snjk",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "vlem9qx0",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "vll7155a",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "vw1ncc20",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "w17yj4f5",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "wke7ltxq",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "xgnhrifg",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "yp6926lu",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    },
+    {
+      "video_id": "zbv4xr1l",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "zitg0m11",
+      "category": "HEADROOM_DEVELOPMENT_EXPOSURE",
+      "source_experiments": [
+        "EXP016"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the frozen headroom-development sample and evaluated with vanilla SAM 3.1 to establish the final GT-defined difficulty rule."
+    },
+    {
+      "video_id": "zp5m6vgw",
+      "category": "EXPLORATORY_HEADROOM_EXPOSURE",
+      "source_experiments": [
+        "EXP009",
+        "EXP010",
+        "EXP011"
+      ],
+      "exclude_from": [
+        "DEV",
+        "TEST"
+      ],
+      "reason": "Included in the exploratory DEV/headroom sample and subsequently evaluated with vanilla SAM 3.1; model-derived results were used during methodology development."
+    }
+  ]
+}

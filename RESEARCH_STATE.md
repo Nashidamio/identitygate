@@ -411,3 +411,58 @@ Resolve the historical contaminated/cache-used exclusion sets, then construct
 candidate TRAIN/DEV/TEST manifests under the passed GT hard-stratum rule and
 verify all split-size and TEST-event-count requirements before locking.
 
+## 15. PRE-SPLIT PROVENANCE DECISION - DEVELOPMENT EXCLUSIONS
+
+### Historical P2 reference
+
+v4 contained the requirement:
+"P2 contaminated 200-video split and P2 600 cache videos never enter DEV or TEST."
+
+During v5 consolidation this wording was generalized to the broader rule that
+contaminated/cache-used videos never enter DEV or TEST. The removal of the P2
+specifics was not an independently approved methodological decision.
+
+A repository-history and local provenance search found no surviving definition,
+manifest, script, branch, repository, or video-ID set grounding the P2 200/600
+reference.
+
+Status:
+P2-specific IDs = UNKNOWN / UNGROUNDED IN SURVIVING EVIDENCE.
+
+Decision:
+- Do not fabricate replacement P2 IDs.
+- Do not claim that the historical P2-specific exclusion has been verified.
+- Preserve the general anti-contamination invariant.
+- If authentic P2 IDs are recovered before TEST lock, union them into the
+  development exclusion set before final split lock.
+
+### VERIFIED IdentityGate development exposure
+
+Repository evidence identifies 81 unique MOSEv2 videos exposed to model outputs
+or model-derived development results before final split lock:
+
+- 1 early model-output video from EXP007/EXP008: 6042d64a
+- 40 EXP009 exploratory videos subsequently evaluated in EXP010/EXP011
+- 40 EXP016 B0 headroom-development videos
+- EXP009/EXP016 overlap = 0
+
+EXP014 adds no new unique videos because all of its audited videos are already
+members of the EXP009 exploratory set.
+
+These 81 videos are prohibited from final DEV and TEST.
+
+GT-only dataset characterization and candidate construction (EXP006, EXP013,
+EXP015) are not classified as model-output exposure and therefore do not by
+themselves exclude the corresponding videos.
+
+Canonical exclusion artifact:
+experiments/development_exclusions_v1.json
+
+### Split-lock assertion
+
+Before final DEV/TEST lock:
+
+    intersection(DEV, development_exclusions) == empty
+    intersection(TEST, development_exclusions) == empty
+
+This assertion is mandatory.
