@@ -355,3 +355,59 @@ POR_hard_w30 <= 0.70 -> headroom requirement passes.
 POR_hard_w30 > 0.70 -> follow the predeclared GT-only tightening procedure;
 do not select individual videos by B0 performance.
 
+## 14. VERIFIED CHECKPOINT - EXP016 FULL - 2026-08-24
+
+### VERIFIED - EXP016 FULL B0 HEADROOM
+
+Vanilla SAM 3.1 was evaluated on the frozen EXP016 headroom-development
+manifest from clean git commit:
+
+37e3ed0b3beec010c43429bb336042d7d85dcd34
+
+Run integrity:
+- 40 / 40 selected videos completed
+- 120 total GT reappearance events scored
+- 112 / 112 frozen hard-stratum events scored
+- no missing or extra hard-event keys
+- git_dirty = False
+- runtime = 19.9 minutes
+- max peak VRAM = 12.38 GB on RTX 4080 SUPER 16 GB
+
+Hard-stratum B0 POR:
+- POR15 = 0.5804
+- POR30 = 0.6071
+- POR60 = 0.6071
+
+All selected-video events:
+- POR15 = 0.6083
+- POR30 = 0.6333
+- POR60 = 0.6333
+
+ITR diagnostic:
+- theft events = 2
+- tracks with theft = 1
+
+HEADROOM RESULT:
+POR_hard_w30 = 0.6071 <= 0.70.
+The predeclared headroom requirement PASSES.
+
+OBSERVED:
+Only three additional hard events recover between windows 15 and 30;
+no additional hard event recovers between windows 30 and 60.
+
+The candidate rule
+    obj_size < 0.005 AND n_frames >= 100
+has therefore passed the headroom-development checkpoint.
+
+IMPORTANT:
+This does NOT yet constitute a locked TRAIN/DEV/TEST split.
+Historical contaminated-video and cache-used-video exclusion IDs remain UNKNOWN,
+so final DEV/TEST construction remains blocked until those exclusions are
+resolved or their provenance is formally adjudicated.
+
+### NEXT EXACT ACTION
+
+Resolve the historical contaminated/cache-used exclusion sets, then construct
+candidate TRAIN/DEV/TEST manifests under the passed GT hard-stratum rule and
+verify all split-size and TEST-event-count requirements before locking.
+

@@ -1,0 +1,3018 @@
+{
+  "summary": {
+    "experiment": "EXP016",
+    "mode": "full",
+    "manifest_status": "HEADROOM_DEVELOPMENT_ONLY_NOT_FINAL_DEV",
+    "git_commit": "37e3ed0b3beec010c43429bb336042d7d85dcd34",
+    "git_dirty": false,
+    "candidate_rule": {
+      "obj_size": "<0.005",
+      "n_frames": ">=100"
+    },
+    "videos": 40,
+    "tracks_with_events": 66,
+    "all_events": 120,
+    "hard_eligible_events_manifest": 112,
+    "hard_events_scored": 112,
+    "theft_events": 2,
+    "tracks_with_theft": 1,
+    "runtime_min": 19.9,
+    "max_peak_vram_gb": 12.38,
+    "POR_all_w15": 0.6083,
+    "n_events_all_w15": 120,
+    "POR_hard_w15": 0.5804,
+    "n_events_hard_w15": 112,
+    "POR_all_w30": 0.6333,
+    "n_events_all_w30": 120,
+    "POR_hard_w30": 0.6071,
+    "n_events_hard_w30": 112,
+    "POR_all_w60": 0.6333,
+    "n_events_all_w60": 120,
+    "POR_hard_w60": 0.6071,
+    "n_events_hard_w60": 112
+  },
+  "per_video": [
+    {
+      "video": "0ofgxn19",
+      "n_frames": 100,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 10.2,
+      "peak_vram_gb": 5.67
+    },
+    {
+      "video": "20ovc8gc",
+      "n_frames": 100,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 10.4,
+      "peak_vram_gb": 5.67
+    },
+    {
+      "video": "6l1wegih",
+      "n_frames": 100,
+      "n_objects": 1,
+      "all_events": 4,
+      "hard_events": 4,
+      "sec": 10.3,
+      "peak_vram_gb": 5.67
+    },
+    {
+      "video": "7ktwmep6",
+      "n_frames": 100,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 10.2,
+      "peak_vram_gb": 5.67
+    },
+    {
+      "video": "jonzenoi",
+      "n_frames": 100,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 10.2,
+      "peak_vram_gb": 5.67
+    },
+    {
+      "video": "ldygfvvl",
+      "n_frames": 100,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 10.5,
+      "peak_vram_gb": 5.67
+    },
+    {
+      "video": "mv8gzra0",
+      "n_frames": 100,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 10.4,
+      "peak_vram_gb": 5.67
+    },
+    {
+      "video": "zbv4xr1l",
+      "n_frames": 100,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 10.6,
+      "peak_vram_gb": 5.67
+    },
+    {
+      "video": "jvu8a48s",
+      "n_frames": 101,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 10.6,
+      "peak_vram_gb": 5.69
+    },
+    {
+      "video": "l26044lk",
+      "n_frames": 101,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 10.6,
+      "peak_vram_gb": 5.68
+    },
+    {
+      "video": "7744dc51",
+      "n_frames": 102,
+      "n_objects": 7,
+      "all_events": 3,
+      "hard_events": 3,
+      "sec": 22.8,
+      "peak_vram_gb": 7.4
+    },
+    {
+      "video": "zitg0m11",
+      "n_frames": 103,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 10.8,
+      "peak_vram_gb": 5.71
+    },
+    {
+      "video": "vjl6snjk",
+      "n_frames": 107,
+      "n_objects": 5,
+      "all_events": 6,
+      "hard_events": 2,
+      "sec": 21.8,
+      "peak_vram_gb": 6.96
+    },
+    {
+      "video": "6hwti19r",
+      "n_frames": 110,
+      "n_objects": 1,
+      "all_events": 4,
+      "hard_events": 4,
+      "sec": 11.8,
+      "peak_vram_gb": 5.8
+    },
+    {
+      "video": "duczdfw4",
+      "n_frames": 110,
+      "n_objects": 1,
+      "all_events": 3,
+      "hard_events": 3,
+      "sec": 11.6,
+      "peak_vram_gb": 5.8
+    },
+    {
+      "video": "0nrb9vzx",
+      "n_frames": 112,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 11.9,
+      "peak_vram_gb": 5.82
+    },
+    {
+      "video": "o6h4sn0b",
+      "n_frames": 112,
+      "n_objects": 1,
+      "all_events": 3,
+      "hard_events": 3,
+      "sec": 11.9,
+      "peak_vram_gb": 5.82
+    },
+    {
+      "video": "89b671bb",
+      "n_frames": 114,
+      "n_objects": 5,
+      "all_events": 5,
+      "hard_events": 1,
+      "sec": 20.3,
+      "peak_vram_gb": 7.04
+    },
+    {
+      "video": "dz9ct5wb",
+      "n_frames": 116,
+      "n_objects": 1,
+      "all_events": 4,
+      "hard_events": 4,
+      "sec": 12.4,
+      "peak_vram_gb": 5.87
+    },
+    {
+      "video": "sbyfhl5a",
+      "n_frames": 126,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 13.4,
+      "peak_vram_gb": 5.99
+    },
+    {
+      "video": "jnz3z8v3",
+      "n_frames": 134,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 14.0,
+      "peak_vram_gb": 6.09
+    },
+    {
+      "video": "2bacpuqz",
+      "n_frames": 135,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 13.8,
+      "peak_vram_gb": 6.1
+    },
+    {
+      "video": "hcb51p0k",
+      "n_frames": 135,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 14.4,
+      "peak_vram_gb": 6.1
+    },
+    {
+      "video": "0442a954",
+      "n_frames": 136,
+      "n_objects": 2,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 17.4,
+      "peak_vram_gb": 6.42
+    },
+    {
+      "video": "sfbg4630",
+      "n_frames": 136,
+      "n_objects": 20,
+      "all_events": 20,
+      "hard_events": 20,
+      "sec": 72.0,
+      "peak_vram_gb": 9.92
+    },
+    {
+      "video": "e6348d2c",
+      "n_frames": 141,
+      "n_objects": 1,
+      "all_events": 3,
+      "hard_events": 3,
+      "sec": 14.7,
+      "peak_vram_gb": 6.18
+    },
+    {
+      "video": "pq5h4hw1",
+      "n_frames": 141,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 15.1,
+      "peak_vram_gb": 6.18
+    },
+    {
+      "video": "fcl5hk5p",
+      "n_frames": 147,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 15.3,
+      "peak_vram_gb": 6.25
+    },
+    {
+      "video": "3iosxiy5",
+      "n_frames": 153,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 16.2,
+      "peak_vram_gb": 6.33
+    },
+    {
+      "video": "61urdhg8",
+      "n_frames": 163,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 17.3,
+      "peak_vram_gb": 6.45
+    },
+    {
+      "video": "ruo4i3o9",
+      "n_frames": 165,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 17.6,
+      "peak_vram_gb": 6.47
+    },
+    {
+      "video": "ikqgio2y",
+      "n_frames": 171,
+      "n_objects": 1,
+      "all_events": 1,
+      "hard_events": 1,
+      "sec": 18.7,
+      "peak_vram_gb": 6.55
+    },
+    {
+      "video": "86hobt2f",
+      "n_frames": 176,
+      "n_objects": 1,
+      "all_events": 3,
+      "hard_events": 3,
+      "sec": 18.4,
+      "peak_vram_gb": 6.61
+    },
+    {
+      "video": "2ujroa82",
+      "n_frames": 349,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 37.4,
+      "peak_vram_gb": 8.73
+    },
+    {
+      "video": "0f7r7f3f",
+      "n_frames": 356,
+      "n_objects": 2,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 46.2,
+      "peak_vram_gb": 9.35
+    },
+    {
+      "video": "1w5fyj35",
+      "n_frames": 515,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 55.4,
+      "peak_vram_gb": 10.77
+    },
+    {
+      "video": "q8dd8tfx",
+      "n_frames": 585,
+      "n_objects": 1,
+      "all_events": 6,
+      "hard_events": 6,
+      "sec": 61.6,
+      "peak_vram_gb": 11.63
+    },
+    {
+      "video": "xgnhrifg",
+      "n_frames": 595,
+      "n_objects": 1,
+      "all_events": 2,
+      "hard_events": 2,
+      "sec": 62.6,
+      "peak_vram_gb": 11.75
+    },
+    {
+      "video": "6ly8os75",
+      "n_frames": 620,
+      "n_objects": 1,
+      "all_events": 8,
+      "hard_events": 8,
+      "sec": 65.8,
+      "peak_vram_gb": 12.06
+    },
+    {
+      "video": "onz6n39p",
+      "n_frames": 646,
+      "n_objects": 1,
+      "all_events": 9,
+      "hard_events": 9,
+      "sec": 66.6,
+      "peak_vram_gb": 12.38
+    }
+  ],
+  "per_track": [
+    {
+      "video": "0ofgxn19",
+      "object_id": 1,
+      "n_frames": 100,
+      "n_events": 2,
+      "reappear_frames": [
+        34,
+        85
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        34,
+        85
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 59,
+      "por_w15": [
+        1,
+        0
+      ],
+      "por_w30": [
+        1,
+        0
+      ],
+      "por_w60": [
+        1,
+        0
+      ],
+      "hard_por_w15": [
+        1,
+        0
+      ],
+      "hard_por_w30": [
+        1,
+        0
+      ],
+      "hard_por_w60": [
+        1,
+        0
+      ]
+    },
+    {
+      "video": "20ovc8gc",
+      "object_id": 1,
+      "n_frames": 100,
+      "n_events": 1,
+      "reappear_frames": [
+        94
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        94
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 92,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "6l1wegih",
+      "object_id": 1,
+      "n_frames": 100,
+      "n_events": 4,
+      "reappear_frames": [
+        14,
+        29,
+        65,
+        71
+      ],
+      "hard_n_events": 4,
+      "hard_reappear_frames": [
+        14,
+        29,
+        65,
+        71
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 75,
+      "por_w15": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "video": "7ktwmep6",
+      "object_id": 1,
+      "n_frames": 100,
+      "n_events": 2,
+      "reappear_frames": [
+        13,
+        80
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        13,
+        80
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 56,
+      "por_w15": [
+        1,
+        0
+      ],
+      "por_w30": [
+        1,
+        0
+      ],
+      "por_w60": [
+        1,
+        0
+      ],
+      "hard_por_w15": [
+        1,
+        0
+      ],
+      "hard_por_w30": [
+        1,
+        0
+      ],
+      "hard_por_w60": [
+        1,
+        0
+      ]
+    },
+    {
+      "video": "jonzenoi",
+      "object_id": 1,
+      "n_frames": 100,
+      "n_events": 1,
+      "reappear_frames": [
+        96
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        96
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 52,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "ldygfvvl",
+      "object_id": 1,
+      "n_frames": 100,
+      "n_events": 2,
+      "reappear_frames": [
+        42,
+        97
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        42,
+        97
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 67,
+      "por_w15": [
+        0,
+        0
+      ],
+      "por_w30": [
+        0,
+        0
+      ],
+      "por_w60": [
+        0,
+        0
+      ],
+      "hard_por_w15": [
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        0,
+        0
+      ],
+      "hard_por_w60": [
+        0,
+        0
+      ]
+    },
+    {
+      "video": "mv8gzra0",
+      "object_id": 1,
+      "n_frames": 100,
+      "n_events": 2,
+      "reappear_frames": [
+        42,
+        58
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        42,
+        58
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 73,
+      "por_w15": [
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1
+      ]
+    },
+    {
+      "video": "zbv4xr1l",
+      "object_id": 1,
+      "n_frames": 100,
+      "n_events": 2,
+      "reappear_frames": [
+        86,
+        99
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        86,
+        99
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 81,
+      "por_w15": [
+        0,
+        1
+      ],
+      "por_w30": [
+        0,
+        1
+      ],
+      "por_w60": [
+        0,
+        1
+      ],
+      "hard_por_w15": [
+        0,
+        1
+      ],
+      "hard_por_w30": [
+        0,
+        1
+      ],
+      "hard_por_w60": [
+        0,
+        1
+      ]
+    },
+    {
+      "video": "jvu8a48s",
+      "object_id": 1,
+      "n_frames": 101,
+      "n_events": 2,
+      "reappear_frames": [
+        14,
+        82
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        14,
+        82
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 73,
+      "por_w15": [
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1
+      ]
+    },
+    {
+      "video": "l26044lk",
+      "object_id": 1,
+      "n_frames": 101,
+      "n_events": 1,
+      "reappear_frames": [
+        24
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        24
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 86,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "7744dc51",
+      "object_id": 6,
+      "n_frames": 102,
+      "n_events": 2,
+      "reappear_frames": [
+        49,
+        71
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        49,
+        71
+      ],
+      "theft_events": 2,
+      "theft_frames": 42,
+      "visible_frames": 82,
+      "por_w15": [
+        0,
+        0
+      ],
+      "por_w30": [
+        0,
+        0
+      ],
+      "por_w60": [
+        0,
+        0
+      ],
+      "hard_por_w15": [
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        0,
+        0
+      ],
+      "hard_por_w60": [
+        0,
+        0
+      ]
+    },
+    {
+      "video": "7744dc51",
+      "object_id": 7,
+      "n_frames": 102,
+      "n_events": 1,
+      "reappear_frames": [
+        44
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        44
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 97,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "zitg0m11",
+      "object_id": 1,
+      "n_frames": 103,
+      "n_events": 2,
+      "reappear_frames": [
+        40,
+        86
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        40,
+        86
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 51,
+      "por_w15": [
+        0,
+        0
+      ],
+      "por_w30": [
+        0,
+        0
+      ],
+      "por_w60": [
+        0,
+        0
+      ],
+      "hard_por_w15": [
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        0,
+        0
+      ],
+      "hard_por_w60": [
+        0,
+        0
+      ]
+    },
+    {
+      "video": "vjl6snjk",
+      "object_id": 1,
+      "n_frames": 107,
+      "n_events": 1,
+      "reappear_frames": [
+        56
+      ],
+      "hard_n_events": 0,
+      "hard_reappear_frames": [],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 102,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [],
+      "hard_por_w30": [],
+      "hard_por_w60": []
+    },
+    {
+      "video": "vjl6snjk",
+      "object_id": 2,
+      "n_frames": 107,
+      "n_events": 1,
+      "reappear_frames": [
+        56
+      ],
+      "hard_n_events": 0,
+      "hard_reappear_frames": [],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 102,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [],
+      "hard_por_w30": [],
+      "hard_por_w60": []
+    },
+    {
+      "video": "vjl6snjk",
+      "object_id": 3,
+      "n_frames": 107,
+      "n_events": 1,
+      "reappear_frames": [
+        56
+      ],
+      "hard_n_events": 0,
+      "hard_reappear_frames": [],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 102,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [],
+      "hard_por_w30": [],
+      "hard_por_w60": []
+    },
+    {
+      "video": "vjl6snjk",
+      "object_id": 4,
+      "n_frames": 107,
+      "n_events": 1,
+      "reappear_frames": [
+        56
+      ],
+      "hard_n_events": 0,
+      "hard_reappear_frames": [],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 102,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [],
+      "hard_por_w30": [],
+      "hard_por_w60": []
+    },
+    {
+      "video": "vjl6snjk",
+      "object_id": 5,
+      "n_frames": 107,
+      "n_events": 2,
+      "reappear_frames": [
+        56,
+        90
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        56,
+        90
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 72,
+      "por_w15": [
+        1,
+        0
+      ],
+      "por_w30": [
+        1,
+        0
+      ],
+      "por_w60": [
+        1,
+        0
+      ],
+      "hard_por_w15": [
+        1,
+        0
+      ],
+      "hard_por_w30": [
+        1,
+        0
+      ],
+      "hard_por_w60": [
+        1,
+        0
+      ]
+    },
+    {
+      "video": "6hwti19r",
+      "object_id": 1,
+      "n_frames": 110,
+      "n_events": 4,
+      "reappear_frames": [
+        29,
+        72,
+        97,
+        106
+      ],
+      "hard_n_events": 4,
+      "hard_reappear_frames": [
+        29,
+        72,
+        97,
+        106
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 18,
+      "por_w15": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "por_w30": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "por_w60": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "hard_por_w15": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "hard_por_w60": [
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "video": "duczdfw4",
+      "object_id": 1,
+      "n_frames": 110,
+      "n_events": 3,
+      "reappear_frames": [
+        40,
+        54,
+        87
+      ],
+      "hard_n_events": 3,
+      "hard_reappear_frames": [
+        40,
+        54,
+        87
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 48,
+      "por_w15": [
+        1,
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "video": "0nrb9vzx",
+      "object_id": 1,
+      "n_frames": 112,
+      "n_events": 1,
+      "reappear_frames": [
+        109
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        109
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 105,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "o6h4sn0b",
+      "object_id": 1,
+      "n_frames": 112,
+      "n_events": 3,
+      "reappear_frames": [
+        23,
+        67,
+        99
+      ],
+      "hard_n_events": 3,
+      "hard_reappear_frames": [
+        23,
+        67,
+        99
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 59,
+      "por_w15": [
+        1,
+        0,
+        0
+      ],
+      "por_w30": [
+        1,
+        0,
+        0
+      ],
+      "por_w60": [
+        1,
+        0,
+        0
+      ],
+      "hard_por_w15": [
+        1,
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        1,
+        0,
+        0
+      ],
+      "hard_por_w60": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "video": "89b671bb",
+      "object_id": 1,
+      "n_frames": 114,
+      "n_events": 2,
+      "reappear_frames": [
+        69,
+        105
+      ],
+      "hard_n_events": 0,
+      "hard_reappear_frames": [],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 57,
+      "por_w15": [
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1
+      ],
+      "hard_por_w15": [],
+      "hard_por_w30": [],
+      "hard_por_w60": []
+    },
+    {
+      "video": "89b671bb",
+      "object_id": 3,
+      "n_frames": 114,
+      "n_events": 2,
+      "reappear_frames": [
+        43,
+        104
+      ],
+      "hard_n_events": 0,
+      "hard_reappear_frames": [],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 85,
+      "por_w15": [
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1
+      ],
+      "hard_por_w15": [],
+      "hard_por_w30": [],
+      "hard_por_w60": []
+    },
+    {
+      "video": "89b671bb",
+      "object_id": 5,
+      "n_frames": 114,
+      "n_events": 1,
+      "reappear_frames": [
+        29
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        29
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 101,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "dz9ct5wb",
+      "object_id": 1,
+      "n_frames": 116,
+      "n_events": 4,
+      "reappear_frames": [
+        34,
+        46,
+        74,
+        105
+      ],
+      "hard_n_events": 4,
+      "hard_reappear_frames": [
+        34,
+        46,
+        74,
+        105
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 44,
+      "por_w15": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "por_w30": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "por_w60": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "video": "sbyfhl5a",
+      "object_id": 1,
+      "n_frames": 126,
+      "n_events": 1,
+      "reappear_frames": [
+        97
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        97
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 34,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "jnz3z8v3",
+      "object_id": 1,
+      "n_frames": 134,
+      "n_events": 1,
+      "reappear_frames": [
+        14
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        14
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 90,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "2bacpuqz",
+      "object_id": 1,
+      "n_frames": 135,
+      "n_events": 1,
+      "reappear_frames": [
+        128
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        128
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 8,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "hcb51p0k",
+      "object_id": 1,
+      "n_frames": 135,
+      "n_events": 1,
+      "reappear_frames": [
+        97
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        97
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 41,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "0442a954",
+      "object_id": 1,
+      "n_frames": 136,
+      "n_events": 2,
+      "reappear_frames": [
+        41,
+        89
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        41,
+        89
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 105,
+      "por_w15": [
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 1,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        130
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        130
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 7,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 2,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        132
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        132
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 5,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 3,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 4,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 5,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 6,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 7,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 8,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 9,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 10,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        135
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        135
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 2,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 11,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        135
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        135
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 2,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 12,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 13,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 14,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 15,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 1,
+      "visible_frames": 3,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 16,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 17,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        134
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        134
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 3,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 18,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        135
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        135
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 2,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 19,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        135
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        135
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 2,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "sfbg4630",
+      "object_id": 20,
+      "n_frames": 136,
+      "n_events": 1,
+      "reappear_frames": [
+        135
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        135
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 2,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "e6348d2c",
+      "object_id": 1,
+      "n_frames": 141,
+      "n_events": 3,
+      "reappear_frames": [
+        41,
+        106,
+        124
+      ],
+      "hard_n_events": 3,
+      "hard_reappear_frames": [
+        41,
+        106,
+        124
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 65,
+      "por_w15": [
+        1,
+        0,
+        1
+      ],
+      "por_w30": [
+        1,
+        0,
+        1
+      ],
+      "por_w60": [
+        1,
+        0,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        0,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        0,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "video": "pq5h4hw1",
+      "object_id": 1,
+      "n_frames": 141,
+      "n_events": 1,
+      "reappear_frames": [
+        136
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        136
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 7,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "fcl5hk5p",
+      "object_id": 1,
+      "n_frames": 147,
+      "n_events": 1,
+      "reappear_frames": [
+        125
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        125
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 57,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "3iosxiy5",
+      "object_id": 1,
+      "n_frames": 153,
+      "n_events": 1,
+      "reappear_frames": [
+        151
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        151
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 4,
+      "por_w15": [
+        1
+      ],
+      "por_w30": [
+        1
+      ],
+      "por_w60": [
+        1
+      ],
+      "hard_por_w15": [
+        1
+      ],
+      "hard_por_w30": [
+        1
+      ],
+      "hard_por_w60": [
+        1
+      ]
+    },
+    {
+      "video": "61urdhg8",
+      "object_id": 1,
+      "n_frames": 163,
+      "n_events": 1,
+      "reappear_frames": [
+        158
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        158
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 6,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "ruo4i3o9",
+      "object_id": 1,
+      "n_frames": 165,
+      "n_events": 2,
+      "reappear_frames": [
+        54,
+        136
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        54,
+        136
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 105,
+      "por_w15": [
+        0,
+        0
+      ],
+      "por_w30": [
+        0,
+        0
+      ],
+      "por_w60": [
+        0,
+        0
+      ],
+      "hard_por_w15": [
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        0,
+        0
+      ],
+      "hard_por_w60": [
+        0,
+        0
+      ]
+    },
+    {
+      "video": "ikqgio2y",
+      "object_id": 1,
+      "n_frames": 171,
+      "n_events": 1,
+      "reappear_frames": [
+        109
+      ],
+      "hard_n_events": 1,
+      "hard_reappear_frames": [
+        109
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 72,
+      "por_w15": [
+        0
+      ],
+      "por_w30": [
+        0
+      ],
+      "por_w60": [
+        0
+      ],
+      "hard_por_w15": [
+        0
+      ],
+      "hard_por_w30": [
+        0
+      ],
+      "hard_por_w60": [
+        0
+      ]
+    },
+    {
+      "video": "86hobt2f",
+      "object_id": 1,
+      "n_frames": 176,
+      "n_events": 3,
+      "reappear_frames": [
+        71,
+        116,
+        151
+      ],
+      "hard_n_events": 3,
+      "hard_reappear_frames": [
+        71,
+        116,
+        151
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 71,
+      "por_w15": [
+        1,
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "video": "2ujroa82",
+      "object_id": 1,
+      "n_frames": 349,
+      "n_events": 2,
+      "reappear_frames": [
+        21,
+        197
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        21,
+        197
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 178,
+      "por_w15": [
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1
+      ]
+    },
+    {
+      "video": "0f7r7f3f",
+      "object_id": 1,
+      "n_frames": 356,
+      "n_events": 2,
+      "reappear_frames": [
+        207,
+        227
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        207,
+        227
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 294,
+      "por_w15": [
+        0,
+        0
+      ],
+      "por_w30": [
+        0,
+        0
+      ],
+      "por_w60": [
+        0,
+        0
+      ],
+      "hard_por_w15": [
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        0,
+        0
+      ],
+      "hard_por_w60": [
+        0,
+        0
+      ]
+    },
+    {
+      "video": "1w5fyj35",
+      "object_id": 1,
+      "n_frames": 515,
+      "n_events": 2,
+      "reappear_frames": [
+        182,
+        348
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        182,
+        348
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 497,
+      "por_w15": [
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1
+      ]
+    },
+    {
+      "video": "q8dd8tfx",
+      "object_id": 1,
+      "n_frames": 585,
+      "n_events": 6,
+      "reappear_frames": [
+        121,
+        254,
+        327,
+        402,
+        506,
+        524
+      ],
+      "hard_n_events": 6,
+      "hard_reappear_frames": [
+        121,
+        254,
+        327,
+        402,
+        506,
+        524
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 420,
+      "por_w15": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "por_w30": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "por_w60": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "video": "xgnhrifg",
+      "object_id": 1,
+      "n_frames": 595,
+      "n_events": 2,
+      "reappear_frames": [
+        521,
+        547
+      ],
+      "hard_n_events": 2,
+      "hard_reappear_frames": [
+        521,
+        547
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 492,
+      "por_w15": [
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1
+      ]
+    },
+    {
+      "video": "6ly8os75",
+      "object_id": 1,
+      "n_frames": 620,
+      "n_events": 8,
+      "reappear_frames": [
+        77,
+        117,
+        209,
+        378,
+        486,
+        495,
+        516,
+        592
+      ],
+      "hard_n_events": 8,
+      "hard_reappear_frames": [
+        77,
+        117,
+        209,
+        378,
+        486,
+        495,
+        516,
+        592
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 460,
+      "por_w15": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "por_w30": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "por_w60": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hard_por_w15": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hard_por_w30": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "hard_por_w60": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "video": "onz6n39p",
+      "object_id": 1,
+      "n_frames": 646,
+      "n_events": 9,
+      "reappear_frames": [
+        40,
+        75,
+        148,
+        214,
+        325,
+        383,
+        402,
+        541,
+        612
+      ],
+      "hard_n_events": 9,
+      "hard_reappear_frames": [
+        40,
+        75,
+        148,
+        214,
+        325,
+        383,
+        402,
+        541,
+        612
+      ],
+      "theft_events": 0,
+      "theft_frames": 0,
+      "visible_frames": 299,
+      "por_w15": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "por_w30": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "por_w60": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "hard_por_w15": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "hard_por_w30": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "hard_por_w60": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

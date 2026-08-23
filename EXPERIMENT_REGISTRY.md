@@ -80,3 +80,16 @@ Fields per entry:
 - Status: RUNNING - manifest and sanity VERIFIED; 40-video B0 run pending.
 - Interpretation: Runner/API/event filtering are verified. Sanity POR is not scientific evidence.
 
+### EXP016 completion note - 2026-08-24
+- Code version: 37e3ed0b3beec010c43429bb336042d7d85dcd34.
+- Command: python scripts/exp016_headroom.py full
+- Output location: experiments/EXP016_full/results.json
+- Result: 40 videos; 120 total events; 112/112 frozen hard events scored.
+- Hard POR: W15=0.5804, W30=0.6071, W60=0.6071.
+- All-event POR: W15=0.6083, W30=0.6333, W60=0.6333.
+- Theft events: 2 across 1 track.
+- Runtime: 19.9 min.
+- Peak VRAM: 12.38 GB.
+- Status: COMPLETED.
+- Interpretation: Predeclared B0 headroom criterion passes because POR_hard_w30=0.6071 <= 0.70. This validates the candidate hard-stratum rule for split construction but does not itself lock final TRAIN/DEV/TEST.
+
