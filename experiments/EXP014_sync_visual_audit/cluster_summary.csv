@@ -1,0 +1,6 @@
+video,cluster_id,sync_events,objects,start_absent_min,start_absent_max,reappear_min,reappear_max
+5hcafebs,1,10,10,35,79,163,177
+vw1ncc20,2,20,20,16,24,75,84
+wke7ltxq,3,23,23,13,15,69,71
+yp6926lu,4,13,13,1,7,92,99
+yp6926lu,5,12,12,114,120,175,175

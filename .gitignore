@@ -44,3 +44,8 @@ Thumbs.db
 *.zip
 *.tar
 *.tar.gz
+
+# Local-only thesis verification artifacts
+experiments/EXP013_attrs_timing.csv
+experiments/EXP014_sync_visual_audit/**/*.jpg
+experiments/EXP016_sanity/

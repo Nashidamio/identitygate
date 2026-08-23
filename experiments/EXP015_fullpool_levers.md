@@ -1,0 +1,69 @@
+# EXP015 - full-pool GT-only lever feasibility
+
+Purpose: determine whether the existing EXP012 GT-only difficulty criteria retain sufficient sample size after enlarging to all EXP013 event-bearing videos.
+
+This experiment uses no SAM predictions and does not select videos by B0 performance.
+
+Expanded events: 4469
+Unique videos: 1691
+Unique tracks: 3237
+
+## Candidate rules retaining at least 210 videos
+
+| criteria                           |   events |   tracks |   videos |   events_per_video_mean |   max_events_one_video |   top5_video_event_share | meets_min_210_videos   | within_210_350_videos   |
+|:-----------------------------------|---------:|---------:|---------:|------------------------:|-----------------------:|-------------------------:|:-----------------------|:------------------------|
+| gap>=10 AND size<0.5% AND len>=100 |      505 |      273 |      218 |                   2.317 |                     20 |                   0.1267 | True                   | True                    |
+| dens>=3                            |     1026 |      908 |      237 |                   4.329 |                     23 |                   0.0984 | True                   | True                    |
+| size<0.5% AND len>=100             |      732 |      333 |      258 |                   2.837 |                     20 |                   0.1038 | True                   | True                    |
+| gap>=20 AND size<0.5%              |      727 |      608 |      280 |                   2.596 |                     30 |                   0.1843 | True                   | True                    |
+| gap>=20 AND size<2% AND len>=100   |      622 |      417 |      321 |                   1.938 |                     20 |                   0.1447 | True                   | True                    |
+| gap>=10 AND size<2% AND len>=100   |      916 |      507 |      400 |                   2.29  |                     26 |                   0.107  | True                   | False                   |
+| gap>=20 AND len>=100               |      853 |      577 |      450 |                   1.896 |                     29 |                   0.1196 | True                   | False                   |
+| gap>=10 AND size<0.5%              |     1122 |      859 |      463 |                   2.423 |                     30 |                   0.1194 | True                   | False                   |
+| size<2% AND len>=100               |     1313 |      630 |      466 |                   2.818 |                     32 |                   0.0853 | True                   | False                   |
+| gap>=20 AND size<2%                |     1283 |     1064 |      526 |                   2.439 |                     32 |                   0.1091 | True                   | False                   |
+| gap>=10 AND len>=100               |     1280 |      711 |      560 |                   2.286 |                     29 |                   0.0859 | True                   | False                   |
+| len>=100                           |     1822 |      897 |      652 |                   2.794 |                     32 |                   0.0681 | True                   | False                   |
+| size<0.5%                          |     1678 |     1164 |      671 |                   2.501 |                     30 |                   0.0799 | True                   | False                   |
+| gap>=20                            |     1645 |     1346 |      744 |                   2.211 |                     32 |                   0.0869 | True                   | False                   |
+| gap>=10 AND size<2%                |     2034 |     1557 |      853 |                   2.385 |                     32 |                   0.0688 | True                   | False                   |
+| gap>=10                            |     2875 |     2190 |     1199 |                   2.398 |                     32 |                   0.0497 | True                   | False                   |
+| size<2%                            |     3118 |     2220 |     1215 |                   2.566 |                     32 |                   0.0468 | True                   | False                   |
+
+## All non-redundant EXP012 rule combinations
+
+| criteria                           |   events |   tracks |   videos |   events_per_video_mean |   max_events_one_video |   top5_video_event_share | meets_min_210_videos   | within_210_350_videos   |
+|:-----------------------------------|---------:|---------:|---------:|------------------------:|-----------------------:|-------------------------:|:-----------------------|:------------------------|
+| gap>=10 AND size<0.5% AND len>=100 |      505 |      273 |      218 |                   2.317 |                     20 |                   0.1267 | True                   | True                    |
+| dens>=3                            |     1026 |      908 |      237 |                   4.329 |                     23 |                   0.0984 | True                   | True                    |
+| size<0.5% AND len>=100             |      732 |      333 |      258 |                   2.837 |                     20 |                   0.1038 | True                   | True                    |
+| gap>=20 AND size<0.5%              |      727 |      608 |      280 |                   2.596 |                     30 |                   0.1843 | True                   | True                    |
+| gap>=20 AND size<2% AND len>=100   |      622 |      417 |      321 |                   1.938 |                     20 |                   0.1447 | True                   | True                    |
+| gap>=10 AND size<2% AND len>=100   |      916 |      507 |      400 |                   2.29  |                     26 |                   0.107  | True                   | False                   |
+| gap>=20 AND len>=100               |      853 |      577 |      450 |                   1.896 |                     29 |                   0.1196 | True                   | False                   |
+| gap>=10 AND size<0.5%              |     1122 |      859 |      463 |                   2.423 |                     30 |                   0.1194 | True                   | False                   |
+| size<2% AND len>=100               |     1313 |      630 |      466 |                   2.818 |                     32 |                   0.0853 | True                   | False                   |
+| gap>=20 AND size<2%                |     1283 |     1064 |      526 |                   2.439 |                     32 |                   0.1091 | True                   | False                   |
+| gap>=10 AND len>=100               |     1280 |      711 |      560 |                   2.286 |                     29 |                   0.0859 | True                   | False                   |
+| len>=100                           |     1822 |      897 |      652 |                   2.794 |                     32 |                   0.0681 | True                   | False                   |
+| size<0.5%                          |     1678 |     1164 |      671 |                   2.501 |                     30 |                   0.0799 | True                   | False                   |
+| gap>=20                            |     1645 |     1346 |      744 |                   2.211 |                     32 |                   0.0869 | True                   | False                   |
+| gap>=10 AND size<2%                |     2034 |     1557 |      853 |                   2.385 |                     32 |                   0.0688 | True                   | False                   |
+| gap>=10                            |     2875 |     2190 |     1199 |                   2.398 |                     32 |                   0.0497 | True                   | False                   |
+| size<2%                            |     3118 |     2220 |     1215 |                   2.566 |                     32 |                   0.0468 | True                   | False                   |
+| size<0.5% AND len>=100 AND dens>=3 |       97 |       58 |       25 |                   3.88  |                     15 |                   0.5052 | False                  | False                   |
+| gap>=20 AND size<0.5% AND dens>=3  |      102 |       95 |       27 |                   3.778 |                     23 |                   0.6863 | False                  | False                   |
+| gap>=20 AND len>=100 AND dens>=3   |       85 |       72 |       30 |                   2.833 |                     20 |                   0.5647 | False                  | False                   |
+| gap>=10 AND len>=100 AND dens>=3   |      132 |       96 |       42 |                   3.143 |                     20 |                   0.4697 | False                  | False                   |
+| gap>=20 AND size<2% AND dens>=3    |      146 |      137 |       42 |                   3.476 |                     23 |                   0.5822 | False                  | False                   |
+| size<2% AND len>=100 AND dens>=3   |      206 |      143 |       48 |                   4.292 |                     21 |                   0.3786 | False                  | False                   |
+| gap>=20 AND dens>=3                |      166 |      152 |       55 |                   3.018 |                     23 |                   0.512  | False                  | False                   |
+| len>=100 AND dens>=3               |      267 |      188 |       58 |                   4.603 |                     23 |                   0.3184 | False                  | False                   |
+| gap>=10 AND size<0.5% AND dens>=3  |      214 |      189 |       77 |                   2.779 |                     23 |                   0.3551 | False                  | False                   |
+| gap>=10 AND size<2% AND dens>=3    |      339 |      304 |      102 |                   3.324 |                     23 |                   0.2566 | False                  | False                   |
+| size<0.5% AND dens>=3              |      367 |      308 |      124 |                   2.96  |                     23 |                   0.2234 | False                  | False                   |
+| gap>=10 AND dens>=3                |      463 |      417 |      131 |                   3.534 |                     23 |                   0.1901 | False                  | False                   |
+| gap>=20 AND size<0.5% AND len>=100 |      340 |      227 |      176 |                   1.932 |                     20 |                   0.1706 | False                  | False                   |
+| size<2% AND dens>=3                |      728 |      635 |      199 |                   3.658 |                     23 |                   0.136  | False                  | False                   |
+
+Note: retained-video count is a feasibility measure, not evidence that a rule is harder. Baseline POR must be measured on a fresh stratum-development sample before any final difficulty rule is locked.

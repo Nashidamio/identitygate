@@ -256,3 +256,102 @@ Pre-registered decision rule:
         until vanilla DEV-hard-stratum POR <= 0.70
 
 This must pass before TRAIN/DEV/TEST splits can be locked.
+
+## 13. VERIFIED CHECKPOINT - 2026-08-23
+
+This section is the current project state and supersedes Sections 9-12 above
+where they conflict.
+
+### Current phase
+Week 2 - data/headroom/split preparation. IdentityGate itself is NOT implemented.
+
+### Last verified baseline
+Git parent before this milestone: 2dcd019.
+SAM 3.1 VOS path remains operational on the RTX 4080 SUPER 16 GB.
+
+### VERIFIED - EXP013
+Full event-bearing MOSEv2 train attribute scan completed:
+- 1,691 videos
+- 3,237 event-bearing tracks
+- 4,469 qualifying disappearance/reappearance events
+Artifact: experiments/EXP013_attrs.csv
+
+### VERIFIED - EXP014
+The EXP011 sync_video heuristic was audited.
+- 82 events were swept in by the original video-level flag.
+- 78 events actually satisfy the event-level >=5 reappearances within +/-10 frames rule.
+- 4 events in yp6926lu were false inclusions from video-level flagging.
+- Five synchronized-reappearance clusters were visually audited.
+- The historical interpretation whole-scene occlusion is NOT supported.
+Most audited clusters are consistent with camera-induced out-of-view/re-entry;
+5hcafebs remains mixed/ambiguous between crowd occlusion and out-of-view.
+
+PROVISIONAL RESEARCHER-LED DECISION:
+Do not use synchronized reappearance as an exclusion criterion.
+Retain it only as a diagnostic attribute unless a defensible event taxonomy is
+established independently.
+
+### VERIFIED - EXP015
+Existing EXP012 GT-only difficulty levers were evaluated over the full EXP013 pool.
+- 31 non-redundant rule combinations tested.
+- 17 retain at least 210 videos.
+- Raw sample-size blocker from the old 291-video convenience pool is resolved.
+
+Chosen HEADROOM-DEVELOPMENT candidate, not a final split rule:
+obj_size < 0.005 AND n_frames >= 100
+
+Before historical EXP009 exclusion:
+- 258 videos
+- 333 tracks
+- 732 events
+
+After excluding all 40 EXP009 exploratory videos:
+- 252 fresh videos
+- 315 tracks
+- 705 events
+
+### VERIFIED - EXP016 MANIFEST
+Frozen headroom-development manifest:
+- seed 42
+- 40 randomly sampled fresh videos
+- 60 eligible hard-stratum tracks
+- 112 eligible hard-stratum events
+- 120 total GT events in the selected videos
+- EXP009 overlap = 0
+
+Status: HEADROOM_DEVELOPMENT_ONLY_NOT_FINAL_DEV.
+
+The exact eligible (video, object_id, reappear_frame) keys are frozen in
+experiments/EXP016_headroom_manifest.json.
+
+### VERIFIED - EXP016 SANITY
+Three-shortest-video B0 runtime sanity passed:
+- 3 videos
+- 7 manifest hard events expected
+- 7 hard events scored
+- max peak VRAM 5.67 GB
+- runtime 0.7 min
+- no missing/extra eligible-event assertion
+
+The sanity POR values are NOT scientific results.
+
+### OPEN / BLOCKING BEFORE FINAL SPLIT LOCK
+- Contaminated-video IDs from historical P2 work: UNKNOWN.
+- Cache-used-video IDs from historical P2 work: UNKNOWN.
+- Therefore final TRAIN/DEV/TEST locking is NOT allowed yet.
+- F1 endpoint contradiction remains unresolved.
+- VOS-path obj_ptr availability remains unverified.
+- Per-object memory-write blocking remains unimplemented/unverified.
+- Native memory admission semantics remain unresolved.
+- ITR denominator remains unresolved.
+- Closed-loop conformal guarantee scope remains unresolved.
+
+### NEXT EXACT SCIENTIFIC ACTION
+Commit this verified implementation/provenance milestone, then run EXP016 full
+from a clean Git commit.
+
+Headroom checkpoint:
+POR_hard_w30 <= 0.70 -> headroom requirement passes.
+POR_hard_w30 > 0.70 -> follow the predeclared GT-only tightening procedure;
+do not select individual videos by B0 performance.
+
