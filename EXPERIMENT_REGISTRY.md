@@ -93,3 +93,16 @@ Fields per entry:
 - Status: COMPLETED.
 - Interpretation: Predeclared B0 headroom criterion passes because POR_hard_w30=0.6071 <= 0.70. This validates the candidate hard-stratum rule for split construction but does not itself lock final TRAIN/DEV/TEST.
 
+## EXP017 - Final split construction
+- Purpose: Freeze leakage-controlled hard-stratum and full-event-bearing evaluation cohorts.
+- Hypothesis: GT-only split construction can satisfy sample-size, event-count, headroom, and development-exclusion requirements without model-score cherry-picking.
+- Code version: source parent 9e4cac1; generator hashes recorded in manifests where available.
+- Dataset: MOSEv2 train partition.
+- Checkpoint: None; GT-only split construction.
+- Configuration: obj_size < 0.005 AND n_frames >= 100; seed 42.
+- Commands: scripts/exp017_make_candidate_splits.py and scripts/exp017_make_full_distribution.py.
+- Outputs: experiments/EXP017_split_manifest.json and experiments/EXP017_full_distribution_manifest.json.
+- Result: TRAIN=100, DEV=40, hard TEST=118/343 hard events; full-event-bearing TEST=118/295 events; 9-video TEST/Test overlap; 227 unique held-out TEST videos; zero TEST overlap with TRAIN, DEV, or 81 development exclusions.
+- Status: COMPLETED / LOCKED.
+- Interpretation: Dataset selection and held-out cohort construction are complete. Future model results may not change these splits.
+

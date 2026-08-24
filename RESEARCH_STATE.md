@@ -466,3 +466,53 @@ Before final DEV/TEST lock:
     intersection(TEST, development_exclusions) == empty
 
 This assertion is mandatory.
+
+## 16. EXP017 SPLIT LOCK - 2026-08-24
+
+### LOCKED hard-stratum split
+
+Final GT-defined hard rule:
+obj_size < 0.005 AND n_frames >= 100
+
+All 258 eligible hard-pool videos are assigned exactly once:
+- TRAIN: 100 videos / 260 hard events
+- DEV: 40 videos / 129 hard events
+- TEST: 118 videos / 343 hard events
+
+TEST satisfies the >=200-event requirement and lies in the preferred
+300-500-event range.
+
+All 46 development-exposed videos that intersect the hard pool are confined
+to TRAIN. DEV and TEST have zero overlap with the 81-video development
+exclusion manifest.
+
+### LOCKED full-event-bearing distribution TEST
+
+F5 full-distribution reporting is operationally defined before any gate/test
+prediction is observed as a seed-42 random sample of 118 held-out videos from
+the 1,691 MOSEv2 event-bearing videos, without hard-stratum attribute filtering.
+
+- 118 videos
+- 295 qualifying reappearance events
+- overlap with hard TEST: 9 videos
+- combined unique TEST universe: 227 videos
+- zero overlap with TRAIN, DEV, or development exclusions
+
+The hard/full TEST overlap is permitted because both cohorts are held out.
+The secondary cohort is called the full event-bearing distribution; it is not
+claimed to represent the 1,975 MOSEv2 videos with no qualifying POR event.
+
+### TEST handling correction
+
+The v5 Week-2 schedule mentions signals_test_locked.parquet, but prediction-
+derived TEST signal caching would conflict with the stronger locked rules that
+TEST remains untouched until Week 7 and is touched exactly once.
+
+Therefore:
+- pre-freeze prediction-derived caching is TRAIN/DEV only;
+- TEST IDs and split-construction GT metadata are frozen now;
+- prediction-derived TEST caching/evaluation occurs only during the single
+  locked Week-7 TEST execution.
+
+No split may be rerolled or changed in response to future model results.
+
