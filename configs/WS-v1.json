@@ -1,0 +1,26 @@
+{
+  "config_id": "WS-v1",
+  "status": "ANNOTATION_RULE_FROZEN_PIXEL_CROSSCHECK_PENDING",
+  "purpose": "Whole-scene occlusion tagging for IdentityGate",
+  "event_gap_min_frames": 5,
+  "annotation_rule": {
+    "reference_lookback_frames": 5,
+    "vanish_share_min": 0.8,
+    "vanish_window_frames": 2,
+    "return_share_min": 0.8,
+    "return_window_frames": 2,
+    "reference_set_definition": "union of GT-visible object IDs over the exact 5 frames immediately preceding the candidate disappearance start",
+    "vanish_definition": "GT visible-to-absent transition",
+    "return_definition": "GT absent-to-visible transition"
+  },
+  "scene_collapse": {
+    "enabled": true,
+    "max_disappearance_spread_frames": 4,
+    "max_reappearance_spread_frames": 4,
+    "reason": "events lying within a common +/-2-frame synchronization window represent one mass scene event"
+  },
+  "final_label_policy": "GT annotation candidate must later be cross-checked with the frozen pixel-side rule; disagreements are manually adjudicated",
+  "negative_control_regression_bound_pp": 2.0,
+  "primary_endpoint_excludes_final_whole_scene_stratum": true,
+  "sensitivity_analysis_retains_whole_scene_stratum": true
+}

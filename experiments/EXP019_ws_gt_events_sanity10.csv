@@ -1,0 +1,15 @@
+video,object_id,disappear_start,reappear_frame,gap_len,lookback_complete,reference_objects,vanished_objects,returned_objects,vanish_share,return_share,ws_gt_candidate,ws_scene_event_id
+006e6b64,1,2,9,7,False,0,0,0,0.0,0.0,False,
+006e6b64,1,16,21,5,True,2,1,1,0.5,1.0,False,
+01e3cec8,1,39,53,14,True,2,1,1,0.5,1.0,False,
+01e3cec8,3,8,39,31,True,3,1,1,0.333333,1.0,False,
+01ojfpgh,1,16,21,5,True,2,2,2,1.0,1.0,True,01ojfpgh:WS001
+01ojfpgh,2,16,21,5,True,2,2,2,1.0,1.0,True,01ojfpgh:WS001
+01ynxb7u,1,20,25,5,True,1,1,1,1.0,1.0,True,01ynxb7u:WS001
+028f6f64,3,13,19,6,True,3,1,1,0.333333,1.0,False,
+02a236b4,1,20,51,31,True,1,1,1,1.0,1.0,True,02a236b4:WS001
+02b72b8d,5,9,20,11,True,5,1,1,0.2,1.0,False,
+02b72b8d,5,31,53,22,True,5,1,1,0.2,1.0,False,
+02de2f2a,1,34,59,25,True,1,1,1,1.0,1.0,True,02de2f2a:WS001
+02deca50,3,41,47,6,True,3,2,2,0.666667,1.0,False,
+03012cfd,1,99,127,28,True,1,1,1,1.0,1.0,True,03012cfd:WS001

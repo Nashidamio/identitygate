@@ -1,0 +1,16 @@
+{
+  "experiment": "EXP019",
+  "status": "GT_ANNOTATION_CANDIDATES_ONLY_NOT_FINAL_WS_LABELS",
+  "videos_scanned": 10,
+  "raw_object_events": 14,
+  "ws_gt_flagged_object_events": 6,
+  "ws_gt_scene_events_after_collapse": 5,
+  "non_ws_object_events": 8,
+  "analysis_event_count_after_ws_collapse": 13,
+  "videos_with_ws_gt_candidate": 5,
+  "exp013_exact_event_reconstruction": true,
+  "config": "configs/WS-v1.json",
+  "config_sha256": "07812618c50412ec451bd0cee6f1c746bd1d4e07bfae803b006ed135f7279e2f",
+  "source_attrs_sha256": "a4dedea00a02bc351cb1e52aa253f59cd1f7dad05fc3e7ff66ef8866251ff2a1",
+  "runtime_sec": 3.31
+}
