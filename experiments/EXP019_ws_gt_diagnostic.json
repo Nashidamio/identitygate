@@ -1,0 +1,45 @@
+{
+  "experiment": "EXP019-D1",
+  "purpose": "Diagnose unexpectedly high annotation-side WS candidate prevalence",
+  "git_commit": "8d4649b",
+  "raw_object_events": 4469,
+  "flagged_object_events": 2945,
+  "flagged_object_fraction": 0.659,
+  "candidate_scene_events": 2179,
+  "candidate_videos": 1281,
+  "flagged_reference_objects_eq_1": 1888,
+  "flagged_reference_objects_ge_2": 1057,
+  "flagged_ref1_in_single_object_videos": 1833,
+  "flagged_ref1_in_multi_object_videos": 55,
+  "candidate_scenes_with_1_object_event": 1906,
+  "candidate_scenes_with_ge_2_object_events": 273,
+  "singleton_candidate_scenes_in_single_object_videos": 1833,
+  "singleton_candidate_scenes_in_multi_object_videos": 73,
+  "reference_object_bins": {
+    "1": {
+      "events": 1888,
+      "flagged": 1888,
+      "flag_rate": 1.0
+    },
+    "2": {
+      "events": 425,
+      "flagged": 203,
+      "flag_rate": 0.4776
+    },
+    "3": {
+      "events": 325,
+      "flagged": 151,
+      "flag_rate": 0.4646
+    },
+    "4": {
+      "events": 285,
+      "flagged": 196,
+      "flag_rate": 0.6877
+    },
+    "5+": {
+      "events": 851,
+      "flagged": 507,
+      "flag_rate": 0.5958
+    }
+  }
+}
