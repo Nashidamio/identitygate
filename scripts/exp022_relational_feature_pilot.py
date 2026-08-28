@@ -494,6 +494,7 @@ with open(
     writer = csv.DictWriter(
         f,
         fieldnames=feature_fields,
+        lineterminator="\n",
     )
     writer.writeheader()
     writer.writerows(feature_rows)
@@ -508,6 +509,7 @@ with open(
     writer = csv.DictWriter(
         f,
         fieldnames=anchor_fields,
+        lineterminator="\n",
     )
     writer.writeheader()
     writer.writerows(anchor_rows)
