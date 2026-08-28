@@ -1,0 +1,54 @@
+{
+  "experiment": "EXP022-FULL",
+  "status": "PLANNED_PRE_RUN",
+  "purpose": "Measure corpus-level availability and degeneracy of tracked-competitor identity pointer signals on the frozen development-exposed multi-object cohort.",
+  "scope": {
+    "manifest": "experiments/EXP021_relational_scope.json",
+    "sha256": "e528ab0b422f57fee371425199f56193c2b54ca103836ae6cf3f364cd8f5e2b2",
+    "protocol": "DEVELOPMENT_EXPOSED_ONLY_NOT_FINAL_SPLIT",
+    "n_videos": 26,
+    "total_video_frames": 4066,
+    "expected_candidate_rows": 22140,
+    "expected_anchor_rows": 1482,
+    "test_videos_touched": 0
+  },
+  "substrate": {
+    "config": "configs/SUBSTRATE-v1.json",
+    "sha256": "cf48aff216a544409823421993f54b42c0f2b0e9bfd8c6772b21901ba32ddb31",
+    "model_family": "SAM 3",
+    "task_mode": "VOS/PVS",
+    "builder": "sam3.model_builder.build_sam3_video_model",
+    "hf_repo_id": "facebook/sam3",
+    "checkpoint_filename": "sam3.pt",
+    "sam_source_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+    "hf_revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+    "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e"
+  },
+  "feature_protocol": {
+    "conditioning_frame": 0,
+    "conditioning_frame_is_gate_candidate": false,
+    "anchor_source": "GT-clean frame-0 prompted object pointer",
+    "competitor_pool": "other tracked objects' GT-clean frame-0 anchors",
+    "candidate_definition": "every non-conditioning propagated object-frame for which baseline SAM executes its memory encoder",
+    "pointer_valid_definition": "object_score_logit > 0",
+    "invalid_pointer_semantics": "SAM replaces obj_ptr with learned no_obj_ptr; relational identity features are undefined and must be masked",
+    "retain_invalid_candidate_rows": true,
+    "use_invalid_relational_values": false,
+    "missing_identity_fallback_for_future_gate": "OPEN_NOT_DECIDED_BY_EXP022",
+    "identity_margin": "self_anchor_cos - max_tracked_competitor_cos",
+    "cosine_precision": "FP32_AUTOCAST_DISABLED_TF32_DISABLED_HIGHEST_MATMUL",
+    "descriptive_abs_margin_eps": [
+      0.01,
+      0.02,
+      0.05
+    ]
+  },
+  "statistics": {
+    "scientific_role": "DEVELOPMENT_ONLY_SIGNAL_FEASIBILITY",
+    "primary_unit_for_future_inference": "video",
+    "p_values_from_EXP022": false,
+    "report_valid_pointer_fraction": true,
+    "report_valid_only_relational_distributions": true,
+    "report_object_count_dependence": true
+  }
+}
