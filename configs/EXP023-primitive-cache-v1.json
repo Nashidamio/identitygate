@@ -1,6 +1,6 @@
 {
   "experiment": "EXP023",
-  "status": "PLANNED_SANITY",
+  "status": "SANITY_VERIFIED_FULL_PENDING",
   "purpose": "Cache definition-independent SAM3 CORE primitive signals and GT outcome primitives on the frozen development-exposed TRAIN multi-object cohort.",
   "scope": {
     "manifest": "experiments/EXP021_relational_scope.json",
@@ -9,7 +9,10 @@
     "expected_videos": 18,
     "sanity_video": "7744dc51",
     "dev_videos_touched": 0,
-    "test_videos_touched": 0
+    "test_videos_touched": 0,
+    "expected_candidate_rows": 13524,
+    "expected_anchor_pointer_rows": 91,
+    "full_output_root": "experiments/EXP023_train18_cache"
   },
   "substrate": {
     "model_family": "SAM 3",
@@ -33,8 +36,28 @@
     "anchor_area_source": "frame0_GT_mask",
     "previous_mask_for_temporal_primitive": "previous tracker video-resolution binary mask; frame0 GT-prompt mask for frame1",
     "centroid_reference_for_final_feature7": "OPEN_NOT_DEFINED_BY_PLAN",
-    "final_clean_state_features_deferred": [4, 7, 8, 9, 11],
+    "final_clean_state_features_deferred": [
+      4,
+      7,
+      8,
+      9,
+      11
+    ],
     "raw_pointer_dtype_on_disk": "float32",
     "cosine_precision": "FP32_AUTOCAST_DISABLED_TF32_DISABLED_HIGHEST_MATMUL"
+  },
+  "signal_schema": {
+    "path": "docs/SIGNAL_SCHEMA-v1.md",
+    "feature1": "VERIFIED_IOU_HEAD_SCORE",
+    "feature2": "VERIFIED_OBJECT_PRESENCE_LOGIT",
+    "feature3": "VERIFIED",
+    "feature4": "DEFERRED_CLEAN_STATE",
+    "feature5": "VERIFIED",
+    "feature6": "VERIFIED_PRIMITIVE",
+    "feature7": "OPEN_FINAL_DERIVATION",
+    "feature8": "DEFERRED_CLEAN_STATE",
+    "feature9": "DEFERRED_CLEAN_STATE",
+    "feature10": "VERIFIED_FRAME0_ANCHOR",
+    "feature11": "DEFERRED_CLEAN_STATE"
   }
 }
