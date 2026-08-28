@@ -1,0 +1,40 @@
+{
+  "experiment": "EXP023",
+  "status": "PLANNED_SANITY",
+  "purpose": "Cache definition-independent SAM3 CORE primitive signals and GT outcome primitives on the frozen development-exposed TRAIN multi-object cohort.",
+  "scope": {
+    "manifest": "experiments/EXP021_relational_scope.json",
+    "manifest_sha256": "e528ab0b422f57fee371425199f56193c2b54ca103836ae6cf3f364cd8f5e2b2",
+    "split": "TRAIN",
+    "expected_videos": 18,
+    "sanity_video": "7744dc51",
+    "dev_videos_touched": 0,
+    "test_videos_touched": 0
+  },
+  "substrate": {
+    "model_family": "SAM 3",
+    "mode": "VOS/PVS",
+    "sam_source_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+    "hf_repo_id": "facebook/sam3",
+    "checkpoint_filename": "sam3.pt",
+    "hf_revision": "3c879f39826c281e95690f02c7821c4de09afae7",
+    "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e"
+  },
+  "mask_protocol": {
+    "binary_prediction": "video_resolution_mask_logit > 0",
+    "resize_after_propagation": false,
+    "target_iou": "intersection(pred,target_gt)/union(pred,target_gt)",
+    "max_other_iou": "maximum intersection(pred,other_gt)/union(pred,other_gt) across other frame0 object IDs"
+  },
+  "primitive_protocol": {
+    "feature1_source": "current_out.iou_score",
+    "feature2_source": "current_out.object_score_logits",
+    "pointer_valid": "object_score_logit > 0",
+    "anchor_area_source": "frame0_GT_mask",
+    "previous_mask_for_temporal_primitive": "previous tracker video-resolution binary mask; frame0 GT-prompt mask for frame1",
+    "centroid_reference_for_final_feature7": "OPEN_NOT_DEFINED_BY_PLAN",
+    "final_clean_state_features_deferred": [4, 7, 8, 9, 11],
+    "raw_pointer_dtype_on_disk": "float32",
+    "cosine_precision": "FP32_AUTOCAST_DISABLED_TF32_DISABLED_HIGHEST_MATMUL"
+  }
+}
