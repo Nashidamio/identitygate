@@ -59,5 +59,12 @@
     "feature9": "DEFERRED_CLEAN_STATE",
     "feature10": "VERIFIED_FRAME0_ANCHOR",
     "feature11": "DEFERRED_CLEAN_STATE"
+  },
+  "production": {
+    "wrapper": "scripts/exp023_train18_full.py",
+    "extractor": "scripts/exp023_train18_primitive_cache.py",
+    "extractor_sha256": "e3f78478171083eab8fc5955b711be39337aa2838da7a05bb6c67771a76c536b",
+    "overwrite_existing_full_output": false,
+    "per_video_exp022_exact_crosscheck": true
   }
 }
