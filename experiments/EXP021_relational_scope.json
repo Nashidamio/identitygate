@@ -1,0 +1,377 @@
+{
+  "experiment": "EXP021",
+  "status": "SCOPE_ONLY_NO_MODEL_RUN",
+  "protocol": "DEVELOPMENT_EXPOSED_ONLY_NOT_FINAL_SPLIT",
+  "source_manifest": "experiments/EXP017_split_manifest.json",
+  "important_note": "EXP017 is superseded as the final thesis split; TRAIN+DEV are used here only because these videos were already exposed during development. TEST is excluded.",
+  "eligible_rule": "n_frame0_objects >= 2",
+  "test_videos_touched": 0,
+  "n_exposed_videos": 140,
+  "n_eligible_videos": 26,
+  "eligible_videos": [
+    {
+      "split": "TRAIN",
+      "video": "0442a954",
+      "n_frames": 136,
+      "n_frame0_objects": 2,
+      "frame0_object_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "0f7r7f3f",
+      "n_frames": 356,
+      "n_frame0_objects": 2,
+      "frame0_object_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "181ec185",
+      "n_frames": 120,
+      "n_frame0_objects": 9,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "3142014e",
+      "n_frames": 120,
+      "n_frame0_objects": 2,
+      "frame0_object_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "5a064706",
+      "n_frames": 115,
+      "n_frame0_objects": 6,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "5hcafebs",
+      "n_frames": 190,
+      "n_frame0_objects": 10,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "6bbyqk3u",
+      "n_frames": 310,
+      "n_frame0_objects": 2,
+      "frame0_object_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "7744dc51",
+      "n_frames": 102,
+      "n_frame0_objects": 7,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "82a3db34",
+      "n_frames": 150,
+      "n_frame0_objects": 4,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "89b671bb",
+      "n_frames": 114,
+      "n_frame0_objects": 5,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "9e85179b",
+      "n_frames": 210,
+      "n_frame0_objects": 5,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "emd2bu78",
+      "n_frames": 107,
+      "n_frame0_objects": 2,
+      "frame0_object_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "fc0qnjw2",
+      "n_frames": 143,
+      "n_frame0_objects": 3,
+      "frame0_object_ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "l1kmuosm",
+      "n_frames": 119,
+      "n_frame0_objects": 3,
+      "frame0_object_ids": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "qb8rh6ap",
+      "n_frames": 231,
+      "n_frame0_objects": 2,
+      "frame0_object_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "sfbg4630",
+      "n_frames": 136,
+      "n_frame0_objects": 20,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "vjl6snjk",
+      "n_frames": 107,
+      "n_frame0_objects": 5,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "split": "TRAIN",
+      "video": "ydnmsfmq",
+      "n_frames": 225,
+      "n_frame0_objects": 2,
+      "frame0_object_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "split": "DEV",
+      "video": "03e5f069",
+      "n_frames": 145,
+      "n_frame0_objects": 2,
+      "frame0_object_ids": [
+        1,
+        2
+      ]
+    },
+    {
+      "split": "DEV",
+      "video": "14655f54",
+      "n_frames": 180,
+      "n_frame0_objects": 10,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "split": "DEV",
+      "video": "1feae28e",
+      "n_frames": 192,
+      "n_frame0_objects": 7,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "split": "DEV",
+      "video": "5twvf4ju",
+      "n_frames": 104,
+      "n_frame0_objects": 13,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "split": "DEV",
+      "video": "84559bc3",
+      "n_frames": 100,
+      "n_frame0_objects": 4,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "split": "DEV",
+      "video": "e65ntk3s",
+      "n_frames": 121,
+      "n_frame0_objects": 10,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "split": "DEV",
+      "video": "r5frlifm",
+      "n_frames": 123,
+      "n_frame0_objects": 15,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "split": "DEV",
+      "video": "sxmx6adc",
+      "n_frames": 110,
+      "n_frame0_objects": 4,
+      "frame0_object_ids": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ]
+}
