@@ -106,3 +106,29 @@ Fields per entry:
 - Status: COMPLETED / LOCKED.
 - Interpretation: Dataset selection and held-out cohort construction are complete. Future model results may not change these splits.
 
+
+
+## SUBSTRATE CORRECTION — AMENDMENT A1 — 2026-08-28
+
+Status: **LOCKED / USER-APPROVED**
+
+Effective for all model-based experiments after A1:
+
+- Core model: SAM 3 VOS/PVS.
+- Builder: `build_sam3_video_model()`.
+- Upstream checkpoint identity: `facebook/sam3/sam3.pt`.
+- True SAM 3.1 Object Multiplex is a transfer/extension substrate only.
+- SAM 3.1 checkpoint identity:
+  `facebook/sam3.1/sam3.1_multiplex.pt`.
+
+Historical registry entries that describe
+`build_sam3_video_model()` runs as “SAM 3.1” are retained for provenance but
+their model-version label is **SUPERSEDED by Amendment A1**.
+
+In particular:
+- EXP016 is a SAM 3 VOS B0 headroom experiment.
+- EXP018 is SAM 3 VOS signal-path engineering evidence.
+- EXP020 is SAM 3 VOS relational-pointer feasibility evidence.
+- GT-only experiments are unaffected.
+
+No historical metric is changed by this correction.

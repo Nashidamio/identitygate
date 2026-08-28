@@ -1,0 +1,29 @@
+{
+  "config_id": "SUBSTRATE-v1",
+  "status": "LOCKED",
+  "locked_date": "2026-08-28",
+  "core": {
+    "model_family": "SAM 3",
+    "task_mode": "VOS/PVS",
+    "builder": "sam3.model_builder.build_sam3_video_model",
+    "load_from_HF": true,
+    "hf_repo_id": "facebook/sam3",
+    "checkpoint_filename": "sam3.pt",
+    "sam_source_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+    "frozen_backbone": true,
+    "sam_finetuning": false
+  },
+  "transfer": {
+    "model_family": "SAM 3.1",
+    "mode": "Object Multiplex",
+    "hf_repo_id": "facebook/sam3.1",
+    "checkpoint_filename": "sam3.1_multiplex.pt",
+    "role": "PREDECLARED_TRANSFER_OR_FEASIBILITY_ONLY",
+    "core_statistical_claim": false
+  },
+  "hardware": {
+    "gpu": "NVIDIA GeForce RTX 4080 SUPER",
+    "vram_gb": 16
+  },
+  "research_question_changed": false
+}

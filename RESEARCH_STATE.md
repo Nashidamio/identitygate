@@ -1,6 +1,99 @@
 # RESEARCH_STATE.md
 
-**Project:** IdentityGate — Supervised, Identity-Verified Memory Write Admission for SAM 3.1 Video Tracking
+**Project:** IdentityGate — Supervised, Identity-Verified Memory Write Admission for SAM 3 Video Tracking with SAM 3.1 Transfer Validation
+
+## AMENDMENT A1 — SAM 3 CORE / SAM 3.1 TRANSFER — 2026-08-28
+
+### Status
+
+**LOCKED / USER-APPROVED**
+
+Approval phrase:
+
+    APPROVE SAM3 CORE + SAM3.1 TRANSFER
+
+### Verified implementation fact
+
+The previously used non-multiplex VOS/PVS API
+
+    from sam3.model_builder import build_sam3_video_model
+    build_sam3_video_model()
+
+does not load the released SAM 3.1 multiplex checkpoint by default.
+
+At installed SAM source commit:
+
+    8f0b7f4d4e7eda2ed606ebde6702c93359ad01da
+
+`build_sam3_video_model()` defaults to the SAM 3 Hugging Face checkpoint:
+
+    repo_id = facebook/sam3
+    checkpoint = sam3.pt
+
+The released SAM 3.1 video path is Object Multiplex and uses:
+
+    repo_id = facebook/sam3.1
+    checkpoint = sam3.1_multiplex.pt
+
+### Hardware constraint
+
+The available experimental GPU is an RTX 4080 SUPER with 16 GB VRAM.
+
+Prior verified engineering measurements showed that the true SAM 3.1 Object
+Multiplex path exceeded the 16 GB core experimental budget, whereas the
+non-multiplex VOS/PVS path was operational within the available GPU budget.
+
+### Locked substrate decision
+
+CORE THESIS SUBSTRATE:
+- frozen SAM 3
+- non-multiplex VOS/PVS
+- `build_sam3_video_model()`
+- `facebook/sam3/sam3.pt`
+- no SAM fine-tuning, LoRA, detector replacement, or external re-ID model
+
+TRANSFER / EXTENSION:
+- true SAM 3.1 Object Multiplex
+- `facebook/sam3.1/sam3.1_multiplex.pt`
+- used only for a predeclared transfer/feasibility validation if hardware
+  permits
+- does not carry the core statistical claim
+
+### Research question
+
+UNCHANGED / LOCKED:
+
+“What information should a memory-write gate use — quality signals, temporal
+signals, or identity signals?”
+
+The IdentityGate intervention, GT-derived labels, matched-write-rate design,
+risk-control work, whole-scene protocol, and relational-identity investigation
+remain unchanged.
+
+### Historical-result reclassification
+
+The following classes of result are retained, not discarded:
+
+- GT-only experiments (including EXP019 and EXP021): unaffected.
+- EXP018 and EXP020 VOS engineering probes: valid SAM 3 VOS evidence.
+- Earlier VOS/PVS B0 measurements using `build_sam3_video_model()`: valid SAM 3
+  measurements; any prior “SAM 3.1” wording is superseded terminology.
+- prior true SAM 3.1 Object Multiplex memory/runtime measurements: retained as
+  hardware-feasibility evidence.
+
+Historical files under `docs/audit/` are provenance artifacts and may contain
+the superseded pre-A1 terminology. They are not silently rewritten.
+
+### Thesis-positioning consequence
+
+The model minor version is not the novelty claim.
+
+The primary contribution remains the controlled study of supervised memory
+WRITE admission in a frozen SAM-generation video tracker, including quality,
+temporal, self-identity, and proposed tracked-competitor identity evidence,
+with matched write rates and risk-controlled admission.
+
+
 **Last updated:** 2026-08-18 (end of Week 1 / start of Week 2)
 **Source of truth:** v4 FINAL plan + Review (fixes F1-F6, N1, N3 adopted; N2 conditional on audit)
 
