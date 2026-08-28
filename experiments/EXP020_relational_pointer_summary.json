@@ -1,0 +1,22 @@
+{
+  "experiment": "EXP020",
+  "status": "TECHNICAL_FEASIBILITY_PASS_SCIENTIFIC_UTILITY_PENDING",
+  "purpose": "Verify propagation-time tracked-competitor SAM 3.1 object-pointer features for proposed relational IdentityGate",
+  "identitygate_commit_at_execution": "527b8d810037fa9f988ada2144949e3e3ac17096",
+  "sam3_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "dataset": "MOSEv2 TRAIN_ONLY_PREVIOUSLY_EXPOSED",
+  "video": "7744dc51",
+  "video_frames": 102,
+  "object_ids": [1, 2, 3, 4],
+  "hidden_dim": 256,
+  "cosine_precision": "FP32_AUTOCAST_DISABLED",
+  "packed_per_object_max_abs_diff": 0.0,
+  "frame0_state_vs_prompt_anchor_max_abs_diff": 0.0,
+  "track_step_calls": 7,
+  "propagation_pointer_calls": 3,
+  "yield_count": 4,
+  "frame0_anchor_offdiagonal_cosine_observed_range": [0.9840, 0.9988],
+  "interpretation": "Propagation-time relational pointers are technically accessible with exact object-ID mapping. Very high inter-object anchor cosine and repeated negative margins on this single TRAIN video require a development-only degeneracy census before relational B3 is frozen.",
+  "scientific_claim": "NONE_FROM_SINGLE_VIDEO",
+  "seed": "N/A_DETERMINISTIC"
+}
