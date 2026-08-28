@@ -1,0 +1,5 @@
+split,video,object_id_i,object_id_j,cosine_fp32
+TRAIN,0f7r7f3f,1,1,1.0
+TRAIN,0f7r7f3f,1,2,0.9370428919792175
+TRAIN,0f7r7f3f,2,1,0.9370428919792175
+TRAIN,0f7r7f3f,2,2,1.0000001192092896

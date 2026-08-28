@@ -1,0 +1,61 @@
+{
+  "experiment": "EXP022-FULL",
+  "status": "COMPLETED",
+  "identitygate_commit_at_execution": "035185d541d81d7e66992d302689b3196e6e5faa",
+  "sam3_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "script_sha256": "6df00a5d16629c9495758371384744e961bfad721ccdb29d0bbc634393cfcd5b",
+  "config_sha256": "9feee41b85e574ec54e1493eec2e42f54b550a9fb5130124e299df038bc506ea",
+  "scope_sha256": "e528ab0b422f57fee371425199f56193c2b54ca103836ae6cf3f364cd8f5e2b2",
+  "substrate_sha256": "cf48aff216a544409823421993f54b42c0f2b0e9bfd8c6772b21901ba32ddb31",
+  "checkpoint_path": "/home/user2/.cache/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt",
+  "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+  "split": "TRAIN",
+  "video": "0442a954",
+  "video_frames": 136,
+  "n_objects": 2,
+  "object_ids": [
+    1,
+    2
+  ],
+  "test_videos_touched": 0,
+  "conditioning_frame_is_candidate": false,
+  "n_candidate_rows": 270,
+  "n_anchor_rows": 4,
+  "valid_pointer_rows": 250,
+  "invalid_pointer_rows": 20,
+  "valid_pointer_fraction": 0.9259259259259259,
+  "pointer_valid_definition": "object_score_logit > 0",
+  "invalid_relational_values_masked": true,
+  "max_invalid_pointer_no_obj_diff": 0.0,
+  "anchor_offdiag": {
+    "n": 2,
+    "min": 0.9826955795288086,
+    "max": 0.9826955795288086,
+    "mean": 0.9826955795288086
+  },
+  "valid_self_anchor_cos": {
+    "n": 250,
+    "min": 0.16227638721466064,
+    "max": 0.41553187370300293,
+    "mean": 0.2654967397451401
+  },
+  "valid_competitor_cos": {
+    "n": 250,
+    "min": 0.17046529054641724,
+    "max": 0.41077136993408203,
+    "mean": 0.2656605671644211
+  },
+  "valid_identity_margin": {
+    "n": 250,
+    "min": -0.04688774049282074,
+    "max": 0.04372096061706543,
+    "mean": -0.00016382741928100587
+  },
+  "negative_valid_margin_rows": 121,
+  "negative_valid_margin_fraction": 0.484,
+  "peak_memory_allocated_gb": 6.417898654937744,
+  "peak_memory_reserved_gb": 6.533203125,
+  "runtime_sec": 19.910795211791992,
+  "features_sha256": "c483f56cf268bf3908c83815f03f2cd67d581096334af449f101408ce25306f9",
+  "anchors_sha256": "63c481ed5e231d9d2c80261cb95c8b862d3a87a1cabadade90c3bfde7ef508a7"
+}

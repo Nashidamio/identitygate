@@ -1,0 +1,64 @@
+{
+  "experiment": "EXP022-FULL",
+  "status": "COMPLETED",
+  "identitygate_commit_at_execution": "035185d541d81d7e66992d302689b3196e6e5faa",
+  "sam3_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "script_sha256": "6df00a5d16629c9495758371384744e961bfad721ccdb29d0bbc634393cfcd5b",
+  "config_sha256": "9feee41b85e574ec54e1493eec2e42f54b550a9fb5130124e299df038bc506ea",
+  "scope_sha256": "e528ab0b422f57fee371425199f56193c2b54ca103836ae6cf3f364cd8f5e2b2",
+  "substrate_sha256": "cf48aff216a544409823421993f54b42c0f2b0e9bfd8c6772b21901ba32ddb31",
+  "checkpoint_path": "/home/user2/.cache/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt",
+  "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+  "split": "TRAIN",
+  "video": "vjl6snjk",
+  "video_frames": 107,
+  "n_objects": 5,
+  "object_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "test_videos_touched": 0,
+  "conditioning_frame_is_candidate": false,
+  "n_candidate_rows": 530,
+  "n_anchor_rows": 25,
+  "valid_pointer_rows": 478,
+  "invalid_pointer_rows": 52,
+  "valid_pointer_fraction": 0.9018867924528302,
+  "pointer_valid_definition": "object_score_logit > 0",
+  "invalid_relational_values_masked": true,
+  "max_invalid_pointer_no_obj_diff": 0.0,
+  "anchor_offdiag": {
+    "n": 20,
+    "min": 0.952872097492218,
+    "max": 0.9967399835586548,
+    "mean": 0.9783642053604126
+  },
+  "valid_self_anchor_cos": {
+    "n": 478,
+    "min": 0.19726179540157318,
+    "max": 0.5402686595916748,
+    "mean": 0.35132542654684895
+  },
+  "valid_competitor_cos": {
+    "n": 478,
+    "min": 0.2033386081457138,
+    "max": 0.5274316072463989,
+    "mean": 0.3722661793481356
+  },
+  "valid_identity_margin": {
+    "n": 478,
+    "min": -0.06792819499969482,
+    "max": 0.04778546094894409,
+    "mean": -0.020940752801286624
+  },
+  "negative_valid_margin_rows": 381,
+  "negative_valid_margin_fraction": 0.797071129707113,
+  "peak_memory_allocated_gb": 6.960606098175049,
+  "peak_memory_reserved_gb": 7.3046875,
+  "runtime_sec": 23.365189790725708,
+  "features_sha256": "164cf9e04d80d2cf81092a9762bb59f56698cb579909aeb03829169317c0b87b",
+  "anchors_sha256": "11024e2087d33dbdae4132e3c9a1f1f1014070034fb9634b9375cbca12462b9a"
+}

@@ -1,0 +1,61 @@
+{
+  "experiment": "EXP022-FULL",
+  "status": "COMPLETED",
+  "identitygate_commit_at_execution": "035185d541d81d7e66992d302689b3196e6e5faa",
+  "sam3_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "script_sha256": "6df00a5d16629c9495758371384744e961bfad721ccdb29d0bbc634393cfcd5b",
+  "config_sha256": "9feee41b85e574ec54e1493eec2e42f54b550a9fb5130124e299df038bc506ea",
+  "scope_sha256": "e528ab0b422f57fee371425199f56193c2b54ca103836ae6cf3f364cd8f5e2b2",
+  "substrate_sha256": "cf48aff216a544409823421993f54b42c0f2b0e9bfd8c6772b21901ba32ddb31",
+  "checkpoint_path": "/home/user2/.cache/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt",
+  "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+  "split": "TRAIN",
+  "video": "3142014e",
+  "video_frames": 120,
+  "n_objects": 2,
+  "object_ids": [
+    1,
+    2
+  ],
+  "test_videos_touched": 0,
+  "conditioning_frame_is_candidate": false,
+  "n_candidate_rows": 238,
+  "n_anchor_rows": 4,
+  "valid_pointer_rows": 175,
+  "invalid_pointer_rows": 63,
+  "valid_pointer_fraction": 0.7352941176470589,
+  "pointer_valid_definition": "object_score_logit > 0",
+  "invalid_relational_values_masked": true,
+  "max_invalid_pointer_no_obj_diff": 0.0,
+  "anchor_offdiag": {
+    "n": 2,
+    "min": 0.9747897982597351,
+    "max": 0.9747897982597351,
+    "mean": 0.9747897982597351
+  },
+  "valid_self_anchor_cos": {
+    "n": 175,
+    "min": 0.16051822900772095,
+    "max": 0.496523380279541,
+    "mean": 0.3100153921331678
+  },
+  "valid_competitor_cos": {
+    "n": 175,
+    "min": 0.17918573319911957,
+    "max": 0.5344192981719971,
+    "mean": 0.27430429926940375
+  },
+  "valid_identity_margin": {
+    "n": 175,
+    "min": -0.1496172547340393,
+    "max": 0.1324693262577057,
+    "mean": 0.03571109286376408
+  },
+  "negative_valid_margin_rows": 56,
+  "negative_valid_margin_fraction": 0.32,
+  "peak_memory_allocated_gb": 6.2185540199279785,
+  "peak_memory_reserved_gb": 6.314453125,
+  "runtime_sec": 18.2683846950531,
+  "features_sha256": "b3acdfb72faecdd01e3607b1ed22494c813a8ee5c905bfa9e16aaba3d846d714",
+  "anchors_sha256": "3cbfa117d189f83ed547b75f4a98da4f322320cb301228b3bdac181616f4f3d3"
+}

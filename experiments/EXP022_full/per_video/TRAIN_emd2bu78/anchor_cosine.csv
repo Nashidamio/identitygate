@@ -1,0 +1,5 @@
+split,video,object_id_i,object_id_j,cosine_fp32
+TRAIN,emd2bu78,1,1,1.0000001192092896
+TRAIN,emd2bu78,1,2,0.9879851341247559
+TRAIN,emd2bu78,2,1,0.9879851341247559
+TRAIN,emd2bu78,2,2,1.0
