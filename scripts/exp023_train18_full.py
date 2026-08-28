@@ -168,7 +168,7 @@ def write_index(train):
         assert summary["video"] == video
         assert summary["split"] == "TRAIN"
         assert summary["status"] == (
-            "SANITY_PASS"
+            "FULL_VIDEO_PASS"
         )
 
         assert (
@@ -313,6 +313,14 @@ def main():
     assert base.sha256_file(
         EXTRACTOR_PATH
     ) == EXPECTED_EXTRACTOR_SHA256
+
+    wrapper_sha256 = base.sha256_file(
+        Path(__file__).resolve()
+    )
+
+    assert wrapper_sha256 == (
+        cfg["production"]["wrapper_sha256"]
+    )
 
     train = sorted(
         train,
@@ -474,6 +482,42 @@ def main():
             row,
             checkpoint,
             outdir,
+        )
+
+        summary_path = (
+            outdir / "summary.json"
+        )
+
+        summary = json.load(
+            open(summary_path)
+        )
+
+        assert summary["status"] == (
+            "SANITY_PASS"
+        )
+
+        summary[
+            "extractor_status_before_production_relabel"
+        ] = "SANITY_PASS"
+
+        summary["status"] = (
+            "FULL_VIDEO_PASS"
+        )
+
+        summary["execution_role"] = (
+            "EXP023_FULL_PER_VIDEO"
+        )
+
+        summary[
+            "production_wrapper_sha256"
+        ] = wrapper_sha256
+
+        summary_path.write_text(
+            json.dumps(
+                summary,
+                indent=2,
+            )
+            + "\n"
         )
 
     merged_path, merged_rows = (
