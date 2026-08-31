@@ -1,0 +1,31 @@
+{
+  "dev_touched": 0,
+  "max_self_anchor_recompute_abs_diff": 2.682209014892578e-07,
+  "overall_counts": {
+    "drift_excluded": 6269,
+    "drift_labeled": 7255,
+    "drift_negative": 5488,
+    "drift_positive": 1767,
+    "pointer_valid": 7951,
+    "pv_drift_labeled": 6958,
+    "pv_drift_negative": 5488,
+    "pv_drift_positive": 1470,
+    "pv_theft_labeled": 7916,
+    "pv_theft_negative": 7773,
+    "pv_theft_positive": 143,
+    "rows": 13524,
+    "theft_excluded": 35,
+    "theft_labeled": 13489,
+    "theft_negative": 13346,
+    "theft_positive": 143
+  },
+  "pointer_valid_fraction": 0.5879177758059746,
+  "pointer_valid_rows": 7951,
+  "positive_video_counts": {
+    "drift": 18,
+    "theft": 5
+  },
+  "rows": 13524,
+  "test_touched": 0,
+  "videos": 18
+}
