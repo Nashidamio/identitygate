@@ -1,0 +1,62 @@
+{
+  "experiment": "EXP024",
+  "status": "TRAIN_ONLY_INCREMENTAL_UTILITY_PROBE",
+  "input_csv": "experiments/EXP023_train18_cache/primitives.csv",
+  "per_video_root": "experiments/EXP023_train18_cache/per_video",
+  "expected_input_sha256": "c13fddfcc7fe422893e5cfed86100d9a8407abb0421c6296f5ed168a34e92feb",
+  "expected_rows": 13524,
+  "expected_videos": 18,
+  "allowed_split": "TRAIN",
+  "pointer_valid_is_feature": false,
+  "analysis_population": "pointer_valid_conditional_for_all_B2_B3S_B3R_comparisons",
+  "identity_numeric_rule": {
+    "dtype": "float32",
+    "autocast": false,
+    "cuda_tf32": false,
+    "matmul_precision": "highest"
+  },
+  "feature_families": {
+    "B2_core": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev"
+    ],
+    "B3_S": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev",
+      "ptr_sim_anchor_fp32"
+    ],
+    "B3_R": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev",
+      "ptr_sim_anchor_fp32",
+      "max_comp_anchor_cos_fp32"
+    ]
+  },
+  "identity_margin_role": "DIAGNOSTIC_ONLY_NOT_AN_INDEPENDENT_FEATURE",
+  "labels": {
+    "setting": "S2_DEVELOPMENT_UTILITY_ONLY_NOT_FINAL",
+    "drift": {
+      "unsafe_if_target_iou_lt": 0.3,
+      "safe_if_target_iou_gt": 0.7,
+      "otherwise": "EXCLUDE"
+    },
+    "theft": {
+      "unsafe_if_max_other_iou_gt": 0.5,
+      "safe_if_max_other_iou_lt": 0.3,
+      "otherwise": "EXCLUDE"
+    }
+  },
+  "deferred_features": [4, 8, 9, 11],
+  "open_features_excluded": [7],
+  "dev_touched": 0,
+  "test_touched": 0
+}
