@@ -1,0 +1,49 @@
+{
+  "experiment": "EXP024",
+  "purpose": "Paired video-cluster bootstrap inference for frozen TRAIN-only OOF utility predictions",
+  "input_csv": "experiments/EXP024_model_utility/oof_predictions.csv",
+  "expected_input_sha256": "b622a3e6838ba574ade8394c007585be253abab6cc8c88fee35155361a345bb2",
+  "expected_rows": 14871,
+  "expected_videos": 18,
+  "replicates": 5000,
+  "sanity_replicates": 100,
+  "seed": 24025,
+  "confidence": 0.95,
+  "cluster_unit": "video",
+  "method": "paired nonparametric cluster bootstrap; sample videos with replacement and retain all rows from each sampled cluster",
+  "comparisons": [
+    ["B3_S", "B2_core"],
+    ["B3_R", "B3_S"],
+    ["B3_R", "B2_core"]
+  ],
+  "score_columns": {
+    "B2_core": "B2_core_p_unsafe",
+    "B3_S": "B3_S_p_unsafe",
+    "B3_R": "B3_R_p_unsafe"
+  },
+  "expected_endpoints": {
+    "drift": {
+      "n": 6958,
+      "positive": 1470,
+      "positive_videos": 16,
+      "point_metrics": {
+        "B2_core": {"average_precision": 0.6983904741096246, "roc_auc": 0.8185834027488547},
+        "B3_S": {"average_precision": 0.6571114519370828, "roc_auc": 0.8123831092203645},
+        "B3_R": {"average_precision": 0.598972038699594, "roc_auc": 0.8072995378909581}
+      }
+    },
+    "theft": {
+      "n": 7913,
+      "positive": 143,
+      "positive_videos": 5,
+      "point_metrics": {
+        "B2_core": {"average_precision": 0.022940766136644742, "roc_auc": 0.6152775152775153},
+        "B3_S": {"average_precision": 0.018746766256690323, "roc_auc": 0.5475470475470475},
+        "B3_R": {"average_precision": 0.018991399493060036, "roc_auc": 0.5466326466326467}
+      }
+    }
+  },
+  "interpretation": "Percentile 95 percent CI of paired model differences. Utility inference only, not closed-loop tracking evidence.",
+  "dev_touched": 0,
+  "test_touched": 0
+}
