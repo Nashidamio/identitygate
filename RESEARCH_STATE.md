@@ -609,3 +609,58 @@ Therefore:
 
 No split may be rerolled or changed in response to future model results.
 
+## CURRENT CHECKPOINT - EXP023 TRAIN18 COMPLETE - 2026-08-31
+
+This checkpoint supersedes earlier `NEXT EXACT ACTION` text where it conflicts.
+Historical checkpoints above are retained unchanged for provenance.
+
+### VERIFIED
+
+- Core substrate remains frozen SAM 3 VOS/PVS under Amendment A1:
+  `build_sam3_video_model()` with `facebook/sam3/sam3.pt`.
+- EXP023 TRAIN18 production primitive cache completed on the frozen 18-video
+  TRAIN relational-development scope.
+- Production result commit: `801d8ea`.
+- 18 / 18 videos completed.
+- 13,524 primitive data rows were produced.
+- DEV videos touched: 0.
+- TEST videos touched: 0.
+- Merged artifact SHA256:
+  - `primitives.csv`: `c13fddfcc7fe422893e5cfed86100d9a8407abb0421c6296f5ed168a34e92feb`
+  - `index.csv`: `9e73e27506d540aab63dd55e2a07a4b5e7e5c8e18e54b393e0891c4d1fa36db0`
+  - `summary.json`: `145889fc5e26c021e8e083956baa7a1b01333357f137ce3c4da42c33448946ce`
+  - run log: `e3cab3898963f559397da9b7bb35213338273fb05afbe2977ad6fa9b23e56e15`
+- EXP018 through EXP023 are backfilled in `EXPERIMENT_REGISTRY.md`.
+- `docs/RESEARCH_HISTORY.md` is the recovered canonical chronology document.
+
+### OPEN / NOT ESTABLISHED
+
+- EXP001 through EXP012 registry backfill remains OPEN / NON-BLOCKING.
+- Whole-scene final labels remain OPEN pending the independent pixel cross-check
+  and predeclared manual audit.
+- Missing-identity fallback remains OPEN; `pointer_valid` is a validity mask,
+  not silently a predictive feature.
+- Features 4, 8, 9, and 11 remain DEFERRED; Feature 7 final definition remains OPEN.
+- Matched-write-rate denominator remains OPEN.
+- ITR denominator remains OPEN.
+- No IdentityGate model has been trained.
+- B3-S > B2 and B3-R > B3-S are NOT ESTABLISHED.
+- Closed-loop write blocking is NOT YET VERIFIED.
+- Final TEST remains untouched.
+
+### NEXT EXACT ACTION
+
+Run the first TRAIN-only incremental utility analysis preparation for
+B2 vs B3-S vs B3-R using the EXP023 primitive cache.
+
+The analysis must:
+- use dual outcomes: drift (`target_iou < 0.3`) and theft
+  (`max_other_iou > 0.5`);
+- evaluate identity utility first on the valid-pointer conditional subset;
+- keep `pointer_valid` as a validity mask rather than a predictive feature;
+- treat video as the statistical cluster;
+- make no DEV or TEST access;
+- make no claim from identity-margin sign alone.
+
+Before writing the analysis implementation, inspect only the cached schema,
+row count, and aggregate label/validity counts. Do not dump the full CSV.
