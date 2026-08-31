@@ -1,0 +1,114 @@
+{
+  "common_complete_case_rows": 7948,
+  "dev_touched": 0,
+  "feature_families": {
+    "B2_core": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev"
+    ],
+    "B3_R": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev",
+      "ptr_sim_anchor_fp32",
+      "max_comp_anchor_cos_fp32"
+    ],
+    "B3_S": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev",
+      "ptr_sim_anchor_fp32"
+    ]
+  },
+  "input_sha256": "538139f4c029832c0e871b94c94f29f08cefa06ba16f02d556f4fc9e8aa45fe5",
+  "model": {
+    "class_weighting": "training-fold positive weight = n_negative/n_positive",
+    "implementation": "PyTorch CPU float64 LBFGS",
+    "l2": 0.001,
+    "max_iter": 200,
+    "not_final_architecture": true,
+    "seed": 24024,
+    "type": "fixed standardized logistic-regression probe"
+  },
+  "results": {
+    "drift": {
+      "models": {
+        "B2_core": {
+          "average_precision": 0.6983904741096246,
+          "roc_auc": 0.8185834027488547
+        },
+        "B3_R": {
+          "average_precision": 0.598972038699594,
+          "roc_auc": 0.8072995378909581
+        },
+        "B3_S": {
+          "average_precision": 0.6571114519370828,
+          "roc_auc": 0.8123831092203645
+        }
+      },
+      "n": 6958,
+      "negative": 5488,
+      "positive": 1470,
+      "positive_videos": [
+        "0442a954",
+        "0f7r7f3f",
+        "181ec185",
+        "3142014e",
+        "5a064706",
+        "5hcafebs",
+        "6bbyqk3u",
+        "7744dc51",
+        "82a3db34",
+        "89b671bb",
+        "9e85179b",
+        "l1kmuosm",
+        "qb8rh6ap",
+        "sfbg4630",
+        "vjl6snjk",
+        "ydnmsfmq"
+      ]
+    },
+    "theft": {
+      "models": {
+        "B2_core": {
+          "average_precision": 0.022940766136644742,
+          "roc_auc": 0.6152775152775153
+        },
+        "B3_R": {
+          "average_precision": 0.018991399493060036,
+          "roc_auc": 0.5466326466326467
+        },
+        "B3_S": {
+          "average_precision": 0.018746766256690323,
+          "roc_auc": 0.5475470475470475
+        }
+      },
+      "n": 7913,
+      "negative": 7770,
+      "positive": 143,
+      "positive_videos": [
+        "181ec185",
+        "5a064706",
+        "7744dc51",
+        "sfbg4630",
+        "ydnmsfmq"
+      ]
+    }
+  },
+  "scope": "Utility probe only. Not closed-loop tracking improvement.",
+  "status": "TRAIN_ONLY_OOF_DISCRIMINATION_COMPLETE_NOT_INFERENCE",
+  "test_touched": 0,
+  "validation": {
+    "cluster": "video",
+    "no_DEV": true,
+    "no_TEST": true,
+    "scheme": "leave-one-video-out OOF"
+  }
+}
