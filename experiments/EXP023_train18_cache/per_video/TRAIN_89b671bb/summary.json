@@ -1,0 +1,35 @@
+{
+  "experiment": "EXP023",
+  "status": "FULL_VIDEO_PASS",
+  "identitygate_commit_at_execution": "29f6332320acb4ac5c7f3e7ce547292de9667a89",
+  "sam3_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "checkpoint": "/home/user2/.cache/huggingface/hub/models--facebook--sam3/snapshots/3c879f39826c281e95690f02c7821c4de09afae7/sam3.pt",
+  "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+  "split": "TRAIN",
+  "video": "89b671bb",
+  "n_frames": 114,
+  "n_objects": 5,
+  "candidate_rows": 565,
+  "pointer_shape": [
+    565,
+    256
+  ],
+  "anchor_pointer_shape": [
+    5,
+    256
+  ],
+  "dev_videos_touched": 0,
+  "test_videos_touched": 0,
+  "mask_rule": "video_res > 0",
+  "feature7_reference": "OPEN_NOT_DEFINED_BY_PLAN",
+  "exp022_object_score_max_abs_diff": 0.0,
+  "exp022_pointer_valid_all_equal": true,
+  "exp022_valid_anchor_cos_max_abs_diff": 0.0,
+  "peak_memory_allocated_gb": 7.034762382507324,
+  "runtime_sec": 25.270023107528687,
+  "primitives_sha256": "5e67d809f2d026d809c81b4bc4a3e0729d9697d65610ccdbc945bc1fb2d7dd40",
+  "pointers_sha256": "41226be9b8f1128e7ec44620b257801b66fcb58f9088c42909185f7a8c07710e",
+  "extractor_status_before_production_relabel": "SANITY_PASS",
+  "execution_role": "EXP023_FULL_PER_VIDEO",
+  "production_wrapper_sha256": "75d2ab96c5ee8e1d2f8045ebd6f74e009c47d3181cb7683c5c188aeb843858ac"
+}
