@@ -183,7 +183,7 @@ def main():
     out_csv = OUT_DIR / "train18_utility.csv"
 
     with open(out_csv, "w", newline="") as f:
-        wr = csv.DictWriter(f, fieldnames=output_fields)
+        wr = csv.DictWriter(f, fieldnames=output_fields, lineterminator="\n")
         wr.writeheader()
         wr.writerows(enriched)
 
