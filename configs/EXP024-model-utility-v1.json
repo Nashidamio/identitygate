@@ -1,0 +1,76 @@
+{
+  "experiment": "EXP024",
+  "purpose": "TRAIN-only incremental signal utility probe",
+  "status": "PROBE_NOT_FINAL_GATE_ARCHITECTURE",
+  "input_csv": "experiments/EXP024_utility_prepare/train18_utility.csv",
+  "expected_input_sha256": "538139f4c029832c0e871b94c94f29f08cefa06ba16f02d556f4fc9e8aa45fe5",
+  "expected_common_rows": 7948,
+  "expected_videos": 18,
+  "labels": {
+    "drift": "drift_label_s2_probe",
+    "theft": "theft_label_s2_probe"
+  },
+  "expected_label_counts": {
+    "drift": {
+      "labeled": 6958,
+      "positive": 1470,
+      "negative": 5488
+    },
+    "theft": {
+      "labeled": 7913,
+      "positive": 143,
+      "negative": 7770
+    }
+  },
+  "feature_families": {
+    "B2_core": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev"
+    ],
+    "B3_S": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev",
+      "ptr_sim_anchor_fp32"
+    ],
+    "B3_R": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev",
+      "ptr_sim_anchor_fp32",
+      "max_comp_anchor_cos_fp32"
+    ]
+  },
+  "population_rule": "pointer_valid==1 AND all B3_R features finite; gray-zone label rows excluded separately per endpoint",
+  "model": {
+    "type": "fixed standardized logistic-regression probe",
+    "implementation": "PyTorch CPU float64 LBFGS",
+    "class_weighting": "training-fold positive weight = n_negative/n_positive",
+    "l2": 0.001,
+    "max_iter": 200,
+    "seed": 24024,
+    "not_final_architecture": true
+  },
+  "validation": {
+    "scheme": "leave-one-video-out OOF",
+    "cluster": "video",
+    "no_DEV": true,
+    "no_TEST": true
+  },
+  "metrics": [
+    "average_precision",
+    "roc_auc"
+  ],
+  "sanity_holdout_videos": [
+    "181ec185",
+    "5a064706"
+  ],
+  "interpretation": "Discrimination only. Statistical inference and closed-loop tracking evidence are separate later stages."
+}
