@@ -288,3 +288,48 @@ Artifacts:
 
 Next exact scientific action:
 - Closed-loop memory-write BLOCK mechanism sanity on TRAIN-exposed data, followed by B0-vs-B2 occlusion recovery evaluation.
+
+## EXP025 - Closed-loop write-block mechanism sanity
+
+Status: COMPLETE / MECHANISM VERIFIED / NOT FINAL GATE
+
+Producing commits:
+- ce4c664 EXP025: freeze closed-loop write-block sanity
+- 79b462d EXP025: correct closed-loop propagation count
+
+Scope:
+- MOSEv2 TRAIN-exposed video 0442a954
+- Frames 0..59
+- Objects: 1, 2
+- Deterministic whole-frame non-conditioning-memory eviction on frames 1..30
+- DEV touched: 0
+- TEST touched: 0
+
+Verified mechanism:
+- 30/30 blocked frames were present in global and per-object memory before eviction.
+- 30/30 were absent after eviction.
+- frames_already_tracked remained present.
+- First intervention-frame prediction was identical between B0 and BLOCK.
+- First downstream mask difference occurred at frame 2.
+- Total downstream B0-vs-BLOCK XOR pixels: 46177.
+- Therefore memory-write intervention changes subsequent closed-loop SAM3 tracking behaviour.
+
+Descriptive tracking result:
+- B0 mean target IoU on visible rows: 0.8243956364947009
+- deterministic BLOCK mean target IoU: 0.8232898540701283
+- delta BLOCK minus B0: -0.001105782424572599
+- This is NOT evidence of tracking improvement.
+
+Resource:
+- B0 peak VRAM: 6.266373634338379 GB
+- BLOCK peak VRAM: 6.202365875244141 GB
+
+Core artifact hashes:
+- summary.json: 4661337126c15fa919ecb4edbd8dd58ec6a034cd6d5e5153bb58261d733bef02
+- frame_metrics.csv: 2c0d2fc57493758233565684f9f5602e36f2dac4dfa948fcce47716391fbf34d
+- write_decisions.csv: d5f2e963f76c02f2b9c9dfeb4c74adbcad8d63a709abf1ee1ac4bf638e1b09e1
+- run log: a7eb388d38128bbd9b0093b3c2acb817ce7917ccbb896e8bcafeb0c09e0a33f4
+
+Claim boundary:
+- Whole-frame deterministic blocking is an engineering mechanism sanity only.
+- It is not the final per-object IdentityGate and is not a POR result.

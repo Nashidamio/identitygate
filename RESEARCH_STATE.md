@@ -704,3 +704,27 @@ VERIFIED DEFECT:
 
 STATUS:
 - Engineering correction only; scientific mechanism result remains OPEN.
+
+## 2026-09-10 - EXP025 closed-loop mechanism verified
+
+EXECUTED / VERIFIED:
+- Frozen SAM3 closed-loop memory intervention successfully executed.
+- A just-yielded non-conditioning memory frame can be physically removed before the next inference step.
+- Intervention-frame B0/BLOCK predictions were identical.
+- Subsequent tracking masks diverged beginning at frame 2.
+- Closed-loop write-block mechanism is therefore demonstrated.
+- Peak VRAM remained below 6.27 GB.
+- DEV touched: 0.
+- TEST touched: 0.
+
+OBSERVED:
+- Deterministic blocking of every frame 1..30 slightly worsened descriptive mean target IoU by -0.0011057824.
+- This stress test is not a learned/selective gate result.
+
+OPEN:
+- Final gate must make per-object, per-frame admission decisions.
+- B2 closed-loop post-occlusion improvement versus B0 remains untested.
+
+NEXT EXACT ACTION:
+- Verify whether vanilla per-object singleton execution reproduces batched B0 closely enough to provide independent per-object memory banks.
+- If verified, use that path for true per-object B2 write admission and occlusion recovery evaluation.

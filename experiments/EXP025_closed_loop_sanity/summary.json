@@ -1,0 +1,41 @@
+{
+  "b0_mean_target_iou_visible_rows": 0.8243956364947009,
+  "b0_peak_vram_gb": 6.266373634338379,
+  "b0_runtime_sec": 7.1796770095825195,
+  "block_count": 30,
+  "block_end_frame": 30,
+  "block_mean_target_iou_visible_rows": 0.8232898540701283,
+  "block_peak_vram_gb": 6.202365875244141,
+  "block_runtime_sec": 6.030673503875732,
+  "block_start_frame": 1,
+  "claim_boundary": "Engineering mechanism sanity only. Whole-frame blocking is not the final per-object IdentityGate.",
+  "descriptive_delta_mean_iou": -0.001105782424572599,
+  "dev_touched": 0,
+  "downstream_behavior_changed": true,
+  "every_block_absent_after": true,
+  "every_block_present_before": true,
+  "first_block_prediction_equal_between_runs": true,
+  "first_changed_frame": 2,
+  "frames": 60,
+  "frames_already_tracked_retained": true,
+  "object_ids": [
+    1,
+    2
+  ],
+  "status": "MECHANISM_SANITY_COMPLETE_NOT_GATE_RESULT",
+  "test_touched": 0,
+  "total_xor_px_after_first_block": 46177,
+  "video": "0442a954",
+  "visual_frames": [
+    0,
+    1,
+    2,
+    5,
+    10,
+    20,
+    30,
+    31,
+    40,
+    59
+  ]
+}
