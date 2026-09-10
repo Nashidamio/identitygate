@@ -748,3 +748,20 @@ OPEN:
 
 NEXT EXACT ACTION:
 - Inspect the batched memory write/read representation required to determine whether one packed object memory payload can be blocked without changing the other objects.
+
+## 2026-09-10 - EXP027 attempt 1 runtime patch indentation defect
+
+EXECUTED / OBSERVED:
+- Vanilla batched B0 completed for EXP027 attempt 1.
+- Runtime installation of the IdentityGate attention filter then failed before PATCHED_NO_BLOCK execution.
+- Failure: IndentationError while compiling the dynamically generated replacement for _prepare_memory_conditioned_features.
+- Failed run log SHA256: 869b3e40e33c29815cf253f483e7d12a32442adacc696535591b14d8c52394e4.
+
+VERIFIED DEFECT:
+- The generated if line was manually indented eight spaces after textwrap.dedent(), while the replacement position already retained the method-body indentation.
+- The generated if line therefore had unexpected extra indentation.
+
+SCIENTIFIC STATUS:
+- EXP027 per-object filter mechanism remains OPEN.
+- No patched no-block or selective-block result was produced.
+- Frozen acceptance criteria are unchanged.

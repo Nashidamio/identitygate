@@ -230,8 +230,8 @@ def install_identitygate_attention_filter(predictor):
     )
     final_new = (
         "prompt_mask = torch.cat(to_cat_prompt_mask, dim=1)\n"
-        "        if not bool(prompt_mask.any().item()):\n"
-        "            prompt_mask = None"
+        "    if not bool(prompt_mask.any().item()):\n"
+        "        prompt_mask = None"
     )
 
     if patched.count(final_old) != 1:
