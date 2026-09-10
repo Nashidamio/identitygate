@@ -1,0 +1,16 @@
+{
+  "experiment": "EXP026",
+  "status": "ENGINEERING_EQUIVALENCE_SANITY",
+  "purpose": "Test whether independent per-object singleton SAM3 VOS execution exactly reproduces vanilla batched multi-object B0 binary masks.",
+  "dataset": "MOSEv2 train",
+  "video": "0442a954",
+  "n_frames": 60,
+  "video_selection": "Fixed TRAIN-exposed EXP025 video; not selected from equivalence outcome.",
+  "batched_condition": "All frame-0 GT objects prompted together.",
+  "singleton_condition": "Each same frame-0 GT object tracked in its own fresh inference_state.",
+  "acceptance_rule": "PASS only if every object-frame binary prediction mask is exactly equal between batched B0 and singleton B0.",
+  "substrate": "Frozen SAM3 VOS via build_sam3_video_model()",
+  "claim_boundary": "Engineering equivalence sanity only. Failure rejects singleton execution as the per-object gating route.",
+  "dev_touched": 0,
+  "test_touched": 0
+}
