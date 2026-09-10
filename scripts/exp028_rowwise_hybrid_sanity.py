@@ -23,7 +23,7 @@ def tensor_hash(x):
     if x is None:
         return None
     y = x.detach().contiguous().cpu()
-    raw = y.view(torch.uint8).numpy().tobytes()
+    raw = y.reshape(-1).view(torch.uint8).numpy().tobytes()
     h = hashlib.sha256()
     h.update(str(tuple(y.shape)).encode())
     h.update(str(y.dtype).encode())

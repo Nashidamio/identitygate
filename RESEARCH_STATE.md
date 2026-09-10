@@ -794,3 +794,24 @@ OPEN:
 
 NEXT EXACT ACTION:
 - Inspect only the pinned use_memory_selection branch and valid_indices construction, then either implement ROWWISE control or reject it.
+
+## 2026-09-10 - EXP028 attempt 1 scalar BFloat16 hash defect
+
+EXECUTED / OBSERVED:
+- Frozen commit: 1d50e41 EXP028: freeze rowwise hybrid sanity.
+- EXP028 attempt 1 entered VANILLA_BATCHED_B0 and failed at frame 1 before any ROWWISE control execution.
+- Failure: tensor_hash attempted a direct torch.uint8 view of a 0-D BFloat16 eff_iou_score tensor.
+- No EXP028 scientific comparison result was produced.
+- DEV touched: 0.
+- TEST touched: 0.
+
+ENGINEERING FIX:
+- Preserve tensor dtype and exact bit representation.
+- Reshape scalar tensors to a one-dimensional buffer before torch.uint8 byte view.
+- Scientific configuration and frozen acceptance criteria are unchanged.
+
+REPRODUCIBILITY NOTE:
+- Immediately after the failed run, the reported log SHA256 was c440d2ba922658f4a789c890087a038625b9727356c225b2f61eee8acb11cf70.
+- Before archival, the same path had SHA256 9d92651bf10628699d0e44e66785e88b00da981a5fe75cf48e5a8b8054a9e8b1.
+- Cause of the hash change is UNKNOWN.
+- The archived current artifact is authoritative for the preserved file.
