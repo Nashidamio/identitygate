@@ -664,3 +664,28 @@ The analysis must:
 
 Before writing the analysis implementation, inspect only the cached schema,
 row count, and aggregate label/validity counts. Do not dump the full CSV.
+
+## 2026-09-10 - EXP024 utility inference complete
+
+EXECUTED / VERIFIED:
+- TRAIN-only B2-core vs B3-S vs B3-R leave-one-video-out utility probe completed.
+- Common complete-case pointer-valid population: 7,948 rows.
+- Paired 5,000-replicate video-cluster bootstrap completed.
+- B3-S and B3-R did not improve over B2-core; theft comparisons versus B2-core were worse with 95% cluster-bootstrap CIs below zero.
+- Theft evidence is cluster-sparse: 143 positives from 5 videos; 16 bootstrap replicates invalid.
+- DEV touched: 0.
+- TEST touched: 0.
+
+NOT CONCLUDED:
+- No closed-loop SAM3 improvement has yet been demonstrated.
+- No final gate comparison has yet been run.
+- No final TEST evidence exists.
+
+IMPLEMENTATION FACT NOW VERIFIED:
+- propagate_in_video stores newly inferred non-conditioning output before yielding it.
+- Missing non-conditioning memory entries are safely skipped by subsequent memory retrieval.
+- Therefore a blocked write can be implemented without modifying frozen SAM3 by evicting the just-yielded frame from global and per-object non-conditioning memory dictionaries before requesting the next generator frame.
+
+NEXT EXACT ACTION:
+- EXP025 closed-loop deterministic write-block mechanism sanity on TRAIN-exposed data.
+- Then wire B2 and produce inspectable B0-vs-B2 occlusion recovery outputs.

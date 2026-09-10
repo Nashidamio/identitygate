@@ -237,3 +237,54 @@ No historical metric is changed by this correction.
 - EXP001 through EXP012 remain missing from this registry.
 - Their provenance is recoverable from `docs/RESEARCH_HISTORY.md`.
 - Backfilling EXP001-EXP012 is OPEN / NON-BLOCKING and is intentionally deferred so it does not delay current B2/B3 utility work.
+
+## EXP024 - TRAIN-only incremental signal utility probe
+
+Status: COMPLETE / DEVELOPMENT-ONLY / TEST UNTOUCHED
+
+Producing bootstrap freeze HEAD: 3d3cbe7
+
+Input:
+- EXP024 OOF predictions SHA256: b622a3e6838ba574ade8394c007585be253abab6cc8c88fee35155361a345bb2
+- Common pointer-valid complete-case population: 7,948 rows
+- Validation: leave-one-video-out by video
+- Model: fixed standardized logistic-regression utility probe; not final gate architecture
+- DEV touched: 0
+- TEST touched: 0
+
+OOF discrimination:
+- Drift B2-core: AP 0.6983904741, AUROC 0.8185834027
+- Drift B3-S: AP 0.6571114519, AUROC 0.8123831092
+- Drift B3-R: AP 0.5989720387, AUROC 0.8072995379
+- Theft B2-core: AP 0.0229407661, AUROC 0.6152775153
+- Theft B3-S: AP 0.0187467663, AUROC 0.5475470475
+- Theft B3-R: AP 0.0189913995, AUROC 0.5466326466
+
+Paired video-cluster bootstrap, 5,000 replicates:
+- Theft B3-S minus B2-core AP 95% CI: [-0.0115334347, -0.0001670046]
+- Theft B3-S minus B2-core AUROC 95% CI: [-0.1015720295, -0.0032966214]
+- Theft B3-R minus B2-core AP 95% CI: [-0.0096703590, -0.0000805857]
+- Theft B3-R minus B2-core AUROC 95% CI: [-0.1015394434, -0.0001109557]
+- Drift B3-R minus B3-S AUROC 95% CI: [-0.0110033203, -0.0008245190]
+- Other reported drift comparisons cross zero.
+
+Sparse-cluster limitation:
+- Theft positives: 143 rows in only 5 videos.
+- 16 of 5,000 theft bootstrap replicates had no evaluable positive class and were reported invalid.
+
+Interpretation:
+- Tested self-identity and relational-identity additions did not demonstrate incremental utility over B2-core in this TRAIN-only probe.
+- Theft results statistically favor B2-core over B3-S and B3-R under the specified clustered bootstrap.
+- This is NOT evidence that B2 improves closed-loop SAM3 tracking.
+- This is NOT a final TEST result.
+
+Artifacts:
+- experiments/EXP024_cluster_bootstrap/summary.json
+  SHA256 69cb95590f21c5fc0b527d5a7f54a9491d8dcecdad4820d0496b4252d6800182
+- experiments/EXP024_cluster_bootstrap/bootstrap_draws.csv
+  SHA256 933a224ad95842769f05b4861f64a688a50aeba9dd9e2497e343ee4c148e2041
+- experiments/EXP024_cluster_bootstrap_run.log
+  SHA256 69cb95590f21c5fc0b527d5a7f54a9491d8dcecdad4820d0496b4252d6800182
+
+Next exact scientific action:
+- Closed-loop memory-write BLOCK mechanism sanity on TRAIN-exposed data, followed by B0-vs-B2 occlusion recovery evaluation.
