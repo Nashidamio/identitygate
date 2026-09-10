@@ -1,0 +1,22 @@
+{
+  "experiment": "EXP028",
+  "status": "ROWWISE_HYBRID_MECHANISM_SANITY",
+  "dataset": "MOSEv2 train",
+  "video": "0442a954",
+  "n_frames": 60,
+  "replace_object_id": 1,
+  "block_start_frame": 1,
+  "block_end_frame": 30,
+  "native_use_memory_selection": true,
+  "memory_selection_rule": "Preserve native global eff_iou_score unchanged. Never recompute it per object.",
+  "conditions": [
+    "VANILLA_BATCHED_B0",
+    "HYBRID_ROWWISE_FULL_MEMORY",
+    "HYBRID_ROWWISE_SELECTIVE_BLOCK"
+  ],
+  "control_acceptance": "Before selective blocking, every binary mask, object_score_logits, iou_score, obj_ptr, maskmem_features, and global eff_iou_score must match vanilla exactly.",
+  "selective_acceptance": "After control PASS, object 2 must remain exact; frame 1 must remain exact; object 1 must change on at least one later frame; blocked object-frame entries must actually be omitted from its temporary memory bank.",
+  "claim_boundary": "Engineering mechanism sanity only. Not a B2 performance result.",
+  "dev_touched": 0,
+  "test_touched": 0
+}
