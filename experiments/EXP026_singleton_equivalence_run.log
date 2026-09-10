@@ -1,0 +1,59 @@
+video=0442a954
+frames=60
+object_ids=[1, 2]
+building frozen SAM3...
+running batched B0...
+running singleton B0 object 1...
+running singleton B0 object 2...
+{
+  "acceptance_rule": "PASS only if every object-frame binary prediction mask is exactly equal between batched B0 and singleton B0.",
+  "batched_mean_target_iou_visible_rows": 0.8243956364947009,
+  "batched_peak_vram_gb": 6.266373634338379,
+  "batched_runtime_sec": 7.021463632583618,
+  "claim_boundary": "Engineering equivalence sanity only. Failure rejects singleton execution as the per-object gating route.",
+  "comparison_rows": 120,
+  "descriptive_target_iou_delta_singleton_minus_batched": -0.001650891938661303,
+  "dev_touched": 0,
+  "exact_all_masks_equal": false,
+  "exact_equal_fraction": 0.18333333333333332,
+  "exact_equal_rows": 22,
+  "first_difference": {
+    "frame_idx": 1,
+    "mask_iou": 0.9996287358455541,
+    "object_id": 1,
+    "xor_px": 2
+  },
+  "frames": 60,
+  "minimum_batched_vs_singleton_mask_iou": 0.6569468267581475,
+  "object_ids": [
+    1,
+    2
+  ],
+  "per_object": {
+    "1": {
+      "exact_rows": 20,
+      "min_mask_iou": 0.6569468267581475,
+      "rows": 60,
+      "total_xor_px": 1694
+    },
+    "2": {
+      "exact_rows": 2,
+      "min_mask_iou": 0.9538419016030957,
+      "rows": 60,
+      "total_xor_px": 1671
+    }
+  },
+  "singleton_mean_target_iou_visible_rows": 0.8227447445560396,
+  "singleton_peak_vram_gb": {
+    "1": 6.042298793792725,
+    "2": 6.042298793792725
+  },
+  "singleton_runtime_sec": {
+    "1": 7.8789613246917725,
+    "2": 5.948286533355713
+  },
+  "status": "EXACT_EQUIVALENCE_FAIL",
+  "test_touched": 0,
+  "total_xor_px": 3365,
+  "video": "0442a954"
+}

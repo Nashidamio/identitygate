@@ -333,3 +333,41 @@ Core artifact hashes:
 Claim boundary:
 - Whole-frame deterministic blocking is an engineering mechanism sanity only.
 - It is not the final per-object IdentityGate and is not a POR result.
+
+## EXP026 - Batched versus singleton B0 equivalence
+
+Status: COMPLETE / EXACT_EQUIVALENCE_FAIL / SINGLETON ROUTE REJECTED
+
+Producing commit:
+- f82904446caec9d901fbb3b8cc5796e0e2e83f6f EXP026: freeze singleton equivalence sanity
+
+Scope:
+- TRAIN-exposed video 0442a954
+- 60 frames
+- 2 objects
+- batched vanilla B0 versus one fresh singleton tracker state per object
+- DEV touched: 0
+- TEST touched: 0
+
+Frozen acceptance rule:
+- PASS only if every object-frame binary prediction mask is exactly equal.
+
+Observed:
+- comparison rows: 120
+- exact rows: 22
+- exact fraction: 0.18333333333333332
+- first difference: frame 1, object 1, XOR 2 px
+- total XOR pixels: 3365
+- minimum batched-vs-singleton mask IoU: 0.6569468267581475
+- mean target IoU singleton minus batched: -0.001650891938661303
+
+Decision:
+- Exact equivalence failed.
+- Singleton execution is rejected as the per-object IdentityGate route.
+- The acceptance rule will not be relaxed post hoc.
+- Cause of the batched/singleton divergence is UNKNOWN and is not required to reject this route.
+
+Artifact hashes:
+- summary.json: 3a01aa0eae5914bdf9e0aafdb36c20c6061d4760f74128edea10dc30ce745f69
+- frame_object_comparison.csv: f4027c29a3e5756d1796f79b3dcbbde3d0fb387bb0709ca75275fcf97cbf7cc8
+- run log: 745a88eadf92f69c03013e622f45c7f9fab87c8135e2c95e9e2bb53f47fd2405

@@ -728,3 +728,23 @@ OPEN:
 NEXT EXACT ACTION:
 - Verify whether vanilla per-object singleton execution reproduces batched B0 closely enough to provide independent per-object memory banks.
 - If verified, use that path for true per-object B2 write admission and occlusion recovery evaluation.
+
+## 2026-09-10 - EXP026 singleton route rejected
+
+EXECUTED / VERIFIED:
+- Batched B0 versus independent per-object singleton B0 was tested on the frozen EXP026 sanity scope.
+- Only 22/120 object-frame binary masks were exactly equal.
+- Total disagreement was 3365 pixels; minimum mask IoU was 0.6569468268.
+- DEV touched: 0.
+- TEST touched: 0.
+
+CONCLUDED:
+- The frozen exact-equivalence acceptance rule failed.
+- Singleton execution is rejected as the per-object gating route.
+- No post-hoc equivalence threshold will be introduced.
+
+OPEN:
+- Per-object IdentityGate intervention must retain batched SAM3 execution.
+
+NEXT EXACT ACTION:
+- Inspect the batched memory write/read representation required to determine whether one packed object memory payload can be blocked without changing the other objects.
