@@ -815,3 +815,25 @@ REPRODUCIBILITY NOTE:
 - Before archival, the same path had SHA256 9d92651bf10628699d0e44e66785e88b00da981a5fe75cf48e5a8b8054a9e8b1.
 - Cause of the hash change is UNKNOWN.
 - The archived current artifact is authoritative for the preserved file.
+
+## 2026-09-10 - EXP028 rejects ROWWISE hybrid
+
+EXECUTED / VERIFIED:
+- EXP028 completed normally with status ROWWISE_CONTROL_FAIL.
+- Full-memory control performed 59 row recomputations with zero memory omissions.
+- Binary masks matched vanilla for 79/120 object-frame rows.
+- Tracked signals matched for 65/120 rows.
+- Global eff_iou_score matched for 58/60 frames.
+- Selective blocking was not executed.
+- DEV touched: 0.
+- TEST touched: 0.
+
+CONCLUDED:
+- B=1 rowwise memory-fusion recomputation is not behaviorally equivalent to vanilla batched B0.
+- The frozen exact-equivalence criterion failed.
+- ROWWISE hybrid is rejected.
+- No B2/B3 performance conclusion follows.
+
+NEXT:
+- Use the already-verified EXP025 whole-frame physical write-block mechanism as the implementation fallback.
+- Append and freeze the resulting frame-level intervention amendment before closed-loop gate experiments.

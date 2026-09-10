@@ -1,0 +1,31 @@
+{
+  "claim_boundary": "Engineering mechanism sanity only. Not a B2 performance result.",
+  "control": {
+    "eff_exact_all": false,
+    "eff_exact_count": 58,
+    "mask_exact_all": false,
+    "mask_exact_count": 79,
+    "signal_exact_count": 65,
+    "signals_exact_all": false,
+    "total_rows": 120
+  },
+  "control_peak_vram_gb": 6.266663551330566,
+  "control_runtime_sec": 7.866125583648682,
+  "control_runtime_stats": {
+    "omission_count": 0,
+    "omitted_frames": [],
+    "row_recompute_calls": 59
+  },
+  "dev_touched": 0,
+  "frames": 60,
+  "object_ids": [
+    1,
+    2
+  ],
+  "replace_object_id": 1,
+  "status": "ROWWISE_CONTROL_FAIL",
+  "test_touched": 0,
+  "vanilla_peak_vram_gb": 6.266373634338379,
+  "vanilla_runtime_sec": 6.997359037399292,
+  "video": "0442a954"
+}

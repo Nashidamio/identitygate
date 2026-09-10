@@ -405,3 +405,55 @@ Failed-run hashes:
 - attempt 1 indentation failure: 869b3e40e33c29815cf253f483e7d12a32442adacc696535591b14d8c52394e4
 - attempt 2 stdout-only diagnostic: 7f755735902957394bd95b24534b080274c0704d81ec400f69b1a2dcf98e19fd
 - attempt 3 captured forward_pre rejection: 2e487385ec658ccc4a8d1fb15b774d337f72e7ec29440dee37ea367d8db0ffde
+
+## EXP028 - Rowwise hybrid equivalence sanity
+
+Status: COMPLETE / ROWWISE CONTROL FAIL / IMPLEMENTATION ROUTE REJECTED
+
+Executed code commit:
+- 7c932cdf2d3788ff02ec5202d7f707e367ac8db7
+
+Scope:
+- MOSEv2 TRAIN-exposed video 0442a954.
+- 60 frames.
+- Objects [1, 2].
+- Replace object ID 1 / row 0.
+- Frozen SAM3.
+- DEV touched: 0.
+- TEST touched: 0.
+
+Frozen control requirement:
+- ROWWISE FULL-MEMORY must exactly reproduce VANILLA B0 before selective blocking.
+- Exactness covered binary masks, object_score_logits, iou_score, obj_ptr, maskmem_features, and global eff_iou_score.
+- No tolerance relaxation was permitted.
+
+Observed control:
+- status: ROWWISE_CONTROL_FAIL.
+- comparison rows: 120.
+- binary-mask exact rows: 79/120.
+- signal exact rows: 65/120.
+- global eff_iou exact frames: 58/60.
+- row recompute calls: 59.
+- omission_count: 0.
+- omitted_frames: [].
+- vanilla peak VRAM: 6.266373634338379 GB.
+- control peak VRAM: 6.266663551330566 GB.
+- vanilla runtime: 6.997359037399292 s.
+- control runtime: 7.866125583648682 s.
+
+Interpretation:
+- Because the full-memory control used zero blocked-frame omissions, the observed differences are caused by the rowwise recomputation path itself rather than by a gate decision.
+- The frozen exact-equivalence criterion failed.
+- ROWWISE hybrid is therefore rejected as a per-object gating implementation route.
+- The selective-block condition was not executed.
+- This experiment provides no B2/B3 tracking-performance result.
+
+Artifacts:
+- summary.json SHA256: 29979f3b736124a8299bad63f82bec994e84fcc690506daed0fc2e1f486b53cc
+- comparisons.csv SHA256: 4d3e75ea171621e0e8726e7994cd4bb535f6532f45dd40f95c9654d701107013
+- run log SHA256: a951abb04aadfd27228097cf7aa5955a998e231040248962934c5bfcc877bbe2
+- comparisons.csv lines: 121
+
+Decision:
+- Do not tune or relax ROWWISE equivalence.
+- Proceed to the pre-declared whole-frame physical write-block fallback, with the scientific change documented as an amendment before gate-result experiments.
