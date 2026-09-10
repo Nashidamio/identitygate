@@ -1,0 +1,18 @@
+{
+  "experiment": "EXP025",
+  "status": "MECHANISM_SANITY_NOT_FINAL_GATE",
+  "purpose": "Verify that removing an already-yielded non-conditioning memory write changes subsequent frozen SAM3 tracking while preserving the decision-frame prediction.",
+  "dataset": "MOSEv2 train",
+  "video": "0442a954",
+  "video_selection": "Fixed TRAIN-exposed EXP023 video; not selected from closed-loop outcomes.",
+  "n_frames": 60,
+  "block_start_frame": 1,
+  "block_end_frame": 30,
+  "block_policy": "Deterministically evict every just-yielded non-conditioning frame in the configured interval from global and per-object memory dictionaries.",
+  "visual_frames": [0, 1, 2, 5, 10, 20, 30, 31, 40, 59],
+  "substrate": "SAM3 VOS via build_sam3_video_model()",
+  "comparison": ["B0", "WHOLE_FRAME_BLOCK"],
+  "claim_boundary": "Engineering mechanism sanity only. Whole-frame blocking is not the final per-object IdentityGate.",
+  "dev_touched": 0,
+  "test_touched": 0
+}
