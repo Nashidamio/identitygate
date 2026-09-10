@@ -1,0 +1,25 @@
+{
+  "experiment": "EXP027",
+  "status": "PER_OBJECT_ATTENTION_FILTER_SANITY",
+  "dataset": "MOSEv2 train",
+  "video": "0442a954",
+  "n_frames": 60,
+  "block_object_id": 1,
+  "block_start_frame": 1,
+  "block_end_frame": 30,
+  "conditions": [
+    "VANILLA_BATCHED_B0",
+    "PATCHED_NO_BLOCK",
+    "PATCHED_OBJECT1_BLOCK"
+  ],
+  "acceptance_rule": [
+    "Vanilla B0 and patched no-block binary masks must be exactly equal for every object-frame.",
+    "The admitted object must remain exactly equal between patched no-block and selective block for every frame.",
+    "All objects must be exactly equal on the first block decision frame.",
+    "The blocked object must differ on at least one later frame.",
+    "Selective execution must report nonzero masked spatial and pointer tokens."
+  ],
+  "claim_boundary": "Engineering mechanism sanity only. Attention-visible filtering is not yet a learned B2 result.",
+  "dev_touched": 0,
+  "test_touched": 0
+}
