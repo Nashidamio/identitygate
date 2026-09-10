@@ -371,3 +371,37 @@ Artifact hashes:
 - summary.json: 3a01aa0eae5914bdf9e0aafdb36c20c6061d4760f74128edea10dc30ce745f69
 - frame_object_comparison.csv: f4027c29a3e5756d1796f79b3dcbbde3d0fb387bb0709ca75275fcf97cbf7cc8
 - run log: 745a88eadf92f69c03013e622f45c7f9fab87c8135e2c95e9e2bb53f47fd2405
+
+## EXP027 - Per-object attention-filter mechanism
+
+Status: COMPLETE / IMPLEMENTATION ROUTE REJECTED / NO GATE RESULT
+
+Producing commits:
+- 6d27569 EXP027: freeze per-object attention filter helper
+- 758b8e7 EXP027: freeze per-object filter sanity
+- cb077f0 EXP027: fix attention filter patch indentation
+
+Scope:
+- TRAIN-exposed video 0442a954
+- 60 frames
+- batched frozen SAM3 retained
+- intended selective object-level memory-attention filtering
+- DEV touched: 0
+- TEST touched: 0
+
+Observed:
+- Vanilla batched B0 executed.
+- Patched NO-BLOCK executed after the indentation correction.
+- Selective filtering failed when the first non-empty memory_key_padding_mask reached the active TransformerDecoderLayerv2.forward_pre path.
+- Active forward_pre asserts that memory_key_padding_mask must be None.
+
+Decision:
+- The memory_key_padding_mask Track-B route is rejected for the pinned SAM3 configuration.
+- The frozen acceptance criteria were not relaxed.
+- No selective-filter tracking result was produced.
+- This is an engineering-route result, not evidence for or against B2 tracking performance.
+
+Failed-run hashes:
+- attempt 1 indentation failure: 869b3e40e33c29815cf253f483e7d12a32442adacc696535591b14d8c52394e4
+- attempt 2 stdout-only diagnostic: 7f755735902957394bd95b24534b080274c0704d81ec400f69b1a2dcf98e19fd
+- attempt 3 captured forward_pre rejection: 2e487385ec658ccc4a8d1fb15b774d337f72e7ec29440dee37ea367d8db0ffde

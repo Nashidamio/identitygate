@@ -765,3 +765,32 @@ SCIENTIFIC STATUS:
 - EXP027 per-object filter mechanism remains OPEN.
 - No patched no-block or selective-block result was produced.
 - Frozen acceptance criteria are unchanged.
+
+## 2026-09-10 - EXP027 attention-mask route rejected
+
+EXECUTED / VERIFIED:
+- Pinned SAM3: 8f0b7f4d4e7eda2ed606ebde6702c93359ad01da.
+- EXP027 patched NO-BLOCK execution reached completion.
+- Selective memory masking failed in the active TransformerDecoderLayerv2.forward_pre path because memory_key_padding_mask is required to be None.
+- DEV touched: 0.
+- TEST touched: 0.
+
+CONCLUDED:
+- The memory_key_padding_mask Track-B route is rejected.
+- No scientific B2/B3 performance conclusion follows from EXP027.
+
+VERIFIED PINNED RUNTIME FLAGS:
+- use_memory_selection=True
+- non_overlap_masks_for_mem_enc=False
+- num_maskmem=7
+- memory_temporal_stride_for_eval=1
+- max_obj_ptrs_in_encoder=16
+- compile_all_components=False
+- model-build CUDA allocation observed: 3.491 GB; this is not a tracking peak.
+
+OPEN:
+- ROWWISE hybrid feasibility is not yet established because pinned SAM3 uses memory selection.
+- Exact interaction between per-object filtered output dictionaries and the existing memory-selection policy must be preserved before using ROWWISE for B2.
+
+NEXT EXACT ACTION:
+- Inspect only the pinned use_memory_selection branch and valid_indices construction, then either implement ROWWISE control or reject it.
