@@ -689,3 +689,18 @@ IMPLEMENTATION FACT NOW VERIFIED:
 NEXT EXACT ACTION:
 - EXP025 closed-loop deterministic write-block mechanism sanity on TRAIN-exposed data.
 - Then wire B2 and produce inspectable B0-vs-B2 occlusion recovery outputs.
+
+## 2026-09-10 - EXP025 attempt 1 off-by-one correction
+
+EXECUTED / OBSERVED:
+- Frozen EXP025 attempt 1 completed both B0 and deterministic BLOCK propagation but yielded 61 frames when 60 were intended.
+- Run stopped at the post-run B0 frame-count assertion; no closed-loop mechanism conclusion was drawn.
+- Failed run log SHA256: c59ca19d882f4b87d019a989d50f60edcfc519116e4d3bfda5fccf6a947cc0ac.
+
+VERIFIED DEFECT:
+- SAM3 forward processing uses an inclusive end index.
+- With start_frame_idx=0 and max_frame_num_to_track=60, frames 0..60 are yielded.
+- EXP025 must pass n_frames - 1 to obtain exactly frames 0..59.
+
+STATUS:
+- Engineering correction only; scientific mechanism result remains OPEN.

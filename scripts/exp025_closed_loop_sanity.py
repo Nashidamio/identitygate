@@ -118,7 +118,7 @@ def run_tracker(predictor, jpg_dir, gt0, object_ids, cfg, block):
     generator = predictor.propagate_in_video(
         state,
         start_frame_idx=0,
-        max_frame_num_to_track=cfg["n_frames"],
+        max_frame_num_to_track=cfg["n_frames"] - 1,
         reverse=False,
         propagate_preflight=True,
     )
