@@ -1,0 +1,71 @@
+{
+  "experiment": "EXP029",
+  "purpose": "TRAIN-only development training of actual B2-core failure-typed MLP heads",
+  "status": "B2_CORE_DEVELOPMENT_NOT_FINAL_B2",
+  "input_csv": "experiments/EXP024_utility_prepare/train18_utility.csv",
+  "expected_input_sha256": "538139f4c029832c0e871b94c94f29f08cefa06ba16f02d556f4fc9e8aa45fe5",
+  "expected_split": "TRAIN",
+  "expected_videos": 18,
+  "features": [
+    "mask_conf_iou_head",
+    "occ_score_logit",
+    "area_norm",
+    "area_ratio_anchor",
+    "temporal_iou_prev"
+  ],
+  "expected_finite_rows": 8139,
+  "labels": {
+    "drift": {
+      "column": "drift_label_s2_probe",
+      "expected_labeled": 6995,
+      "expected_positive": 1507,
+      "expected_negative": 5488,
+      "expected_positive_videos": 17
+    },
+    "theft": {
+      "column": "theft_label_s2_probe",
+      "expected_labeled": 8104,
+      "expected_positive": 143,
+      "expected_negative": 7961,
+      "expected_positive_videos": 5
+    }
+  },
+  "architecture": {
+    "design": "two independent failure-typed heads with one shared TRAIN-only normalizer",
+    "input_dim": 5,
+    "hidden_dims": [64, 32],
+    "activation": "ReLU",
+    "output_per_head": "unsafe logit",
+    "parameter_count_expected_per_head": 2497,
+    "parameter_count_expected_total": 4994
+  },
+  "training": {
+    "implementation": "PyTorch CPU float64 deterministic full-batch",
+    "loss": "weighted BCEWithLogitsLoss",
+    "positive_weight": "n_negative / n_positive independently per head",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "betas": [0.9, 0.999],
+    "eps": 1e-8,
+    "epochs": 1000,
+    "sanity_epochs": 10,
+    "log_every": 50,
+    "seed": 29029,
+    "early_stopping": false,
+    "dev_tuning": false
+  },
+  "normalization": {
+    "rule": "shared z-score fitted on all finite B2-core TRAIN rows only",
+    "zero_std_replacement": 1.0
+  },
+  "claim_boundary": [
+    "This is the first actual learned gate-weight experiment, but it is B2-core development, not final frozen B2.",
+    "Features 4 and 8 remain deferred and Feature 7 remains open; they are not manufactured here.",
+    "The two failure heads are not yet combined into a final physical admission score.",
+    "Training-set discrimination is descriptive only and is not held-out evidence.",
+    "No DEV and no TEST data are read."
+  ],
+  "dev_touched": 0,
+  "test_touched": 0
+}
