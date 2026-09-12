@@ -717,3 +717,36 @@ Artifacts:
 - B3_R_object_scores.csv SHA256: e9de784bf51a54c0c81593c0d00fae6da74f6ed180696e8626476a508b1f74dd
 - B3_R_write_decisions.csv SHA256: d26ba5c20f789a0972f1f868857394aa4bac8fb6bbe1419e1d401dad887d7a83
 - ignored run log SHA256: 8808b52452d8e76320cbfe5e794a2c1e87480e49a6e6b1f7e1d32b5f2c831012
+
+
+## EXP034 - Whole-scene pixel cross-check sanity
+
+Status: SANITY COMPLETE / ENGINEERING PASS / NOT FINAL WHOLE-SCENE LABELS
+
+Frozen execution commit: b8cd9c37bb7c37ec6b430d56c238c0a6a275e9a1
+Scope: predeclared development-exposed video 0nrb9vzx; 1 video / 1 EXP019 scene; fresh final DEV 0; TEST gate evaluation 0.
+
+Observed:
+- camera-cut positive scenes: 0.
+- global-MAD positive scenes: 0.
+- pixel-confirmed scenes: 0.
+- manual-adjudication-required scenes: 1.
+- peak allocated VRAM: 0.1648869514465332 GB.
+- runtime: 7.353137016296387 s.
+- SAM predictions used: false.
+- gate predictions used: false.
+- POR used: false.
+- TEST gate evaluation performed: false.
+
+Interpretation:
+- Frozen EXP034 executes end-to-end and disagreement routing works.
+- This one-scene sanity is not evidence about whole-scene prevalence, pixel-rule accuracy, threshold quality, or gate performance.
+- Frozen thresholds are unchanged.
+
+Artifacts:
+- per_scene.csv SHA256: e320cc49ad139915891cdb4b02bbc3f2ce40271a3b67c6e6dcf14720da63a17f
+- manual_adjudication_required.csv SHA256: e320cc49ad139915891cdb4b02bbc3f2ce40271a3b67c6e6dcf14720da63a17f
+- summary.json SHA256: a57c2ca13a47b6bfaddc92e0d264da95642a455bf3617657a88caf140765ef23
+- ignored run log SHA256: 887a9f3ce9e335c7793f4b7707be6fc4d45ac10bcd4c73da9623c4d043c6b083
+
+Next: commit the sanity record, then execute the unchanged frozen full EXP034 pixel cross-check.

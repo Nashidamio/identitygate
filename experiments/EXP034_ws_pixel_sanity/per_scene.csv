@@ -1,0 +1,2 @@
+scene_event_id,video,n_object_events,n_unique_objects,disappear_min,disappear_max,reappear_min,reappear_max,transnet_disappear_max_prob,transnet_reappear_max_prob,camera_cut_positive,reference_median_mad,disappear_max_mad,reappear_max_mad,event_max_mad,event_to_reference_mad_ratio,global_mad_positive,pixel_confirmation_positive,automatic_status
+0nrb9vzx:WS001,0nrb9vzx,1,1,102,102,109,109,0.007623421493917704,0.005171888042241335,0,0.05084337294101715,0.050960440188646317,0.05165091156959534,0.05165091156959534,1.0158828689338728,0,0,MANUAL_ADJUDICATION_REQUIRED

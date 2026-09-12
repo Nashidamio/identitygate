@@ -1035,3 +1035,21 @@ COVERAGE NOTE:
 
 NEXT:
 - Close the remaining pre-DEV gate/split protocol items, then build the DEV-ready A4 matched-write-rate evaluator without touching TEST.
+
+
+## 2026-09-12 - EXP034 whole-scene pixel sanity verified
+
+IMPLEMENTED / EXECUTED / VERIFIED:
+- Frozen EXP034 commit b8cd9c37bb7c37ec6b430d56c238c0a6a275e9a1 ran on development-exposed video 0nrb9vzx.
+- One EXP019 candidate scene was processed end-to-end.
+- camera-cut positives: 0; global-MAD positives: 0; pixel-confirmed: 0; manual-adjudication-required: 1.
+- Peak allocated VRAM: 0.1648869514465332 GB; runtime: 7.353137016296387 s.
+- SAM predictions: 0; gate predictions: 0; POR outcomes: 0; TEST gate evaluation: 0.
+
+INTERPRETATION:
+- EXP034 engineering sanity passes.
+- The pixel-negative sanity outcome does not justify threshold changes.
+- Final whole-scene labels remain OPEN pending full cross-check, manual disagreements, and frozen 30-scene audit.
+
+NEXT:
+- Commit this sanity record, then run the unchanged frozen full EXP034 pixel cross-check.
