@@ -1,0 +1,109 @@
+{
+  "claim_boundary": [
+    "This is frozen dataset-label preprocessing, not gate evaluation.",
+    "No threshold may be changed after pixel outputs are inspected without a prospective amendment.",
+    "Processing raw frames that may later belong to DEV or TEST is allowed because split construction has not occurred and no SAM/gate outcome is used.",
+    "This configuration does not itself complete the whole-scene labels; manual disagreement adjudication and the frozen 30-event audit remain required.",
+    "No novelty claim is made."
+  ],
+  "config_id": "WS-pixel-v1",
+  "freeze_principle": "All thresholds and matching rules are fixed before inspecting full-corpus pixel outputs.",
+  "global_frame_difference": {
+    "absolute_mad_min": 0.15,
+    "event_windows": "adjacent transitions ending within disappear_min-2 through disappear_max+2 OR reappear_min-2 through reappear_max+2",
+    "pixel_source": "original-resolution decoded RGB JPEGs",
+    "positive_rule": "event_max_mad >= 0.15 AND event_max_mad >= 3.0 * max(reference_median_mad, 1e-6)",
+    "reference_floor": 1e-06,
+    "reference_frames": "exact five frames immediately preceding disappear_min",
+    "reference_multiplier_min": 3.0,
+    "reference_statistic": "median of the four adjacent-frame MAD values inside the five-frame reference window",
+    "statistic": "mean absolute adjacent-frame RGB difference divided by 255"
+  },
+  "input_population": {
+    "annotation_candidate_scene_count": 2179,
+    "scene_csv": "experiments/EXP019_ws_gt_scenes.csv",
+    "scope": "collapsed EXP019 annotation-side whole-scene candidate scenes only",
+    "videos_with_annotation_candidate": 1281
+  },
+  "manual_adjudication": {
+    "allowed_labels": [
+      "WHOLE_SCENE",
+      "NORMAL_OCCLUSION"
+    ],
+    "final_label_source_for_disagreements": "manual adjudication",
+    "population": "all annotation/pixel disagreements",
+    "reason_must_be_recorded": true
+  },
+  "manual_audit": {
+    "minimum_agreement_threshold": null,
+    "population": "EXP019 collapsed annotation-side whole-scene candidate scenes",
+    "report": "manual whole-scene judgement, automated two-signal label, agreement count and agreement rate",
+    "sample_size": 30,
+    "sampling": "uniform without replacement using sorted scene_event_id population before pixel outcomes are inspected",
+    "seed": 34034
+  },
+  "outcome_independence": {
+    "b0_recovery_used": false,
+    "gate_predictions_used": false,
+    "por_used": false,
+    "sam_predictions_used": false,
+    "test_gate_evaluation_performed": false
+  },
+  "outputs_required": [
+    "per-scene pixel statistics and component decisions",
+    "annotation/pixel disagreement list",
+    "fixed 30-scene manual-audit manifest",
+    "final automated-confirmed scene list before adjudication",
+    "runtime and peak GPU memory",
+    "source/config/checkpoint hashes"
+  ],
+  "parent_annotation_rule": {
+    "path": "configs/WS-v1.json",
+    "sha256": "07812618c50412ec451bd0cee6f1c746bd1d4e07bfae803b006ed135f7279e2f"
+  },
+  "pixel_confirmation": {
+    "automatic_final_ws_rule": "EXP019 annotation candidate AND pixel_confirmation positive",
+    "disagreement_must_not_be_auto_labeled_non_ws": true,
+    "disagreement_rule": "EXP019 annotation candidate AND pixel_confirmation negative -> MANUAL_ADJUDICATION_REQUIRED",
+    "pixel_positive_without_annotation_candidate": "outside this cross-check population and cannot independently create a whole-scene label",
+    "positive_rule": "camera_cut_positive OR global_frame_difference_positive"
+  },
+  "purpose": "Independent pixel-side confirmation of EXP019 whole-scene annotation candidates before final dataset split",
+  "status": "FROZEN_PENDING_COMMIT_AND_SUPERVISOR_COUNTERSIGN",
+  "transnetv2": {
+    "camera_cut": {
+      "comparison": "strict_greater_than",
+      "matching_rule": "positive if any single-frame probability > 0.5 within disappear_min-2 through disappear_max+2 OR reappear_min-2 through reappear_max+2, clipped to video bounds",
+      "matching_window_frames": 2,
+      "threshold": 0.5
+    },
+    "checkpoint_path": "~/thesis/external/transnetv2_converted_85cef72/transnetv2-pytorch-weights.pth",
+    "checkpoint_sha256": "214d9bada931b04fe9e7ffdc015e745d86232c9ce00e90a03c843ba7dd11d4eb",
+    "input": {
+      "channel_order": "RGB",
+      "decode": "Pillow convert RGB",
+      "dtype": "uint8",
+      "frame_source": "MOSEv2 JPEG frame sequence",
+      "resize_height": 27,
+      "resize_method": "Pillow bilinear",
+      "resize_width": 48,
+      "runtime_pillow_version_must_be_recorded": true
+    },
+    "module": "inference-pytorch/transnetv2_pytorch.py",
+    "paper_arxiv_id": "2008.04838",
+    "source_commit": "85cef72af9a916bdfd7cc94a670c9cdfbf12d1ed",
+    "source_path": "~/thesis/external/TransNetV2",
+    "temporal_inference": {
+      "activation": "sigmoid",
+      "end_padding_rule": "repeat last frame using official TransNetV2 predict_frames formula",
+      "head_used_for_label": "single_frame",
+      "kept_prediction_slice_start": 25,
+      "kept_prediction_slice_stop_exclusive": 75,
+      "many_hot_head_role": "diagnostic_only",
+      "start_padding_frames": 25,
+      "start_padding_rule": "repeat first frame",
+      "stride_frames": 50,
+      "window_frames": 100
+    }
+  }
+}
