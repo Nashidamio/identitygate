@@ -1,0 +1,80 @@
+{
+  "a6_path": "docs/AMENDMENT_A6_B1_MANUAL_RULE.md",
+  "acceptance": {
+    "at_least_one_B1_block": true,
+    "dev_touched": 0,
+    "downstream_mask_changes_after_first_block": true,
+    "every_block_absent_after_eviction": true,
+    "every_block_present_before_eviction": true,
+    "first_block_prediction_equal_to_b0": true,
+    "test_touched": 0
+  },
+  "b1_rule_config_path": "configs/B1-rule-v1.json",
+  "claim_boundary": [
+    "TRAIN-exposed engineering sanity only.",
+    "B1 has zero learned parameters.",
+    "Tau 0.5 is a mechanism-sanity setting and not the A4 final matched-rate threshold.",
+    "No tracking-improvement claim follows from this experiment.",
+    "DEV and TEST are untouched."
+  ],
+  "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+  "derived_from": {
+    "expected_sha256": "a430597240f86d5ebef1c0f7d6711d1547ea4b7e1ec5da4cb7595dac60729abb",
+    "script": "scripts/exp030_b2core_closed_loop_sanity.py"
+  },
+  "dev_touched": 0,
+  "expected_a6_sha256": "0faad8c94fa9a0b8c369d6c28bda983c32427606e4f9da0676119fd46760968f",
+  "expected_b1_rule_sha256": "f748f91953d8173158a50fb6d300c45a03e34084915290b64e0715e70139d47c",
+  "expected_object_ids": [
+    1,
+    2
+  ],
+  "expected_sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "experiment": "EXP032",
+  "features": [
+    "mask_conf_iou_head",
+    "occ_score_logit",
+    "area_ratio_anchor",
+    "temporal_iou_prev"
+  ],
+  "frame_aggregation": {
+    "block_rule": "BLOCK iff frame_score < tau_B1",
+    "conditioning_frame_zero": "always retained",
+    "frame_score": "minimum B1_score over all tracked objects",
+    "rule": "ALL_SAFE",
+    "tau_B1": 0.5,
+    "tau_status": "MECHANISM_SANITY_ONLY_NOT_FINAL_OPERATING_THRESHOLD"
+  },
+  "manual_score": {
+    "B1_score": "min(q_conf,q_area,q_temp)",
+    "learned_parameters": 0,
+    "q_area": "0 if area_ratio_anchor==0 else min(area_ratio_anchor,1/area_ratio_anchor)",
+    "q_conf": "q_iou*q_obj",
+    "q_iou": "clip(mask_conf_iou_head,0,1)",
+    "q_obj": "sigmoid(occ_score_logit)",
+    "q_temp": "clip(temporal_iou_prev,0,1)"
+  },
+  "missingness": {
+    "B1_score_if_nonfinite": 0.0,
+    "finite_zero_area_ratio": "q_area=0",
+    "required_input_nonfinite": "FAIL_CLOSED",
+    "status": "FROZEN_BY_A6_FOR_B1"
+  },
+  "n_frames": 60,
+  "purpose": "TRAIN-exposed B1 manual-rule closed-loop mechanism sanity",
+  "status": "DEVELOPMENT_MECHANISM_SANITY_NOT_B1_PERFORMANCE_RESULT",
+  "test_touched": 0,
+  "video": "0442a954",
+  "visual_frames": [
+    0,
+    1,
+    2,
+    5,
+    10,
+    20,
+    30,
+    31,
+    40,
+    59
+  ]
+}
