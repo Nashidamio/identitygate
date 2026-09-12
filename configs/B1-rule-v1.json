@@ -1,0 +1,46 @@
+{
+  "admission_rule": "frame_score >= tau_B1",
+  "baseline": "B1",
+  "components": {
+    "q_area": "0 if area_ratio_anchor==0 else min(area_ratio_anchor,1/area_ratio_anchor)",
+    "q_conf": "q_iou*q_obj",
+    "q_iou": "clip(mask_conf_iou_head,0,1)",
+    "q_obj": "sigmoid(occ_score_logit)",
+    "q_temp": "clip(temporal_iou_prev,0,1)"
+  },
+  "conditioning_frames": "ALWAYS_RETAIN",
+  "dev_tracking_outcome_for_threshold_selection": false,
+  "frame_aggregation": "A3_ALL_SAFE_MIN_OVER_OBJECTS",
+  "inputs": [
+    "mask_conf_iou_head",
+    "occ_score_logit",
+    "area_ratio_anchor",
+    "temporal_iou_prev"
+  ],
+  "learned_parameters": 0,
+  "literature_basis": {
+    "MOSEv2": "arXiv:2508.05630",
+    "OAMVOS": "arXiv:2604.22837",
+    "claim": "heuristic adaptation, not reproduction"
+  },
+  "object_score": "min(q_conf,q_area,q_temp)",
+  "physical_intervention": "A3_WHOLE_FRAME_EVICTION",
+  "required_input_nonfinite": "FAIL_CLOSED",
+  "status": "PROPOSED_FOR_FREEZE",
+  "tau_B1_initial_grid": [
+    0.0,
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9,
+    1.0
+  ],
+  "test_retuning": false,
+  "threshold_selection": "A4_DEV_WRITE_RATE_ONLY",
+  "version": "B1-rule-v1"
+}
