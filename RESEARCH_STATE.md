@@ -1053,3 +1053,26 @@ INTERPRETATION:
 
 NEXT:
 - Commit this sanity record, then run the unchanged frozen full EXP034 pixel cross-check.
+
+
+## 2026-09-12 - EXP034 full pixel cross-check complete
+
+EXECUTED / OBSERVED / VERIFIED:
+- Frozen EXP034 full pixel cross-check completed at commit 98f613ab7efdaf25f868f79b44e948771a6db595.
+- 1281 videos and all 2179 EXP019 collapsed annotation-side candidate scenes were processed.
+- camera-cut positives: 322.
+- global-MAD positives: 226.
+- pixel-confirmed scenes: 361.
+- manual-adjudication-required scenes: 1818.
+- Frozen audit sample rows with pixel statistics: 30.
+- Peak allocated VRAM: 0.1648869514465332 GB.
+- Runtime: 5693.0291039943695 seconds.
+- SAM predictions: 0; gate predictions: 0; POR outcomes: 0; TEST gate evaluation: 0.
+
+INTERPRETATION:
+- Automated whole-scene pixel preprocessing is complete.
+- Thresholds remain frozen after full-output inspection.
+- Final whole-scene labels remain OPEN pending manual disagreement adjudication and the fixed 30-scene manual audit.
+
+NEXT:
+- Generate deterministic visual-review packs for audit30 and manual-adjudication scenes.

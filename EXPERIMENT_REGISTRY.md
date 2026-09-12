@@ -750,3 +750,47 @@ Artifacts:
 - ignored run log SHA256: 887a9f3ce9e335c7793f4b7707be6fc4d45ac10bcd4c73da9623c4d043c6b083
 
 Next: commit the sanity record, then execute the unchanged frozen full EXP034 pixel cross-check.
+
+
+## EXP034 - Full whole-scene pixel cross-check
+
+Status: FULL PIXEL CROSS-CHECK COMPLETE / MANUAL ADJUDICATION PENDING
+
+Executed commit:
+- 98f613ab7efdaf25f868f79b44e948771a6db595
+
+Scope:
+- EXP019 collapsed annotation-side candidate scenes.
+- Videos processed: 1281.
+- Scenes processed: 2179.
+- Frozen audit scenes resolved with pixel statistics: 30.
+- SAM predictions used: false.
+- Gate predictions used: false.
+- POR used: false.
+- TEST gate evaluation performed: false.
+
+Observed:
+- camera-cut positive scenes: 322.
+- global-MAD positive scenes: 226.
+- pixel-confirmed scenes: 361.
+- manual-adjudication-required scenes: 1818.
+- Peak allocated VRAM: 0.1648869514465332 GB.
+- Runtime: 5693.0291039943695 s.
+
+Interpretation:
+- Full frozen pixel-side preprocessing completed successfully.
+- 361 scenes are automatically confirmed by the frozen pixel rule.
+- 1818 annotation-positive / pixel-negative scenes require manual adjudication.
+- The frozen 0.5 / 0.15 / 3.0 thresholds remain unchanged after outcome inspection.
+- Final whole-scene labels remain OPEN pending manual adjudication and the frozen 30-scene audit.
+
+Artifacts:
+- audit_sample_with_pixel.csv SHA256: 3aa2f19cf69726c6c708ac2c3e99f68fdf5d6bf3de377f5b6f20979ead72cbcc
+- auto_confirmed.csv SHA256: bb3d8b9fe8c29882736cacdd6d207a3d1dc43d9092e9996560c7a47fcaf4ffe7
+- manual_adjudication_required.csv SHA256: 1f6fa7ad1e10662ff0333331e6d1d5a1127e89c710b0e6d9768cd206a34d63d3
+- per_scene.csv SHA256: aefb19804adf093dfc94cc80aa50dc53e69df83bab2c2ab8ba5d6acd603acd2f
+- summary.json SHA256: f78da9dc9b029750ad37fb448008740f33d06525d6ac970197f46202c87835a8
+- ignored run log SHA256: 71f774ee45850546cfc26a64d6d585761b5daf8f3f3d1246706ff7191211e531
+
+Next:
+- Freeze and generate deterministic visual-review artifacts for the 30-scene audit and manual-adjudication population.
