@@ -1,0 +1,57 @@
+{
+  "a6_sha256": "0faad8c94fa9a0b8c369d6c28bda983c32427606e4f9da0676119fd46760968f",
+  "admit_count": 11,
+  "b0_mean_target_iou_visible_rows_descriptive": 0.8243956364947009,
+  "b0_peak_vram_gb": 6.266373634338379,
+  "b0_runtime_sec": 9.03199553489685,
+  "b1_rule_sha256": "f748f91953d8173158a50fb6d300c45a03e34084915290b64e0715e70139d47c",
+  "block_count": 48,
+  "descriptive_admit_fraction_nonconditioning": 0.1864406779661017,
+  "descriptive_mean_iou_delta_gated_minus_b0": 0.003185102237101445,
+  "dev_touched": 0,
+  "downstream_mask_changed_after_first_block": true,
+  "eligible_nonconditioning_frames": 59,
+  "every_block_absent_after": true,
+  "every_block_present_before": true,
+  "first_block_frame": 2,
+  "first_block_prediction_equal_to_b0": true,
+  "first_changed_frame": 3,
+  "frames": 60,
+  "frames_already_tracked_retained": true,
+  "gated_mean_target_iou_visible_rows_descriptive": 0.8275807387318024,
+  "gated_peak_vram_gb": 6.166836261749268,
+  "gated_runtime_sec": 6.5696799755096436,
+  "manual_score": {
+    "B1_score": "min(q_conf,q_area,q_temp)",
+    "learned_parameters": 0,
+    "q_area": "0 if area_ratio_anchor==0 else min(area_ratio_anchor,1/area_ratio_anchor)",
+    "q_conf": "q_iou*q_obj",
+    "q_iou": "clip(mask_conf_iou_head,0,1)",
+    "q_obj": "sigmoid(occ_score_logit)",
+    "q_temp": "clip(temporal_iou_prev,0,1)"
+  },
+  "missingness": {
+    "B1_score_if_nonfinite": 0.0,
+    "finite_zero_area_ratio": "q_area=0",
+    "required_input_nonfinite": "FAIL_CLOSED",
+    "status": "FROZEN_BY_A6_FOR_B1"
+  },
+  "nonfinite_object_feature_rows": 11,
+  "object_ids": [
+    1,
+    2
+  ],
+  "sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "scope": [
+    "TRAIN-exposed engineering sanity only.",
+    "B1 has zero learned parameters.",
+    "Tau 0.5 is a mechanism-sanity setting and not the A4 final matched-rate threshold.",
+    "No tracking-improvement claim follows from this experiment.",
+    "DEV and TEST are untouched."
+  ],
+  "status": "B1_GATE_CLOSED_LOOP_SANITY_PASS",
+  "tau_B1": 0.5,
+  "test_touched": 0,
+  "total_xor_px_after_first_block": 34005,
+  "video": "0442a954"
+}

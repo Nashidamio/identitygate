@@ -990,3 +990,23 @@ OPEN:
 
 NEXT:
 - Resolve the exact B1 rule from the canonical repository record, then implement B1 and the unified B1/B2/B3-S/B3-R A3/A4 closed-loop development evaluator without touching TEST.
+
+## 2026-09-12 - EXP032 B1 closed-loop mechanism verified
+
+IMPLEMENTED / EXECUTED / VERIFIED:
+- Frozen A6 B1 manual rule was executed closed-loop through the A3 physical memory-write intervention.
+- 59 eligible non-conditioning frames: 11 admitted and 48 blocked at mechanism-sanity tau_B1=0.5.
+- Every blocked frame was present before eviction and absent afterward.
+- frames_already_tracked bookkeeping remained retained.
+- The first blocked-frame prediction equaled B0 and downstream predictions changed starting at frame 3.
+- DEV touched: 0.
+- TEST touched: 0.
+- B1 peak VRAM was 6.166836261749268 GB.
+
+INTERPRETATION:
+- B1 is now implemented and physically controls frozen SAM3 memory writes.
+- The descriptive TRAIN-exposed IoU delta of 0.003185102237101445 is not performance evidence.
+- Final B1 threshold selection remains controlled by A4 DEV write rate only.
+
+NEXT:
+- Implement the unified B1/B2/B3-S/B3-R closed-loop development evaluator under A3, A4, A5, and A6 without touching TEST.

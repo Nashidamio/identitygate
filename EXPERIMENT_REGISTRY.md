@@ -607,3 +607,57 @@ Artifacts:
 - training_curve.csv SHA256: 2c2614ce13884efb0e8fc7006a801f32e78be362c88ffe970f70596b426b9dd0
 - summary.json SHA256: 56bb0668696d9cb1f5fd9514ee2e3a356289107255c3be6ab58eda76acaa59eb
 - run log SHA256: 56bb0668696d9cb1f5fd9514ee2e3a356289107255c3be6ab58eda76acaa59eb
+
+## EXP032 - B1 manual-rule closed-loop sanity
+
+Status: COMPLETE / CLOSED-LOOP MECHANISM PASS / NOT PERFORMANCE RESULT
+
+Executed code commit:
+- 89d6d3291bb1e294f21aa602453fe85efa06a0e6
+
+Scope:
+- TRAIN-exposed MOSEv2 video 0442a954.
+- 60 frames; objects [1, 2].
+- Frozen SAM3.
+- Frozen A6 B1 manual scoring rule.
+- A3 ALL-SAFE frame aggregation and whole-frame physical memory eviction.
+- Fixed mechanism-sanity tau_B1 = 0.5.
+- DEV touched: 0.
+- TEST touched: 0.
+
+Observed mechanism result:
+- status: B1_GATE_CLOSED_LOOP_SANITY_PASS.
+- eligible non-conditioning frames: 59.
+- ADMIT: 11.
+- BLOCK: 48.
+- descriptive admit fraction: 0.1864406779661017.
+- nonfinite object feature rows: 11.
+- first blocked frame: 2.
+- first blocked-frame prediction equals B0: True.
+- first changed downstream frame: 3.
+- downstream prediction changed: True.
+- total downstream XOR pixels after first block: 34005.
+- every blocked frame present before eviction: True.
+- every blocked frame absent after eviction: True.
+- frames_already_tracked retained: True.
+
+Descriptive TRAIN-exposed tracking values:
+- B0 mean target IoU: 0.8243956364947009.
+- B1-gated mean target IoU: 0.8275807387318024.
+- gated minus B0 delta: 0.003185102237101445.
+- B0 peak VRAM GB: 6.266373634338379.
+- B1 peak VRAM GB: 6.166836261749268.
+
+Interpretation:
+- B1 demonstrably controls the physical SAM3 memory-write path.
+- The positive descriptive IoU delta is not performance evidence.
+- tau_B1=0.5 is not a final operating point and was not A4 matched-rate selected.
+- No generalization or tracking-improvement conclusion follows.
+
+Artifacts:
+- summary.json SHA256: 962801fb812ef6a1516a171768898f864eb361abbdee2da10306a910a75d1ca5
+- write_decisions.csv SHA256: fc52991a7ef29e2bff739d09974aeee6ed1449f31a4564df2d62e38e1dc97a1c
+- object_gate_scores.csv SHA256: a5899014014154a5f55a5c982f43da5753e5f6b5a600c9dd16fd1a8f6f2f50ed
+- frame_metrics.csv SHA256: 97eded925f9556423bc1f57ee602658b2a18445e98f3ac43d02a587f6eafb079
+- visuals.sha256 SHA256: f889731f62c7ee735991e34ffb564669726285b1a0bf592ad217f0c0a6632dd4
+- run log SHA256: 94a0d0c418df111168ce013b38ca3edb85bc2f3955ae5db794f6a68164c19d04
