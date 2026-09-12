@@ -1,0 +1,103 @@
+{
+  "claim_boundary": [
+    "Actual B3-S and B3-R development weights, not final frozen B3.",
+    "pointer_valid is an availability mask and is not a predictive feature.",
+    "Missing-identity deployment fallback remains unresolved.",
+    "Training-set loss is descriptive only.",
+    "No DEV and no TEST data are read."
+  ],
+  "complete_rows": 7948,
+  "dev_touched": 0,
+  "epochs_executed": 1000,
+  "input_sha256": "538139f4c029832c0e871b94c94f29f08cefa06ba16f02d556f4fc9e8aa45fe5",
+  "model_sha256": "235076b86aa0975b3ec624aae703575fd4f030381b6af4008c3808f2db71847a",
+  "pointer_valid_rows": 7951,
+  "status": "TRAIN_ONLY_B3_DEVELOPMENT_TRAINING_COMPLETE",
+  "test_touched": 0,
+  "variants": {
+    "B3_R": {
+      "features": [
+        "mask_conf_iou_head",
+        "occ_score_logit",
+        "area_norm",
+        "area_ratio_anchor",
+        "temporal_iou_prev",
+        "ptr_sim_anchor_fp32",
+        "max_comp_anchor_cos_fp32"
+      ],
+      "heads": {
+        "drift": {
+          "final_weighted_bce": 0.20031431750105905,
+          "initial_weighted_bce": 1.1239718935598602,
+          "label_column": "drift_label_s2_probe",
+          "labeled_rows": 6958,
+          "negative": 5488,
+          "parameter_count": 2625,
+          "positive": 1470,
+          "positive_videos": 16,
+          "positive_weight": 3.7333333333333334,
+          "score_max_train_descriptive": 0.9999999982805292,
+          "score_min_train_descriptive": 3.1256656860697176e-53,
+          "seed": 31131
+        },
+        "theft": {
+          "final_weighted_bce": 0.12216637266336192,
+          "initial_weighted_bce": 1.398325059932092,
+          "label_column": "theft_label_s2_probe",
+          "labeled_rows": 7913,
+          "negative": 7770,
+          "parameter_count": 2625,
+          "positive": 143,
+          "positive_videos": 5,
+          "positive_weight": 54.33566433566433,
+          "score_max_train_descriptive": 0.9999557489252104,
+          "score_min_train_descriptive": 3.033074856453727e-98,
+          "seed": 31132
+        }
+      },
+      "total_parameters": 5250
+    },
+    "B3_S": {
+      "features": [
+        "mask_conf_iou_head",
+        "occ_score_logit",
+        "area_norm",
+        "area_ratio_anchor",
+        "temporal_iou_prev",
+        "ptr_sim_anchor_fp32"
+      ],
+      "heads": {
+        "drift": {
+          "final_weighted_bce": 0.2704712555479701,
+          "initial_weighted_bce": 1.1087743738922864,
+          "label_column": "drift_label_s2_probe",
+          "labeled_rows": 6958,
+          "negative": 5488,
+          "parameter_count": 2561,
+          "positive": 1470,
+          "positive_videos": 16,
+          "positive_weight": 3.7333333333333334,
+          "score_max_train_descriptive": 0.9999999971046654,
+          "score_min_train_descriptive": 7.610762629591841e-33,
+          "seed": 31031
+        },
+        "theft": {
+          "final_weighted_bce": 0.19085894319757699,
+          "initial_weighted_bce": 1.4022949012535892,
+          "label_column": "theft_label_s2_probe",
+          "labeled_rows": 7913,
+          "negative": 7770,
+          "parameter_count": 2561,
+          "positive": 143,
+          "positive_videos": 5,
+          "positive_weight": 54.33566433566433,
+          "score_max_train_descriptive": 0.9999890940106623,
+          "score_min_train_descriptive": 9.510883394755959e-90,
+          "seed": 31032
+        }
+      },
+      "total_parameters": 5122
+    }
+  },
+  "videos": 18
+}

@@ -559,3 +559,51 @@ Artifacts:
 - frame_metrics.csv SHA256: 7165c8a19b5145409a7b9ce8da09118226bdb4431cc95e50af1cf678c211f687
 - visual_sha256.txt SHA256: 5e12e9642d7bfe939850c90722fc0549c83e3e38d7446ed3395c4db940947c51
 - run log SHA256: 421d0592ff00e724d068b771d771b2c2f7c558d0b6d25e4aa410a66a4c7d149f
+
+## EXP031 - B3-S and B3-R development gate training
+
+Status: COMPLETE / TRAIN-ONLY DEVELOPMENT WEIGHTS / NOT FINAL B3
+
+Executed code commit:
+- 5944229ba518ccb924ce36c8d7368f6602ff8dce
+
+Scope:
+- 18 TRAIN videos only.
+- 7,951 pointer-valid rows observed.
+- 7,948 common complete identity rows used for training.
+- pointer_valid is an availability mask and is not a predictive feature.
+- B3-S inputs: B2-core plus ptr_sim_anchor_fp32.
+- B3-R inputs: B3-S plus max_comp_anchor_cos_fp32.
+- DEV touched: 0.
+- TEST touched: 0.
+
+Architecture:
+- Two independent failure-typed heads per variant: drift and theft.
+- Hidden architecture per head: input -> 64 -> 32 -> 1.
+- B3-S total learned parameters: 5,122.
+- B3-R total learned parameters: 5,250.
+
+Training:
+- PyTorch CPU float64 deterministic full-batch.
+- AdamW, 1,000 fixed epochs.
+- Weighted BCE independently per head.
+- No early stopping and no DEV tuning.
+
+Observed TRAIN-only losses:
+- B3-S drift: 1.1087743738922864 -> 0.2704712555479701.
+- B3-S theft: 1.4022949012535892 -> 0.19085894319757699.
+- B3-R drift: 1.1239718935598602 -> 0.20031431750105905.
+- B3-R theft: 1.398325059932092 -> 0.12216637266336192.
+
+Claim boundary:
+- These are actual B3-S and B3-R development weights.
+- Training loss and extreme TRAIN probabilities are descriptive only.
+- No generalization or tracking-improvement conclusion follows.
+- Missing-identity deployment fallback remains OPEN.
+- Existing EXP024 held-out utility evidence remains unchanged and is not superseded by TRAIN fit quality.
+
+Artifacts:
+- model.json SHA256: 235076b86aa0975b3ec624aae703575fd4f030381b6af4008c3808f2db71847a
+- training_curve.csv SHA256: 2c2614ce13884efb0e8fc7006a801f32e78be362c88ffe970f70596b426b9dd0
+- summary.json SHA256: 56bb0668696d9cb1f5fd9514ee2e3a356289107255c3be6ab58eda76acaa59eb
+- run log SHA256: 56bb0668696d9cb1f5fd9514ee2e3a356289107255c3be6ab58eda76acaa59eb

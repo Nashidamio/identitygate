@@ -937,3 +937,28 @@ OPEN:
 
 NEXT:
 - Implement the broader closed-loop development evaluator for B1/B2/B3-S/B3-R under A3 and A4 without touching TEST.
+
+## 2026-09-12 - EXP031 B3 development weights trained
+
+IMPLEMENTED / EXECUTED / VERIFIED:
+- Actual B3-S and B3-R neural gate weights were trained on TRAIN only.
+- Both variants use the same 7,948 pointer-valid complete identity rows.
+- pointer_valid remains a routing and availability mask, not a predictive feature.
+- B3-S learned parameter count: 5,122.
+- B3-R learned parameter count: 5,250.
+- DEV touched: 0.
+- TEST touched: 0.
+- Model SHA256: 235076b86aa0975b3ec624aae703575fd4f030381b6af4008c3808f2db71847a.
+
+INTERPRETATION:
+- Actual identity-augmented development models now exist.
+- Low TRAIN loss is not held-out evidence.
+- EXP024 held-out utility results remain the current evidence about incremental identity discrimination.
+- B3-S greater than B2 and B3-R greater than B3-S remain NOT ESTABLISHED.
+
+OPEN:
+- Missing-identity deployment fallback must be frozen before B3 closed-loop evaluation.
+- Final B3 calibration and thresholds remain unfrozen.
+
+NEXT:
+- Freeze an outcome-independent missing-identity routing rule, then wire B3-S and B3-R into the A3 frame-level closed-loop evaluator.
