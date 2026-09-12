@@ -890,3 +890,27 @@ NEXT:
 - Build EXP030 TRAIN-only closed-loop learned-gate sanity using frozen EXP029
   weights, A3 ALL-SAFE frame aggregation, and the verified EXP025 physical
   whole-frame eviction mechanism.
+
+## 2026-09-12 - EXP030 learned gate controls closed-loop writes
+
+IMPLEMENTED / EXECUTED / VERIFIED:
+- Frozen EXP029 B2-core neural weights were evaluated live inside frozen SAM3 tracking.
+- Live quality/temporal features drove drift/theft failure-head probabilities.
+- Development-only object-safe scores were aggregated with A3 ALL-SAFE.
+- BLOCK decisions used the verified EXP025 whole-frame physical eviction mechanism.
+- 55/59 eligible non-conditioning frames were blocked at the pre-fixed tau=0.5.
+- Every blocked entry existed before eviction and was absent afterward.
+- The first blocked-frame prediction matched B0, and later masks changed beginning at frame 3.
+- DEV touched: 0.
+- TEST touched: 0.
+
+OBSERVED / NOT A PERFORMANCE CONCLUSION:
+- B0 descriptive visible-row mean target IoU: 0.8243956364947009.
+- gated descriptive visible-row mean target IoU: 0.8062881782959369.
+- delta: -0.018107458198764026.
+- The negative TRAIN-exposed delta is retained.
+- The 6.78% admit rate demonstrates that an uncontrolled threshold comparison is not scientifically interpretable.
+
+NEXT:
+- Freeze the neutral matched-budget protocol before headline B1/B2/B3 comparisons.
+- Then run broader closed-loop development evaluation with full write-rate curves and video-clustered inference.

@@ -1,0 +1,53 @@
+{
+  "admit_count": 4,
+  "b0_mean_target_iou_visible_rows_descriptive": 0.8243956364947009,
+  "b0_peak_vram_gb": 6.266373634338379,
+  "b0_runtime_sec": 6.693681716918945,
+  "block_count": 55,
+  "descriptive_admit_fraction_nonconditioning": 0.06779661016949153,
+  "descriptive_mean_iou_delta_gated_minus_b0": -0.018107458198764026,
+  "dev_touched": 0,
+  "downstream_mask_changed_after_first_block": true,
+  "dual_head_composition": {
+    "drift_output": "p_unsafe_drift",
+    "object_safe_score": "min(1-p_unsafe_drift, 1-p_unsafe_theft)",
+    "status": "DEVELOPMENT_ONLY_NOT_FINAL_COMPOSITION",
+    "theft_output": "p_unsafe_theft"
+  },
+  "eligible_nonconditioning_frames": 59,
+  "every_block_absent_after": true,
+  "every_block_present_before": true,
+  "first_block_frame": 2,
+  "first_block_prediction_equal_to_b0": true,
+  "first_changed_frame": 3,
+  "frames": 60,
+  "frames_already_tracked_retained": true,
+  "gated_mean_target_iou_visible_rows_descriptive": 0.8062881782959369,
+  "gated_peak_vram_gb": 6.055308818817139,
+  "gated_runtime_sec": 6.490253925323486,
+  "missingness": {
+    "object_safe_score_if_any_feature_nonfinite": 0.0,
+    "policy": "FAIL_CLOSED",
+    "status": "DEVELOPMENT_ONLY_NOT_FINAL_MISSINGNESS_POLICY",
+    "temporal_iou_union_zero": "nonfinite"
+  },
+  "model_sha256": "6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf",
+  "nonfinite_object_feature_rows": 6,
+  "object_ids": [
+    1,
+    2
+  ],
+  "sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "scope": [
+    "TRAIN-exposed engineering sanity only.",
+    "EXP029 weights are development B2-core weights, not final B2.",
+    "Tau 0.5, dual-head composition, and fail-closed missingness are mechanism-sanity rules, not final calibrated policy.",
+    "No tracking-improvement claim follows from this experiment.",
+    "DEV and TEST are untouched."
+  ],
+  "status": "LEARNED_GATE_CLOSED_LOOP_SANITY_PASS",
+  "tau_admit": 0.5,
+  "test_touched": 0,
+  "total_xor_px_after_first_block": 60790,
+  "video": "0442a954"
+}

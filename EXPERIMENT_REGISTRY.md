@@ -501,3 +501,61 @@ Artifacts:
 - training_curve.csv SHA256: e7262d73b829290a1e97753faab9558d877eb733c79799637a787cbc025a2ebb
 - summary.json SHA256: a80e790c88c5b0d1ebc6c2b8643cf6ebf336fb7a22cef35e7a23e44316a10560
 - run log SHA256: a80e790c88c5b0d1ebc6c2b8643cf6ebf336fb7a22cef35e7a23e44316a10560
+
+## EXP030 - Learned B2-core closed-loop sanity
+
+Status: COMPLETE / LEARNED CLOSED-LOOP MECHANISM PASS / NOT PERFORMANCE RESULT
+
+Executed code commit:
+- 590b1f5c1bf8da6a7eb724355b76ec3b3fc5a219
+
+Scope:
+- TRAIN-exposed MOSEv2 video 0442a954.
+- 60 frames; objects [1, 2].
+- Frozen EXP029 B2-core model SHA256:
+  6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf
+- A3 ALL-SAFE frame aggregation.
+- Development-only dual-head composition and fail-closed missingness.
+- Fixed mechanism-sanity tau_admit=0.5.
+- DEV touched: 0.
+- TEST touched: 0.
+
+Observed mechanism result:
+- status: LEARNED_GATE_CLOSED_LOOP_SANITY_PASS.
+- eligible non-conditioning frames: 59.
+- ADMIT count: 4.
+- BLOCK count: 55.
+- descriptive admit fraction: 0.06779661016949153.
+- first BLOCK frame: 2.
+- first BLOCK prediction exactly matched B0: True.
+- first downstream changed frame: 3.
+- downstream masks changed: True.
+- total downstream XOR pixels: 60790.
+- every BLOCK present before eviction: True.
+- every BLOCK absent after eviction: True.
+- frames_already_tracked retained: True.
+- non-finite object-feature rows: 6.
+
+Descriptive tracking result:
+- B0 mean target IoU on visible rows: 0.8243956364947009.
+- gated mean target IoU on visible rows: 0.8062881782959369.
+- gated minus B0: -0.018107458198764026.
+- This TRAIN-exposed descriptive delta is negative and is retained without threshold tuning.
+
+Resources:
+- B0 peak VRAM: 6.266373634338379 GB.
+- gated peak VRAM: 6.055308818817139 GB.
+
+Interpretation:
+- A learned neural gate now demonstrably controls physical closed-loop SAM3 memory writes and changes subsequent predictions.
+- EXP030 does not establish tracking improvement, generalization, calibration, or final B2 performance.
+- The fixed tau=0.5 operating point admitted only 4/59 frames, so write-budget control is mandatory before performance comparison.
+- No post-hoc threshold tuning is performed on this result.
+
+Artifacts:
+- summary.json SHA256: 248a8323e2f299d17de64231d750a9a91a49a190f6483fbd2ed783f922158384
+- write_decisions.csv SHA256: 04c7e1fb2dc4902f4d61376acdcad14093de04a40c8f53fffa32f89a3d5b4a6a
+- object_gate_scores.csv SHA256: 1ccf7dc778eeb7ed71a6358fa747837165ea116794adcbf129aebd075050d93d
+- frame_metrics.csv SHA256: 7165c8a19b5145409a7b9ce8da09118226bdb4431cc95e50af1cf678c211f687
+- visual_sha256.txt SHA256: 5e12e9642d7bfe939850c90722fc0549c83e3e38d7446ed3395c4db940947c51
+- run log SHA256: 421d0592ff00e724d068b771d771b2c2f7c558d0b6d25e4aa410a66a4c7d149f
