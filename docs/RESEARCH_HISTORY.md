@@ -1363,3 +1363,33 @@ one-touch TEST rule are unchanged.
 
 Full amendment artifact:
 docs/AMENDMENT_A3_FRAME_LEVEL_WRITE_INTERVENTION.md
+
+## 73. Amendment A4 - Matched frame-write-rate protocol frozen
+
+Amendment A4 is now frozen at commit e6164a5.
+
+The matched-write-rate protocol left OPEN by Amendment A3 is RESOLVED.
+
+Locked by A4:
+- physical write-rate denominator is eligible non-conditioning frames;
+- B0 remains the ungated practical reference and is not the matched-budget reference;
+- gated headline comparisons use one DEV-selected common target rate chosen from write rate only;
+- absolute pooled DEV matching tolerance is 0.02;
+- every signal method receives an outcome-independent deterministic neutral control with exactly the same admitted-frame count per video;
+- full closed-loop write-rate curves use target rates 0.10 through 0.90;
+- TEST thresholds are never retuned;
+- direct TEST contrasts outside 0.02 pooled-rate tolerance are labeled RATE_MISMATCH;
+- primary POR@30 inference remains paired video-clustered BCa bootstrap;
+- the locked minimum practically important hard-set POR effect remains +0.08.
+
+Still OPEN and not resolved by A4:
+- ITR denominator;
+- F1 endpoint/co-primary contradiction;
+- missing-identity fallback;
+- deferred final feature definitions;
+- final gate/calibration choices.
+
+Artifact:
+docs/AMENDMENT_A4_MATCHED_WRITE_RATE_PROTOCOL.md
+SHA256:
+decaf53d83c790346148f598d053b1cab9865e925420f88b63aab567c4b9a8a4

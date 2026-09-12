@@ -914,3 +914,26 @@ OBSERVED / NOT A PERFORMANCE CONCLUSION:
 NEXT:
 - Freeze the neutral matched-budget protocol before headline B1/B2/B3 comparisons.
 - Then run broader closed-loop development evaluation with full write-rate curves and video-clustered inference.
+
+## 2026-09-12 - Amendment A4 matched-rate protocol frozen
+
+LOCKED / VERIFIED:
+- Amendment A4 frozen at commit e6164a5.
+- Matched-write-rate protocol previously OPEN under A3 is now RESOLVED.
+- B0 is the ungated practical reference, not the matched-budget reference.
+- Headline gated comparisons use an outcome-blind common DEV rate with absolute pooled write-rate tolerance 0.02.
+- Neutral matched-budget controls copy each signal methods admitted-frame count exactly per video.
+- Full write-rate curves remain mandatory.
+- TEST thresholds are not retuned.
+- POR@30 inference remains paired video-clustered BCa bootstrap.
+- Minimum practically important hard-set POR effect remains +0.08.
+
+OPEN:
+- ITR denominator.
+- F1 endpoint/co-primary contradiction.
+- Missing-identity fallback.
+- Deferred final feature definitions.
+- Final gate/calibration choices.
+
+NEXT:
+- Implement the broader closed-loop development evaluator for B1/B2/B3-S/B3-R under A3 and A4 without touching TEST.
