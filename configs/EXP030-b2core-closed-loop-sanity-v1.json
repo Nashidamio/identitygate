@@ -1,0 +1,57 @@
+{
+  "experiment": "EXP030",
+  "purpose": "TRAIN-exposed learned B2-core closed-loop mechanism sanity",
+  "status": "DEVELOPMENT_MECHANISM_SANITY_NOT_B2_PERFORMANCE_RESULT",
+  "model_path": "experiments/EXP029_b2core_train/model.json",
+  "expected_model_sha256": "6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf",
+  "expected_sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+  "video": "0442a954",
+  "n_frames": 60,
+  "expected_object_ids": [1, 2],
+  "features": [
+    "mask_conf_iou_head",
+    "occ_score_logit",
+    "area_norm",
+    "area_ratio_anchor",
+    "temporal_iou_prev"
+  ],
+  "dual_head_composition": {
+    "drift_output": "p_unsafe_drift",
+    "theft_output": "p_unsafe_theft",
+    "object_safe_score": "min(1-p_unsafe_drift, 1-p_unsafe_theft)",
+    "status": "DEVELOPMENT_ONLY_NOT_FINAL_COMPOSITION"
+  },
+  "missingness": {
+    "temporal_iou_union_zero": "nonfinite",
+    "policy": "FAIL_CLOSED",
+    "object_safe_score_if_any_feature_nonfinite": 0.0,
+    "status": "DEVELOPMENT_ONLY_NOT_FINAL_MISSINGNESS_POLICY"
+  },
+  "frame_aggregation": {
+    "rule": "ALL_SAFE",
+    "frame_score": "minimum object_safe_score over all tracked objects",
+    "tau_admit": 0.5,
+    "block_rule": "BLOCK iff frame_score < tau_admit",
+    "conditioning_frame_zero": "always retained"
+  },
+  "acceptance": {
+    "at_least_one_learned_block": true,
+    "every_block_present_before_eviction": true,
+    "every_block_absent_after_eviction": true,
+    "first_block_prediction_equal_to_b0": true,
+    "downstream_mask_changes_after_first_block": true,
+    "dev_touched": 0,
+    "test_touched": 0
+  },
+  "visual_frames": [0, 1, 2, 5, 10, 20, 30, 31, 40, 59],
+  "claim_boundary": [
+    "TRAIN-exposed engineering sanity only.",
+    "EXP029 weights are development B2-core weights, not final B2.",
+    "Tau 0.5, dual-head composition, and fail-closed missingness are mechanism-sanity rules, not final calibrated policy.",
+    "No tracking-improvement claim follows from this experiment.",
+    "DEV and TEST are untouched."
+  ],
+  "dev_touched": 0,
+  "test_touched": 0
+}
