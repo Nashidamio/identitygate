@@ -1,0 +1,150 @@
+{
+  "a5_routing": {
+    "B3_R": {
+      "relational_identity_available": "B3_R",
+      "self_identity_only": "B3_S",
+      "self_identity_unavailable": "B2"
+    },
+    "B3_S": {
+      "self_identity_available": "B3_S",
+      "self_identity_unavailable": "B2"
+    },
+    "unexpected_nonfinite_identity_when_available": "STOP_ENGINEERING_DEFECT"
+  },
+  "acceptance_per_variant": {
+    "at_least_one_block": true,
+    "downstream_mask_changes_after_first_block": true,
+    "every_block_absent_after_eviction": true,
+    "every_block_present_before_eviction": true,
+    "first_block_prediction_equal_to_b0": true,
+    "frames_already_tracked_retained": true
+  },
+  "base_feature_missingness": {
+    "B1_required_input_nonfinite": "FAIL_CLOSED",
+    "B2_base_feature_nonfinite": "FAIL_CLOSED",
+    "safe_score_when_fail_closed": 0.0
+  },
+  "claim_boundary": [
+    "TRAIN-exposed engineering sanity only.",
+    "EXP029 weights remain B2-core development weights and are not final B2.",
+    "EXP031 weights remain development B3-S/B3-R weights.",
+    "Tau 0.5 is not an A4 matched-rate operating point.",
+    "Any descriptive IoU difference is not performance evidence.",
+    "Fresh final DEV is not touched.",
+    "TEST is not touched."
+  ],
+  "dual_head_composition": {
+    "object_safe_score": "min(1-p_unsafe_drift,1-p_unsafe_theft)",
+    "status": "MECHANISM_SANITY_ONLY_NOT_FINAL_CALIBRATION"
+  },
+  "experiment": "EXP033",
+  "features": {
+    "B2": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev"
+    ],
+    "B3_R": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev",
+      "ptr_sim_anchor_fp32",
+      "max_comp_anchor_cos_fp32"
+    ],
+    "B3_S": [
+      "mask_conf_iou_head",
+      "occ_score_logit",
+      "area_norm",
+      "area_ratio_anchor",
+      "temporal_iou_prev",
+      "ptr_sim_anchor_fp32"
+    ]
+  },
+  "frame_intervention": {
+    "block_action": "evict current non-conditioning frame from global and per-object memory banks",
+    "conditioning_frame_zero": "always retained",
+    "frame_score": "minimum object safe score over all tracked objects",
+    "rule": "A3_ALL_SAFE",
+    "tau": 0.5,
+    "tau_status": "MECHANISM_SANITY_ONLY_NOT_A4_FINAL_OPERATING_THRESHOLD"
+  },
+  "fresh_dev_touched": 0,
+  "identity_protocol": {
+    "anchor_source": "GT-clean frame-0 conditioning obj_ptr",
+    "autocast": "disabled",
+    "current_pointer_source": "current non-conditioning output obj_ptr",
+    "float32_matmul_precision": "highest",
+    "pointer_valid": "occ_score_logit > 0",
+    "pointer_valid_is_predictive_feature": false,
+    "relational_identity": "FP32 maximum cosine current pointer to other tracked frame-0 anchors",
+    "self_identity": "FP32 cosine current pointer to own frame-0 anchor",
+    "tf32": "disabled"
+  },
+  "models": {
+    "B2": {
+      "path": "experiments/EXP029_b2core_train/model.json",
+      "sha256": "6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf",
+      "status": "DEVELOPMENT_B2_CORE_NOT_FINAL_B2"
+    },
+    "B3": {
+      "path": "experiments/EXP031_b3_train/model.json",
+      "sha256": "235076b86aa0975b3ec624aae703575fd4f030381b6af4008c3808f2db71847a",
+      "status": "TRAIN_ONLY_B3_DEVELOPMENT_WEIGHTS"
+    }
+  },
+  "protocol_artifacts": {
+    "a5_path": "docs/AMENDMENT_A5_MISSING_IDENTITY_ROUTING.md",
+    "a5_sha256": "368f9b3073084687b2919cbb3927672f179aa69b32ce3e3ece3a6712b875712f",
+    "a6_path": "docs/AMENDMENT_A6_B1_MANUAL_RULE.md",
+    "a6_sha256": "0faad8c94fa9a0b8c369d6c28bda983c32427606e4f9da0676119fd46760968f",
+    "b1_rule_path": "configs/B1-rule-v1.json",
+    "b1_rule_sha256": "f748f91953d8173158a50fb6d300c45a03e34084915290b64e0715e70139d47c"
+  },
+  "purpose": "TRAIN-exposed unified B1/B2-core/B3-S/B3-R closed-loop mechanism sanity",
+  "scope": {
+    "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+    "development_exposed_train_only": true,
+    "expected_object_ids": [
+      1,
+      2
+    ],
+    "fresh_dev_touched": 0,
+    "n_frames": 60,
+    "test_touched": 0,
+    "video": "0442a954"
+  },
+  "source_dependencies": {
+    "exp022_relational_source": {
+      "path": "scripts/exp022_relational_feature_full.py",
+      "sha256": "6df00a5d16629c9495758371384744e961bfad721ccdb29d0bbc634393cfcd5b"
+    },
+    "exp023_primitive_source": {
+      "path": "scripts/exp023_train18_primitive_cache.py",
+      "sha256": "e3f78478171083eab8fc5955b711be39337aa2838da7a05bb6c67771a76c536b"
+    },
+    "exp030_b2_closed_loop_source": {
+      "path": "scripts/exp030_b2core_closed_loop_sanity.py",
+      "sha256": "a430597240f86d5ebef1c0f7d6711d1547ea4b7e1ec5da4cb7595dac60729abb"
+    },
+    "exp032_b1_closed_loop_source": {
+      "path": "scripts/exp032_b1_closed_loop_sanity.py",
+      "sha256": "afc370169f8be6ddf9e8e8b2c934ae71da54118ad9f54250dbf1ffd1982ec53e"
+    }
+  },
+  "status": "PLANNED_MECHANISM_SANITY_NOT_PERFORMANCE_RESULT",
+  "substrate": {
+    "builder": "build_sam3_video_model",
+    "expected_sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da"
+  },
+  "test_touched": 0,
+  "variants": [
+    "B1",
+    "B2",
+    "B3_S",
+    "B3_R"
+  ]
+}
