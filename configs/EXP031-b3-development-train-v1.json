@@ -1,0 +1,94 @@
+{
+  "experiment": "EXP031",
+  "purpose": "TRAIN-only actual B3-S and B3-R development gate training",
+  "status": "B3_DEVELOPMENT_NOT_FINAL_B3",
+  "input_csv": "experiments/EXP024_utility_prepare/train18_utility.csv",
+  "expected_input_sha256": "538139f4c029832c0e871b94c94f29f08cefa06ba16f02d556f4fc9e8aa45fe5",
+  "expected_split": "TRAIN",
+  "expected_videos": 18,
+  "population": {
+    "require_pointer_valid": true,
+    "pointer_valid_is_feature": false,
+    "expected_pointer_valid_rows": 7951,
+    "expected_complete_rows": 7948
+  },
+  "variants": {
+    "B3_S": {
+      "features": [
+        "mask_conf_iou_head",
+        "occ_score_logit",
+        "area_norm",
+        "area_ratio_anchor",
+        "temporal_iou_prev",
+        "ptr_sim_anchor_fp32"
+      ],
+      "input_dim": 6,
+      "parameter_count_expected_per_head": 2561,
+      "parameter_count_expected_total": 5122
+    },
+    "B3_R": {
+      "features": [
+        "mask_conf_iou_head",
+        "occ_score_logit",
+        "area_norm",
+        "area_ratio_anchor",
+        "temporal_iou_prev",
+        "ptr_sim_anchor_fp32",
+        "max_comp_anchor_cos_fp32"
+      ],
+      "input_dim": 7,
+      "parameter_count_expected_per_head": 2625,
+      "parameter_count_expected_total": 5250
+    }
+  },
+  "labels": {
+    "drift": {
+      "column": "drift_label_s2_probe",
+      "expected_labeled": 6958,
+      "expected_positive": 1470,
+      "expected_negative": 5488,
+      "expected_positive_videos": 16
+    },
+    "theft": {
+      "column": "theft_label_s2_probe",
+      "expected_labeled": 7913,
+      "expected_positive": 143,
+      "expected_negative": 7770,
+      "expected_positive_videos": 5
+    }
+  },
+  "architecture": {
+    "hidden_dims": [64, 32],
+    "activation": "ReLU",
+    "output_per_head": "unsafe logit"
+  },
+  "training": {
+    "implementation": "PyTorch CPU float64 deterministic full-batch",
+    "loss": "weighted BCEWithLogitsLoss",
+    "positive_weight": "n_negative / n_positive independently per head",
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "betas": [0.9, 0.999],
+    "eps": 1e-8,
+    "epochs": 1000,
+    "sanity_epochs": 10,
+    "log_every": 50,
+    "base_seed": 31031,
+    "early_stopping": false,
+    "dev_tuning": false
+  },
+  "normalization": {
+    "rule": "variant-specific z-score fitted on the same 7948 pointer-valid complete TRAIN rows",
+    "zero_std_replacement": 1.0
+  },
+  "claim_boundary": [
+    "Actual B3-S and B3-R development weights, not final frozen B3.",
+    "pointer_valid is an availability mask and is not a predictive feature.",
+    "Missing-identity deployment fallback remains unresolved.",
+    "Training-set loss is descriptive only.",
+    "No DEV and no TEST data are read."
+  ],
+  "dev_touched": 0,
+  "test_touched": 0
+}
