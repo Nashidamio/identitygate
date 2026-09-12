@@ -1337,3 +1337,29 @@ Outstanding at this point:
 
 Next scientific step after commit: B2 vs B3-S vs B3-R utility analysis
 on the cached TRAIN primitives.
+
+## 72. Amendment A3 - Frame-level physical write intervention
+
+After EXP025 verified whole-frame physical memory eviction and EXP026,
+EXP027, and EXP028 rejected the tested per-object implementations under exact
+vanilla-equivalence requirements, the closed-loop intervention granularity is
+amended from per-object physical blocking to frame-level physical blocking.
+
+Object-level B1/B2/B3 scores are retained. A frame uses the fixed ALL-SAFE
+aggregation rule: frame score = minimum tracked-object admission score, and the
+whole non-conditioning frame is admitted only when that score passes the
+variant threshold.
+
+The physical fallback operates on non-conditioning frames, but the final
+matched-write-rate denominator/reference protocol remains OPEN. Vanilla B0
+physically retains every eligible frame under this mechanism, so direct
+physical-rate matching would force no blocking. THESIS_RULES open item 6 is
+not resolved by this amendment. A separate outcome-independent matched-budget
+control protocol must be frozen before headline matched-rate comparisons.
+Full sweep curves remain mandatory.
+
+Research question, endpoints, video-clustered inference, frozen SAM3, and the
+one-touch TEST rule are unchanged.
+
+Full amendment artifact:
+docs/AMENDMENT_A3_FRAME_LEVEL_WRITE_INTERVENTION.md

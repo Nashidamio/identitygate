@@ -837,3 +837,33 @@ CONCLUDED:
 NEXT:
 - Use the already-verified EXP025 whole-frame physical write-block mechanism as the implementation fallback.
 - Append and freeze the resulting frame-level intervention amendment before closed-loop gate experiments.
+
+## AMENDMENT A3 - FRAME-LEVEL PHYSICAL WRITE INTERVENTION - 2026-09-10
+
+LOCK CANDIDATE:
+- EXP025 whole-frame physical eviction is the closed-loop intervention.
+- EXP026 singleton, EXP027 attention-mask, and EXP028 rowwise routes are
+  rejected and will not be relaxed or retuned.
+- Object-level gate scores are aggregated by a fixed ALL-SAFE rule:
+  frame_score = minimum tracked-object admission score.
+- The physical intervention candidate is one non-conditioning frame.
+- Conditioning/prompt frames are never blocked.
+- The final matched-write-rate denominator/reference/control remains OPEN per
+  THESIS_RULES open item 6 and is NOT frozen by A3.
+- Direct matching to vanilla B0 physical admission would force no blocking
+  because B0 retains every eligible frame under this mechanism.
+- A separate outcome-independent matched-budget protocol must be frozen before
+  headline B1/B2/B3/B5 matched-rate comparisons.
+- Full write-rate sweep curves remain mandatory.
+- Vanilla B0 remains the ungated practical reference.
+- The final method must be described as frame-level physical memory-write
+  admission derived from object-level signals, not per-object physical write
+  blocking.
+- Research question, POR@30, video-clustered bootstrap, +8 pp practical-effect
+  criterion, J&F protection, whole-scene control, frozen SAM3, and one-touch
+  TEST remain unchanged.
+- Full text: docs/AMENDMENT_A3_FRAME_LEVEL_WRITE_INTERVENTION.md
+
+NEXT:
+- Freeze Amendment A3 before using the whole-frame fallback in closed-loop gate sanity experiments.
+- Resolve and freeze the matched-budget protocol separately before headline matched-rate DEV/TEST comparisons.
