@@ -661,3 +661,59 @@ Artifacts:
 - frame_metrics.csv SHA256: 97eded925f9556423bc1f57ee602658b2a18445e98f3ac43d02a587f6eafb079
 - visuals.sha256 SHA256: f889731f62c7ee735991e34ffb564669726285b1a0bf592ad217f0c0a6632dd4
 - run log SHA256: 94a0d0c418df111168ce013b38ca3edb85bc2f3955ae5db794f6a68164c19d04
+
+## EXP033 - Unified B1/B2/B3 closed-loop sanity
+
+Status: COMPLETE / UNIFIED CLOSED-LOOP MECHANISM PASS / NOT PERFORMANCE RESULT
+
+Executed code commit:
+- bbeb184
+
+Scope:
+- TRAIN-exposed MOSEv2 video 0442a954.
+- 60 frames; objects [1, 2].
+- Frozen SAM3 commit 8f0b7f4d4e7eda2ed606ebde6702c93359ad01da.
+- B1 manual A6 rule.
+- B2 EXP029 development B2-core weights.
+- B3-S/B3-R EXP031 development weights.
+- A5 missing-identity routing.
+- A3 whole-frame physical memory eviction.
+- Fixed mechanism-sanity tau = 0.5.
+- Fresh DEV touched: 0.
+- TEST touched: 0.
+
+Observed:
+- Overall status: UNIFIED_GATE_CLOSED_LOOP_SANITY_PASS.
+- B1: 11 ADMIT / 48 BLOCK; mechanism PASS.
+- B2: 4 ADMIT / 55 BLOCK; mechanism PASS.
+- B3-S: 18 ADMIT / 41 BLOCK; mechanism PASS.
+- B3-R: 16 ADMIT / 43 BLOCK; mechanism PASS.
+- Every variant preserved current-frame prediction at the first block and changed downstream predictions.
+- Every blocked frame was present before eviction and absent afterward.
+- frames_already_tracked bookkeeping remained retained.
+- B3-S live routing: B3_S=105, B2=1, FAIL_CLOSED_BASE=12.
+- B3-R live routing: B3_R=104, B2=1, FAIL_CLOSED_BASE=13.
+- Peak VRAM remained approximately 6.06-6.18 GB for gated variants; B0 peak was 6.266 GB.
+
+Descriptive TRAIN-exposed IoU deltas versus B0:
+- B1: +0.003185102237101445.
+- B2: -0.018107458198764026.
+- B3-S: +0.0038962141239293757.
+- B3-R: +0.0012914734621838342.
+These are not performance evidence because write rates are unmatched and the scope is one TRAIN-exposed video.
+
+Coverage note:
+- The live two-object run exercised the B3-R relational route.
+- The single-object B3-R -> B3-S fallback was not live-exercised here; its deterministic routing branch passed the pre-run CPU smoke test.
+
+Artifacts:
+- summary.json SHA256: 0de6088159321da12342a955541af8577a6be8a484608a2bce3c88c2f81b4886
+- B1_object_scores.csv SHA256: 5440767106c77f7e3f76dd5ff72149d08c9a918930095b319e02463ea83fd46c
+- B1_write_decisions.csv SHA256: fff1dc941d6d6b08c2bb866ae7e0b9b07c572e3e347b769c93c96018da0fa98a
+- B2_object_scores.csv SHA256: b0ffb61b2d77129a27704837bf830c25271f14d8c446ca1adb9696b3cdd0db73
+- B2_write_decisions.csv SHA256: 325260d36fd63b49838a3e297c484cb707d3b0d01a3c26fc32b2ebbc099757bb
+- B3_S_object_scores.csv SHA256: 30dd7b45faa0f24902fa479fe308b5fe982c68e531f0d2cc0eacc568a9c2bc93
+- B3_S_write_decisions.csv SHA256: 114e8ebcf236ccdaccdce42d0d0f53e98fd375dabb8093256afd529de6b9185d
+- B3_R_object_scores.csv SHA256: e9de784bf51a54c0c81593c0d00fae6da74f6ed180696e8626476a508b1f74dd
+- B3_R_write_decisions.csv SHA256: d26ba5c20f789a0972f1f868857394aa4bac8fb6bbe1419e1d401dad887d7a83
+- ignored run log SHA256: 8808b52452d8e76320cbfe5e794a2c1e87480e49a6e6b1f7e1d32b5f2c831012

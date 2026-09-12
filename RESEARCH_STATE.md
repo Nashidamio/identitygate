@@ -1010,3 +1010,28 @@ INTERPRETATION:
 
 NEXT:
 - Implement the unified B1/B2/B3-S/B3-R closed-loop development evaluator under A3, A4, A5, and A6 without touching TEST.
+
+## 2026-09-12 - EXP033 unified closed-loop gate mechanism verified
+
+IMPLEMENTED / EXECUTED / VERIFIED:
+- Unified B1, B2-core, B3-S, and B3-R closed-loop gate execution passed on TRAIN-exposed video 0442a954.
+- All four variants physically controlled the A3 SAM3 memory-write intervention.
+- B3-S used its identity model on 105 live object-rows.
+- B3-R used its relational identity model on 104 live object-rows.
+- Invalid/unavailable identity routed according to A5 or failed closed when base features were non-finite.
+- Fresh DEV touched: 0.
+- TEST touched: 0.
+- All observed peak VRAM values remained below 6.3 GB.
+
+INTERPRETATION:
+- The unified gate mechanism is operational on frozen SAM3.
+- The observed TRAIN-only IoU deltas are descriptive only and are not evidence that any gate is better.
+- A4 matched-write-rate development evaluation is still required before comparative conclusions.
+- EXP029 remains B2-core rather than final B2.
+
+COVERAGE NOTE:
+- B3-R relational routing was live-exercised on this two-object video.
+- The single-object B3-R -> B3-S fallback was CPU-smoke-tested but not live-exercised in EXP033.
+
+NEXT:
+- Close the remaining pre-DEV gate/split protocol items, then build the DEV-ready A4 matched-write-rate evaluator without touching TEST.
