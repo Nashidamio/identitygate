@@ -867,3 +867,26 @@ LOCK CANDIDATE:
 NEXT:
 - Freeze Amendment A3 before using the whole-frame fallback in closed-loop gate sanity experiments.
 - Resolve and freeze the matched-budget protocol separately before headline matched-rate DEV/TEST comparisons.
+
+## 2026-09-12 - EXP029 B2-core development weights trained
+
+IMPLEMENTED / EXECUTED / VERIFIED:
+- Actual B2-core neural gate weights were trained on TRAIN only.
+- Five currently verified quality/temporal features were used.
+- Two failure-typed MLP heads were trained: drift and theft.
+- Combined learned parameter count: 4,994.
+- DEV touched: 0.
+- TEST touched: 0.
+- Model SHA256: 6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf.
+
+INTERPRETATION:
+- EXP029 establishes a reusable learned B2-core development model.
+- Training loss decreased for both heads, but this is not evidence of
+  generalization or tracking improvement.
+- Final B2 remains OPEN because deferred/open feature definitions and the final
+  dual-head admission composition are not yet frozen.
+
+NEXT:
+- Build EXP030 TRAIN-only closed-loop learned-gate sanity using frozen EXP029
+  weights, A3 ALL-SAFE frame aggregation, and the verified EXP025 physical
+  whole-frame eviction mechanism.

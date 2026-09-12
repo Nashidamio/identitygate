@@ -457,3 +457,47 @@ Artifacts:
 Decision:
 - Do not tune or relax ROWWISE equivalence.
 - Proceed to the pre-declared whole-frame physical write-block fallback, with the scientific change documented as an amendment before gate-result experiments.
+
+## EXP029 - B2-core development gate training
+
+Status: COMPLETE / TRAIN-ONLY DEVELOPMENT WEIGHTS / NOT FINAL B2
+
+Executed code commit:
+- 8722001e2d337e9c96d3a145f2ad9cb2b063d6cf
+
+Scope:
+- 18 TRAIN videos only.
+- 8,139 rows with all five B2-core features finite.
+- Features: mask_conf_iou_head, occ_score_logit, area_norm,
+  area_ratio_anchor, temporal_iou_prev.
+- Shared TRAIN-only z-score normalization.
+- Two independent failure-typed MLP heads: drift and theft.
+- Architecture per head: 5 -> 64 -> 32 -> 1.
+- Total learned parameters: 4,994.
+- DEV touched: 0.
+- TEST touched: 0.
+
+Training:
+- PyTorch CPU float64 deterministic full-batch.
+- AdamW, 1,000 fixed epochs.
+- Weighted BCE independently per head.
+- No early stopping and no DEV tuning.
+
+Observed:
+- Drift rows: 6,995; positives: 1,507; positive-video clusters: 17.
+- Theft rows: 8,104; positives: 143; positive-video clusters: 5.
+- Drift weighted BCE: 1.0820583613743782 -> 0.3333268393773441.
+- Theft weighted BCE: 1.367510637194698 -> 0.2881328066581184.
+
+Claim boundary:
+- These are actual learned B2-core development weights.
+- Training-set loss is descriptive only.
+- This is not held-out evidence, not closed-loop evidence, and not final frozen B2.
+- Features 4 and 8 remain deferred; Feature 7 remains open.
+- The two failure heads are not yet frozen into one physical admission-score rule.
+
+Artifacts:
+- model.json SHA256: 6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf
+- training_curve.csv SHA256: e7262d73b829290a1e97753faab9558d877eb733c79799637a787cbc025a2ebb
+- summary.json SHA256: a80e790c88c5b0d1ebc6c2b8643cf6ebf336fb7a22cef35e7a23e44316a10560
+- run log SHA256: a80e790c88c5b0d1ebc6c2b8643cf6ebf336fb7a22cef35e7a23e44316a10560

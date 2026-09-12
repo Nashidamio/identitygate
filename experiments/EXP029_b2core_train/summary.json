@@ -1,0 +1,55 @@
+{
+  "claim_boundary": [
+    "This is the first actual learned gate-weight experiment, but it is B2-core development, not final frozen B2.",
+    "Features 4 and 8 remain deferred and Feature 7 remains open; they are not manufactured here.",
+    "The two failure heads are not yet combined into a final physical admission score.",
+    "Training-set discrimination is descriptive only and is not held-out evidence.",
+    "No DEV and no TEST data are read."
+  ],
+  "dev_touched": 0,
+  "epochs_executed": 1000,
+  "features": [
+    "mask_conf_iou_head",
+    "occ_score_logit",
+    "area_norm",
+    "area_ratio_anchor",
+    "temporal_iou_prev"
+  ],
+  "finite_b2_rows": 8139,
+  "heads": {
+    "drift": {
+      "final_weighted_bce": 0.3333268393773441,
+      "initial_weighted_bce": 1.0820583613743782,
+      "label_column": "drift_label_s2_probe",
+      "labeled_rows": 6995,
+      "negative": 5488,
+      "parameter_count": 2497,
+      "positive": 1507,
+      "positive_videos": 17,
+      "positive_weight": 3.641672196416722,
+      "score_max_train_descriptive": 0.9999999672097732,
+      "score_min_train_descriptive": 2.107123920098369e-58,
+      "seed": 29029
+    },
+    "theft": {
+      "final_weighted_bce": 0.2881328066581184,
+      "initial_weighted_bce": 1.367510637194698,
+      "label_column": "theft_label_s2_probe",
+      "labeled_rows": 8104,
+      "negative": 7961,
+      "parameter_count": 2497,
+      "positive": 143,
+      "positive_videos": 5,
+      "positive_weight": 55.67132867132867,
+      "score_max_train_descriptive": 0.999698070145972,
+      "score_min_train_descriptive": 4.3250517150143016e-92,
+      "seed": 29030
+    }
+  },
+  "input_sha256": "538139f4c029832c0e871b94c94f29f08cefa06ba16f02d556f4fc9e8aa45fe5",
+  "model_sha256": "6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf",
+  "status": "TRAIN_ONLY_B2_CORE_TRAINING_COMPLETE_NOT_FINAL_B2",
+  "test_touched": 0,
+  "total_parameters": 4994,
+  "videos": 18
+}
