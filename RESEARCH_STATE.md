@@ -962,3 +962,31 @@ OPEN:
 
 NEXT:
 - Freeze an outcome-independent missing-identity routing rule, then wire B3-S and B3-R into the A3 frame-level closed-loop evaluator.
+
+## 2026-09-12 - Amendment A5 missing-identity routing frozen
+
+LOCKED / VERIFIED:
+- Amendment A5 frozen at commit 9fb8464.
+- Missing-identity routing for B3-S/B3-R is now RESOLVED.
+- pointer_valid is an availability/routing mask only and is not a predictive feature.
+- B3-S routes to B2 when self identity is unavailable.
+- B3-R routes hierarchically: B3-R -> B3-S -> B2 as relational/self identity becomes unavailable.
+- Single-object B3-R routes to B3-S when self identity is available.
+- Identity missingness never removes an object from A3 ALL-SAFE frame aggregation.
+- Unexpected required identity numeric failure must STOP rather than silently fallback.
+- DEV outcomes and TEST outcomes do not participate in routing.
+
+NOT CONCLUDED:
+- B3-S improves over B2.
+- B3-R improves over B3-S.
+- Identity improves closed-loop tracking.
+
+OPEN:
+- Final B2/B3 feature completion.
+- Final dual-head composition/calibration.
+- B2-core signal missingness handling.
+- ITR denominator.
+- F1 endpoint/co-primary contradiction.
+
+NEXT:
+- Resolve the exact B1 rule from the canonical repository record, then implement B1 and the unified B1/B2/B3-S/B3-R A3/A4 closed-loop development evaluator without touching TEST.

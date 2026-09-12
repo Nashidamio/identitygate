@@ -1393,3 +1393,33 @@ Artifact:
 docs/AMENDMENT_A4_MATCHED_WRITE_RATE_PROTOCOL.md
 SHA256:
 decaf53d83c790346148f598d053b1cab9865e925420f88b63aab567c4b9a8a4
+
+## 74. Amendment A5 - Hierarchical missing-identity routing frozen
+
+Amendment A5 is frozen at commit 9fb8464.
+
+The missing-identity routing item previously OPEN for B3-S/B3-R is RESOLVED.
+
+Locked routing:
+- pointer_valid remains an identity-availability mask, not a predictive feature;
+- B3-S uses B3-S when self identity is available and otherwise falls back to B2;
+- B3-R uses B3-R when relational identity is available, falls back to B3-S when only self identity is available, and falls back to B2 when self identity is unavailable;
+- single-object B3-R therefore routes to B3-S while self identity is available;
+- objects are never removed from A3 ALL-SAFE aggregation because identity is missing;
+- an unexpected non-finite identity value in a case where the value should be computable is an engineering defect and must STOP the run rather than being silently treated as scientific missingness;
+- no future outcome, GT outcome, POR, ITR, J&F, or TEST result may affect routing.
+
+A5 does not establish that identity improves tracking. EXP024 held-out utility evidence remains unchanged, and EXP031 TRAIN fit quality is not generalization evidence.
+
+Still OPEN:
+- final B2/B3 feature completion;
+- final dual-head composition/calibration;
+- B2-core signal missingness handling;
+- ITR denominator;
+- F1 endpoint/co-primary contradiction.
+
+Artifact:
+docs/AMENDMENT_A5_MISSING_IDENTITY_ROUTING.md
+
+SHA256:
+368f9b3073084687b2919cbb3927672f179aa69b32ce3e3ece3a6712b875712f
