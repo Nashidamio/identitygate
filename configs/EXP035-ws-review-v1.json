@@ -1,0 +1,66 @@
+{
+  "claim_boundary": [
+    "Visual review does not permit changing EXP034 thresholds.",
+    "Audit30 manual labels are recorded before revealing automated decisions.",
+    "Disagreement adjudication determines final labels only for the frozen disagreement population.",
+    "No SAM, gate, POR, or TEST evaluation is performed."
+  ],
+  "experiment": "EXP035",
+  "frame_source": "/mnt/d/thesis_data/mosev2/train/JPEGImages",
+  "manual_review": {
+    "allowed_labels": [
+      "WHOLE_SCENE",
+      "NORMAL_OCCLUSION"
+    ],
+    "label_template_columns": [
+      "scene_event_id",
+      "manual_label",
+      "reason",
+      "reviewer_notes"
+    ],
+    "manual_label_initial_value": "",
+    "reason_initial_value": "",
+    "reviewer_notes_initial_value": ""
+  },
+  "output_root": "~/thesis/identitygate_visual_artifacts/EXP035",
+  "packs": {
+    "audit30": {
+      "batch_size": 30,
+      "expected_scenes": 30,
+      "source": "audit_csv"
+    },
+    "disagreements": {
+      "batch_size": 100,
+      "expected_scenes": 1818,
+      "source": "disagreement_csv"
+    }
+  },
+  "purpose": "Blinded visual review for EXP034 whole-scene manual audit and disagreement adjudication",
+  "review_blinding": {
+    "hide_automatic_status": true,
+    "hide_component_decisions": true,
+    "hide_mad_scores": true,
+    "hide_transnet_scores": true,
+    "reason": "Manual judgement must be recorded without seeing the automated pixel decision.",
+    "visible_identifiers": [
+      "scene_event_id",
+      "frame_index"
+    ]
+  },
+  "source": {
+    "audit_csv": "experiments/EXP034_ws_pixel_full/audit_sample_with_pixel.csv",
+    "audit_csv_sha256": "3aa2f19cf69726c6c708ac2c3e99f68fdf5d6bf3de377f5b6f20979ead72cbcc",
+    "disagreement_csv": "experiments/EXP034_ws_pixel_full/manual_adjudication_required.csv",
+    "disagreement_csv_sha256": "1f6fa7ad1e10662ff0333331e6d1d5a1127e89c710b0e6d9768cd206a34d63d3",
+    "result_commit": "dff45551bc546ec858fa522198b84d38434750c6"
+  },
+  "status": "FROZEN_PENDING_COMMIT",
+  "visual_context": {
+    "animated_gif_frame_duration_ms": 180,
+    "animated_gif_loop": 0,
+    "contact_sheet_thumbnail_width": 320,
+    "gap_sample_count": 3,
+    "gap_sampling": "deterministic evenly spaced interior frames when available",
+    "transition_context_frames": 7
+  }
+}
