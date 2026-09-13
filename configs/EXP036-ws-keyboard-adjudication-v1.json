@@ -1,0 +1,47 @@
+{
+  "blinding": {
+    "show_automatic_status": false,
+    "show_component_decisions": false,
+    "show_frame_indices": true,
+    "show_mad_scores": false,
+    "show_scene_id": true,
+    "show_transnet_scores": false
+  },
+  "cache_dir": "contact_sheet_cache",
+  "claim_boundary": [
+    "EXP034 thresholds remain frozen.",
+    "This interface performs manual adjudication only.",
+    "No SAM, gate, POR, or TEST evaluation is performed."
+  ],
+  "exp035_config": "configs/EXP035-ws-review-v1.json",
+  "exp035_config_sha256": "f88f34449f7ead0efecec01114d0a445f7ccc6c871041914d7dfd3614a030bad",
+  "expected_scenes": 1818,
+  "experiment": "EXP036",
+  "frame_root": "/mnt/d/thesis_data/mosev2/train/JPEGImages",
+  "host": "127.0.0.1",
+  "keys": {
+    "1": [
+      "WHOLE_SCENE",
+      "camera_cut_or_global_scene_switch"
+    ],
+    "2": [
+      "WHOLE_SCENE",
+      "global_obstruction_or_scene_wide_collapse"
+    ],
+    "3": [
+      "NORMAL_OCCLUSION",
+      "local_object_specific_event"
+    ],
+    "4": [
+      "NORMAL_OCCLUSION",
+      "continuous_camera_motion_scene_visible"
+    ]
+  },
+  "labels_file": "review_labels.csv",
+  "output_root": "~/thesis/identitygate_visual_artifacts/EXP036/disagreements",
+  "port": 8765,
+  "purpose": "Rapid blinded manual adjudication of the frozen EXP034 disagreement population",
+  "source_csv": "experiments/EXP034_ws_pixel_full/manual_adjudication_required.csv",
+  "source_csv_sha256": "1f6fa7ad1e10662ff0333331e6d1d5a1127e89c710b0e6d9768cd206a34d63d3",
+  "status": "FROZEN_PENDING_COMMIT"
+}
