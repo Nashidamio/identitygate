@@ -1,0 +1,94 @@
+{
+  "b0_por30_event_count": 1,
+  "b2_model_sha256": "6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf",
+  "b3_model_sha256": "235076b86aa0975b3ec624aae703575fd4f030381b6af4008c3808f2db71847a",
+  "claim_boundary": [
+    "TRAIN-exposed engineering sanity only.",
+    "Exact A7 B2/B3 model artifacts and A5 routing are inherited through the frozen EXP033 mechanism.",
+    "Tau 0.5 is not an A4 matched-rate operating point.",
+    "This run is not final performance evidence and performs no statistical inference.",
+    "Fresh final DEV is not touched.",
+    "TEST is not touched."
+  ],
+  "config_sha256": "087c5175f43ec13c0c9195fe782a1f5b39ba1e466039aa1137ab9b6147cfb932",
+  "experiment": "EXP037",
+  "frames": 60,
+  "fresh_dev_touched": 0,
+  "object_ids": [
+    1,
+    2
+  ],
+  "operating_points": [
+    {
+      "admit_count": 59,
+      "block_count": 0,
+      "block_integrity_pass": 1,
+      "eligible_nonconditioning_frames": 59,
+      "peak_vram_gb": 6.266373634338379,
+      "por30": 1.0,
+      "por30_events": 1,
+      "runtime_sec": 7.147211313247681,
+      "tau": "",
+      "variant": "B0",
+      "write_rate": 1.0
+    },
+    {
+      "admit_count": 11,
+      "block_count": 48,
+      "block_integrity_pass": 1,
+      "eligible_nonconditioning_frames": 59,
+      "peak_vram_gb": 6.166837215423584,
+      "por30": 1.0,
+      "por30_events": 1,
+      "runtime_sec": 6.683965682983398,
+      "tau": 0.5,
+      "variant": "B1",
+      "write_rate": 0.1864406779661017
+    },
+    {
+      "admit_count": 4,
+      "block_count": 55,
+      "block_integrity_pass": 1,
+      "eligible_nonconditioning_frames": 59,
+      "peak_vram_gb": 6.05643892288208,
+      "por30": 1.0,
+      "por30_events": 1,
+      "runtime_sec": 6.7083165645599365,
+      "tau": 0.5,
+      "variant": "B2",
+      "write_rate": 0.06779661016949153
+    },
+    {
+      "admit_count": 18,
+      "block_count": 41,
+      "block_integrity_pass": 1,
+      "eligible_nonconditioning_frames": 59,
+      "peak_vram_gb": 6.18153715133667,
+      "por30": 1.0,
+      "por30_events": 1,
+      "runtime_sec": 7.859818935394287,
+      "tau": 0.5,
+      "variant": "B3_S",
+      "write_rate": 0.3050847457627119
+    },
+    {
+      "admit_count": 16,
+      "block_count": 43,
+      "block_integrity_pass": 1,
+      "eligible_nonconditioning_frames": 59,
+      "peak_vram_gb": 6.176720142364502,
+      "por30": 1.0,
+      "por30_events": 1,
+      "runtime_sec": 6.84198260307312,
+      "tau": 0.5,
+      "variant": "B3_R",
+      "write_rate": 0.2711864406779661
+    }
+  ],
+  "repo_commit": "020705b32f92325c6f3d6a38d0bf122a01cfcc3d",
+  "sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "script_sha256": "3c64a2ee49f1dc196558578171478e1c072d6fef5317bcacfcc2d536f9758d1a",
+  "status": "EXP037_INTEGRATION_SANITY_PASS",
+  "test_touched": 0,
+  "video": "0442a954"
+}

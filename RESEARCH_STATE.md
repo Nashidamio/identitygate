@@ -1076,3 +1076,38 @@ INTERPRETATION:
 
 NEXT:
 - Generate deterministic visual-review packs for audit30 and manual-adjudication scenes.
+
+
+## 2026-09-19 - EXP037 matched-rate evaluator integration sanity
+
+EXECUTED / OBSERVED / VERIFIED:
+- Frozen EXP037 evaluator executed from commit 020705b32f92325c6f3d6a38d0bf122a01cfcc3d.
+- TRAIN-exposed video 0442a954, first 60 frames, object IDs [1, 2].
+- B0, B1, B2, B3-S, and B3-R completed successfully.
+- Each gated variant had 59 eligible non-conditioning frame-write opportunities.
+- B1: 11 admitted / 48 blocked, write rate 0.1864406779661017.
+- B2: 4 admitted / 55 blocked, write rate 0.06779661016949153.
+- B3-S: 18 admitted / 41 blocked, write rate 0.3050847457627119.
+- B3-R: 16 admitted / 43 blocked, write rate 0.2711864406779661.
+- Physical write-block integrity passed for every gated variant.
+- POR@30 endpoint was exercised with 1 qualifying event; B0/B1/B2/B3-S/B3-R each recovered that event.
+- Maximum observed peak allocated VRAM: 6.266373634338379 GB.
+- Frozen SAM3 commit: 8f0b7f4d4e7eda2ed606ebde6702c93359ad01da.
+- Fresh final DEV touched: 0.
+- TEST touched: 0.
+
+INTERPRETATION:
+- Unified closed-loop gate intervention, write-rate accounting, and POR@30 scoring are integrated and executable.
+- The single qualifying event is sufficient for endpoint integration sanity only.
+- POR@30 = 1.0 for all variants in this sanity run is not comparative performance evidence.
+- Tau 0.5 remains an engineering sanity threshold, not an A4 matched-rate operating point.
+- No statistical inference or thesis performance conclusion is supported by EXP037.
+
+ARTIFACTS:
+- operating_points.csv SHA256: 41fb68238994d3fb0e6df9c4a117dac66d1a6c530f051af61d09ba684959ab10
+- por30_events.csv SHA256: 6231647b9528d0774120bbe15e77d93629aaccbcac47243a1adb2b98b7c36843
+- summary.json SHA256: f182356c6d8ec6f758d9a55a7b33b52dfbe216d4fc486b0497736e6b7323fe9d
+- ignored run log SHA256: 54990e40e957891f17ca6a3eede2b9c524b1c173bbe10256dd49abfabadb6cff
+
+NEXT:
+- Record EXP037, then continue implementation toward the full A4 matched-rate evaluator without touching fresh final DEV or TEST.

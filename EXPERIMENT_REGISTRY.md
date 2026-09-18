@@ -794,3 +794,48 @@ Artifacts:
 
 Next:
 - Freeze and generate deterministic visual-review artifacts for the 30-scene audit and manual-adjudication population.
+
+
+## EXP037 - Matched-rate evaluator integration sanity
+
+Status: INTEGRATION SANITY PASS / NOT PERFORMANCE EVIDENCE
+
+Executed commit:
+- 020705b32f92325c6f3d6a38d0bf122a01cfcc3d
+
+Scope:
+- TRAIN-exposed video: 0442a954.
+- Frames: 60.
+- Object IDs: [1, 2].
+- Variants: B0, B1, B2, B3-S, B3-R.
+- Engineering tau: 0.5 for gated variants.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+Observed:
+- B0 write rate: 1.0.
+- B1 write rate: 0.1864406779661017.
+- B2 write rate: 0.06779661016949153.
+- B3-S write rate: 0.3050847457627119.
+- B3-R write rate: 0.2711864406779661.
+- Physical write-block integrity passed for every gated variant.
+- Qualifying POR@30 events: 1.
+- POR@30: 1.0 for B0, B1, B2, B3-S, and B3-R.
+- Maximum observed peak allocated VRAM: 6.266373634338379 GB.
+
+Interpretation:
+- Closed-loop intervention, write-rate accounting, and POR@30 endpoint integration are verified.
+- One qualifying event is insufficient for comparative performance inference.
+- Tau 0.5 is not an A4 matched-rate operating point.
+- This experiment provides no final gate-performance or statistical-significance conclusion.
+
+Artifacts:
+- config SHA256: 087c5175f43ec13c0c9195fe782a1f5b39ba1e466039aa1137ab9b6147cfb932
+- script SHA256: 3c64a2ee49f1dc196558578171478e1c072d6fef5317bcacfcc2d536f9758d1a
+- operating_points.csv SHA256: 41fb68238994d3fb0e6df9c4a117dac66d1a6c530f051af61d09ba684959ab10
+- por30_events.csv SHA256: 6231647b9528d0774120bbe15e77d93629aaccbcac47243a1adb2b98b7c36843
+- summary.json SHA256: f182356c6d8ec6f758d9a55a7b33b52dfbe216d4fc486b0497736e6b7323fe9d
+- ignored run log SHA256: 54990e40e957891f17ca6a3eede2b9c524b1c173bbe10256dd49abfabadb6cff
+
+Next:
+- Extend the verified evaluator toward the frozen A4 matched-write-rate protocol before any fresh final DEV evaluation.
