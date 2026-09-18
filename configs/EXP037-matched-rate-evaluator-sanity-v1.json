@@ -1,0 +1,73 @@
+{
+  "claim_boundary": [
+    "TRAIN-exposed engineering sanity only.",
+    "Exact A7 B2/B3 model artifacts and A5 routing are inherited through the frozen EXP033 mechanism.",
+    "Tau 0.5 is not an A4 matched-rate operating point.",
+    "This run is not final performance evidence and performs no statistical inference.",
+    "Fresh final DEV is not touched.",
+    "TEST is not touched."
+  ],
+  "endpoint": {
+    "evaluable_frames": "GT_VISIBLE_ONLY",
+    "por_window": 30,
+    "qualifying_gap_frames": 5,
+    "recovery_iou_strictly_greater_than": 0.5,
+    "truncate_at_next_qualifying_gap": true,
+    "visibility_source": "GT"
+  },
+  "engineering_tau_status": "INTEGRATION_SANITY_ONLY_NOT_A4_MATCHED_RATE_SELECTION",
+  "engineering_taus": [
+    0.5
+  ],
+  "experiment": "EXP037",
+  "purpose": "Integrate frozen unified gate intervention with write-rate and POR@30 scoring before final A4 DEV evaluation",
+  "scope": {
+    "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+    "development_exposed_train_only": true,
+    "expected_object_ids": [
+      1,
+      2
+    ],
+    "fresh_dev_touched": 0,
+    "n_frames": 60,
+    "test_touched": 0,
+    "video": "0442a954"
+  },
+  "source_dependencies": {
+    "a4": {
+      "path": "docs/AMENDMENT_A4_MATCHED_WRITE_RATE_PROTOCOL.md",
+      "sha256": "decaf53d83c790346148f598d053b1cab9865e925420f88b63aab567c4b9a8a4"
+    },
+    "a7": {
+      "path": "docs/AMENDMENT_A7_FINAL_GATE_FEATURE_COMPOSITION_FREEZE.md",
+      "sha256": "493b41d9a7544dbfac6dfd53466c932fa7a01e1191278b90d48b85cd2d04078e"
+    },
+    "exp010_por_reference": {
+      "path": "scripts/exp010_por.py",
+      "sha256": "d524b22fe4ac4270b7b8b74906ce01fc596ad631c4f8d04d7a4dd0a52a6fe2d3"
+    },
+    "exp033_config": {
+      "path": "configs/EXP033-unified-gate-closed-loop-sanity-v1.json",
+      "sha256": "db5190fe01555cc731ebeceb9df06f6e743d0ee7ad264f29a8136b13b2cbf1cb"
+    },
+    "exp033_script": {
+      "path": "scripts/exp033_unified_gate_closed_loop_sanity.py",
+      "sha256": "aa2d5c50cb28fc1f200f854683cbda78a9d39a5d29b361d4f43f04a1a1ca297b"
+    }
+  },
+  "status": "PLANNED_TRAIN_EXPOSED_EVALUATOR_SANITY",
+  "substrate": {
+    "builder": "build_sam3_video_model",
+    "expected_sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da"
+  },
+  "variants": [
+    "B1",
+    "B2",
+    "B3_S",
+    "B3_R"
+  ],
+  "write_rate": {
+    "denominator": "ALL_ELIGIBLE_NONCONDITIONING_FRAME_OPPORTUNITIES",
+    "numerator": "ADMITTED_ELIGIBLE_NONCONDITIONING_FRAME_WRITES"
+  }
+}
