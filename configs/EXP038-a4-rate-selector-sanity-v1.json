@@ -1,0 +1,91 @@
+{
+  "a4_selector": {
+    "absolute_rate_tolerance": 0.02,
+    "coarse_tau": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "common_target_rate_order": [
+      0.5,
+      0.4,
+      0.6,
+      0.3,
+      0.7,
+      0.2,
+      0.8,
+      0.1,
+      0.9
+    ],
+    "curve_target_rates": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "max_midpoint_refinements": 4,
+    "multiple_adjacent_brackets": "STOP_UNSPECIFIED_BY_A4",
+    "selection_information": "REALIZED_WRITE_RATE_ONLY",
+    "selection_tiebreak": [
+      "minimum_absolute_write_rate_error",
+      "lower_admission_threshold"
+    ]
+  },
+  "claim_boundary": [
+    "TRAIN-exposed selector engineering sanity only.",
+    "Fresh final DEV is not touched.",
+    "TEST is not touched.",
+    "No POR, ITR, J&F, UAR, contamination, or other tracking outcome may influence threshold selection.",
+    "B5 is not included in this engineering sanity and remains mandatory before final common-rate selection.",
+    "No threshold or target rate from this sanity is a final DEV or TEST operating point."
+  ],
+  "experiment": "EXP038",
+  "final_required_variant_note": "B5 remains required for final common-rate headline selection and is not waived by this sanity.",
+  "purpose": "Exercise the frozen A4 write-rate-only threshold selection algorithm using the verified EXP037 closed-loop evaluator",
+  "sanity_variants": [
+    "B1",
+    "B2",
+    "B3_S",
+    "B3_R"
+  ],
+  "scope": {
+    "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+    "development_exposed_train_only": true,
+    "expected_object_ids": [
+      1,
+      2
+    ],
+    "fresh_dev_touched": 0,
+    "n_frames": 60,
+    "test_touched": 0,
+    "video": "0442a954"
+  },
+  "source_dependencies": {
+    "a4": {
+      "path": "docs/AMENDMENT_A4_MATCHED_WRITE_RATE_PROTOCOL.md",
+      "sha256": "decaf53d83c790346148f598d053b1cab9865e925420f88b63aab567c4b9a8a4"
+    },
+    "exp037_config": {
+      "path": "configs/EXP037-matched-rate-evaluator-sanity-v1.json",
+      "sha256": "087c5175f43ec13c0c9195fe782a1f5b39ba1e466039aa1137ab9b6147cfb932"
+    },
+    "exp037_script": {
+      "path": "scripts/exp037_matched_rate_evaluator_sanity.py",
+      "sha256": "3c64a2ee49f1dc196558578171478e1c072d6fef5317bcacfcc2d536f9758d1a"
+    }
+  },
+  "status": "PLANNED_TRAIN_EXPOSED_A4_SELECTOR_SANITY"
+}
