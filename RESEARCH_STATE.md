@@ -1111,3 +1111,46 @@ ARTIFACTS:
 
 NEXT:
 - Record EXP037, then continue implementation toward the full A4 matched-rate evaluator without touching fresh final DEV or TEST.
+
+## 2026-09-19 - EXP038 A4 rate-selector sanity
+
+EXECUTED / OBSERVED / VERIFIED:
+- Frozen EXP038 selector was originally committed as 59395074dc98b38d0c1feeca18a205c48b4f52a8.
+- The first execution failed before a scientific tracker result because Runner did not retain the loaded exp037 dependency.
+- Minimal dependency-wiring fix was committed separately as 4a5f44fc226be88a9c074cb67b69572b22cffda3; no A4 protocol, threshold, target-order, model, or data-scope rule changed.
+- A subsequent foreground execution was manually interrupted and produced no final scientific result.
+- The successful retry executed from commit 4a5f44fc226be88a9c074cb67b69572b22cffda3.
+- Scope: TRAIN-exposed video 0442a954, first 60 frames, object IDs [1, 2].
+- Variants: B1, B2, B3-S, B3-R.
+- First A4 target tested: 0.5.
+- B1 matched at tau 0.35 with realized write rate 0.4915254237288136.
+- B2 matched at tau 0.1875 with realized write rate 0.5084745762711864.
+- B3-S matched at tau 0.2 with realized write rate 0.5084745762711864.
+- B3-R matched at tau 0.25 with realized write rate 0.4915254237288136.
+- Absolute write-rate error for every variant was 0.008474576271186418, within the locked A4 tolerance of 0.02.
+- Total executed tau points: 49.
+- Maximum observed peak allocated VRAM: 6.266784191131592 GB.
+- Frozen SAM3 commit: 8f0b7f4d4e7eda2ed606ebde6702c93359ad01da.
+- Fresh final DEV touched: 0.
+- TEST touched: 0.
+- Final status: EXP038_A4_SELECTOR_SANITY_PASS.
+
+INTERPRETATION:
+- The implemented A4 write-rate-only common-target selector is executable in closed loop for B1/B2/B3-S/B3-R.
+- Coarse-grid selection and deterministic midpoint refinement were exercised.
+- The value 0.5 is subset_common_target_not_final_r_star only.
+- EXP038 cannot define final r_star because it is TRAIN-exposed and B5 is not included.
+- EXP038 provides no comparative gate-performance result and no final statistical inference.
+
+ARTIFACTS:
+- config SHA256: e53a1fdce71e11bd1fff8fcd0bd8b70a5f1291e87f39df8581ab529d84be1636
+- fixed script SHA256: bf81cea8e531b08d3ef432d985f4f09971d24fef51338c61896b616c88ffdb9f
+- executed_tau_points.csv SHA256: db93bd1dd30698908f4f777ceee043e4cefb3a8518c239253b11c36049e5b1cb
+- summary.json SHA256: 1f313044e894f0533ca669a90544ad7eb324db92e40440b556a2fa3271bcf0f6
+- target_selection.csv SHA256: b306642d55b3cb4d1a59b14f6275aec00b8a6c87808932852e8a9ef13c5275a6
+- ignored original failed-run log SHA256: c91d498e74bce5d3335a18ac6cb87eb394276bdc01ae8f52118cfc00e7d06e4c
+- ignored interrupted fixed-run log SHA256: 9b1e0c638351003f469ae9614a4a2ce3fccc83560184feede23e1e136a32f3c1
+- ignored successful retry log SHA256: 6e8ba8cc0492bcf555d4e709ae16c93e33a40d604ee891c3fd41c8ab5a9ddb24
+
+NEXT:
+- Record EXP038 artifacts, then continue toward the remaining final-evaluation blockers without touching fresh final DEV or TEST.

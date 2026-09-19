@@ -839,3 +839,57 @@ Artifacts:
 
 Next:
 - Extend the verified evaluator toward the frozen A4 matched-write-rate protocol before any fresh final DEV evaluation.
+
+## EXP038 - A4 rate-selector sanity
+
+Status: SELECTOR SANITY PASS / NOT PERFORMANCE EVIDENCE
+
+Frozen implementation commit:
+- 59395074dc98b38d0c1feeca18a205c48b4f52a8
+
+Defect-fix and successful executed commit:
+- 4a5f44fc226be88a9c074cb67b69572b22cffda3
+
+Scope:
+- TRAIN-exposed video: 0442a954.
+- Frames: 60.
+- Object IDs: [1, 2].
+- Variants: B1, B2, B3-S, B3-R.
+- A4 target-order search began at 0.5 and all required sanity variants matched there.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+- B5 included: false.
+
+Observed:
+- B1: tau 0.35, write rate 0.4915254237288136, absolute error 0.008474576271186418, 1 midpoint refinement.
+- B2: tau 0.1875, write rate 0.5084745762711864, absolute error 0.008474576271186418, 3 midpoint refinements.
+- B3-S: tau 0.2, write rate 0.5084745762711864, absolute error 0.008474576271186418, 0 midpoint refinements.
+- B3-R: tau 0.25, write rate 0.4915254237288136, absolute error 0.008474576271186418, 1 midpoint refinement.
+- All four variants satisfied the locked A4 +/-0.02 write-rate tolerance.
+- Total executed tau points: 49.
+- subset_common_target_not_final_r_star: 0.5.
+- Maximum observed peak allocated VRAM: 6.266784191131592 GB.
+- Final status: EXP038_A4_SELECTOR_SANITY_PASS.
+
+Execution provenance:
+- Original frozen execution failed before a scientific result because Runner did not retain exp037.
+- The dependency-only fix was committed separately; A4 scientific rules were unchanged.
+- One fixed foreground execution was manually interrupted and produced no final result.
+- The subsequent background retry completed successfully.
+
+Interpretation:
+- Closed-loop A4 write-rate-only threshold selection is verified for the four gate variants in this TRAIN-exposed sanity scope.
+- Coarse thresholds plus deterministic midpoint refinement are operational.
+- The selected 0.5 target is not final r_star.
+- B5 and fresh DEV are still required before final common-rate selection.
+- No comparative performance or final statistical conclusion is supported by EXP038.
+
+Artifacts:
+- config SHA256: e53a1fdce71e11bd1fff8fcd0bd8b70a5f1291e87f39df8581ab529d84be1636
+- script SHA256: bf81cea8e531b08d3ef432d985f4f09971d24fef51338c61896b616c88ffdb9f
+- executed_tau_points.csv SHA256: db93bd1dd30698908f4f777ceee043e4cefb3a8518c239253b11c36049e5b1cb
+- summary.json SHA256: 1f313044e894f0533ca669a90544ad7eb324db92e40440b556a2fa3271bcf0f6
+- target_selection.csv SHA256: b306642d55b3cb4d1a59b14f6275aec00b8a6c87808932852e8a9ef13c5275a6
+- original failed-run log SHA256: c91d498e74bce5d3335a18ac6cb87eb394276bdc01ae8f52118cfc00e7d06e4c
+- interrupted fixed-run log SHA256: 9b1e0c638351003f469ae9614a4a2ce3fccc83560184feede23e1e136a32f3c1
+- successful retry log SHA256: 6e8ba8cc0492bcf555d4e709ae16c93e33a40d604ee891c3fd41c8ab5a9ddb24

@@ -1,0 +1,29 @@
+{
+  "claim_boundary": [
+    "TRAIN-exposed selector engineering sanity only.",
+    "Fresh final DEV is not touched.",
+    "TEST is not touched.",
+    "No POR, ITR, J&F, UAR, contamination, or other tracking outcome may influence threshold selection.",
+    "B5 is not included in this engineering sanity and remains mandatory before final common-rate selection.",
+    "No threshold or target rate from this sanity is a final DEV or TEST operating point."
+  ],
+  "config_sha256": "e53a1fdce71e11bd1fff8fcd0bd8b70a5f1291e87f39df8581ab529d84be1636",
+  "executed_tau_points": 49,
+  "experiment": "EXP038",
+  "frames": 60,
+  "fresh_dev_touched": 0,
+  "max_peak_vram_gb": 6.266784191131592,
+  "repo_commit": "4a5f44fc226be88a9c074cb67b69572b22cffda3",
+  "sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "script_sha256": "bf81cea8e531b08d3ef432d985f4f09971d24fef51338c61896b616c88ffdb9f",
+  "status": "EXP038_A4_SELECTOR_SANITY_PASS",
+  "subset_common_target_not_final_r_star": 0.5,
+  "test_touched": 0,
+  "variants": [
+    "B1",
+    "B2",
+    "B3_S",
+    "B3_R"
+  ],
+  "video": "0442a954"
+}
