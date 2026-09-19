@@ -1423,3 +1423,49 @@ docs/AMENDMENT_A5_MISSING_IDENTITY_ROUTING.md
 
 SHA256:
 368f9b3073084687b2919cbb3927672f179aa69b32ce3e3ece3a6712b875712f
+
+## 75. Amendment A8 - DMS-lite write-side comparator frozen
+
+Amendment A8 freezes the previously open operational definition of B5.
+
+B5 is a DMS-lite write-side comparator derived prospectively from the
+reliability signal inspected in FudanCVL/SAM3-DMS at upstream commit
+88475d9fc2b6267f8542710375dec92b40590353.
+
+The inspected upstream method performs memory selection for later memory use;
+it does not directly implement the A3 physical memory-write admission
+intervention. Therefore B5 is explicitly NOT claimed to reproduce official
+SAM3-DMS.
+
+Frozen B5 object score:
+- required inputs are the existing frozen SAM3 iou_score and
+  object_score_logits;
+- non-finite required input -> score 0, FAIL_CLOSED;
+- object_score_logits <= 0 -> presence score 0;
+- otherwise presence = 2 * sigmoid(object_score_logits) - 1;
+- B5 object score = presence * iou_score.
+
+A3 remains unchanged:
+- frame score = minimum tracked-object B5 score;
+- ADMIT iff frame_score >= tau;
+- BLOCK uses the verified whole-frame non-conditioning memory eviction.
+
+A4 remains unchanged:
+- tau is the B5 scalar operating parameter;
+- threshold selection uses realized physical write rate only;
+- common-rate tolerance, target order, deterministic midpoint refinement,
+  full sweeps, neutral controls, and TEST RATE_MISMATCH rules remain frozen.
+
+B5 has no learned parameters and requires no training.
+The external SAM3-DMS checkout is provenance for the signal definition, not
+an additional runtime model dependency.
+
+First implementation must be a new experiment after EXP038 on
+development-exposed data only. Historical EXP033/EXP037/EXP038 artifacts
+must not be rewritten. Fresh final DEV and TEST remain untouched.
+
+Artifact:
+docs/AMENDMENT_A8_DMS_LITE_WRITE_COMPARATOR.md
+
+SHA256:
+199b5630fb48bf3f1285683c3b1075476beb2e67d974b4d8199e1f4a7df80252
