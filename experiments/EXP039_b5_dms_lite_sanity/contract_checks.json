@@ -1,0 +1,17 @@
+{
+  "a8_sha256": "199b5630fb48bf3f1285683c3b1075476beb2e67d974b4d8199e1f4a7df80252",
+  "actual_fail_closed_rows_total": 0,
+  "all_action_rule_pass": 1,
+  "all_block_integrity_pass": 1,
+  "all_formula_pass": 1,
+  "all_frame_min_pass": 1,
+  "executed_points": 13,
+  "formula_rows_checked_total": 1534,
+  "patched_exp033_nan_fail_closed_pass": 1,
+  "synthetic_checks": {
+    "inf_fail_closed_pass": 1,
+    "nan_fail_closed_pass": 1,
+    "nonpositive_occ_zero_pass": 1,
+    "positive_formula_pass": 1
+  }
+}

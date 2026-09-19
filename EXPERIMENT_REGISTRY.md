@@ -893,3 +893,51 @@ Artifacts:
 - original failed-run log SHA256: c91d498e74bce5d3335a18ac6cb87eb394276bdc01ae8f52118cfc00e7d06e4c
 - interrupted fixed-run log SHA256: 9b1e0c638351003f469ae9614a4a2ce3fccc83560184feede23e1e136a32f3c1
 - successful retry log SHA256: 6e8ba8cc0492bcf555d4e709ae16c93e33a40d604ee891c3fd41c8ab5a9ddb24
+
+## EXP039 - B5 DMS-lite write-side comparator sanity
+
+Status: B5 SANITY PASS / NOT PERFORMANCE EVIDENCE
+
+Frozen implementation commit:
+- 4b8b54f058d2187e665d4ea5c5c44015933a2d8a
+
+Scope:
+- TRAIN-exposed video: 0442a954.
+- Frames: 60.
+- Object IDs: [1, 2].
+- Variant: B5 DMS-lite write-side comparator.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+Observed:
+- Final status: EXP039_B5_DMS_LITE_SANITY_PASS.
+- First matched sanity target: 0.5.
+- Selected tau: 0.775.
+- Realized physical write rate: 0.4915254237288136.
+- Absolute rate error: 0.008474576271186418.
+- Midpoint refinements: 2.
+- Executed tau points: 13.
+- Formula rows checked: 1534.
+- Actual fail-closed rows observed: 0.
+- Synthetic and patched-path FAIL_CLOSED checks passed.
+- Exact executed-row B5 formula checks passed.
+- A3 frame-min and action-rule checks passed.
+- Physical block-integrity checks passed.
+- Maximum observed peak allocated VRAM: 6.266374588012695 GB.
+
+Interpretation:
+- Frozen A8 B5 scoring is operational on the frozen SAM3 substrate.
+- B5 uses the frozen A3 physical whole-frame write intervention.
+- Frozen A4 write-rate-only threshold selection is operational for B5 in this TRAIN-exposed sanity scope.
+- Target 0.5 and tau 0.775 are not final r_star.
+- EXP039 provides no final performance or statistical inference.
+- B5 is DMS-lite write-side adaptation and is not claimed to reproduce official SAM3-DMS.
+
+Artifacts:
+- config SHA256: e48a09e27bc6807b7d84a7eb7b517171ace93fbdba339fede109d6a95ee5f015
+- script SHA256: a5380f390ec3559b6a44abc14927d99ed4db594cd1056096d68dcb77ce3d8635
+- summary.json SHA256: 0849204aab608f9e8424d002c00e591847f6576e0c80f44368fc56a95ac8f8e7
+- contract_checks.json SHA256: 5f46691162cc8e7f0da7599283c370afd86ece2aa7bb22a70fd278b77667e5a7
+- target_selection.csv SHA256: 3ff941aff44317c208b950622d91e55b22a7d368e8b935600d7e90e26db82e3e
+- executed_tau_points.csv SHA256: 5937845489dd414a7fdf60bd28650ce99eb280c0c9638f21ce9e1ac5fb1ba2c9
+- ignored execution log SHA256: 26e193f69cc6a0e9f64c66cf9f933e229cf975517da7299393eb35af673082a5

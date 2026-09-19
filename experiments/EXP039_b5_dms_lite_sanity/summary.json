@@ -1,0 +1,27 @@
+{
+  "b5_first_match_target_not_final_r_star": 0.5,
+  "claim_boundary": [
+    "TRAIN-exposed B5 engineering sanity only.",
+    "Fresh final DEV is not touched.",
+    "TEST is not touched.",
+    "No tracking outcome influences threshold selection.",
+    "Any selected target or tau is not final r_star.",
+    "B5 is DMS-lite write-side adaptation and is not claimed to reproduce official SAM3-DMS."
+  ],
+  "config_sha256": "e48a09e27bc6807b7d84a7eb7b517171ace93fbdba339fede109d6a95ee5f015",
+  "contract_checks_pass": 1,
+  "executed_tau_points": 13,
+  "experiment": "EXP039",
+  "frames": 60,
+  "fresh_dev_touched": 0,
+  "max_peak_vram_gb": 6.266374588012695,
+  "repo_commit": "4b8b54f058d2187e665d4ea5c5c44015933a2d8a",
+  "sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "script_sha256": "a5380f390ec3559b6a44abc14927d99ed4db594cd1056096d68dcb77ce3d8635",
+  "selected_realized_write_rate": 0.4915254237288136,
+  "selected_tau": 0.775,
+  "status": "EXP039_B5_DMS_LITE_SANITY_PASS",
+  "test_touched": 0,
+  "variant": "B5",
+  "video": "0442a954"
+}

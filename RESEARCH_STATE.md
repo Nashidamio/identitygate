@@ -1154,3 +1154,64 @@ ARTIFACTS:
 
 NEXT:
 - Record EXP038 artifacts, then continue toward the remaining final-evaluation blockers without touching fresh final DEV or TEST.
+
+## EXP039 - B5 DMS-lite write-side comparator sanity
+
+STATUS:
+- EXECUTED / VERIFIED PASS.
+- TRAIN-exposed engineering sanity only.
+- No comparative performance evidence.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+FROZEN IMPLEMENTATION:
+- Commit: 4b8b54f058d2187e665d4ea5c5c44015933a2d8a
+- Config SHA256: e48a09e27bc6807b7d84a7eb7b517171ace93fbdba339fede109d6a95ee5f015
+- Script SHA256: a5380f390ec3559b6a44abc14927d99ed4db594cd1056096d68dcb77ce3d8635
+- A8 SHA256: 199b5630fb48bf3f1285683c3b1075476beb2e67d974b4d8199e1f4a7df80252
+- SAM3 commit: 8f0b7f4d4e7eda2ed606ebde6702c93359ad01da
+
+SCOPE:
+- TRAIN-exposed video: 0442a954.
+- Frames: 60.
+- Object IDs: [1, 2].
+- Variant: B5 DMS-lite write-side comparator.
+- B5 is not claimed to reproduce official SAM3-DMS.
+
+OBSERVED:
+- Final status: EXP039_B5_DMS_LITE_SANITY_PASS.
+- First matched sanity target: 0.5.
+- Selected tau: 0.775.
+- Realized physical write rate: 0.4915254237288136.
+- Absolute rate error: 0.008474576271186418.
+- Midpoint refinements: 2.
+- Executed tau points: 13.
+- Formula rows checked: 1534.
+- Actual nonfinite/fail-closed rows observed: 0.
+- Synthetic positive-formula check: PASS.
+- Synthetic nonpositive-occurrence-zero check: PASS.
+- Synthetic NaN FAIL_CLOSED check: PASS.
+- Synthetic Inf FAIL_CLOSED check: PASS.
+- Patched EXP033 NaN FAIL_CLOSED path: PASS.
+- Exact B5 formula checks on executed rows: PASS.
+- A3 frame-min aggregation checks: PASS.
+- A3 action-rule checks: PASS.
+- Physical block-integrity checks: PASS.
+- Maximum observed peak allocated VRAM: 6.266374588012695 GB.
+
+INTERPRETATION:
+- Frozen A8 B5 scoring is executable with the existing frozen SAM3 outputs.
+- B5 operates through the frozen A3 whole-frame physical write intervention.
+- Frozen A4 write-rate-only selection can obtain a matched operating point for B5 in this TRAIN-exposed sanity scope.
+- The 0.5 target and tau 0.775 are sanity-only and are not final r_star.
+- No final DEV, TEST, comparative gate-performance, or statistical conclusion is supported by EXP039.
+
+ARTIFACTS:
+- summary.json SHA256: 0849204aab608f9e8424d002c00e591847f6576e0c80f44368fc56a95ac8f8e7
+- contract_checks.json SHA256: 5f46691162cc8e7f0da7599283c370afd86ece2aa7bb22a70fd278b77667e5a7
+- target_selection.csv SHA256: 3ff941aff44317c208b950622d91e55b22a7d368e8b935600d7e90e26db82e3e
+- executed_tau_points.csv SHA256: 5937845489dd414a7fdf60bd28650ce99eb280c0c9638f21ce9e1ac5fb1ba2c9
+- ignored execution log SHA256: 26e193f69cc6a0e9f64c66cf9f933e229cf975517da7299393eb35af673082a5
+
+NEXT:
+- Close EXP039 provenance, then continue the remaining final-evaluation blockers without touching fresh final DEV or TEST.
