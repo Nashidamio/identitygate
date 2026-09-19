@@ -109,6 +109,7 @@ class Runner:
     def __init__(
         self,
         exp033,
+        exp037,
         predictor,
         packs,
         deps,
@@ -120,6 +121,7 @@ class Runner:
         n_frames,
     ):
         self.exp033 = exp033
+        self.exp037 = exp037
         self.predictor = predictor
         self.packs = packs
         self.deps = deps
@@ -559,6 +561,7 @@ def main():
 
     runner = Runner(
         exp033=exp033,
+        exp037=exp037,
         predictor=predictor,
         packs=packs,
         deps=deps,
