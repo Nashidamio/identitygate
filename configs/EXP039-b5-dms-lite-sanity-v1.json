@@ -1,0 +1,121 @@
+{
+  "a4_selector": {
+    "absolute_rate_tolerance": 0.02,
+    "coarse_tau": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "common_target_rate_order": [
+      0.5,
+      0.4,
+      0.6,
+      0.3,
+      0.7,
+      0.2,
+      0.8,
+      0.1,
+      0.9
+    ],
+    "curve_target_rates": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "max_midpoint_refinements": 4,
+    "multiple_adjacent_brackets": "STOP_UNSPECIFIED_BY_A4",
+    "selection_information": "REALIZED_WRITE_RATE_ONLY",
+    "selection_tiebreak": [
+      "minimum_absolute_write_rate_error",
+      "lower_admission_threshold"
+    ]
+  },
+  "b5_contract": {
+    "frame_aggregation": "MIN",
+    "learned_parameters": 0,
+    "name": "DMS-lite write-side comparator",
+    "nonfinite_policy": "FAIL_CLOSED_ZERO",
+    "object_score_rule": "presence * mask_conf_iou_head",
+    "physical_action": "A3_WHOLE_FRAME_WRITE_ADMISSION",
+    "presence_rule": "0 if occ_score_logit <= 0 else 2*sigmoid(occ_score_logit)-1",
+    "required_inputs": [
+      "iou_score",
+      "object_score_logits"
+    ],
+    "training_required": false,
+    "upstream_commit": "88475d9fc2b6267f8542710375dec92b40590353",
+    "upstream_repo": "FudanCVL/SAM3-DMS",
+    "variant": "B5"
+  },
+  "claim_boundary": [
+    "TRAIN-exposed B5 engineering sanity only.",
+    "Fresh final DEV is not touched.",
+    "TEST is not touched.",
+    "No tracking outcome influences threshold selection.",
+    "Any selected target or tau is not final r_star.",
+    "B5 is DMS-lite write-side adaptation and is not claimed to reproduce official SAM3-DMS."
+  ],
+  "experiment": "EXP039",
+  "purpose": "Verify frozen A8 B5 DMS-lite scoring, A3 physical write intervention, and A4 write-rate-only threshold matching",
+  "scope": {
+    "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+    "development_exposed_train_only": true,
+    "expected_object_ids": [
+      1,
+      2
+    ],
+    "fresh_dev_touched": 0,
+    "n_frames": 60,
+    "test_touched": 0,
+    "video": "0442a954"
+  },
+  "source_dependencies": {
+    "a3": {
+      "path": "docs/AMENDMENT_A3_FRAME_LEVEL_WRITE_INTERVENTION.md",
+      "sha256": "7f1953e68432c9d597da48e6681ff931513548000ea80fc7f123d8a45cc8e355"
+    },
+    "a4": {
+      "path": "docs/AMENDMENT_A4_MATCHED_WRITE_RATE_PROTOCOL.md",
+      "sha256": "decaf53d83c790346148f598d053b1cab9865e925420f88b63aab567c4b9a8a4"
+    },
+    "a8": {
+      "path": "docs/AMENDMENT_A8_DMS_LITE_WRITE_COMPARATOR.md",
+      "sha256": "199b5630fb48bf3f1285683c3b1075476beb2e67d974b4d8199e1f4a7df80252"
+    },
+    "exp033_script": {
+      "path": "scripts/exp033_unified_gate_closed_loop_sanity.py",
+      "sha256": "aa2d5c50cb28fc1f200f854683cbda78a9d39a5d29b361d4f43f04a1a1ca297b"
+    },
+    "exp037_config": {
+      "path": "configs/EXP037-matched-rate-evaluator-sanity-v1.json",
+      "sha256": "087c5175f43ec13c0c9195fe782a1f5b39ba1e466039aa1137ab9b6147cfb932"
+    },
+    "exp037_script": {
+      "path": "scripts/exp037_matched_rate_evaluator_sanity.py",
+      "sha256": "3c64a2ee49f1dc196558578171478e1c072d6fef5317bcacfcc2d536f9758d1a"
+    },
+    "exp038_config": {
+      "path": "configs/EXP038-a4-rate-selector-sanity-v1.json",
+      "sha256": "e53a1fdce71e11bd1fff8fcd0bd8b70a5f1291e87f39df8581ab529d84be1636"
+    },
+    "exp038_script": {
+      "path": "scripts/exp038_a4_rate_selector_sanity.py",
+      "sha256": "bf81cea8e531b08d3ef432d985f4f09971d24fef51338c61896b616c88ffdb9f"
+    }
+  },
+  "status": "PLANNED_TRAIN_EXPOSED_B5_DMS_LITE_SANITY"
+}
