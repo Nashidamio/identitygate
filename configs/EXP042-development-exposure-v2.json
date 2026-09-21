@@ -1,0 +1,57 @@
+{
+  "experiment": "EXP042",
+  "purpose": "Reconstruct the final recorded development-exposure boundary before fresh final split construction.",
+  "status": "FROZEN_PENDING_EXECUTION",
+  "source_git_head": "0c54456b4cd950b71a8b33fd3c1e0fca37a6c53e",
+  "inputs": {
+    "legacy_exclusions": {
+      "path": "experiments/development_exclusions_v1.json",
+      "sha256": "423d9ece6321eea7a182e482a9f1b921495fbb814c155618a86783d5c4de41e6"
+    },
+    "historical_split": {
+      "path": "experiments/EXP017_split_manifest.json",
+      "sha256": "f246010c3e339da3d27f01f69d627c80ea9eafa4ead362898ce3e6f4e96a8e5a"
+    },
+    "relational_scope": {
+      "path": "experiments/EXP021_relational_scope.json",
+      "sha256": "e528ab0b422f57fee371425199f56193c2b54ca103836ae6cf3f364cd8f5e2b2"
+    }
+  },
+  "expected": {
+    "legacy_exclusions": 81,
+    "exp017_train": 100,
+    "exp017_dev": 40,
+    "exp021_eligible": 26
+  },
+  "later_scope_files": [
+    "experiments/EXP022_full/summary.json",
+    "experiments/EXP022_pilot/summary.json",
+    "experiments/EXP023_sanity/summary.json",
+    "experiments/EXP023_train18_cache/index.csv",
+    "experiments/EXP023_train18_cache/summary.json",
+    "experiments/EXP024_cluster_bootstrap/summary.json",
+    "experiments/EXP024_utility_prepare/summary.json",
+    "experiments/EXP025_closed_loop_sanity/summary.json",
+    "experiments/EXP026_singleton_equivalence/summary.json",
+    "experiments/EXP028_rowwise_hybrid_sanity/summary.json",
+    "experiments/EXP029_b2core_train/summary.json",
+    "experiments/EXP030_b2core_closed_loop_sanity/summary.json",
+    "experiments/EXP031_b3_train/summary.json",
+    "experiments/EXP032_b1_closed_loop_sanity/summary.json",
+    "experiments/EXP033_unified_gate_closed_loop_sanity/summary.json",
+    "experiments/EXP037_matched_rate_evaluator_sanity/summary.json",
+    "experiments/EXP038_a4_rate_selector_sanity/summary.json",
+    "experiments/EXP039_b5_dms_lite_sanity/summary.json"
+  ],
+  "output_dir": "experiments/EXP042_development_exposure",
+  "claim_boundary": [
+    "EXP017 is superseded as a final split; only its TRAIN and DEV memberships are retained as development exposure.",
+    "Historical EXP017 TEST membership is not automatically treated as development exposure.",
+    "The legacy exclusion list is unioned with EXP017 TRAIN and DEV by exact video ID.",
+    "Later metadata is checked only for explicit video-ID fields; no exposure ID is inferred from metrics, counts, filenames or absence of fields.",
+    "Any later explicit video ID outside the reconstructed boundary must be reported for review before final split lock.",
+    "This experiment does not define DI-v1 and does not construct a DEV or TEST split.",
+    "No SAM, gate, POR, fresh final DEV or TEST evaluation is performed.",
+    "The unresolved historical P2 reference remains explicit; no IDs are fabricated."
+  ]
+}
