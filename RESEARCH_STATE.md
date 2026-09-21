@@ -1274,3 +1274,35 @@ ARTIFACTS:
 NEXT:
 - Record blinded manual labels for all 30 valid audit scenes.
 - The final whole-scene agreement estimate remains OPEN until those labels are complete.
+
+## EXP040 - Final blinded whole-scene audit complete
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Final valid blinded audit size: 30.
+- Agreement: 27/30 = 0.900000.
+- Mismatches: 3.
+- No acceptance threshold was preregistered.
+- EXP034 thresholds remain unchanged.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+OBSERVED:
+- Manual NORMAL_OCCLUSION: 23.
+- Manual WHOLE_SCENE: 7.
+- Automatic NORMAL_OCCLUSION: 24.
+- Automatic WHOLE_SCENE: 6.
+- NORMAL_OCCLUSION -> NORMAL_OCCLUSION: 22.
+- NORMAL_OCCLUSION -> WHOLE_SCENE: 1.
+- WHOLE_SCENE -> NORMAL_OCCLUSION: 2.
+- WHOLE_SCENE -> WHOLE_SCENE: 5.
+- Mismatch scene IDs: la1w5eyj:WS003, n0d05tlz:WS001, zpjsz5f5:WS002.
+
+ARTIFACTS:
+- review_labels.csv SHA256: a73ee5ac1b7a327fef82c498c5d6ce89f8a621bfc9da288c31f116b389847724
+- final_audit_source.csv SHA256: fe0bc24767fc0a2177f37cd8b1fe68ecf32fadde363df7a8cc31a5e750d009be
+- EXP034 per_scene.csv SHA256: aefb19804adf093dfc94cc80aa50dc53e69df83bab2c2ab8ba5d6acd603acd2f
+- experiments/EXP040_ws_audit_replacement/final_audit_result.json
+
+NEXT:
+- Freeze final whole-scene labels from the already-frozen EXP034 automatic-confirmed population plus completed EXP036 manual adjudication.

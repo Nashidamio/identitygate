@@ -985,3 +985,24 @@ Artifacts:
 
 Open:
 - Complete blinded manual labels for all 30 final-audit scenes.
+
+## EXP040 - Final blinded whole-scene audit complete
+
+Status: COMPLETE
+
+Observed:
+- Final blinded audit n: 30.
+- Agreement: 27/30 = 0.900000.
+- Mismatches: 3.
+- Manual WHOLE_SCENE: 7.
+- Manual NORMAL_OCCLUSION: 23.
+- No preregistered audit acceptance threshold.
+- No EXP034 threshold changes allowed from this result.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+Artifacts:
+- review_labels.csv SHA256: a73ee5ac1b7a327fef82c498c5d6ce89f8a621bfc9da288c31f116b389847724
+- final_audit_source.csv SHA256: fe0bc24767fc0a2177f37cd8b1fe68ecf32fadde363df7a8cc31a5e750d009be
+- EXP034 per_scene.csv SHA256: aefb19804adf093dfc94cc80aa50dc53e69df83bab2c2ab8ba5d6acd603acd2f
+- final_audit_result.json

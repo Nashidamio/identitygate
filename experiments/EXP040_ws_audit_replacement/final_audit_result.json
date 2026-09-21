@@ -1,0 +1,60 @@
+{
+  "acceptance_threshold_preregistered": false,
+  "agreement_count": 27,
+  "agreement_rate": 0.9,
+  "audit_n": 30,
+  "automatic_label_counts": {
+    "NORMAL_OCCLUSION": 24,
+    "WHOLE_SCENE": 6
+  },
+  "claim_boundary": [
+    "The frozen 30-scene blinded audit observed 27/30 agreement (0.90).",
+    "No audit acceptance threshold was preregistered.",
+    "The audit result does not permit changing EXP034 thresholds.",
+    "This audit is validation evidence, not gate evaluation.",
+    "Fresh final DEV and TEST were not touched."
+  ],
+  "compromised_original_scenes_excluded": true,
+  "confusion": {
+    "NORMAL_OCCLUSION -> NORMAL_OCCLUSION": 22,
+    "NORMAL_OCCLUSION -> WHOLE_SCENE": 1,
+    "WHOLE_SCENE -> NORMAL_OCCLUSION": 2,
+    "WHOLE_SCENE -> WHOLE_SCENE": 5
+  },
+  "exp034_per_scene_sha256": "aefb19804adf093dfc94cc80aa50dc53e69df83bab2c2ab8ba5d6acd603acd2f",
+  "experiment": "EXP040",
+  "final_audit_source_sha256": "fe0bc24767fc0a2177f37cd8b1fe68ecf32fadde363df7a8cc31a5e750d009be",
+  "fresh_final_dev_touched": false,
+  "manual_label_counts": {
+    "NORMAL_OCCLUSION": 23,
+    "WHOLE_SCENE": 7
+  },
+  "manual_labels_recorded_before_automatic_comparison": true,
+  "mismatch_count": 3,
+  "mismatches": [
+    {
+      "automatic_label": "WHOLE_SCENE",
+      "manual_label": "NORMAL_OCCLUSION",
+      "scene_event_id": "la1w5eyj:WS003"
+    },
+    {
+      "automatic_label": "NORMAL_OCCLUSION",
+      "manual_label": "WHOLE_SCENE",
+      "scene_event_id": "n0d05tlz:WS001"
+    },
+    {
+      "automatic_label": "NORMAL_OCCLUSION",
+      "manual_label": "WHOLE_SCENE",
+      "scene_event_id": "zpjsz5f5:WS002"
+    }
+  ],
+  "reason_counts": {
+    "continuous_camera_motion_scene_visible": 22,
+    "global_obstruction_or_scene_wide_collapse": 7,
+    "local_object_specific_event": 1
+  },
+  "review_labels_sha256": "a73ee5ac1b7a327fef82c498c5d6ce89f8a621bfc9da288c31f116b389847724",
+  "status": "FINAL_BLINDED_WS_AUDIT_COMPLETE",
+  "test_touched": false,
+  "thresholds_changed_after_audit": false
+}
