@@ -1,0 +1,83 @@
+{
+  "backbone": {
+    "family": "DINOv2 ViT-S/14",
+    "frozen": true,
+    "local_source": "~/thesis/externals/dinov2",
+    "local_weights": "~/thesis/checkpoints/dinov2/dinov2_vits14_pretrain.pth",
+    "name": "dinov2_vits14",
+    "parameter_count": 22056576,
+    "role": "EXTERNAL_FROZEN_VISUAL_DIVERSITY_BACKBONE_ONLY",
+    "source_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+    "source_repo": "https://github.com/facebookresearch/dinov2.git",
+    "weights_name": "LVD142M",
+    "weights_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "weights_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth"
+  },
+  "claim_boundary": [
+    "The external visual embedding is used only for diversity control in hard-set construction.",
+    "It is not a gate input.",
+    "It is not an outcome variable.",
+    "It does not use annotations, recovery outcomes, fresh DEV, or TEST.",
+    "EXP047 does not select the hard set.",
+    "EXP047 does not freeze DI-v1.",
+    "EXP047 does not construct the final split."
+  ],
+  "downstream_predeclared": {
+    "clustering_performed_by_EXP047": false,
+    "contact_sheet_role": "REPORTING_ONLY",
+    "hard_set_max_fraction_per_visual_cluster": 0.15,
+    "planned_clustering": "k-means",
+    "planned_k": 20
+  },
+  "embedding": {
+    "autocast": false,
+    "dimension": 384,
+    "dtype": "float32",
+    "l2_normalization_after_model": false,
+    "matmul_precision": "highest",
+    "postprocessing": "NONE",
+    "representation": "model(x) = IdentityHead(x_norm_clstoken)",
+    "tf32": false
+  },
+  "experiment": "EXP047",
+  "frame_sampling": {
+    "even_length_semantics": "upper middle frame",
+    "frames": "sorted *.jpg filenames",
+    "frames_per_video": 1,
+    "middle_frame_index_formula": "n_frames // 2",
+    "uses_annotations": false,
+    "uses_labels": false,
+    "uses_outcomes": false
+  },
+  "input": {
+    "expected_primary_videos": 1170,
+    "jpeg_root": "/mnt/d/thesis_data/mosev2/train/JPEGImages",
+    "primary_video_manifest": "experiments/EXP045_di_gt_primitives/video_gt_primitives.csv",
+    "primary_video_manifest_sha256": "ab88e8ecc103cb8e23b48a8c91e8e4635b6bfe8b6a2d52ca7613c0e242086994"
+  },
+  "outputs": {
+    "embeddings": "experiments/EXP047_visual_embeddings/embeddings.npy",
+    "summary": "experiments/EXP047_visual_embeddings/summary.json",
+    "video_frames": "experiments/EXP047_visual_embeddings/video_frames.csv"
+  },
+  "preprocessing": {
+    "center_crop_size": 224,
+    "interpolation": "BICUBIC",
+    "normalize_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalize_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "resize_semantics": "torchvision integer Resize; shorter image edge becomes 256",
+    "resize_size": 256,
+    "source": "dinov2.data.transforms.make_classification_eval_transform",
+    "to_tensor": true
+  },
+  "purpose": "Extract one outcome-independent frozen DINOv2 ViT-S/14 visual embedding from one deterministic middle frame for each video in the frozen EXP045 primary video population. Embeddings are for visual-diversity clustering only.",
+  "status": "PLANNED_PRE_FREEZE"
+}
