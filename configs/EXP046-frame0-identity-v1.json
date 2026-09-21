@@ -1,0 +1,61 @@
+{
+  "claim_boundary": [
+    "Runs SAM only for GT-clean frame-0 anchor extraction on multi-object videos.",
+    "Does not propagate recovery trajectories after frame 0.",
+    "Does not run a gate.",
+    "Does not compute DI percentile ranks or a DI score.",
+    "Does not select a hard set.",
+    "Does not construct final DEV or TEST.",
+    "Does not evaluate fresh DEV or TEST.",
+    "Single-object cases are retained with explicit structural no-competitor status and no fabricated cosine."
+  ],
+  "experiment": "EXP046",
+  "identity_protocol": {
+    "anchor_source": "GT-clean frame-0 prompted obj_ptr",
+    "competitor_pool": "other tracked objects GT-clean frame-0 anchors",
+    "conditioning_frame": 0,
+    "cosine_precision": "FP32_AUTOCAST_DISABLED_TF32_DISABLED_HIGHEST_MATMUL",
+    "distractor_pressure_raw": "maximum FP32 cosine to another tracked frame-0 anchor",
+    "propagation_after_frame0": false,
+    "recovery_outcomes_used": false,
+    "single_object_rule": "NO_TRACKED_COMPETITOR; raw cosine and competitor object id remain null; no fabricated similarity"
+  },
+  "inputs": {
+    "event_gt_primitives": "experiments/EXP045_di_gt_primitives/event_gt_primitives.csv",
+    "sha256": {
+      "event_gt_primitives.csv": "4b4cc3c49a419f777145b824ca80cae6c21a16d134ea3aa566aa728d72d7060c",
+      "summary.json": "c4f716fd1ed4dcf3fa55d9168f01e4813f6587617f1ff2e86e0549b415e995de",
+      "video_gt_primitives.csv": "ab88e8ecc103cb8e23b48a8c91e8e4635b6bfe8b6a2d52ca7613c0e242086994"
+    },
+    "summary": "experiments/EXP045_di_gt_primitives/summary.json",
+    "video_gt_primitives": "experiments/EXP045_di_gt_primitives/video_gt_primitives.csv"
+  },
+  "purpose": "Extract outcome-independent frame-0 GT-clean SAM 3 object-pointer anchor similarities for the frozen EXP045 primary population, without recovery propagation or DI selection.",
+  "sanity": {
+    "also_probe_deterministic_max_primary_object_count_video": true,
+    "artifact_written": false,
+    "historical_equivalence_videos": [
+      "7744dc51",
+      "sfbg4630"
+    ],
+    "max_abs_cosine_diff": 1e-06
+  },
+  "scope": {
+    "events_with_competitor": 1279,
+    "events_without_competitor": 1422,
+    "multi_object_videos": 378,
+    "primary_events": 2701,
+    "primary_videos": 1170,
+    "single_object_videos": 792
+  },
+  "status": "PLANNED_PRE_FREEZE",
+  "substrate": {
+    "builder": "sam3.model_builder.build_sam3_video_model",
+    "checkpoint_filename": "sam3.pt",
+    "checkpoint_repo": "facebook/sam3",
+    "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "model_family": "SAM 3",
+    "sam_source_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+    "task_mode": "VOS/PVS"
+  }
+}
