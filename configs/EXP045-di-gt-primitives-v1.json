@@ -1,0 +1,39 @@
+{
+  "annotations_root": "/mnt/d/thesis_data/mosev2/train/Annotations",
+  "claim_boundary": [
+    "GT-only Difficulty Index primitive census.",
+    "Uses only events already marked primary_pool_eligible by EXP044.",
+    "Does not run SAM or a gate.",
+    "Does not extract obj_ptr or compute pointer cosine.",
+    "Does not compute percentile ranks or a DI score.",
+    "Does not select a hard set.",
+    "Does not construct DEV or TEST.",
+    "Does not evaluate fresh DEV or TEST.",
+    "Both visible-only and literal pre-gap area minima are retained to expose the target-size interpretation before DI-v1 freeze."
+  ],
+  "event_pool": {
+    "path": "experiments/EXP044_event_pool/event_pool.csv",
+    "sha256": "d1c8bb0121796138e6f355fbb4a03d86dcc5103bbfff7d6612e40b950105d285"
+  },
+  "expected": {
+    "event_gap_min_frames": 5,
+    "primary_events": 2701,
+    "primary_videos": 1170
+  },
+  "experiment": "EXP045",
+  "output_dir": "experiments/EXP045_di_gt_primitives",
+  "protocol": {
+    "crowding": "mean number of nonzero GT object IDs visible per annotation frame across the complete video",
+    "displacement": "Euclidean centroid displacement divided by image diagonal",
+    "frame0_anchorability": "target object ID has positive GT area in annotation frame 0",
+    "frame0_competitor_count": "number of other positive-area GT object IDs in frame 0 when target is present; otherwise all frame-0 objects are reported as non-target objects",
+    "last_seen_position": "target-mask centroid at disappear_start minus 1",
+    "outcome_independent": true,
+    "pre_disappearance_window_frames": 10,
+    "reappearance_position": "target-mask centroid at reappear_frame",
+    "target_size_literal_diagnostic": "minimum GT target area fraction over the same exact frame window including zero if absent",
+    "target_size_visible_candidate": "minimum positive GT target area fraction among the exact up-to-10 frames immediately preceding disappear_start"
+  },
+  "source_commit": "67adca503821e0c97d897c562ad85e8526aa8501",
+  "status": "GT_PRIMITIVE_BUILDER_FROZEN_PENDING_EXECUTION"
+}
