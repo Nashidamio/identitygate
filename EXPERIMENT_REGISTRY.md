@@ -1006,3 +1006,22 @@ Artifacts:
 - final_audit_source.csv SHA256: fe0bc24767fc0a2177f37cd8b1fe68ecf32fadde363df7a8cc31a5e750d009be
 - EXP034 per_scene.csv SHA256: aefb19804adf093dfc94cc80aa50dc53e69df83bab2c2ab8ba5d6acd603acd2f
 - final_audit_result.json
+
+## EXP041 - Final whole-scene labels frozen
+
+Status: COMPLETE
+
+Observed:
+- Total candidate scenes: 2179.
+- WHOLE_SCENE: 550.
+- NORMAL_OCCLUSION: 1629.
+- Auto-confirmed: 361.
+- Manual adjudicated: 1818.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+- Thresholds changed: false.
+
+Artifacts:
+- final_ws_labels.csv SHA256: a14d9c83b0ddbc62c0cf3bae404950867259b96c773a7db491375ec74f37689e
+- whole_scene_scene_ids.json SHA256: 22cd1e9f208183d912c5dc69ec383911e1cf5d93b90aa2c99a5bec2d93edb13f
+- summary.json SHA256: 4873a1cf33a7f6d28f767ffef80ea6a4eeeca9aa9a6ec7e65f5cbbee70dd20d3

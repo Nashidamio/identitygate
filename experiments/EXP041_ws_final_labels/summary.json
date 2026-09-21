@@ -1,0 +1,24 @@
+{
+  "auto_confirmed_count": 361,
+  "experiment": "EXP041",
+  "final_ws_labels_sha256": "a14d9c83b0ddbc62c0cf3bae404950867259b96c773a7db491375ec74f37689e",
+  "fresh_final_dev_touched": false,
+  "input_hashes": {
+    "auto_confirmed": "bb3d8b9fe8c29882736cacdd6d207a3d1dc43d9092e9996560c7a47fcaf4ffe7",
+    "blinded_audit_result": "5318356ceb2d57fd61c925a9ceebf434088223612f84d468a234e7543046201a",
+    "manual_labels": "9b76ae3bc722db7c6138cb1f2b4ab567990e6921ec2be7caf6dc0d2b239e51a4",
+    "manual_required": "1f6fa7ad1e10662ff0333331e6d1d5a1127e89c710b0e6d9768cd206a34d63d3",
+    "scene_population": "aed70b4e77ce39afe7a40ad8ada9507ea82719dc195478495c6eca25e3570990"
+  },
+  "manual_adjudicated_count": 1818,
+  "manual_normal_occlusion_count": 1629,
+  "manual_whole_scene_count": 189,
+  "normal_occlusion_count": 1629,
+  "population_rows": 2179,
+  "repo_commit_at_execution": "1fea04351df12fc2501f758914768cf3f572bb9b",
+  "status": "FINAL_WHOLE_SCENE_LABELS_FROZEN",
+  "test_touched": false,
+  "thresholds_changed": false,
+  "whole_scene_count": 550,
+  "whole_scene_scene_ids_sha256": "22cd1e9f208183d912c5dc69ec383911e1cf5d93b90aa2c99a5bec2d93edb13f"
+}

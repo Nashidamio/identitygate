@@ -1306,3 +1306,28 @@ ARTIFACTS:
 
 NEXT:
 - Freeze final whole-scene labels from the already-frozen EXP034 automatic-confirmed population plus completed EXP036 manual adjudication.
+
+## EXP041 - Final whole-scene labels frozen
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Final whole-scene candidate labels are frozen.
+- Population: 2179 scenes.
+- WHOLE_SCENE: 550.
+- NORMAL_OCCLUSION: 1629.
+- EXP034 auto-confirmed contribution: 361.
+- EXP036 manual-adjudicated contribution: 1818.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+- Whole-scene thresholds changed: false.
+
+ARTIFACTS:
+- experiments/EXP041_ws_final_labels/final_ws_labels.csv
+  SHA256: a14d9c83b0ddbc62c0cf3bae404950867259b96c773a7db491375ec74f37689e
+- experiments/EXP041_ws_final_labels/whole_scene_scene_ids.json
+  SHA256: 22cd1e9f208183d912c5dc69ec383911e1cf5d93b90aa2c99a5bec2d93edb13f
+- experiments/EXP041_ws_final_labels/summary.json
+  SHA256: 4873a1cf33a7f6d28f767ffef80ea6a4eeeca9aa9a6ec7e65f5cbbee70dd20d3
+
+NEXT:
+- Freeze final development-exclusion / DI-v1 logic before constructing the fresh final DEV/TEST split.
