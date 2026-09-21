@@ -1,0 +1,155 @@
+{
+  "a4_selector": {
+    "absolute_rate_tolerance": 0.02,
+    "coarse_tau": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "common_target_rate_order": [
+      0.5,
+      0.4,
+      0.6,
+      0.3,
+      0.7,
+      0.2,
+      0.8,
+      0.1,
+      0.9
+    ],
+    "curve_target_rates": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "max_midpoint_refinements": 4,
+    "multiple_adjacent_brackets": "STOP_UNSPECIFIED_BY_A4",
+    "selection_information": "REALIZED_WRITE_RATE_ONLY",
+    "selection_tiebreak": [
+      "minimum_absolute_write_rate_error",
+      "lower_admission_threshold"
+    ]
+  },
+  "boundary": {
+    "fresh_dev_closed_loop_tracking_allowed": true,
+    "test_runtime_inputs_allowed": false,
+    "test_touched": false
+  },
+  "experiment": "EXP050",
+  "final_models": {
+    "B2": {
+      "path": "experiments/EXP029_b2core_train/model.json",
+      "promotion_basis": "A7_FINAL_B2",
+      "sha256": "6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf"
+    },
+    "B3": {
+      "path": "experiments/EXP031_b3_train/model.json",
+      "promotion_basis": "A7_FINAL_B3_S_AND_B3_R",
+      "sha256": "235076b86aa0975b3ec624aae703575fd4f030381b6af4008c3808f2db71847a"
+    }
+  },
+  "purpose": "Select final A4 matched write-rate operating points on frozen fresh DEV using physical write rate only; no tracking outcome metric is computed.",
+  "runtime": {
+    "checkpoint_unit": "ONE_VARIANT_TAU_VIDEO",
+    "resume_policy": "REUSE_ONLY_IF_REPO_COMMIT_CONFIG_HASH_SCOPE_VARIANT_TAU_VIDEO_MATCH",
+    "scratch_dir": "/mnt/d/thesis_data/identitygate_scratch/EXP050_dev_rate_selection"
+  },
+  "scope": {
+    "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+    "expected_primary_events": 233,
+    "expected_videos": 40,
+    "fresh_dev_csv": "experiments/EXP049_final_split/fresh_dev.csv",
+    "fresh_dev_csv_sha256": "5c40f403337aca576242709cc18c75f8a982de0ea8fc1d3bed1c3fad2ee3ffdc",
+    "fresh_dev_membership_sha256": "fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d",
+    "train_exposed_sanity_video": "0442a954"
+  },
+  "selection_firewall": {
+    "contamination_computed": false,
+    "itr_computed": false,
+    "jf_computed": false,
+    "pooled_write_rate": "SUM_K_OVER_SUM_N",
+    "por_computed": false,
+    "tracking_outcome_used_for_threshold_selection": false,
+    "uar_computed": false
+  },
+  "source_dependencies": {
+    "a4": {
+      "path": "docs/AMENDMENT_A4_MATCHED_WRITE_RATE_PROTOCOL.md",
+      "sha256": "decaf53d83c790346148f598d053b1cab9865e925420f88b63aab567c4b9a8a4"
+    },
+    "a5": {
+      "path": "docs/AMENDMENT_A5_MISSING_IDENTITY_ROUTING.md",
+      "sha256": "368f9b3073084687b2919cbb3927672f179aa69b32ce3e3ece3a6712b875712f"
+    },
+    "a6": {
+      "path": "docs/AMENDMENT_A6_B1_MANUAL_RULE.md",
+      "sha256": "0faad8c94fa9a0b8c369d6c28bda983c32427606e4f9da0676119fd46760968f"
+    },
+    "a7": {
+      "path": "docs/AMENDMENT_A7_FINAL_GATE_FEATURE_COMPOSITION_FREEZE.md",
+      "sha256": "493b41d9a7544dbfac6dfd53466c932fa7a01e1191278b90d48b85cd2d04078e"
+    },
+    "a8": {
+      "path": "docs/AMENDMENT_A8_DMS_LITE_WRITE_COMPARATOR.md",
+      "sha256": "199b5630fb48bf3f1285683c3b1075476beb2e67d974b4d8199e1f4a7df80252"
+    },
+    "b1_rule": {
+      "path": "configs/B1-rule-v1.json",
+      "sha256": "f748f91953d8173158a50fb6d300c45a03e34084915290b64e0715e70139d47c"
+    },
+    "exp033_config": {
+      "path": "configs/EXP033-unified-gate-closed-loop-sanity-v1.json",
+      "sha256": "db5190fe01555cc731ebeceb9df06f6e743d0ee7ad264f29a8136b13b2cbf1cb"
+    },
+    "exp033_script": {
+      "path": "scripts/exp033_unified_gate_closed_loop_sanity.py",
+      "sha256": "aa2d5c50cb28fc1f200f854683cbda78a9d39a5d29b361d4f43f04a1a1ca297b"
+    },
+    "exp037_config": {
+      "path": "configs/EXP037-matched-rate-evaluator-sanity-v1.json",
+      "sha256": "087c5175f43ec13c0c9195fe782a1f5b39ba1e466039aa1137ab9b6147cfb932"
+    },
+    "exp037_script": {
+      "path": "scripts/exp037_matched_rate_evaluator_sanity.py",
+      "sha256": "3c64a2ee49f1dc196558578171478e1c072d6fef5317bcacfcc2d536f9758d1a"
+    },
+    "exp038_config": {
+      "path": "configs/EXP038-a4-rate-selector-sanity-v1.json",
+      "sha256": "e53a1fdce71e11bd1fff8fcd0bd8b70a5f1291e87f39df8581ab529d84be1636"
+    },
+    "exp038_script": {
+      "path": "scripts/exp038_a4_rate_selector_sanity.py",
+      "sha256": "bf81cea8e531b08d3ef432d985f4f09971d24fef51338c61896b616c88ffdb9f"
+    },
+    "exp039_config": {
+      "path": "configs/EXP039-b5-dms-lite-sanity-v1.json",
+      "sha256": "e48a09e27bc6807b7d84a7eb7b517171ace93fbdba339fede109d6a95ee5f015"
+    },
+    "exp039_script": {
+      "path": "scripts/exp039_b5_dms_lite_sanity.py",
+      "sha256": "a5380f390ec3559b6a44abc14927d99ed4db594cd1056096d68dcb77ce3d8635"
+    }
+  },
+  "status": "PLANNED_PRE_FREEZE",
+  "variants": [
+    "B1",
+    "B2",
+    "B3_S",
+    "B3_R",
+    "B5"
+  ]
+}
