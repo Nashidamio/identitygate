@@ -1249,3 +1249,41 @@ Artifacts:
 - component_correlations.csv SHA256: cb2e05c5d409bf99343b3595875070be48127da88cdda3783d6378034e8b56b4
 - stability_grid.csv SHA256: 9cdb68443d9042b85d87a18daec8dd40f5ec68669c696bd586a6c6577e6f9fef
 - summary.json SHA256: f6af9aa752e9ebab1b7139ac9b4ff9f5adb657d4f1f781ab03152f0411aba257
+
+## EXP049 - Final split freeze
+
+Status: COMPLETE
+
+Freeze commit:
+- dd0f47c50e8fb008ae61d4371cee824225bb43a4
+
+Frozen cohorts:
+- Hard pool: 120 videos / 739 primary events.
+- Fresh DEV: 40 videos / 233 primary events.
+- Hard TEST: 80 videos / 506 primary events.
+- Representative TEST: 40 videos / 76 primary events.
+
+Construction:
+- Hard pool selected from frozen DI-v1 only.
+- Visual-cluster cap: <=0.15.
+- Fresh DEV / hard TEST partition: visual-cluster-stratified largest-remainder allocation, seed 42.
+- Representative TEST: uniform sample without replacement from primary-eligible non-hard videos, seed 42.
+- DEV and TEST disjoint: true.
+- Representative TEST disjoint from entire hard pool: true.
+- Model outcomes used: false.
+- Gate inference performed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+Membership hashes:
+- HARD120: 50285e5ffd6a30d082fec4c945e4769199f7456a0a119e7f1b487fa8cb17cadc
+- DEV40: fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d
+- TEST80: 6bf5a059c05d07f82e43fec9bd6b4c4b723bc551a21b72c988912e57b28ce582
+- REPRESENTATIVE40: ba23def8c8d0de7a83af64c6f952544d5f3e44ad6ca018f9e4d2b6cd82ebfb66
+
+Artifacts:
+- hard_pool.csv SHA256: a283bf41141a58a02e3111ad2edffd0384b11380febe12105e5c3400216a1d7a
+- fresh_dev.csv SHA256: 5c40f403337aca576242709cc18c75f8a982de0ea8fc1d3bed1c3fad2ee3ffdc
+- hard_test.csv SHA256: f0469d9bf5cdc9f438b8262c626f52b4de5fa690ab7734da36052ff53495f881
+- representative_test.csv SHA256: cbdf2e2f7896b326ec810ce0dbcd51722b63421f09a878aa89b0fcf2c926fe0b
+- manifest.json SHA256: 9b2d4a4b405ed94339b0b1325782c9471c34e1c1438d60be03cc4d5c39c218fc

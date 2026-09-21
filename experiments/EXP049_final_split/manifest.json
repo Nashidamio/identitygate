@@ -1,0 +1,96 @@
+{
+  "boundary": {
+    "fresh_dev_evaluated": false,
+    "gate_inference_performed": false,
+    "model_outcomes_used": false,
+    "test_evaluated": false,
+    "test_membership_metadata_only": true
+  },
+  "config_sha256": "65ad6d3484351fabdafdf44498d456b6702f93783765c0d8a663e2198e584692",
+  "experiment": "EXP049",
+  "fresh_dev": {
+    "membership_sha256": "fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d",
+    "primary_events": 233,
+    "videos": 40
+  },
+  "hard_dev_allocation": {
+    "dev_quota_by_cluster": {
+      "0": 6,
+      "1": 1,
+      "10": 0,
+      "11": 0,
+      "12": 2,
+      "13": 0,
+      "14": 1,
+      "15": 3,
+      "16": 3,
+      "17": 4,
+      "18": 1,
+      "19": 2,
+      "2": 3,
+      "3": 4,
+      "4": 4,
+      "5": 1,
+      "6": 0,
+      "7": 2,
+      "8": 0,
+      "9": 3
+    },
+    "method": "visual-cluster-stratified largest-remainder quota",
+    "rng_seed": 42
+  },
+  "hard_pool": {
+    "membership_sha256": "50285e5ffd6a30d082fec4c945e4769199f7456a0a119e7f1b487fa8cb17cadc",
+    "primary_events": 739,
+    "videos": 120,
+    "visual_cluster_cap": 0.15,
+    "visual_cluster_counts": {
+      "0": 18,
+      "1": 2,
+      "10": 1,
+      "11": 1,
+      "12": 7,
+      "13": 0,
+      "14": 3,
+      "15": 9,
+      "16": 10,
+      "17": 11,
+      "18": 4,
+      "19": 5,
+      "2": 8,
+      "3": 10,
+      "4": 13,
+      "5": 4,
+      "6": 0,
+      "7": 5,
+      "8": 0,
+      "9": 9
+    }
+  },
+  "hard_test": {
+    "membership_sha256": "6bf5a059c05d07f82e43fec9bd6b4c4b723bc551a21b72c988912e57b28ce582",
+    "minimum_required_primary_events": 200,
+    "primary_events": 506,
+    "videos": 80
+  },
+  "identitygate_commit_at_execution": "dd0f47c50e8fb008ae61d4371cee824225bb43a4",
+  "output_hashes": {
+    "fresh_dev.csv": "5c40f403337aca576242709cc18c75f8a982de0ea8fc1d3bed1c3fad2ee3ffdc",
+    "hard_pool.csv": "a283bf41141a58a02e3111ad2edffd0384b11380febe12105e5c3400216a1d7a",
+    "hard_test.csv": "f0469d9bf5cdc9f438b8262c626f52b4de5fa690ab7734da36052ff53495f881",
+    "representative_test.csv": "cbdf2e2f7896b326ec810ce0dbcd51722b63421f09a878aa89b0fcf2c926fe0b"
+  },
+  "population_videos": 1170,
+  "representative_sampling": {
+    "method": "uniform without replacement from primary-eligible non-hard videos",
+    "rng_seed": 42
+  },
+  "representative_test": {
+    "disjoint_from_entire_hard_pool": true,
+    "membership_sha256": "ba23def8c8d0de7a83af64c6f952544d5f3e44ad6ca018f9e4d2b6cd82ebfb66",
+    "primary_events": 76,
+    "videos": 40
+  },
+  "script_sha256": "706da43538afc64442a5b559e93c5a9b72e6437ebdd6fab61839627e39f2386d",
+  "status": "FINAL_SPLIT_FROZEN"
+}

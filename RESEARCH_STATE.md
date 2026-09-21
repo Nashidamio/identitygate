@@ -1713,3 +1713,71 @@ ARTIFACTS:
 
 NEXT:
 - Lock hard-set size and final video-level DEV/TEST construction without using gate/model outcomes, while preserving the frozen DI-v1 score and visual-cluster constraint.
+
+## EXP049 - Final split freeze
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Frozen implementation commit: dd0f47c50e8fb008ae61d4371cee824225bb43a4.
+- Final video-level cohort membership is FROZEN.
+- Model outcomes used for split construction: false.
+- Gate inference performed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+- TEST membership was materialized as metadata only.
+
+FROZEN POPULATION:
+- Source population: 1170 EXP044 primary-eligible, development-unexposed videos.
+- Hard pool: 120 videos / 739 primary events.
+- Fresh DEV: 40 videos / 233 primary events.
+- Hard TEST: 80 videos / 506 primary events.
+- Representative TEST: 40 videos / 76 primary events.
+- Hard TEST minimum required event count: 200.
+- Observed hard TEST event count: 506; PASS.
+
+HARD-POOL CONSTRUCTION:
+- Ranking: descending frozen DI-v1 score.
+- Tie-break: ascending video ID.
+- Maximum selected fraction per frozen visual cluster: 0.15.
+- Observed maximum hard-pool cluster count: 18/120 = 0.15.
+- Hard pool membership SHA256:
+  50285e5ffd6a30d082fec4c945e4769199f7456a0a119e7f1b487fa8cb17cadc.
+
+FRESH DEV / HARD TEST PARTITION:
+- DEV allocation: visual-cluster-stratified largest-remainder quotas.
+- RNG seed: 42.
+- Fresh DEV membership SHA256:
+  fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d.
+- Hard TEST membership SHA256:
+  6bf5a059c05d07f82e43fec9bd6b4c4b723bc551a21b72c988912e57b28ce582.
+- Fresh DEV and hard TEST are disjoint.
+- Their union exactly equals the frozen 120-video hard pool.
+
+REPRESENTATIVE TEST:
+- Size: 40 videos.
+- Sampling population: current 1170-video primary-eligible population excluding the entire hard pool.
+- Sampling: uniform without replacement.
+- RNG seed: 42.
+- Representative TEST is disjoint from the entire hard pool.
+- Representative TEST membership SHA256:
+  ba23def8c8d0de7a83af64c6f952544d5f3e44ad6ca018f9e4d2b6cd82ebfb66.
+
+IMPLEMENTATION:
+- config SHA256: 65ad6d3484351fabdafdf44498d456b6702f93783765c0d8a663e2198e584692.
+- script SHA256: 706da43538afc64442a5b559e93c5a9b72e6437ebdd6fab61839627e39f2386d.
+- test SHA256: a278154542611bf3270c72f4a7f214a1c1cdf54b8052410c62ea43d2b4b3900f.
+
+ARTIFACTS:
+- experiments/EXP049_final_split/hard_pool.csv
+  SHA256: a283bf41141a58a02e3111ad2edffd0384b11380febe12105e5c3400216a1d7a
+- experiments/EXP049_final_split/fresh_dev.csv
+  SHA256: 5c40f403337aca576242709cc18c75f8a982de0ea8fc1d3bed1c3fad2ee3ffdc
+- experiments/EXP049_final_split/hard_test.csv
+  SHA256: f0469d9bf5cdc9f438b8262c626f52b4de5fa690ab7734da36052ff53495f881
+- experiments/EXP049_final_split/representative_test.csv
+  SHA256: cbdf2e2f7896b326ec810ce0dbcd51722b63421f09a878aa89b0fcf2c926fe0b
+- experiments/EXP049_final_split/manifest.json
+  SHA256: 9b2d4a4b405ed94339b0b1325782c9471c34e1c1438d60be03cc4d5c39c218fc
+
+NEXT:
+- Freeze the exact fresh-DEV evaluation implementation/config, then execute fresh DEV once to choose the outcome-independent matched-rate target r_star and final gate thresholds according to the locked A4 protocol. TEST remains untouched.
