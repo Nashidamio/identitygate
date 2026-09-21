@@ -1,0 +1,30 @@
+{
+  "anchor_pair_rows": 17889,
+  "checkpoint_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+  "config_sha256": "d3fcf86a29ed0e37eb7f587cd222cd618a0e37981170ef4f066af940272c358e",
+  "di_v1_frozen": false,
+  "events_with_competitor": 1279,
+  "events_without_competitor": 1422,
+  "experiment": "EXP046",
+  "final_split_constructed": false,
+  "fresh_dev_evaluated": false,
+  "hard_set_selected": false,
+  "identitygate_commit_at_execution": "1860efda483586b9a1c8066b655f666f128b513f",
+  "max_peak_memory_allocated_gb": 10.260851383209229,
+  "multi_object_videos": 378,
+  "output_hashes": {
+    "anchor_cosine.csv": "62dbf9a10e391b87e4568e7ce65a34909a9d6fb5492b66bddb74baba9a9c0a8d",
+    "event_identity_primitives.csv": "902347f11bfcff2e91a287453e375a1895f4e42b6ffc70e42766b50ae28d4a70",
+    "video_identity_primitives.csv": "a77fd63405d9c13ff1e08ec27692a01a5d5f6b041675b348ea928459a4f1953c"
+  },
+  "primary_events": 2701,
+  "primary_videos": 1170,
+  "propagation_after_frame0_performed": false,
+  "sam_or_gate_recovery_inference_performed": false,
+  "script_sha256": "4edd518e6d4f4f9053c9824a7141491c1dd39bbdfc297ca03a08c93d70f120ae",
+  "single_object_raw_cosine_fabricated": false,
+  "single_object_videos": 792,
+  "status": "FRAME0_IDENTITY_PRIMITIVES_COMPLETE_NOT_DI_FREEZE",
+  "test_evaluated": false,
+  "total_multi_video_runtime_sec": 1170.549460887909
+}

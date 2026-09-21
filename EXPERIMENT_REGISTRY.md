@@ -1114,3 +1114,37 @@ Artifacts:
 - event_gt_primitives.csv SHA256: 4b4cc3c49a419f777145b824ca80cae6c21a16d134ea3aa566aa728d72d7060c
 - video_gt_primitives.csv SHA256: ab88e8ecc103cb8e23b48a8c91e8e4635b6bfe8b6a2d52ca7613c0e242086994
 - summary.json SHA256: c4f716fd1ed4dcf3fa55d9168f01e4813f6587617f1ff2e86e0549b415e995de
+
+## EXP046 - Frame-0 identity primitives
+
+Status: COMPLETE
+
+Freeze commit:
+- 1860efda483586b9a1c8066b655f666f128b513f
+
+Observed:
+- Primary events: 2701.
+- Primary videos: 1170.
+- Multi-object videos: 378.
+- Single-object videos: 792.
+- Competitor-defined event rows: 1279.
+- Structural no-competitor event rows: 1422.
+- Unique competitor-defined video-object identities: 1079.
+- Repeated event rows beyond unique video-object identities: 200.
+- Videos with repeated target-event identity measurements: 92.
+- Anchor pair rows: 17889.
+- Anchor/event semantics check: PASS.
+- Maximum peak allocated VRAM: 10.260851383209229 GB.
+- Recovery propagation performed: false.
+- Raw similarity fabricated for no-competitor cases: false.
+- DI-v1 frozen: false.
+- Hard set selected: false.
+- Final split constructed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+Artifacts:
+- event_identity_primitives.csv SHA256: 902347f11bfcff2e91a287453e375a1895f4e42b6ffc70e42766b50ae28d4a70
+- video_identity_primitives.csv SHA256: a77fd63405d9c13ff1e08ec27692a01a5d5f6b041675b348ea928459a4f1953c
+- anchor_cosine.csv SHA256: 62dbf9a10e391b87e4568e7ce65a34909a9d6fb5492b66bddb74baba9a9c0a8d
+- summary.json SHA256: 8780419efb8634cc93b250f945f02abb8bfb2bbced6102bc2373053788e9f4dd

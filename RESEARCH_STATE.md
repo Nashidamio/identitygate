@@ -1478,3 +1478,60 @@ ARTIFACTS:
 
 NEXT:
 - Freeze the exact frame-0 pointer-only distractor-pressure preprocessing after interpreting anchor/competitor coverage and the pre-gap target-size diagnostic.
+
+## EXP046 - Frame-0 identity primitives
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Frozen implementation commit: 1860efda483586b9a1c8066b655f666f128b513f.
+- GT-clean SAM 3 frame-0 object-pointer identity primitive extraction over the frozen EXP045 primary population.
+- Recovery propagation performed: false.
+- Gate inference performed: false.
+- DI-v1 frozen: false.
+- Hard set selected: false.
+- Final split constructed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+OBSERVED:
+- Primary events: 2701.
+- Primary videos: 1170.
+- Multi-object frame-0 videos: 378.
+- Single-object frame-0 videos: 792.
+- Events with a tracked frame-0 competitor: 1279 (0.47352832284339136).
+- Events with no tracked frame-0 competitor: 1422 (0.5264716771566087).
+- Single-object/no-competitor cases retained explicitly; no raw similarity was fabricated.
+- Anchor pair rows: 17889.
+- Unique competitor-defined video-object identities: 1079.
+- Repeated event rows beyond unique video-object identities: 200.
+- Videos with at least one repeated target-event identity measurement: 92.
+- Event-vs-anchor semantics cross-check: PASS.
+- Production maximum peak allocated VRAM: 10.260851383209229 GB.
+- Total multi-object extraction runtime: 1170.549460887909 s.
+
+IDENTITY-PRESSURE DIAGNOSTIC:
+- Event-weighted cosine: median 0.996055483818; mean 0.99079794068.
+- Unique-object-weighted cosine: median 0.996669888496; mean 0.991415897531.
+- Video maximum cosine: median 0.99401023984; mean 0.989591110478.
+- Video mean cosine: median 0.992960363626; mean 0.98841552755.
+- Identity cosine is highly concentrated near 1 in the multi-object population.
+- The same static frame-0 identity primitive can appear in multiple occlusion-event rows; event-row weighting is therefore not treated as an independent identity measurement.
+- Exact DI-v1 video-level identity aggregation and structural no-competitor ranking remain OPEN until DI-v1 freeze.
+
+ARTIFACTS:
+- experiments/EXP046_frame0_identity/event_identity_primitives.csv
+  SHA256: 902347f11bfcff2e91a287453e375a1895f4e42b6ffc70e42766b50ae28d4a70
+- experiments/EXP046_frame0_identity/video_identity_primitives.csv
+  SHA256: a77fd63405d9c13ff1e08ec27692a01a5d5f6b041675b348ea928459a4f1953c
+- experiments/EXP046_frame0_identity/anchor_cosine.csv
+  SHA256: 62dbf9a10e391b87e4568e7ce65a34909a9d6fb5492b66bddb74baba9a9c0a8d
+- experiments/EXP046_frame0_identity/summary.json
+  SHA256: 8780419efb8634cc93b250f945f02abb8bfb2bbced6102bc2373053788e9f4dd
+
+IMPLEMENTATION:
+- config SHA256: d3fcf86a29ed0e37eb7f587cd222cd618a0e37981170ef4f066af940272c358e
+- script SHA256: 4edd518e6d4f4f9053c9824a7141491c1dd39bbdfc297ca03a08c93d70f120ae
+- SAM checkpoint SHA256: 9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e
+
+NEXT:
+- Assemble and freeze the outcome-independent DI-v1 video-level component table, explicitly resolving identity aggregation, structural no-competitor handling, and the pre-gap target-size definition before hard-set selection.
