@@ -1,0 +1,54 @@
+{
+  "experiment": "EXP043",
+  "purpose": "Lock the final known development-exposure exclusion boundary after targeted provenance closure of EXP024, EXP029, and EXP031.",
+  "status": "FROZEN_PENDING_EXECUTION",
+  "source_result_commit": "1319da0b8ac07d43ace0e7686a47271346611427",
+  "expected": {
+    "excluded_videos": 175,
+    "train18_videos": 18
+  },
+  "exp042_inputs": {
+    "exclusions": {
+      "path": "experiments/EXP042_development_exposure/development_exclusions_v2.json",
+      "sha256": "c3346825babb6a9c28858cbf84022cb9719950f02fbdffd77a21c9dfd5e19240"
+    },
+    "coverage": {
+      "path": "experiments/EXP042_development_exposure/coverage_report.json",
+      "sha256": "1514bc83109e3845fa0a97eae8a48b4d245f437ccef765b24170f5245f4b11cf"
+    },
+    "summary": {
+      "path": "experiments/EXP042_development_exposure/summary.json",
+      "sha256": "66403caa4308bbad7d76e0847737eb70d2a5efe75d4b79241d08ca756633629d"
+    }
+  },
+  "closure_files": {
+    "exp023_index": "experiments/EXP023_train18_cache/index.csv",
+    "exp023_primitives": "experiments/EXP023_train18_cache/primitives.csv",
+    "exp024_utility_config": "configs/EXP024-utility-probe-v1.json",
+    "exp024_utility_summary": "experiments/EXP024_utility_prepare/summary.json",
+    "exp024_utility_csv": "experiments/EXP024_utility_prepare/train18_utility.csv",
+    "exp024_model_utility_config": "configs/EXP024-model-utility-v1.json",
+    "exp024_oof_predictions": "experiments/EXP024_model_utility/oof_predictions.csv",
+    "exp024_bootstrap_config": "configs/EXP024-cluster-bootstrap-v1.json",
+    "exp024_bootstrap_summary": "experiments/EXP024_cluster_bootstrap/summary.json",
+    "exp029_config": "configs/EXP029-b2core-train-v1.json",
+    "exp029_summary": "experiments/EXP029_b2core_train/summary.json",
+    "exp031_config": "configs/EXP031-b3-development-train-v1.json",
+    "exp031_summary": "experiments/EXP031_b3_train/summary.json"
+  },
+  "output_dir": "experiments/EXP043_development_exposure_final_lock",
+  "p2_handling": {
+    "status": "UNRESOLVED_UNGROUNDED_REFERENCE",
+    "rule": "No P2 video IDs are fabricated. If authentic P2 IDs are recovered before TEST lock, append a new amendment, union those IDs into the exclusion boundary, and regenerate any affected fresh split before TEST."
+  },
+  "claim_boundary": [
+    "The known development-exposure boundary contains 175 unique videos.",
+    "The historical EXP017 split remains superseded as a final evaluation split.",
+    "EXP017 TRAIN and DEV membership is retained only as development-exposure evidence.",
+    "The four EXP042 metadata gaps were resolved through deterministic upstream input and video-set provenance.",
+    "All 18 train18 videos in those provenance chains are contained inside the 175-video exclusion boundary.",
+    "No new exclusion IDs were added from EXP024, EXP029, or EXP031.",
+    "The unresolved historical P2 reference remains explicitly documented and no IDs are fabricated.",
+    "This lock does not define DI-v1, construct final DEV or TEST, run SAM, run a gate, or inspect fresh final outcomes."
+  ]
+}
