@@ -941,3 +941,25 @@ Artifacts:
 - target_selection.csv SHA256: 3ff941aff44317c208b950622d91e55b22a7d368e8b935600d7e90e26db82e3e
 - executed_tau_points.csv SHA256: 5937845489dd414a7fdf60bd28650ce99eb280c0c9638f21ce9e1ac5fb1ba2c9
 - ignored execution log SHA256: 26e193f69cc6a0e9f64c66cf9f933e229cf975517da7299393eb35af673082a5
+
+## EXP036 - Whole-scene manual adjudication complete
+
+Status: MANUAL ADJUDICATION COMPLETE / NOT FINAL WS PROTOCOL COMPLETE
+
+Observed:
+- Total scenes: 1818.
+- Filled: 1818.
+- Remaining: 0.
+- NORMAL_OCCLUSION: 1629.
+- WHOLE_SCENE: 189.
+- Scene-ID set matched frozen EXP034 disagreement population.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+- Three blinded replacement audit scenes remain required.
+
+Artifacts:
+- review_labels.csv SHA256: 9b76ae3bc722db7c6138cb1f2b4ab567990e6921ec2be7caf6dc0d2b239e51a4
+- source CSV SHA256: 1f6fa7ad1e10662ff0333331e6d1d5a1127e89c710b0e6d9768cd206a34d63d3
+- config SHA256: 32dcd845a9bae9cfa12dd9d90d1c9578db2134bf09c7f3a5995b4f30c22b6102
+- script SHA256: 955e53b572d825fe060ba5122114a1fee6789a6946dbf5ae991c4562973bcf47
+- final_summary.json

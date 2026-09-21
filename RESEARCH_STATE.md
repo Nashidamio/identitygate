@@ -1215,3 +1215,32 @@ ARTIFACTS:
 
 NEXT:
 - Close EXP039 provenance, then continue the remaining final-evaluation blockers without touching fresh final DEV or TEST.
+
+## EXP036 - Whole-scene manual adjudication complete
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Frozen EXP034 disagreement population fully manually adjudicated.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+- Separate 3-scene blinded-audit replacement requirement remains OPEN.
+
+OBSERVED:
+- Total disagreement scenes: 1818.
+- Filled manual labels: 1818.
+- Remaining manual labels: 0.
+- Unique scene IDs: 1818.
+- Scene-ID set matched frozen EXP034 disagreement CSV: true.
+- NORMAL_OCCLUSION: 1629.
+- WHOLE_SCENE: 189.
+- camera_cut_or_global_scene_switch: 14.
+- global_obstruction_or_scene_wide_collapse: 175.
+- local_object_specific_event: 235.
+- continuous_camera_motion_scene_visible: 1394.
+
+ARTIFACTS:
+- canonical review_labels.csv SHA256: 9b76ae3bc722db7c6138cb1f2b4ab567990e6921ec2be7caf6dc0d2b239e51a4
+- source manual_adjudication_required.csv SHA256: 1f6fa7ad1e10662ff0333331e6d1d5a1127e89c710b0e6d9768cd206a34d63d3
+- EXP036 config SHA256: 32dcd845a9bae9cfa12dd9d90d1c9578db2134bf09c7f3a5995b4f30c22b6102
+- EXP036 script SHA256: 955e53b572d825fe060ba5122114a1fee6789a6946dbf5ae991c4562973bcf47
+- result summary: experiments/EXP036_ws_keyboard_adjudication/final_summary.json

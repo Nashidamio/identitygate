@@ -1,0 +1,32 @@
+{
+  "claim_boundary": [
+    "EXP036 manually adjudicates the frozen EXP034 disagreement population.",
+    "This result does not itself complete the separate blinded-audit replacement requirement.",
+    "No fresh final DEV or TEST data were touched."
+  ],
+  "config_sha256": "32dcd845a9bae9cfa12dd9d90d1c9578db2134bf09c7f3a5995b4f30c22b6102",
+  "experiment": "EXP036",
+  "filled_rows": 1818,
+  "fresh_dev_touched": 0,
+  "label_counts": {
+    "NORMAL_OCCLUSION": 1629,
+    "WHOLE_SCENE": 189
+  },
+  "manual_rows": 1818,
+  "reason_counts": {
+    "camera_cut_or_global_scene_switch": 14,
+    "continuous_camera_motion_scene_visible": 1394,
+    "global_obstruction_or_scene_wide_collapse": 175,
+    "local_object_specific_event": 235
+  },
+  "remaining_rows": 0,
+  "repo_recording_head": "974cdba3311ac923271a7b95e87af70ff4df38b3",
+  "review_labels_sha256": "9b76ae3bc722db7c6138cb1f2b4ab567990e6921ec2be7caf6dc0d2b239e51a4",
+  "scene_id_set_match": true,
+  "script_sha256": "955e53b572d825fe060ba5122114a1fee6789a6946dbf5ae991c4562973bcf47",
+  "source_csv_sha256": "1f6fa7ad1e10662ff0333331e6d1d5a1127e89c710b0e6d9768cd206a34d63d3",
+  "source_disagreement_rows": 1818,
+  "status": "EXP036_MANUAL_ADJUDICATION_COMPLETE",
+  "test_touched": 0,
+  "unique_scene_ids": 1818
+}
