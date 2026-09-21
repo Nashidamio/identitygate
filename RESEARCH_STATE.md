@@ -1535,3 +1535,83 @@ IMPLEMENTATION:
 
 NEXT:
 - Assemble and freeze the outcome-independent DI-v1 video-level component table, explicitly resolving identity aggregation, structural no-competitor handling, and the pre-gap target-size definition before hard-set selection.
+
+## EXP047 - Frozen DINOv2 visual embeddings
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Frozen implementation commit: 50f7f07905cd2ff70bafe49132a0253648f086db.
+- External frozen visual-backbone embeddings extracted for all 1170 videos in the frozen primary population.
+- Role: visual-diversity control for later hard-set construction only.
+- Gate input: false.
+- Outcome variable: false.
+- Clustering performed: false.
+- DI-v1 frozen: false.
+- Hard set selected: false.
+- Final split constructed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+FROZEN BACKBONE PROVENANCE:
+- Backbone: DINOv2 ViT-S/14, dinov2_vits14.
+- DINOv2 source commit: 7764ea0f912e53c92e82eb78a2a1631e92725fc8.
+- Weight SHA256: b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9.
+- Parameter count: 22056576.
+- Strict pretrained state-dict load: 0 missing keys, 0 unexpected keys.
+- Parameters frozen during extraction.
+- xFormers absence was non-blocking; the current inference path passed CPU and GPU sanity without installing the historical DINOv2 training dependency stack.
+
+SAMPLING / REPRESENTATION:
+- One frame per primary video.
+- Frame ordering: sorted *.jpg filenames.
+- Selected frame index: n_frames // 2.
+- Even-length semantics: upper-middle frame.
+- No annotations, labels, recovery outcomes, fresh DEV, or TEST were used for frame selection.
+- Official pinned DINOv2 classification eval transform:
+  resize shorter side to 256 with bicubic interpolation;
+  center crop 224;
+  tensor conversion;
+  ImageNet mean (0.485, 0.456, 0.406);
+  ImageNet std (0.229, 0.224, 0.225).
+- Representation: model(x) = IdentityHead(x_norm_clstoken).
+- Embedding dimensionality: 384.
+- Embedding dtype: float32.
+- Extra L2 normalization: false.
+- Embedding postprocessing: NONE.
+
+SANITY:
+- Same-image repeat maximum absolute difference: 0.0.
+- model(x) versus forward_features()[x_norm_clstoken] maximum absolute difference: 0.0.
+- Frozen three-video GPU sanity: PASS.
+- Sanity artifact written: false.
+
+PRODUCTION OBSERVED:
+- Primary videos: 1170.
+- Embedding shape: (1170, 384).
+- Unique video rows: 1170.
+- Embedding norm minimum: 41.223283646063756.
+- Embedding norm median: 47.046143158972725.
+- Embedding norm maximum: 53.952479547818726.
+- Embedding norm mean: 46.94078641062315.
+- Maximum peak allocated VRAM: 0.09605073928833008 GB.
+- Maximum peak reserved VRAM: 0.111328125 GB.
+- Runtime: 69.38440942764282 s.
+- Planned downstream visual clustering k: 20.
+- Planned hard-set maximum fraction per visual cluster: 0.15.
+- No clustering or hard-set selection occurred in EXP047.
+
+IMPLEMENTATION:
+- config SHA256: 039e784aca2451cd629efa909893e9aabb7d8de80b90d16d4dd64177b4930b5f.
+- script SHA256: eb377e4f702bf1d5be9aee1a477f78b2dccbc9cc4484b09476581902a46ef2f3.
+- test SHA256: d1df3aa7e3f5ba14967203c296d09d44e6081acd9e5e69b2db62e4e2cc6a1b54.
+
+ARTIFACTS:
+- experiments/EXP047_visual_embeddings/embeddings.npy
+  SHA256: 66aacaa538f633976c64a702c2a3fe5fce475a45e1eeb0885836627922434776
+- experiments/EXP047_visual_embeddings/video_frames.csv
+  SHA256: 2ed34109a2aaac86100cf5f5c5a00652e812094cf68df52019d632de3091f27b
+- experiments/EXP047_visual_embeddings/summary.json
+  SHA256: e69640de8418ed8bc5efe3a8c2e31a46586518d7ccc4a3e5d53162163648a0e8
+
+NEXT:
+- Assemble and freeze DI-v1 at video level using the five supervisor-approved outcome-independent components, then apply the frozen visual-diversity clustering constraint before final hard-set and split construction.

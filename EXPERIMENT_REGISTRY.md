@@ -1148,3 +1148,45 @@ Artifacts:
 - video_identity_primitives.csv SHA256: a77fd63405d9c13ff1e08ec27692a01a5d5f6b041675b348ea928459a4f1953c
 - anchor_cosine.csv SHA256: 62dbf9a10e391b87e4568e7ce65a34909a9d6fb5492b66bddb74baba9a9c0a8d
 - summary.json SHA256: 8780419efb8634cc93b250f945f02abb8bfb2bbced6102bc2373053788e9f4dd
+
+## EXP047 - Frozen DINOv2 visual embeddings
+
+Status: COMPLETE
+
+Freeze commit:
+- 50f7f07905cd2ff70bafe49132a0253648f086db
+
+Backbone:
+- DINOv2 ViT-S/14 / dinov2_vits14.
+- Source commit: 7764ea0f912e53c92e82eb78a2a1631e92725fc8.
+- Weight SHA256: b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9.
+- Parameters: 22056576.
+- Frozen: true.
+
+Observed:
+- Primary videos: 1170.
+- Frames per video: 1.
+- Frame selection: sorted JPEG index n_frames // 2.
+- Embedding shape: (1170, 384).
+- Embedding dtype: float32.
+- Representation: model(x) = IdentityHead(x_norm_clstoken).
+- Extra L2 normalization: false.
+- Embedding norm min: 41.223283646063756.
+- Embedding norm median: 47.046143158972725.
+- Embedding norm max: 53.952479547818726.
+- Maximum peak allocated VRAM: 0.09605073928833008 GB.
+- Maximum peak reserved VRAM: 0.111328125 GB.
+- Runtime: 69.38440942764282 s.
+- Same-image repeat max absolute difference: 0.0.
+- Direct model output versus x_norm_clstoken max absolute difference: 0.0.
+- Clustering performed: false.
+- DI-v1 frozen: false.
+- Hard set selected: false.
+- Final split constructed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+Artifacts:
+- embeddings.npy SHA256: 66aacaa538f633976c64a702c2a3fe5fce475a45e1eeb0885836627922434776
+- video_frames.csv SHA256: 2ed34109a2aaac86100cf5f5c5a00652e812094cf68df52019d632de3091f27b
+- summary.json SHA256: e69640de8418ed8bc5efe3a8c2e31a46586518d7ccc4a3e5d53162163648a0e8
