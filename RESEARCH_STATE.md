@@ -1615,3 +1615,101 @@ ARTIFACTS:
 
 NEXT:
 - Assemble and freeze DI-v1 at video level using the five supervisor-approved outcome-independent components, then apply the frozen visual-diversity clustering constraint before final hard-set and split construction.
+
+## EXP048 - DI-v1 component freeze
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Frozen implementation commit: 10b9292d20fb35942359a6b7006db4515788e5fb.
+- DI-v1 component definition and video-level component table are FROZEN / MATERIALIZED.
+- Population: frozen EXP044 primary-eligible population only.
+- Primary events: 2701.
+- Primary videos: 1170.
+- Hard-set size frozen: false.
+- Hard set selected: false.
+- Final split constructed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+FROZEN DI-v1 COMPONENT SEMANTICS:
+- Five equal-weight components, each weight 0.2:
+  identity pressure;
+  gap duration;
+  target size;
+  crowding;
+  reappearance displacement.
+- Event-to-video gap duration: maximum gap_len.
+- Event-to-video target size: minimum pre10_min_visible_area_fraction; smaller target is harder.
+- Event-to-video crowding: maximum crowding_mean_visible_objects.
+- Event-to-video reappearance displacement: maximum reappearance_displacement_diag_norm.
+- Identity pressure: maximum unique (video, object_id) max_other_anchor_cos_fp32.
+- Repeated occlusion-event rows do not duplicate a frame-0 identity measurement.
+- Structural no-frame-0-competitor videos form the lowest tied identity-pressure group; no cosine is fabricated.
+- Within-pool component ranks: scipy.stats.rankdata(method="average") / N, N=1170.
+- DI-v1 score: arithmetic mean of the five percentile ranks.
+
+IDENTITY COVERAGE:
+- Competitor-defined videos: 378.
+- Structural no-competitor videos: 792.
+- Unique competitor-defined video-object identity measurements: 1079.
+
+VISUAL DIVERSITY:
+- Input: frozen EXP047 DINOv2 ViT-S/14 384-D embedding.
+- No additional L2 normalization.
+- scipy.cluster.vq.kmeans2.
+- k=20.
+- iter=100.
+- minit="++".
+- RNG seed=42.
+- Hard-set maximum fraction per visual cluster: 0.15.
+- Visual cluster counts:
+  110,45,57,88,89,80,65,26,35,72,54,49,49,15,75,65,101,64,12,19.
+
+DI-v1 OBSERVED DISTRIBUTION:
+- Minimum: 0.19367521367521368.
+- Median: 0.48619658119658116.
+- Maximum: 0.8810256410256411.
+
+COMPONENT CORRELATION:
+- Identity vs gap: -0.15552068548485032.
+- Identity vs size: 0.09102515455157509.
+- Identity vs crowding: 0.7078374476225872.
+- Identity vs displacement: -0.0819060178338578.
+- Gap vs size: -0.08460772297469671.
+- Gap vs crowding: -0.5259040085641359.
+- Gap vs displacement: 0.41297032349648993.
+- Size vs crowding: 0.16044527760495481.
+- Size vs displacement: -0.12160965389482929.
+- Crowding vs displacement: -0.31639716947214896.
+- Identity/crowding correlation is substantial, but the supervisor-required leave-one-component-out stability criterion passes; no rebalance is required.
+
+LEAVE-ONE-COMPONENT-OUT STABILITY:
+- Required survival overlap: >=0.60.
+- hard_n=120: 739 events; min overlap 0.6583333333333333; PASS.
+- hard_n=160: 907 events; min overlap 0.65625; PASS.
+- hard_n=200: 1053 events; min overlap 0.705; PASS.
+- hard_n=240: 1162 events; min overlap 0.6958333333333333; PASS.
+- hard_n=280: 1234 events; min overlap 0.6892857142857143; PASS.
+- hard_n=320: 1321 events; min overlap 0.703125; PASS.
+- All tested hard-set sizes satisfy the <=0.15 visual-cluster cap.
+- Equal-weight DI-v1 is retained without rebalance.
+
+IMPLEMENTATION:
+- config SHA256: 18e564332c23dace531620f440433cd2457fbaca850cdcbd5ad8e003a0ab19e1.
+- script SHA256: b86b86448cd01752cc821f9b1943994718fc48f77960d8090e6b9915b300f00c.
+- test SHA256: e022e07614baafb09226d7ff9dc057fac017568e56ac1b8ddd21bdc16bab9ed8.
+
+ARTIFACTS:
+- experiments/EXP048_di_v1/di_video_components.csv
+  SHA256: 42717e0c25b798c60e1be71cfcaafa49904559e104d6f23b09bff95c10275df3
+- experiments/EXP048_di_v1/visual_clusters.csv
+  SHA256: 4c229d2e0b077b66c6394b6508830b8df32f3ce5ae0988245f397205576a0aae
+- experiments/EXP048_di_v1/component_correlations.csv
+  SHA256: cb2e05c5d409bf99343b3595875070be48127da88cdda3783d6378034e8b56b4
+- experiments/EXP048_di_v1/stability_grid.csv
+  SHA256: 9cdb68443d9042b85d87a18daec8dd40f5ec68669c696bd586a6c6577e6f9fef
+- experiments/EXP048_di_v1/summary.json
+  SHA256: f6af9aa752e9ebab1b7139ac9b4ff9f5adb657d4f1f781ab03152f0411aba257
+
+NEXT:
+- Lock hard-set size and final video-level DEV/TEST construction without using gate/model outcomes, while preserving the frozen DI-v1 score and visual-cluster constraint.

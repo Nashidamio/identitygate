@@ -1190,3 +1190,62 @@ Artifacts:
 - embeddings.npy SHA256: 66aacaa538f633976c64a702c2a3fe5fce475a45e1eeb0885836627922434776
 - video_frames.csv SHA256: 2ed34109a2aaac86100cf5f5c5a00652e812094cf68df52019d632de3091f27b
 - summary.json SHA256: e69640de8418ed8bc5efe3a8c2e31a46586518d7ccc4a3e5d53162163648a0e8
+
+## EXP048 - DI-v1 component freeze
+
+Status: COMPLETE
+
+Freeze commit:
+- 10b9292d20fb35942359a6b7006db4515788e5fb
+
+Frozen population:
+- Primary events: 2701.
+- Primary videos: 1170.
+
+DI-v1:
+- Components: identity pressure, gap duration, target size, crowding, reappearance displacement.
+- Weights: 0.2 each.
+- Percentile ranking: scipy.stats.rankdata(method="average") / 1170.
+- Video aggregation: hardest event per non-identity component.
+- Target-size definition: minimum visible-only pre-gap area fraction; smaller is harder.
+- Identity definition: maximum unique frame-0 target/competitor cosine.
+- Structural no-competitor videos: lowest tied identity-pressure group; no cosine fabricated.
+- Competitor-defined videos: 378.
+- Structural no-competitor videos: 792.
+- Unique video-object identity measurements: 1079.
+- DI score min: 0.19367521367521368.
+- DI score median: 0.48619658119658116.
+- DI score max: 0.8810256410256411.
+
+Visual clustering:
+- k=20.
+- kmeans2 seed=42.
+- minit="++".
+- iter=100.
+- Extra L2 normalization: false.
+- Hard-set visual-cluster cap: <=0.15.
+
+Stability:
+- hard_n=120 min LOO overlap: 0.6583333333333333 PASS.
+- hard_n=160 min LOO overlap: 0.65625 PASS.
+- hard_n=200 min LOO overlap: 0.705 PASS.
+- hard_n=240 min LOO overlap: 0.6958333333333333 PASS.
+- hard_n=280 min LOO overlap: 0.6892857142857143 PASS.
+- hard_n=320 min LOO overlap: 0.703125 PASS.
+- All tested sizes pass the >=0.60 requirement.
+- Equal-weight DI retained; no rebalance.
+
+Boundary:
+- DI-v1 component definition: FROZEN / MATERIALIZED.
+- Hard-set size frozen: false.
+- Hard set selected: false.
+- Final split constructed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+Artifacts:
+- di_video_components.csv SHA256: 42717e0c25b798c60e1be71cfcaafa49904559e104d6f23b09bff95c10275df3
+- visual_clusters.csv SHA256: 4c229d2e0b077b66c6394b6508830b8df32f3ce5ae0988245f397205576a0aae
+- component_correlations.csv SHA256: cb2e05c5d409bf99343b3595875070be48127da88cdda3783d6378034e8b56b4
+- stability_grid.csv SHA256: 9cdb68443d9042b85d87a18daec8dd40f5ec68669c696bd586a6c6577e6f9fef
+- summary.json SHA256: f6af9aa752e9ebab1b7139ac9b4ff9f5adb657d4f1f781ab03152f0411aba257
