@@ -1,0 +1,41 @@
+{
+  "claim_boundary": [
+    "All frozen EXP019 object events are retained; no event is redetected or silently dropped.",
+    "Scene labels are joined by recorded ws_scene_event_id, not inferred from nearby timestamps.",
+    "NOT_ANNOTATION_CANDIDATE is a pipeline category, not an additional human adjudication.",
+    "Eligibility flags implement only the frozen whole-scene and development-exposure restrictions.",
+    "Whole-scene exclusion is event-level; mixed videos retain their eligible non-whole-scene events.",
+    "All whole-scene events remain in the table for separately specified sensitivity and negative-control analyses.",
+    "This step does not compute DI-v1, substitute legacy attributes for its components, or construct a split.",
+    "No SAM or gate inference, calibration, fresh DEV evaluation, or TEST evaluation is performed."
+  ],
+  "expected": {
+    "candidate_scenes": 2179,
+    "event_bearing_videos": 1691,
+    "events": 4469,
+    "excluded_videos": 175,
+    "whole_scene_scenes": 550
+  },
+  "experiment": "EXP044",
+  "inputs": {
+    "events": {
+      "path": "experiments/EXP019_ws_gt_events.csv",
+      "sha256": "d6b7f79e8aabdf9041264e03b0449642677f3595f148c3489c8c7ad655f1850c"
+    },
+    "exposure_lock": {
+      "path": "experiments/EXP043_development_exposure_final_lock/development_exclusions_locked.json",
+      "sha256": "4f663bf3a6532fcac662e0ef9afa9af04609de1872f36bab4f0608ceca32333d"
+    },
+    "scene_labels": {
+      "path": "experiments/EXP041_ws_final_labels/final_ws_labels.csv",
+      "sha256": "a14d9c83b0ddbc62c0cf3bae404950867259b96c773a7db491375ec74f37689e"
+    },
+    "ws_rule": {
+      "path": "configs/WS-v1.json",
+      "sha256": "07812618c50412ec451bd0cee6f1c746bd1d4e07bfae803b006ed135f7279e2f"
+    }
+  },
+  "output_dir": "experiments/EXP044_event_pool",
+  "source_commit": "d3e6de186863a37d1ea4e7b4225a6b52a07555a1",
+  "status": "BUILDER_FROZEN_BEFORE_EVENT_POOL_EXECUTION"
+}
