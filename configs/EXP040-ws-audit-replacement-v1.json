@@ -1,0 +1,58 @@
+{
+  "experiment": "EXP040",
+  "purpose": "Prospective blinded replacement of three compromised EXP035 whole-scene audit items",
+  "status": "PROSPECTIVE_RULE_FROZEN",
+  "source_population": {
+    "path": "experiments/EXP019_ws_gt_scenes.csv",
+    "sha256": "aed70b4e77ce39afe7a40ad8ada9507ea82719dc195478495c6eca25e3570990",
+    "expected_scene_count": 2179,
+    "order": "sorted scene_event_id"
+  },
+  "original_audit": {
+    "manifest_path": "experiments/EXP034_ws_pixel_audit_manifest.json",
+    "manifest_sha256": "beeaca20cff8950725926596703c5c638fa7a8eef9207adf27aad492b60f0298",
+    "sample_size": 30,
+    "seed": 34034
+  },
+  "compromised_scene_event_ids": [
+    "1i2lajr8:WS001",
+    "3zc7wpcz:WS002",
+    "47suxl9t:WS001"
+  ],
+  "compromise_reason": "Automatic review status was accidentally visible; these three items remain pilot-only and are excluded from the final agreement estimate.",
+  "replacement_sampling": {
+    "sample_size": 3,
+    "seed": 34035,
+    "algorithm": "Python random.Random(seed).sample(sorted_eligible_scene_event_ids, sample_size)",
+    "eligibility": "Same frozen 2179-scene EXP019 population excluding all 30 original EXP034 audit IDs"
+  },
+  "final_audit": {
+    "uncompromised_original_count": 27,
+    "replacement_count": 3,
+    "valid_scene_count": 30
+  },
+  "frame_source": "/mnt/d/thesis_data/mosev2/train/JPEGImages",
+  "output_root": "~/thesis/identitygate_visual_artifacts/EXP040/final_audit30",
+  "visual_context": {
+    "animated_gif_frame_duration_ms": 180,
+    "animated_gif_loop": 0,
+    "contact_sheet_thumbnail_width": 320,
+    "gap_sample_count": 3,
+    "transition_context_frames": 7
+  },
+  "blinding": {
+    "source_for_manual_review": "EXP019 annotation-side scene rows only",
+    "automatic_status_exposed": false,
+    "pixel_scores_exposed": false,
+    "component_decisions_exposed": false,
+    "sam_or_gate_outcomes_exposed": false
+  },
+  "claim_boundary": [
+    "Replacement selection is frozen before replacement IDs are revealed.",
+    "No EXP034 pixel outcome is used for replacement selection.",
+    "All original 30 audit IDs are excluded from replacement eligibility.",
+    "The three compromised original scenes are pilot-only and excluded from the final agreement estimate.",
+    "No whole-scene thresholds are changed.",
+    "No fresh final DEV or TEST gate evaluation is performed."
+  ]
+}
