@@ -963,3 +963,25 @@ Artifacts:
 - config SHA256: 32dcd845a9bae9cfa12dd9d90d1c9578db2134bf09c7f3a5995b4f30c22b6102
 - script SHA256: 955e53b572d825fe060ba5122114a1fee6789a6946dbf5ae991c4562973bcf47
 - final_summary.json
+
+## EXP040 - Blinded audit replacement sample executed
+
+Status: REPLACEMENT SAMPLE EXECUTED / MANUAL AUDIT PENDING
+
+Observed:
+- Replacement eligible population: 2149.
+- Replacement seed: 34035.
+- Replacement count: 3.
+- Replacement IDs: 5r6uxga7:WS001, of2thxpc:WS001, 0fc00006:WS001.
+- Final valid audit population: 30.
+- Pixel outcomes used for replacement selection: false.
+- SAM/gate outcomes used for replacement selection: false.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+Artifacts:
+- final_audit_source.csv SHA256: fe0bc24767fc0a2177f37cd8b1fe68ecf32fadde363df7a8cc31a5e750d009be
+- replacement_manifest.json SHA256: eb975d4fff3eefb8345360c495c35cc128f4fe83a918215b1afc7da7e1e527af
+
+Open:
+- Complete blinded manual labels for all 30 final-audit scenes.

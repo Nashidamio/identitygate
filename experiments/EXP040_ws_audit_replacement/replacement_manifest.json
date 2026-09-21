@@ -1,0 +1,27 @@
+{
+  "compromised_count": 3,
+  "config_sha256": "555081371370de594c5e26977c509af18242caa943910c3d66b53a271f4afbf2",
+  "experiment": "EXP040",
+  "final_audit_source_sha256": "fe0bc24767fc0a2177f37cd8b1fe68ecf32fadde363df7a8cc31a5e750d009be",
+  "final_valid_audit_count": 30,
+  "fresh_final_dev_touched": false,
+  "original_audit_count": 30,
+  "original_audit_manifest_sha256": "beeaca20cff8950725926596703c5c638fa7a8eef9207adf27aad492b60f0298",
+  "replacement_count": 3,
+  "replacement_eligible_count": 2149,
+  "replacement_scene_event_ids": [
+    "5r6uxga7:WS001",
+    "of2thxpc:WS001",
+    "0fc00006:WS001"
+  ],
+  "replacement_seed": 34035,
+  "replacement_selection_used_pixel_outcomes": false,
+  "replacement_selection_used_sam_or_gate_outcomes": false,
+  "repo_commit_at_execution": "e6dea8b509b5ce3e2fb4c0669d566ced8b928722",
+  "script_sha256": "e8f33fc516aa297572aaa57d54b07941bb3167318c4bc388ba4f092b9b4d866d",
+  "source_population_count": 2179,
+  "source_population_sha256": "aed70b4e77ce39afe7a40ad8ada9507ea82719dc195478495c6eca25e3570990",
+  "status": "PROSPECTIVE_REPLACEMENT_SAMPLE_EXECUTED",
+  "test_touched": false,
+  "uncompromised_original_count": 27
+}

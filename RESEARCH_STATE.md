@@ -1244,3 +1244,33 @@ ARTIFACTS:
 - EXP036 config SHA256: 32dcd845a9bae9cfa12dd9d90d1c9578db2134bf09c7f3a5995b4f30c22b6102
 - EXP036 script SHA256: 955e53b572d825fe060ba5122114a1fee6789a6946dbf5ae991c4562973bcf47
 - result summary: experiments/EXP036_ws_keyboard_adjudication/final_summary.json
+
+## EXP040 - Blinded audit replacement sample executed
+
+STATUS:
+- EXECUTED / VERIFIED.
+- Prospective replacement rule was frozen before replacement IDs were revealed.
+- Manual final-audit labeling is still PENDING.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+OBSERVED:
+- Original audit size: 30.
+- Compromised pilot-only scenes: 3.
+- Uncompromised original scenes retained: 27.
+- Replacement eligible population: 2149.
+- Replacement seed: 34035.
+- Replacement scenes: 5r6uxga7:WS001, of2thxpc:WS001, 0fc00006:WS001.
+- Final valid blinded-audit population: 30.
+- Replacement selection used pixel outcomes: false.
+- Replacement selection used SAM/gate outcomes: false.
+
+ARTIFACTS:
+- experiments/EXP040_ws_audit_replacement/final_audit_source.csv
+  SHA256: fe0bc24767fc0a2177f37cd8b1fe68ecf32fadde363df7a8cc31a5e750d009be
+- experiments/EXP040_ws_audit_replacement/replacement_manifest.json
+  SHA256: eb975d4fff3eefb8345360c495c35cc128f4fe83a918215b1afc7da7e1e527af
+
+NEXT:
+- Record blinded manual labels for all 30 valid audit scenes.
+- The final whole-scene agreement estimate remains OPEN until those labels are complete.
