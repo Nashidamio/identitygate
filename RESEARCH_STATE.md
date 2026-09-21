@@ -1331,3 +1331,43 @@ ARTIFACTS:
 
 NEXT:
 - Freeze final development-exclusion / DI-v1 logic before constructing the fresh final DEV/TEST split.
+
+## EXP042 - Development exposure boundary reconstructed
+
+STATUS:
+- EXECUTED / VERIFIED.
+- Recorded development-exposure union reconstructed from legacy exclusions plus historical EXP017 TRAIN and DEV.
+- Final split is NOT yet authorized.
+- DI-v1 is NOT yet defined/frozen.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+OBSERVED:
+- Legacy exclusions: 81 videos.
+- Historical EXP017 TRAIN: 100 videos.
+- Historical EXP017 DEV: 40 videos.
+- Historical TRAIN+DEV union: 140 videos.
+- Legacy overlap with historical TRAIN+DEV: 46 videos.
+- Added beyond development_exclusions_v1: 94 videos.
+- Reconstructed unique exclusion boundary: 175 videos.
+- EXP021 eligible videos outside boundary: 0.
+- Later explicit video IDs outside boundary: 0.
+- Later scope files checked: 18.
+- Later scope files without explicit video IDs: 4.
+
+OPEN:
+- Scope provenance must still be resolved for:
+  - experiments/EXP024_cluster_bootstrap/summary.json
+  - experiments/EXP024_utility_prepare/summary.json
+  - experiments/EXP029_b2core_train/summary.json
+  - experiments/EXP031_b3_train/summary.json
+- Historical unresolved P2 reference remains unresolved; no IDs are fabricated.
+- Final exclusion lock, DI-v1, and fresh final DEV/TEST split remain pending.
+
+ARTIFACTS:
+- experiments/EXP042_development_exposure/development_exclusions_v2.json
+  SHA256: c3346825babb6a9c28858cbf84022cb9719950f02fbdffd77a21c9dfd5e19240
+- experiments/EXP042_development_exposure/coverage_report.json
+  SHA256: 1514bc83109e3845fa0a97eae8a48b4d245f437ccef765b24170f5245f4b11cf
+- experiments/EXP042_development_exposure/summary.json
+  SHA256: 66403caa4308bbad7d76e0847737eb70d2a5efe75d4b79241d08ca756633629d

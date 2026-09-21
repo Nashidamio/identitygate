@@ -1025,3 +1025,24 @@ Artifacts:
 - final_ws_labels.csv SHA256: a14d9c83b0ddbc62c0cf3bae404950867259b96c773a7db491375ec74f37689e
 - whole_scene_scene_ids.json SHA256: 22cd1e9f208183d912c5dc69ec383911e1cf5d93b90aa2c99a5bec2d93edb13f
 - summary.json SHA256: 4873a1cf33a7f6d28f767ffef80ea6a4eeeca9aa9a6ec7e65f5cbbee70dd20d3
+
+## EXP042 - Development exposure boundary reconstructed
+
+Status: RECONSTRUCTION COMPLETE / FINAL EXCLUSION LOCK PENDING
+
+Observed:
+- Reconstructed exclusion boundary: 175 unique videos.
+- Added beyond v1: 94.
+- Legacy overlap with EXP017 TRAIN+DEV: 46.
+- EXP021 outside boundary: 0.
+- Later explicit IDs outside boundary: 0.
+- Four later summary files have no explicit video IDs and require provenance resolution.
+- Final split constructed: false.
+- DI-v1 defined: false.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+Artifacts:
+- development_exclusions_v2.json SHA256: c3346825babb6a9c28858cbf84022cb9719950f02fbdffd77a21c9dfd5e19240
+- coverage_report.json SHA256: 1514bc83109e3845fa0a97eae8a48b4d245f437ccef765b24170f5245f4b11cf
+- summary.json SHA256: 66403caa4308bbad7d76e0847737eb70d2a5efe75d4b79241d08ca756633629d

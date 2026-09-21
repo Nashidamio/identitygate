@@ -1,0 +1,37 @@
+{
+  "config_sha256": "3bc3128c8ddd543f417bef1f2cb261f1322b7d7b80986e4f135d260df58f6da6",
+  "counts": {
+    "added_beyond_v1": 94,
+    "exp017_dev": 40,
+    "exp017_train": 100,
+    "exp017_train_dev_union": 140,
+    "exp021_eligible": 26,
+    "exp021_outside_boundary": 0,
+    "later_explicit_ids_outside_boundary": 0,
+    "later_scope_files_checked": 18,
+    "later_scope_files_without_explicit_video_ids": 4,
+    "legacy_exclusions": 81,
+    "legacy_overlap_with_exp017_train_dev": 46,
+    "total_unique_excluded_videos": 175
+  },
+  "di_v1_defined": false,
+  "experiment": "EXP042",
+  "files_without_explicit_video_ids": [
+    "experiments/EXP024_cluster_bootstrap/summary.json",
+    "experiments/EXP024_utility_prepare/summary.json",
+    "experiments/EXP029_b2core_train/summary.json",
+    "experiments/EXP031_b3_train/summary.json"
+  ],
+  "final_split_constructed": false,
+  "fresh_final_dev_touched": false,
+  "output_hashes": {
+    "coverage_report.json": "1514bc83109e3845fa0a97eae8a48b4d245f437ccef765b24170f5245f4b11cf",
+    "development_exclusions_v2.json": "c3346825babb6a9c28858cbf84022cb9719950f02fbdffd77a21c9dfd5e19240"
+  },
+  "outside_boundary_ids": [],
+  "repo_commit_at_execution": "c3350208638fcd7b965189f4fa42e9abee7fd1ae",
+  "sam_or_gate_inference_performed": false,
+  "script_sha256": "f1456515777628405e49e22a72a3cb57efed17b2395b1c3118c67c1c8c5c797a",
+  "status": "DEVELOPMENT_EXPOSURE_RECONSTRUCTION_COMPLETE",
+  "test_touched": false
+}

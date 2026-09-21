@@ -1,0 +1,392 @@
+{
+  "automatic_boundary_expansion_performed": false,
+  "checks": [
+    {
+      "explicit_video_count": 26,
+      "id_evidence": {
+        "03e5f069": [
+          "$/per_video/18/video"
+        ],
+        "0442a954": [
+          "$/per_video/0/video"
+        ],
+        "0f7r7f3f": [
+          "$/per_video/1/video"
+        ],
+        "14655f54": [
+          "$/per_video/19/video"
+        ],
+        "181ec185": [
+          "$/per_video/2/video"
+        ],
+        "1feae28e": [
+          "$/per_video/20/video"
+        ],
+        "3142014e": [
+          "$/per_video/3/video"
+        ],
+        "5a064706": [
+          "$/per_video/4/video"
+        ],
+        "5hcafebs": [
+          "$/per_video/5/video"
+        ],
+        "5twvf4ju": [
+          "$/per_video/21/video"
+        ],
+        "6bbyqk3u": [
+          "$/per_video/6/video"
+        ],
+        "7744dc51": [
+          "$/per_video/7/video"
+        ],
+        "82a3db34": [
+          "$/per_video/8/video"
+        ],
+        "84559bc3": [
+          "$/per_video/22/video"
+        ],
+        "89b671bb": [
+          "$/per_video/9/video"
+        ],
+        "9e85179b": [
+          "$/per_video/10/video"
+        ],
+        "e65ntk3s": [
+          "$/per_video/23/video"
+        ],
+        "emd2bu78": [
+          "$/per_video/11/video"
+        ],
+        "fc0qnjw2": [
+          "$/per_video/12/video"
+        ],
+        "l1kmuosm": [
+          "$/per_video/13/video"
+        ],
+        "qb8rh6ap": [
+          "$/per_video/14/video"
+        ],
+        "r5frlifm": [
+          "$/per_video/24/video"
+        ],
+        "sfbg4630": [
+          "$/per_video/15/video"
+        ],
+        "sxmx6adc": [
+          "$/per_video/25/video"
+        ],
+        "vjl6snjk": [
+          "$/per_video/16/video"
+        ],
+        "ydnmsfmq": [
+          "$/per_video/17/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP022_full/summary.json",
+      "sha256": "f46c063e9f58d0a7b5216e02620def10fa24214644c29b042fefa28ca1b390dc",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "sfbg4630": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP022_pilot/summary.json",
+      "sha256": "7645ea709235706d40bca14fab8cfe6fee4445c5ba4b4e14d6acdd821e9170f3",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "7744dc51": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP023_sanity/summary.json",
+      "sha256": "db3d06b56398f526e764b3e8f7b34d0528b4f7ed7e30cf3eace6109b6854e511",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 18,
+      "id_evidence": {
+        "0442a954": [
+          "row=2/video"
+        ],
+        "0f7r7f3f": [
+          "row=3/video"
+        ],
+        "181ec185": [
+          "row=4/video"
+        ],
+        "3142014e": [
+          "row=5/video"
+        ],
+        "5a064706": [
+          "row=6/video"
+        ],
+        "5hcafebs": [
+          "row=7/video"
+        ],
+        "6bbyqk3u": [
+          "row=8/video"
+        ],
+        "7744dc51": [
+          "row=9/video"
+        ],
+        "82a3db34": [
+          "row=10/video"
+        ],
+        "89b671bb": [
+          "row=11/video"
+        ],
+        "9e85179b": [
+          "row=12/video"
+        ],
+        "emd2bu78": [
+          "row=13/video"
+        ],
+        "fc0qnjw2": [
+          "row=14/video"
+        ],
+        "l1kmuosm": [
+          "row=15/video"
+        ],
+        "qb8rh6ap": [
+          "row=16/video"
+        ],
+        "sfbg4630": [
+          "row=17/video"
+        ],
+        "vjl6snjk": [
+          "row=18/video"
+        ],
+        "ydnmsfmq": [
+          "row=19/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP023_train18_cache/index.csv",
+      "sha256": "9e73e27506d540aab63dd55e2a07a4b5e7e5c8e18e54b393e0891c4d1fa36db0",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 18,
+      "id_evidence": {
+        "0442a954": [
+          "$/per_video/0/video"
+        ],
+        "0f7r7f3f": [
+          "$/per_video/1/video"
+        ],
+        "181ec185": [
+          "$/per_video/2/video"
+        ],
+        "3142014e": [
+          "$/per_video/3/video"
+        ],
+        "5a064706": [
+          "$/per_video/4/video"
+        ],
+        "5hcafebs": [
+          "$/per_video/5/video"
+        ],
+        "6bbyqk3u": [
+          "$/per_video/6/video"
+        ],
+        "7744dc51": [
+          "$/per_video/7/video"
+        ],
+        "82a3db34": [
+          "$/per_video/8/video"
+        ],
+        "89b671bb": [
+          "$/per_video/9/video"
+        ],
+        "9e85179b": [
+          "$/per_video/10/video"
+        ],
+        "emd2bu78": [
+          "$/per_video/11/video"
+        ],
+        "fc0qnjw2": [
+          "$/per_video/12/video"
+        ],
+        "l1kmuosm": [
+          "$/per_video/13/video"
+        ],
+        "qb8rh6ap": [
+          "$/per_video/14/video"
+        ],
+        "sfbg4630": [
+          "$/per_video/15/video"
+        ],
+        "vjl6snjk": [
+          "$/per_video/16/video"
+        ],
+        "ydnmsfmq": [
+          "$/per_video/17/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP023_train18_cache/summary.json",
+      "sha256": "145889fc5e26c021e8e083956baa7a1b01333357f137ce3c4da42c33448946ce",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 0,
+      "id_evidence": {},
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP024_cluster_bootstrap/summary.json",
+      "sha256": "69cb95590f21c5fc0b527d5a7f54a9491d8dcecdad4820d0496b4252d6800182",
+      "status": "NO_EXPLICIT_VIDEO_IDS"
+    },
+    {
+      "explicit_video_count": 0,
+      "id_evidence": {},
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP024_utility_prepare/summary.json",
+      "sha256": "8445c86f6424ff1c8c4e153837378e8f4c63ea5f8b3cbc2e3cecc4775d35e526",
+      "status": "NO_EXPLICIT_VIDEO_IDS"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP025_closed_loop_sanity/summary.json",
+      "sha256": "4661337126c15fa919ecb4edbd8dd58ec6a034cd6d5e5153bb58261d733bef02",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP026_singleton_equivalence/summary.json",
+      "sha256": "3a01aa0eae5914bdf9e0aafdb36c20c6061d4760f74128edea10dc30ce745f69",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP028_rowwise_hybrid_sanity/summary.json",
+      "sha256": "29979f3b736124a8299bad63f82bec994e84fcc690506daed0fc2e1f486b53cc",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 0,
+      "id_evidence": {},
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP029_b2core_train/summary.json",
+      "sha256": "a80e790c88c5b0d1ebc6c2b8643cf6ebf336fb7a22cef35e7a23e44316a10560",
+      "status": "NO_EXPLICIT_VIDEO_IDS"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP030_b2core_closed_loop_sanity/summary.json",
+      "sha256": "248a8323e2f299d17de64231d750a9a91a49a190f6483fbd2ed783f922158384",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 0,
+      "id_evidence": {},
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP031_b3_train/summary.json",
+      "sha256": "56bb0668696d9cb1f5fd9514ee2e3a356289107255c3be6ab58eda76acaa59eb",
+      "status": "NO_EXPLICIT_VIDEO_IDS"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP032_b1_closed_loop_sanity/summary.json",
+      "sha256": "962801fb812ef6a1516a171768898f864eb361abbdee2da10306a910a75d1ca5",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP033_unified_gate_closed_loop_sanity/summary.json",
+      "sha256": "0de6088159321da12342a955541af8577a6be8a484608a2bce3c88c2f81b4886",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP037_matched_rate_evaluator_sanity/summary.json",
+      "sha256": "f182356c6d8ec6f758d9a55a7b33b52dfbe216d4fc486b0497736e6b7323fe9d",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP038_a4_rate_selector_sanity/summary.json",
+      "sha256": "1f313044e894f0533ca669a90544ad7eb324db92e40440b556a2fa3271bcf0f6",
+      "status": "EXPLICIT_IDS_COVERED"
+    },
+    {
+      "explicit_video_count": 1,
+      "id_evidence": {
+        "0442a954": [
+          "$/video"
+        ]
+      },
+      "outside_boundary_ids": [],
+      "path": "experiments/EXP039_b5_dms_lite_sanity/summary.json",
+      "sha256": "0849204aab608f9e8424d002c00e591847f6576e0c80f44368fc56a95ac8f8e7",
+      "status": "EXPLICIT_IDS_COVERED"
+    }
+  ],
+  "experiment": "EXP042",
+  "files_without_explicit_video_ids": [
+    "experiments/EXP024_cluster_bootstrap/summary.json",
+    "experiments/EXP024_utility_prepare/summary.json",
+    "experiments/EXP029_b2core_train/summary.json",
+    "experiments/EXP031_b3_train/summary.json"
+  ],
+  "note": "Only explicit video-ID fields were checked. No ID was inferred from metrics, counts or filenames.",
+  "outside_boundary_ids": [],
+  "status": "LATER_SCOPE_EXPLICIT_ID_CHECK_COMPLETE"
+}
