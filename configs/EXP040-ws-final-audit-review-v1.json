@@ -1,0 +1,49 @@
+{
+  "experiment": "EXP040",
+  "stage": "FINAL_BLINDED_AUDIT30_MANUAL_REVIEW",
+  "source_csv": "experiments/EXP040_ws_audit_replacement/final_audit_source.csv",
+  "source_csv_sha256": "fe0bc24767fc0a2177f37cd8b1fe68ecf32fadde363df7a8cc31a5e750d009be",
+  "expected_scenes": 30,
+  "exp035_config": "configs/EXP035-ws-review-v1.json",
+  "exp035_config_sha256": "f88f34449f7ead0efecec01114d0a445f7ccc6c871041914d7dfd3614a030bad",
+  "exp036_reviewer_script": "scripts/exp036_ws_keyboard_adjudicator.py",
+  "exp036_reviewer_script_sha256": "955e53b572d825fe060ba5122114a1fee6789a6946dbf5ae991c4562973bcf47",
+  "frame_root": "/mnt/d/thesis_data/mosev2/train/JPEGImages",
+  "output_root": "~/thesis/identitygate_visual_artifacts/EXP040/final_audit30",
+  "cache_dir": "contact_sheet_cache",
+  "labels_file": "review_labels.csv",
+  "host": "127.0.0.1",
+  "port": 8766,
+  "keys": {
+    "1": [
+      "WHOLE_SCENE",
+      "camera_cut_or_global_scene_switch"
+    ],
+    "2": [
+      "WHOLE_SCENE",
+      "global_obstruction_or_scene_wide_collapse"
+    ],
+    "3": [
+      "NORMAL_OCCLUSION",
+      "local_object_specific_event"
+    ],
+    "4": [
+      "NORMAL_OCCLUSION",
+      "continuous_camera_motion_scene_visible"
+    ]
+  },
+  "blinding_contract": {
+    "automatic_status_exposed": false,
+    "pixel_scores_exposed": false,
+    "component_decisions_exposed": false,
+    "sam_or_gate_outcomes_exposed": false,
+    "source_is_annotation_only": true
+  },
+  "claim_boundary": [
+    "All 30 final audit scene IDs were frozen before manual labels are entered.",
+    "The three compromised original audit scenes are excluded.",
+    "Manual labels are recorded before comparison with automated EXP034 decisions.",
+    "No whole-scene threshold may be changed from this review.",
+    "No fresh final DEV or TEST gate evaluation is performed."
+  ]
+}
