@@ -1,0 +1,56 @@
+{
+  "all_events_retained": 4469,
+  "candidate_scenes_mapped": 2179,
+  "claim_boundary": [
+    "All frozen EXP019 object events are retained; no event is redetected or silently dropped.",
+    "Scene labels are joined by recorded ws_scene_event_id, not inferred from nearby timestamps.",
+    "NOT_ANNOTATION_CANDIDATE is a pipeline category, not an additional human adjudication.",
+    "Eligibility flags implement only the frozen whole-scene and development-exposure restrictions.",
+    "Whole-scene exclusion is event-level; mixed videos retain their eligible non-whole-scene events.",
+    "All whole-scene events remain in the table for separately specified sensitivity and negative-control analyses.",
+    "This step does not compute DI-v1, substitute legacy attributes for its components, or construct a split.",
+    "No SAM or gate inference, calibration, fresh DEV evaluation, or TEST evaluation is performed."
+  ],
+  "config_sha256": "e5f69593ba703bae52c226bde05986fe9c1ca3b84a089feb83545203b5b996e7",
+  "di_v1_frozen": false,
+  "event_bearing_videos": 1691,
+  "event_partition": {
+    "exposed_non_ws": 528,
+    "exposed_ws": 52,
+    "unexposed_non_ws": 2701,
+    "unexposed_ws": 1188
+  },
+  "excluded_videos_in_event_corpus": 175,
+  "excluded_videos_outside_event_corpus": 0,
+  "experiment": "EXP044",
+  "final_split_constructed": false,
+  "fresh_dev_evaluation_performed": false,
+  "input_hashes": {
+    "events": "d6b7f79e8aabdf9041264e03b0449642677f3595f148c3489c8c7ad655f1850c",
+    "exposure_lock": "4f663bf3a6532fcac662e0ef9afa9af04609de1872f36bab4f0608ceca32333d",
+    "scene_labels": "a14d9c83b0ddbc62c0cf3bae404950867259b96c773a7db491375ec74f37689e",
+    "ws_rule": "07812618c50412ec451bd0cee6f1c746bd1d4e07bfae803b006ed135f7279e2f"
+  },
+  "known_excluded_videos": 175,
+  "mixed_ws_non_ws_videos": 104,
+  "output_hashes": {
+    "event_pool.csv": "d1c8bb0121796138e6f355fbb4a03d86dcc5103bbfff7d6612e40b950105d285",
+    "per_video_pool.csv": "957d48e553ac9887cae78fa33b05b069a7fd2df10b7ba4102d6c1569a816d977"
+  },
+  "p2_status": "UNRESOLVED_UNGROUNDED_REFERENCE",
+  "primary_pool_events": 2701,
+  "primary_pool_videos": 1170,
+  "python_version": "3.12.13",
+  "repo_commit_at_execution": "3757b184911820134be7743ef2886a50ce7a40c9",
+  "resolved_ws_status_counts": {
+    "NORMAL_OCCLUSION": 1705,
+    "NOT_ANNOTATION_CANDIDATE": 1524,
+    "WHOLE_SCENE": 1240
+  },
+  "sam_or_gate_inference_performed": false,
+  "script_sha256": "5f6430fc65fb8f3e0f298266d1b833be55b4028773b798785caf55d6c882a7eb",
+  "status": "EVENT_POOL_JOIN_VERIFIED_NOT_A_SPLIT",
+  "test_evaluation_performed": false,
+  "ws_control_pool_events": 1188,
+  "ws_control_pool_videos": 437
+}

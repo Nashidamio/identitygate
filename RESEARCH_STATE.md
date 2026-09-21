@@ -1405,3 +1405,40 @@ OPEN:
 
 NEXT:
 - Freeze DI-v1 and construct the fresh final split without using model outcomes.
+
+## EXP044 - Final event pool join
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- All 4469 frozen recovery events retained.
+- Whole-scene labels joined through recorded EXP019 scene membership.
+- Development-exposure exclusion applied as eligibility metadata using the EXP043 175-video lock.
+- Whole-scene handling remains event-level.
+- DI-v1 frozen: false.
+- Final split constructed: false.
+- Fresh final DEV evaluated: false.
+- TEST evaluated: false.
+
+OBSERVED:
+- Event-bearing videos: 1691.
+- Primary eligible non-whole-scene events: 2701.
+- Primary eligible videos: 1170.
+- Whole-scene control eligible events: 1188.
+- Whole-scene control videos: 437.
+- Exposed non-whole-scene events: 528.
+- Exposed whole-scene events: 52.
+- Whole-scene events overall: 1240.
+- Non-whole-scene events overall: 3229.
+- Mixed whole-scene/non-whole-scene videos: 104.
+- Known development-exposed videos in event corpus: 175.
+
+ARTIFACTS:
+- experiments/EXP044_event_pool/event_pool.csv
+  SHA256: d1c8bb0121796138e6f355fbb4a03d86dcc5103bbfff7d6612e40b950105d285
+- experiments/EXP044_event_pool/per_video_pool.csv
+  SHA256: 957d48e553ac9887cae78fa33b05b069a7fd2df10b7ba4102d6c1569a816d977
+- experiments/EXP044_event_pool/summary.json
+  SHA256: 098b0af57d300824d2100619df2068b01c4baf0fd6bf9ecee3360f759f54185a
+
+NEXT:
+- Construct and freeze the outcome-independent DI-v1 component table over the eligible event/video population before any fresh split is generated.
