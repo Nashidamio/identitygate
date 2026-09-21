@@ -1,0 +1,52 @@
+{
+  "experiment": "EXP041",
+  "purpose": "Freeze final whole-scene labels after EXP034 pixel cross-check, EXP036 disagreement adjudication, and EXP040 blinded audit",
+  "status": "FROZEN_PENDING_EXECUTION",
+  "inputs": {
+    "scene_population": {
+      "path": "experiments/EXP019_ws_gt_scenes.csv",
+      "sha256": "aed70b4e77ce39afe7a40ad8ada9507ea82719dc195478495c6eca25e3570990",
+      "expected_rows": 2179
+    },
+    "auto_confirmed": {
+      "path": "experiments/EXP034_ws_pixel_full/auto_confirmed.csv",
+      "sha256": "bb3d8b9fe8c29882736cacdd6d207a3d1dc43d9092e9996560c7a47fcaf4ffe7",
+      "expected_rows": 361
+    },
+    "manual_required": {
+      "path": "experiments/EXP034_ws_pixel_full/manual_adjudication_required.csv",
+      "sha256": "1f6fa7ad1e10662ff0333331e6d1d5a1127e89c710b0e6d9768cd206a34d63d3",
+      "expected_rows": 1818
+    },
+    "manual_labels": {
+      "path": "~/thesis/identitygate_visual_artifacts/EXP036/disagreements/review_labels.csv",
+      "sha256": "9b76ae3bc722db7c6138cb1f2b4ab567990e6921ec2be7caf6dc0d2b239e51a4",
+      "expected_rows": 1818
+    },
+    "blinded_audit_result": {
+      "path": "experiments/EXP040_ws_audit_replacement/final_audit_result.json",
+      "sha256": "5318356ceb2d57fd61c925a9ceebf434088223612f84d468a234e7543046201a"
+    }
+  },
+  "label_rule": {
+    "auto_confirmed": "WHOLE_SCENE",
+    "manual_required": "use frozen EXP036 manual_label",
+    "allowed_final_labels": [
+      "WHOLE_SCENE",
+      "NORMAL_OCCLUSION"
+    ]
+  },
+  "expected_output": {
+    "rows": 2179,
+    "whole_scene": 550,
+    "normal_occlusion": 1629
+  },
+  "output_dir": "experiments/EXP041_ws_final_labels",
+  "claim_boundary": [
+    "EXP040 audit mismatches do not alter EXP034 thresholds or final-label rules.",
+    "Auto-confirmed EXP034 scenes are labeled WHOLE_SCENE.",
+    "All EXP034 disagreement scenes use the frozen EXP036 manual adjudication.",
+    "No gate, POR, fresh final DEV, or TEST outcome is used.",
+    "This is dataset-label preprocessing before final split construction."
+  ]
+}
