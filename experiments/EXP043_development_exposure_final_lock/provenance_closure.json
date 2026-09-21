@@ -1,0 +1,51 @@
+{
+  "chains": {
+    "EXP024_cluster_bootstrap": "EXP024_utility_prepare/train18_utility.csv -> EXP024_model_utility/oof_predictions.csv -> EXP024_cluster_bootstrap",
+    "EXP024_utility_prepare": "EXP023_train18_cache/primitives.csv -> EXP024_utility_prepare/train18_utility.csv",
+    "EXP029_b2core_train": "EXP024_utility_prepare/train18_utility.csv -> EXP029_b2core_train",
+    "EXP031_b3_train": "EXP024_utility_prepare/train18_utility.csv -> EXP031_b3_train"
+  },
+  "experiment": "EXP043",
+  "new_video_ids_supported": [],
+  "source_hashes": {
+    "configs/EXP024-cluster-bootstrap-v1.json": "e1f2c5316dc7df6de17be8b66c1073dd93b4300257e50a5c00f0256cc86d8aa5",
+    "configs/EXP024-model-utility-v1.json": "2cac9787a108a13c5c7fdd76ec164b691874f8feb9d406b667eb10e0289cd222",
+    "configs/EXP024-utility-probe-v1.json": "9da8d077eccbb38eedb3500ae5aac6ae179c8060a2ed0b0242f9ade46c351c31",
+    "configs/EXP029-b2core-train-v1.json": "dd6c69041eaf1bc0e794d94262fee8791feb353ddd05c82f15d4197503b69658",
+    "configs/EXP031-b3-development-train-v1.json": "67e53b43d6a691f101fe38673157daad8aa62e814c9aad3df869a350a57d094b",
+    "experiments/EXP023_train18_cache/index.csv": "9e73e27506d540aab63dd55e2a07a4b5e7e5c8e18e54b393e0891c4d1fa36db0",
+    "experiments/EXP023_train18_cache/primitives.csv": "c13fddfcc7fe422893e5cfed86100d9a8407abb0421c6296f5ed168a34e92feb",
+    "experiments/EXP024_cluster_bootstrap/summary.json": "69cb95590f21c5fc0b527d5a7f54a9491d8dcecdad4820d0496b4252d6800182",
+    "experiments/EXP024_model_utility/oof_predictions.csv": "b622a3e6838ba574ade8394c007585be253abab6cc8c88fee35155361a345bb2",
+    "experiments/EXP024_utility_prepare/summary.json": "8445c86f6424ff1c8c4e153837378e8f4c63ea5f8b3cbc2e3cecc4775d35e526",
+    "experiments/EXP024_utility_prepare/train18_utility.csv": "538139f4c029832c0e871b94c94f29f08cefa06ba16f02d556f4fc9e8aa45fe5",
+    "experiments/EXP029_b2core_train/summary.json": "a80e790c88c5b0d1ebc6c2b8643cf6ebf336fb7a22cef35e7a23e44316a10560",
+    "experiments/EXP031_b3_train/summary.json": "56bb0668696d9cb1f5fd9514ee2e3a356289107255c3be6ab58eda76acaa59eb",
+    "experiments/EXP042_development_exposure/coverage_report.json": "1514bc83109e3845fa0a97eae8a48b4d245f437ccef765b24170f5245f4b11cf",
+    "experiments/EXP042_development_exposure/development_exclusions_v2.json": "c3346825babb6a9c28858cbf84022cb9719950f02fbdffd77a21c9dfd5e19240",
+    "experiments/EXP042_development_exposure/summary.json": "66403caa4308bbad7d76e0847737eb70d2a5efe75d4b79241d08ca756633629d"
+  },
+  "status": "PROVENANCE_CLOSURE_PASS",
+  "train18_outside_locked_boundary": [],
+  "train18_video_count": 18,
+  "train18_video_ids": [
+    "0442a954",
+    "0f7r7f3f",
+    "181ec185",
+    "3142014e",
+    "5a064706",
+    "5hcafebs",
+    "6bbyqk3u",
+    "7744dc51",
+    "82a3db34",
+    "89b671bb",
+    "9e85179b",
+    "emd2bu78",
+    "fc0qnjw2",
+    "l1kmuosm",
+    "qb8rh6ap",
+    "sfbg4630",
+    "vjl6snjk",
+    "ydnmsfmq"
+  ]
+}

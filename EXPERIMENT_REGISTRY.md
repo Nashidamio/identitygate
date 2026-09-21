@@ -1046,3 +1046,23 @@ Artifacts:
 - development_exclusions_v2.json SHA256: c3346825babb6a9c28858cbf84022cb9719950f02fbdffd77a21c9dfd5e19240
 - coverage_report.json SHA256: 1514bc83109e3845fa0a97eae8a48b4d245f437ccef765b24170f5245f4b11cf
 - summary.json SHA256: 66403caa4308bbad7d76e0847737eb70d2a5efe75d4b79241d08ca756633629d
+
+## EXP043 - Final known development exposure lock
+
+Status: COMPLETE
+
+Observed:
+- Known development-exposure boundary: 175 unique videos.
+- train18 provenance videos: 18.
+- New IDs from provenance closure: 0.
+- Provenance closure: PASS.
+- P2 status: UNRESOLVED_UNGROUNDED_REFERENCE.
+- DI-v1 defined: false.
+- Final split constructed: false.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+Artifacts:
+- development_exclusions_locked.json SHA256: 4f663bf3a6532fcac662e0ef9afa9af04609de1872f36bab4f0608ceca32333d
+- provenance_closure.json SHA256: 4de201f9b8c2a7b8d68dc9aedd5d5e9349c4732ff4092160d0f6b96b600dc23e
+- summary.json SHA256: 08d78028ecdefb780b00b241b6bba1c885f8292652b0c369ee9ac5084b0bd63e

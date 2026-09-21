@@ -1,0 +1,21 @@
+{
+  "config_sha256": "4c2526e4e4fe7fb71a33feb7cbb85c87fa835a9635186e0d88386d9f53797936",
+  "development_exposure_lock_complete": true,
+  "di_v1_defined": false,
+  "experiment": "EXP043",
+  "final_split_constructed": false,
+  "fresh_final_dev_touched": false,
+  "known_excluded_video_count": 175,
+  "new_video_ids_from_provenance_closure": 0,
+  "output_hashes": {
+    "development_exclusions_locked.json": "4f663bf3a6532fcac662e0ef9afa9af04609de1872f36bab4f0608ceca32333d",
+    "provenance_closure.json": "4de201f9b8c2a7b8d68dc9aedd5d5e9349c4732ff4092160d0f6b96b600dc23e"
+  },
+  "p2_status": "UNRESOLVED_UNGROUNDED_REFERENCE",
+  "repo_commit_at_execution": "ac0d2dd8e1ace596fbab7203c4e460d208b3f488",
+  "script_sha256": "c8ecad660ddbac97d0bd1f4c11075b51d89114060905bf1d1cd3cda32ee3f418",
+  "source_result_commit": "1319da0b8ac07d43ace0e7686a47271346611427",
+  "status": "DEVELOPMENT_EXPOSURE_LOCK_COMPLETE",
+  "test_touched": false,
+  "train18_video_count": 18
+}

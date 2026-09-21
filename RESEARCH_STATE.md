@@ -1371,3 +1371,37 @@ ARTIFACTS:
   SHA256: 1514bc83109e3845fa0a97eae8a48b4d245f437ccef765b24170f5245f4b11cf
 - experiments/EXP042_development_exposure/summary.json
   SHA256: 66403caa4308bbad7d76e0847737eb70d2a5efe75d4b79241d08ca756633629d
+
+## EXP043 - Final known development exposure lock
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Known development-exposure boundary is locked at 175 unique videos.
+- EXP024/EXP029/EXP031 provenance closure: PASS.
+- No additional video IDs were supported by provenance closure.
+- Historical P2 reference remains UNRESOLVED_UNGROUNDED_REFERENCE; no IDs were fabricated.
+- DI-v1 defined: false.
+- Final split constructed: false.
+- Fresh final DEV touched: false.
+- TEST touched: false.
+
+OBSERVED:
+- Known excluded videos: 175.
+- Provenance train18 videos: 18.
+- train18 videos outside locked boundary: 0.
+- New video IDs from provenance closure: 0.
+
+ARTIFACTS:
+- experiments/EXP043_development_exposure_final_lock/development_exclusions_locked.json
+  SHA256: 4f663bf3a6532fcac662e0ef9afa9af04609de1872f36bab4f0608ceca32333d
+- experiments/EXP043_development_exposure_final_lock/provenance_closure.json
+  SHA256: 4de201f9b8c2a7b8d68dc9aedd5d5e9349c4732ff4092160d0f6b96b600dc23e
+- experiments/EXP043_development_exposure_final_lock/summary.json
+  SHA256: 08d78028ecdefb780b00b241b6bba1c885f8292652b0c369ee9ac5084b0bd63e
+
+OPEN:
+- Historical P2 remains unresolved; authentic recovered IDs before TEST lock require a new amendment and affected split regeneration.
+- DI-v1 and the fresh final DEV/TEST split remain pending.
+
+NEXT:
+- Freeze DI-v1 and construct the fresh final split without using model outcomes.
