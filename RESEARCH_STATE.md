@@ -1442,3 +1442,39 @@ ARTIFACTS:
 
 NEXT:
 - Construct and freeze the outcome-independent DI-v1 component table over the eligible event/video population before any fresh split is generated.
+
+## EXP045 - GT DI primitive census
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- GT-only primitive census over the frozen EXP044 primary pool.
+- Primary events: 2701.
+- Primary videos: 1170.
+- SAM/gate inference performed: false.
+- Pointer cosine computed: false.
+- DI-v1 frozen: false.
+- Hard set selected: false.
+- Final split constructed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+OBSERVED:
+- Frame-0 anchorable primary events: 2701.
+- Non-anchorable primary events: 0.
+- Videos with any anchorable primary event: 1170.
+- Videos with all primary events anchorable: 1170.
+- Videos with zero anchorable primary events: 0.
+- Events with literal pre-10-frame area minimum equal to zero: 554.
+- Events with less than 10 frames of available pre-gap history: 858.
+- Events with zero target area at disappear_start-1: 0.
+
+ARTIFACTS:
+- experiments/EXP045_di_gt_primitives/event_gt_primitives.csv
+  SHA256: 4b4cc3c49a419f777145b824ca80cae6c21a16d134ea3aa566aa728d72d7060c
+- experiments/EXP045_di_gt_primitives/video_gt_primitives.csv
+  SHA256: ab88e8ecc103cb8e23b48a8c91e8e4635b6bfe8b6a2d52ca7613c0e242086994
+- experiments/EXP045_di_gt_primitives/summary.json
+  SHA256: c4f716fd1ed4dcf3fa55d9168f01e4813f6587617f1ff2e86e0549b415e995de
+
+NEXT:
+- Freeze the exact frame-0 pointer-only distractor-pressure preprocessing after interpreting anchor/competitor coverage and the pre-gap target-size diagnostic.

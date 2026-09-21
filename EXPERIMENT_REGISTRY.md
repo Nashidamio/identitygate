@@ -1089,3 +1089,28 @@ Artifacts:
 - event_pool.csv SHA256: d1c8bb0121796138e6f355fbb4a03d86dcc5103bbfff7d6612e40b950105d285
 - per_video_pool.csv SHA256: 957d48e553ac9887cae78fa33b05b069a7fd2df10b7ba4102d6c1569a816d977
 - summary.json SHA256: 098b0af57d300824d2100619df2068b01c4baf0fd6bf9ecee3360f759f54185a
+
+## EXP045 - GT DI primitive census
+
+Status: COMPLETE
+
+Observed:
+- Primary events: 2701.
+- Primary videos: 1170.
+- Frame-0 anchorable events: 2701.
+- Non-anchorable events: 0.
+- Videos with any anchorable event: 1170.
+- Videos with all events anchorable: 1170.
+- Videos with zero anchorable events: 0.
+- Literal pre-10 minimum-zero events: 554.
+- Short-history events: 858.
+- DI-v1 frozen: false.
+- Hard set selected: false.
+- Final split constructed: false.
+- Fresh DEV evaluated: false.
+- TEST evaluated: false.
+
+Artifacts:
+- event_gt_primitives.csv SHA256: 4b4cc3c49a419f777145b824ca80cae6c21a16d134ea3aa566aa728d72d7060c
+- video_gt_primitives.csv SHA256: ab88e8ecc103cb8e23b48a8c91e8e4635b6bfe8b6a2d52ca7613c0e242086994
+- summary.json SHA256: c4f716fd1ed4dcf3fa55d9168f01e4813f6587617f1ff2e86e0549b415e995de
