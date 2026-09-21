@@ -1,0 +1,108 @@
+{
+  "claim_boundary": {
+    "di_v1_materialized": true,
+    "final_split_constructed": false,
+    "fresh_dev_evaluated": false,
+    "hard_set_selected": false,
+    "hard_set_size_frozen": false,
+    "test_evaluated": false
+  },
+  "di_v1": {
+    "components": [
+      "identity_pressure",
+      "gap_duration",
+      "target_size",
+      "crowding",
+      "reappearance_displacement"
+    ],
+    "event_to_video": {
+      "crowding": "maximum crowding_mean_visible_objects",
+      "gap_duration": "maximum gap_len",
+      "identity_pressure": "maximum unique (video, object_id) max_other_anchor_cos_fp32",
+      "reappearance_displacement": "maximum reappearance_displacement_diag_norm",
+      "target_size": "minimum pre10_min_visible_area_fraction; smaller is harder"
+    },
+    "identity_no_competitor": {
+      "ranking": "lowest tied identity-pressure group; no cosine fabricated",
+      "semantics": "structural absence of a tracked frame-0 competitor"
+    },
+    "percentile_rank": {
+      "N": 1170,
+      "implementation": "scipy.stats.rankdata",
+      "method": "average",
+      "scaling": "rank / N"
+    },
+    "score": "arithmetic mean of the five percentile ranks",
+    "weights": {
+      "crowding": 0.2,
+      "gap_duration": 0.2,
+      "identity_pressure": 0.2,
+      "reappearance_displacement": 0.2,
+      "target_size": 0.2
+    }
+  },
+  "experiment": "EXP048",
+  "inputs": {
+    "gt_event_primitives": {
+      "expected_rows": 2701,
+      "path": "experiments/EXP045_di_gt_primitives/event_gt_primitives.csv",
+      "sha256": "4b4cc3c49a419f777145b824ca80cae6c21a16d134ea3aa566aa728d72d7060c"
+    },
+    "identity_event_primitives": {
+      "expected_rows": 2701,
+      "path": "experiments/EXP046_frame0_identity/event_identity_primitives.csv",
+      "sha256": "902347f11bfcff2e91a287453e375a1895f4e42b6ffc70e42766b50ae28d4a70"
+    },
+    "visual_embeddings": {
+      "expected_shape": [
+        1170,
+        384
+      ],
+      "path": "experiments/EXP047_visual_embeddings/embeddings.npy",
+      "sha256": "66aacaa538f633976c64a702c2a3fe5fce475a45e1eeb0885836627922434776"
+    },
+    "visual_video_rows": {
+      "expected_rows": 1170,
+      "path": "experiments/EXP047_visual_embeddings/video_frames.csv",
+      "sha256": "2ed34109a2aaac86100cf5f5c5a00652e812094cf68df52019d632de3091f27b"
+    }
+  },
+  "outputs": {
+    "components": "experiments/EXP048_di_v1/di_video_components.csv",
+    "correlations": "experiments/EXP048_di_v1/component_correlations.csv",
+    "stability_grid": "experiments/EXP048_di_v1/stability_grid.csv",
+    "summary": "experiments/EXP048_di_v1/summary.json",
+    "visual_clusters": "experiments/EXP048_di_v1/visual_clusters.csv"
+  },
+  "population": {
+    "definition": "EXP044 primary eligible non-whole-scene, development-unexposed video population",
+    "events": 2701,
+    "videos": 1170
+  },
+  "purpose": "Freeze and materialize the outcome-independent DI-v1 video-level component table and deterministic visual clusters without selecting a hard set or constructing the final split.",
+  "stability": {
+    "diagnostic_hard_n": [
+      120,
+      160,
+      200,
+      240,
+      280,
+      320
+    ],
+    "required_min_leave_one_component_out_overlap": 0.6,
+    "selection_status": "diagnostic only; no final hard-set size frozen by EXP048"
+  },
+  "status": "PLANNED_PRE_FREEZE",
+  "visual_clustering": {
+    "algorithm": "scipy.cluster.vq.kmeans2",
+    "embedding_postprocessing": "NONE",
+    "hard_set_max_fraction_per_cluster": 0.15,
+    "iter": 100,
+    "k": 20,
+    "l2_normalize": false,
+    "minit": "++",
+    "missing": "raise",
+    "rng_seed": 42,
+    "scipy_input_dtype": "float64"
+  }
+}
