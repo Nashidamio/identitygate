@@ -1,0 +1,62 @@
+{
+  "acceptance": {
+    "hard_test_min_primary_events": 200,
+    "representative_disjoint_from_entire_hard_pool": true,
+    "require_video_level_disjointness": true
+  },
+  "boundary": {
+    "fresh_dev_evaluated": false,
+    "gate_inference_performed": false,
+    "model_outcomes_used": false,
+    "test_evaluated": false,
+    "test_membership_metadata_only": true
+  },
+  "expected_diagnostic": {
+    "fresh_dev_primary_events": 233,
+    "hard_pool_primary_events": 739,
+    "hard_test_primary_events": 506,
+    "membership_sha256": {
+      "DEV40": "fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d",
+      "HARD120": "50285e5ffd6a30d082fec4c945e4769199f7456a0a119e7f1b487fa8cb17cadc",
+      "REPRESENTATIVE40": "ba23def8c8d0de7a83af64c6f952544d5f3e44ad6ca018f9e4d2b6cd82ebfb66",
+      "TEST80": "6bf5a059c05d07f82e43fec9bd6b4c4b723bc551a21b72c988912e57b28ce582"
+    },
+    "representative_primary_events": 76
+  },
+  "experiment": "EXP049",
+  "hard_partition": {
+    "fresh_dev_videos": 40,
+    "hard_test_videos": 80,
+    "method": "visual-cluster-stratified DEV allocation using largest-remainder quotas",
+    "rng_seed": 42
+  },
+  "hard_pool": {
+    "ranking": "descending frozen di_v1_score; video ID ascending tie-break",
+    "videos": 120,
+    "visual_cluster_max_fraction": 0.15
+  },
+  "input": {
+    "expected_videos": 1170,
+    "path": "experiments/EXP048_di_v1/di_video_components.csv",
+    "sha256": "42717e0c25b798c60e1be71cfcaafa49904559e104d6f23b09bff95c10275df3"
+  },
+  "outputs": {
+    "fresh_dev": "experiments/EXP049_final_split/fresh_dev.csv",
+    "hard_pool": "experiments/EXP049_final_split/hard_pool.csv",
+    "hard_test": "experiments/EXP049_final_split/hard_test.csv",
+    "manifest": "experiments/EXP049_final_split/manifest.json",
+    "representative_test": "experiments/EXP049_final_split/representative_test.csv"
+  },
+  "population": {
+    "definition": "EXP044 primary-eligible non-whole-scene, development-unexposed videos",
+    "videos": 1170
+  },
+  "purpose": "Freeze the final leakage-controlled video-level cohorts using only frozen DI-v1, visual clusters, and primary-event counts.",
+  "representative_test": {
+    "rng_seed": 42,
+    "sampling": "uniform without replacement",
+    "sampling_population": "current primary-eligible videos excluding the entire hard pool",
+    "videos": 40
+  },
+  "status": "PLANNED_PRE_FREEZE"
+}
