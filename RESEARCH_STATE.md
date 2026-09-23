@@ -1909,3 +1909,41 @@ OPEN BEFORE OUTCOMES:
 
 NEXT:
 - Freeze ITR denominator and endpoint status before fresh-DEV performance outcomes.
+
+## Amendment A10 - Final endpoint and ITR freeze
+
+STATUS:
+- FROZEN WHEN THIS RECORD AND A10 ARTIFACT ARE COMMITTED.
+- Fresh-DEV tracking-performance outcomes inspected before freeze: false.
+- TEST evaluated: false.
+
+PRIMARY:
+- Endpoint: POR@30.
+- Contrast: B3-S minus B2 at frozen r_star=0.30.
+- Inference: paired video-clustered BCa bootstrap 95% CI.
+- Minimum practically important hard-set POR benefit remains +0.08.
+
+SECONDARY:
+- B3-R minus B3-S.
+- B3-R minus B2.
+- B2 minus B1.
+- B5 comparator contrasts.
+- gated methods versus native-rate B0 practical reference.
+- ITR@30.
+
+ITR@30:
+- theft frame: target_iou < 0.3 AND max_other_iou > 0.5.
+- theft episode: >=5 consecutive chronological theft frames.
+- denominator: qualifying reappearance events.
+- numerator: qualifying events containing >=1 theft episode in the
+  POR@30-aligned post-reappearance interval.
+- video clustering retained for comparative uncertainty.
+
+A10 SHA256:
+- 465e2be4534bc2b4838b263841a5de1050158322665825ba0e93a504a8f875b2
+
+OPEN ENDPOINT ITEMS:
+- none from the historical ITR-denominator / F1 contradiction pair.
+
+NEXT:
+- Freeze and execute the fresh-DEV matched-rate tracking-outcome evaluator.

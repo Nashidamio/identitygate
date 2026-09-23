@@ -1500,3 +1500,35 @@ docs/AMENDMENT_A9_SUPPORTED_MATCHED_RATE_CURVES.md
 
 SHA256:
 51e15129b396574c7326cd7a0b4d476760dc1acfcbdfea4a9e3f1edefddbea15
+
+## 77. Amendment A10 - Final endpoint and ITR freeze
+
+A10 is frozen by the commit introducing this section and its amendment
+artifact.
+
+A10 is frozen before any fresh-DEV tracking-performance outcome is computed
+or inspected and while TEST remains untouched.
+
+Resolved by A10:
+- POR@30 is the sole primary endpoint metric;
+- the single primary research-question contrast is B3-S minus B2 at the
+  frozen r_star=0.30 matched operating point;
+- primary inference remains paired video-clustered BCa bootstrap 95% CI;
+- B3-R minus B3-S, B3-R minus B2, B2 minus B1, B5 comparisons, and B0
+  practical-reference comparisons are secondary;
+- ITR@30 is secondary;
+- ITR denominator is qualifying reappearance events;
+- an event is ITR-positive when at least one >=5-consecutive-frame theft
+  episode occurs in its POR@30-aligned post-reappearance interval;
+- historical per-track/per-object-frame ITR normalizations are descriptive
+  diagnostics only;
+- the historical POR/ITR co-primary proposal is superseded.
+
+No models, r_star, thresholds, split membership, matched-rate tolerance, or
+TEST rules are changed.
+
+Artifact:
+docs/AMENDMENT_A10_ENDPOINT_AND_ITR_FREEZE.md
+
+SHA256:
+465e2be4534bc2b4838b263841a5de1050158322665825ba0e93a504a8f875b2
