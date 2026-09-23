@@ -1947,3 +1947,27 @@ OPEN ENDPOINT ITEMS:
 
 NEXT:
 - Freeze and execute the fresh-DEV matched-rate tracking-outcome evaluator.
+
+## EXP051 engineering defect - predictor tuple interface
+
+STATUS:
+- ENGINEERING DEFECT FOUND BEFORE SCIENTIFIC OUTCOME.
+- EXP051 freeze commit attempted:
+  2e4104f75a33a8e74cffe95097436ea92b1d337f
+- TRAIN-exposed sanity failed before tracker initialization completed.
+- Failure:
+  AttributeError: tuple object has no attribute init_state
+- Cause:
+  EXP050 build_predictor returns (model, predictor), while EXP051 assigned
+  the full tuple to predictor at two call sites.
+- Scientific outcome produced: false.
+- Fresh DEV performance outcome produced: false.
+- TEST touched: false.
+- Frozen models, thresholds, r_star, event cohort, POR definition, and ITR
+  definition are unchanged.
+- Fix:
+  unpack (model, predictor) at both EXP051 call sites.
+- Sanity rerun required after a new engineering-fix commit.
+
+Failed sanity log SHA256:
+- 3ffa9bc89a3f6c7e38e807af37f77b0e4722a6c72ea15d54e534c593501ec323

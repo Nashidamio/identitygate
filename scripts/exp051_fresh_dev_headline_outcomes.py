@@ -859,7 +859,7 @@ def sanity():
         )
     rows = [rows[0]]
 
-    predictor = exp050.build_predictor(runtime)
+    model, predictor = exp050.build_predictor(runtime)
 
     variant = "B2"
     tau = float(cfg["headline"]["taus"][variant])
@@ -919,7 +919,7 @@ def run():
         exp050,
     )
 
-    predictor = exp050.build_predictor(runtime)
+    model, predictor = exp050.build_predictor(runtime)
     run_rows = []
     cache_hits = 0
     cache_misses = 0
