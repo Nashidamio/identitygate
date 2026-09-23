@@ -1287,3 +1287,67 @@ Artifacts:
 - hard_test.csv SHA256: f0469d9bf5cdc9f438b8262c626f52b4de5fa690ab7734da36052ff53495f881
 - representative_test.csv SHA256: cbdf2e2f7896b326ec810ce0dbcd51722b63421f09a878aa89b0fcf2c926fe0b
 - manifest.json SHA256: 9b2d4a4b405ed94339b0b1325782c9471c34e1c1438d60be03cc4d5c39c218fc
+
+## EXP050 - Fresh DEV rate-only matched-write-rate selection
+
+Status:
+- COMPLETE WITH PROTOCOL FAILURE.
+- Headline matched-rate selection: PASS.
+- Mandatory full-curve requirement: FAIL under frozen A4 search procedure.
+
+Freeze commit:
+- d74f0f502f99d3e8f6d290773fe4943f8fbd3ab0
+
+Fresh DEV:
+- 40 videos / 233 primary events.
+- Membership SHA256:
+  fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d.
+- Tracking-performance outcomes inspected: false.
+- TEST evaluated: false.
+
+Headline matched-rate result:
+- r_star=0.3.
+- B1 tau=0.1, rate=0.28367729831144467.
+- B2 tau=0.1, rate=0.3091932457786116.
+- B3-S tau=0.2, rate=0.30393996247654786.
+- B3-R tau=0.2, rate=0.2904315196998124.
+- B5 tau=0.7, rate=0.29812382739212007.
+- All absolute errors <=0.02.
+
+Full-curve result:
+- 45 requested variant-target rows.
+- 19 matched.
+- 26 unmatched after the frozen maximum four midpoint refinements.
+- B1 failed targets 0.4-0.9.
+- B2, B3-S, B3-R, and B5 failed targets 0.5-0.9.
+- Observed rate at tau=0 was 1.0 for every variant.
+- Observed rate at tau=0.00625 ranged from 0.374109 to 0.472045.
+- High-rate mathematical unreachability is NOT concluded.
+- No post-hoc refinement-budget or tolerance change was made.
+
+Execution:
+- Pooled points: 79.
+- Video trajectories: 3160.
+- Peak VRAM: 13.846986293792725 GB.
+- Production log SHA256:
+  1abfd0d12aa62b75f48ebe0a247d351ab4016a5244b4894311ab1492c7dbc7c6.
+- Cache-ledger SHA256:
+  749de50a0ad643e15d8000565361d20fa116f1f0f7dcac07286ce3f135da84ef.
+
+Artifacts:
+- common_target_selection.csv SHA256:
+  92837a93aa50ab71fd7868f751d99f96e1617eb32d66b72fc29875795ea2ff6e
+- curve_selection.csv SHA256:
+  9977e9589dfd8e22a69ee7812ba1a48cc89a37cfc56bfe087c1a5c40d9d1c0c2
+- executed_pooled_points.csv SHA256:
+  c104238f29b7509e32bd631d7e5ce9fa427fc5b98d358e16ea739cb4c77ced22
+- final_operating_points.json SHA256:
+  b924642245b722b8734e111b9ce4c60b24544f7d7e39defb4711120e74bcea46
+- per_video_write_counts.csv SHA256:
+  db5e47654bcbd08dbc0857f5c892e680930fbd7bc1ed2ecf1aad8cc5946bfc2d
+- summary.json SHA256:
+  b5d141fd82c7708d9a54a0889ece3cad1e03ba435b16201bcd075116a792cffb
+
+Protocol consequence:
+- Retain the observed headline r_star=0.3.
+- Full-curve requirement remains unresolved and requires a frozen narrow amendment before any tracking-performance outcome inspection.

@@ -1781,3 +1781,104 @@ ARTIFACTS:
 
 NEXT:
 - Freeze the exact fresh-DEV evaluation implementation/config, then execute fresh DEV once to choose the outcome-independent matched-rate target r_star and final gate thresholds according to the locked A4 protocol. TEST remains untouched.
+
+## EXP050 - Fresh DEV rate-only matched-write-rate selection
+
+STATUS:
+- EXECUTED / VERIFIED.
+- HEADLINE MATCHED-RATE SELECTION: PASS.
+- MANDATORY FULL-CURVE REQUIREMENT: PROTOCOL FAILURE.
+- Implementation freeze commit: d74f0f502f99d3e8f6d290773fe4943f8fbd3ab0.
+- Fresh DEV was touched by closed-loop tracking for physical write-rate selection only.
+- Tracking-performance outcomes were not computed or inspected.
+- TEST remained untouched.
+
+SCOPE:
+- Frozen fresh DEV: 40 videos / 233 primary events.
+- Fresh DEV membership SHA256:
+  fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d.
+- Variants: B1, B2, B3-S, B3-R, B5.
+- Physical pooled write rate: sum(K_v) / sum(N_v).
+- Absolute matched-rate tolerance: 0.02.
+- Locked target order: 0.5, 0.4, 0.6, 0.3, 0.7, 0.2, 0.8, 0.1, 0.9.
+- Maximum midpoint refinements per A4 target: 4.
+
+HEADLINE RESULT:
+- First common matched target in the locked order: r_star = 0.3.
+- B1: tau=0.1, realized pooled write rate=0.28367729831144467,
+  absolute error=0.01632270168855532.
+- B2: tau=0.1, realized pooled write rate=0.3091932457786116,
+  absolute error=0.009193245778611636.
+- B3-S: tau=0.2, realized pooled write rate=0.30393996247654786,
+  absolute error=0.003939962476547876.
+- B3-R: tau=0.2, realized pooled write rate=0.2904315196998124,
+  absolute error=0.009568480300187587.
+- B5: tau=0.7, realized pooled write rate=0.29812382739212007,
+  absolute error=0.0018761726078799223.
+- All five headline operating points satisfy the locked +/-0.02 tolerance.
+
+FULL-CURVE RESULT:
+- Requested curve targets: 0.1 through 0.9 in increments of 0.1.
+- Requested variant-target rows: 45.
+- Matched rows: 19.
+- Unmatched rows: 26.
+- B1 unmatched targets: 0.4, 0.5, 0.6, 0.7, 0.8, 0.9.
+- B2 unmatched targets: 0.5, 0.6, 0.7, 0.8, 0.9.
+- B3-S unmatched targets: 0.5, 0.6, 0.7, 0.8, 0.9.
+- B3-R unmatched targets: 0.5, 0.6, 0.7, 0.8, 0.9.
+- B5 unmatched targets: 0.5, 0.6, 0.7, 0.8, 0.9.
+- Each failed row exhausted the frozen maximum of four midpoint refinements.
+- Therefore the mandatory full-curve requirement failed under the frozen A4 search procedure.
+
+NEAR-ZERO RATE BEHAVIOR:
+- All variants had pooled write rate 1.0 at tau=0.
+- At tau=0.00625 the observed pooled rates were:
+  B1=0.374109, B2=0.427767, B3-S=0.437711,
+  B3-R=0.399625, B5=0.472045.
+- This is an observed sharp near-zero threshold discontinuity.
+- It is NOT concluded that the unmatched high-rate targets are mathematically unreachable.
+- No post-hoc increase in refinement budget, tolerance, target order, or outcome-driven retuning was performed.
+
+EXECUTION:
+- Executed pooled points: 79.
+- Executed video trajectories: 3160.
+- Scratch cache misses: 3160.
+- Scratch cache hits: 0.
+- Maximum observed peak VRAM: 13.846986293792725 GB.
+- Production log SHA256:
+  1abfd0d12aa62b75f48ebe0a247d351ab4016a5244b4894311ab1492c7dbc7c6.
+- Cache-ledger SHA256:
+  749de50a0ad643e15d8000565361d20fa116f1f0f7dcac07286ce3f135da84ef.
+
+OUTCOME FIREWALL:
+- POR computed: false.
+- ITR computed: false.
+- J&F computed: false.
+- UAR computed: false.
+- Contamination computed: false.
+- Tracking outcomes used for threshold selection: false.
+- TEST touched: false.
+
+ARTIFACTS:
+- common_target_selection.csv
+  SHA256: 92837a93aa50ab71fd7868f751d99f96e1617eb32d66b72fc29875795ea2ff6e
+- curve_selection.csv
+  SHA256: 9977e9589dfd8e22a69ee7812ba1a48cc89a37cfc56bfe087c1a5c40d9d1c0c2
+- executed_pooled_points.csv
+  SHA256: c104238f29b7509e32bd631d7e5ce9fa427fc5b98d358e16ea739cb4c77ced22
+- final_operating_points.json
+  SHA256: b924642245b722b8734e111b9ce4c60b24544f7d7e39defb4711120e74bcea46
+- per_video_write_counts.csv
+  SHA256: db5e47654bcbd08dbc0857f5c892e680930fbd7bc1ed2ecf1aad8cc5946bfc2d
+- summary.json
+  SHA256: b5d141fd82c7708d9a54a0889ece3cad1e03ba435b16201bcd075116a792cffb
+
+OPEN PROTOCOL ITEM:
+- Headline r_star=0.3 is observed and matched under the frozen A4 procedure.
+- The mandatory full 0.1-0.9 curve cannot be declared complete under that same procedure.
+- Before any tracking-performance outcome is inspected, freeze a narrow amendment specifying how the observed full-curve protocol failure is handled.
+- Do not retune models, target order, tolerance, or headline r_star based on outcomes.
+
+NEXT:
+- Record and freeze the narrow A4 full-curve-failure handling amendment.
+- Close the remaining preregistration ambiguities before inspecting fresh-DEV tracking outcomes.

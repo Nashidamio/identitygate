@@ -1,0 +1,43 @@
+{
+  "b2_model_sha256": "6160a6be9da2058808c16182abe03443014806273df46fe59a86411ffc869ecf",
+  "b3_model_sha256": "235076b86aa0975b3ec624aae703575fd4f030381b6af4008c3808f2db71847a",
+  "config_sha256": "1567e7b665e7e5f212af03780bf4b8ce21121bbbcc3e286a1aea9822d2bd9bc0",
+  "contamination_computed": false,
+  "curve_all_match": false,
+  "executed_pooled_points": 79,
+  "executed_video_evaluations": 3160,
+  "experiment": "EXP050",
+  "fresh_dev_csv_sha256": "5c40f403337aca576242709cc18c75f8a982de0ea8fc1d3bed1c3fad2ee3ffdc",
+  "fresh_dev_membership_sha256": "fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d",
+  "fresh_dev_primary_events": 233,
+  "fresh_dev_touched_by_closed_loop_tracking": true,
+  "fresh_dev_videos": 40,
+  "itr_computed": false,
+  "jf_computed": false,
+  "max_peak_vram_gb": 13.846986293792725,
+  "output_hashes": {
+    "common_target_selection.csv": "92837a93aa50ab71fd7868f751d99f96e1617eb32d66b72fc29875795ea2ff6e",
+    "curve_selection.csv": "9977e9589dfd8e22a69ee7812ba1a48cc89a37cfc56bfe087c1a5c40d9d1c0c2",
+    "executed_pooled_points.csv": "c104238f29b7509e32bd631d7e5ce9fa427fc5b98d358e16ea739cb4c77ced22",
+    "final_operating_points.json": "b924642245b722b8734e111b9ce4c60b24544f7d7e39defb4711120e74bcea46",
+    "per_video_write_counts.csv": "db5e47654bcbd08dbc0857f5c892e680930fbd7bc1ed2ecf1aad8cc5946bfc2d"
+  },
+  "por_computed": false,
+  "r_star": 0.3,
+  "repo_commit": "d74f0f502f99d3e8f6d290773fe4943f8fbd3ab0",
+  "sam_commit": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "scratch_cache_hits": 0,
+  "scratch_cache_misses": 3160,
+  "script_sha256": "c3361f84c3f25f3dc5d5076f4935f0e2e56a7d626bcde74c23a66f35c2bd3e2d",
+  "status": "EXP050_FULL_CURVE_MATCH_FAILURE",
+  "test_touched": false,
+  "threshold_selection_uses_tracking_outcomes": false,
+  "uar_computed": false,
+  "variants": [
+    "B1",
+    "B2",
+    "B3_S",
+    "B3_R",
+    "B5"
+  ]
+}
