@@ -1,0 +1,115 @@
+{
+  "boundary": {
+    "fresh_dev_tracking_outcomes_allowed": true,
+    "test_runtime_inputs_allowed": false,
+    "test_touched": false,
+    "threshold_or_model_retuning_from_outcomes": false
+  },
+  "claim_boundary": [
+    "EXP051 evaluates only the frozen fresh-DEV headline operating point and exact per-method neutral budgets.",
+    "Only EXP044 primary_pool_eligible=1 events belonging to EXP049 fresh DEV are primary endpoint rows.",
+    "Whole-scene events are excluded from the primary endpoint by frozen event keys.",
+    "No fresh-DEV outcome may change models, features, r_star, thresholds, tolerance, endpoint definitions, or split membership.",
+    "TEST is not read or evaluated."
+  ],
+  "design_source_commit": "75b87c0f0994dbe067a3fafa21f009d508e57d45",
+  "endpoint": {
+    "itr_denominator": "QUALIFYING_PRIMARY_REAPPEARANCE_EVENTS",
+    "por_window": 30,
+    "qualifying_gap_frames": 5,
+    "recovery_iou_strictly_greater_than": 0.5,
+    "theft_consecutive_frames": 5,
+    "theft_other_iou_strictly_greater_than": 0.5,
+    "theft_target_iou_strictly_less_than": 0.3
+  },
+  "experiment": "EXP051",
+  "headline": {
+    "expected_fresh_dev_rates": {
+      "B1": 0.28367729831144467,
+      "B2": 0.3091932457786116,
+      "B3_R": 0.2904315196998124,
+      "B3_S": 0.30393996247654786,
+      "B5": 0.29812382739212007
+    },
+    "r_star": 0.3,
+    "taus": {
+      "B1": 0.1,
+      "B2": 0.1,
+      "B3_R": 0.2,
+      "B3_S": 0.2,
+      "B5": 0.7
+    }
+  },
+  "neutral_control": {
+    "per_video_exact_k": true,
+    "schedule": "q_j=floor((j+0.5)*N/K), then frame_idx=q_j+1",
+    "uses_gt_or_outcome": false
+  },
+  "purpose": "Evaluate frozen fresh-DEV headline closed-loop outcomes at the EXP050 matched-rate operating point, with exact frozen primary-event keys and per-method exact-K neutral controls.",
+  "reproducibility": {
+    "cache_identity": [
+      "repo_commit",
+      "config_sha256",
+      "scope_label",
+      "run_label",
+      "video",
+      "neutral_source_k"
+    ],
+    "require_clean_committed_tree_for_gpu": true,
+    "write_rate_abs_tolerance": 1e-12
+  },
+  "runtime": {
+    "checkpoint_unit": "ONE_RUN_LABEL_VIDEO",
+    "resume_policy": "REUSE_ONLY_IF_CACHE_IDENTITY_MATCHES",
+    "scratch_dir": "/mnt/d/thesis_data/identitygate_scratch/EXP051_fresh_dev_headline_outcomes"
+  },
+  "scope": {
+    "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+    "event_pool_csv": "experiments/EXP044_event_pool/event_pool.csv",
+    "event_pool_csv_sha256": "d1c8bb0121796138e6f355fbb4a03d86dcc5103bbfff7d6612e40b950105d285",
+    "expected_primary_events": 233,
+    "expected_videos": 40,
+    "fresh_dev_csv": "experiments/EXP049_final_split/fresh_dev.csv",
+    "fresh_dev_csv_sha256": "5c40f403337aca576242709cc18c75f8a982de0ea8fc1d3bed1c3fad2ee3ffdc",
+    "fresh_dev_membership_sha256": "fde1d5ba4787fa627948301183256a00102a50ab8be2d41a4dd756cd1a859e8d",
+    "train_exposed_sanity_video": "0442a954"
+  },
+  "source_dependencies": {
+    "a10": {
+      "path": "docs/AMENDMENT_A10_ENDPOINT_AND_ITR_FREEZE.md",
+      "sha256": "465e2be4534bc2b4838b263841a5de1050158322665825ba0e93a504a8f875b2"
+    },
+    "a9": {
+      "path": "docs/AMENDMENT_A9_SUPPORTED_MATCHED_RATE_CURVES.md",
+      "sha256": "51e15129b396574c7326cd7a0b4d476760dc1acfcbdfea4a9e3f1edefddbea15"
+    },
+    "event_pool": {
+      "path": "experiments/EXP044_event_pool/event_pool.csv",
+      "sha256": "d1c8bb0121796138e6f355fbb4a03d86dcc5103bbfff7d6612e40b950105d285"
+    },
+    "exp050_config": {
+      "path": "configs/EXP050-fresh-dev-rate-selection-v1.json",
+      "sha256": "1567e7b665e7e5f212af03780bf4b8ce21121bbbcc3e286a1aea9822d2bd9bc0"
+    },
+    "exp050_script": {
+      "path": "scripts/exp050_fresh_dev_rate_selection.py",
+      "sha256": "c3361f84c3f25f3dc5d5076f4935f0e2e56a7d626bcde74c23a66f35c2bd3e2d"
+    },
+    "final_operating_points": {
+      "path": "experiments/EXP050_dev_rate_selection/final_operating_points.json",
+      "sha256": "b924642245b722b8734e111b9ce4c60b24544f7d7e39defb4711120e74bcea46"
+    },
+    "fresh_dev": {
+      "path": "experiments/EXP049_final_split/fresh_dev.csv",
+      "sha256": "5c40f403337aca576242709cc18c75f8a982de0ea8fc1d3bed1c3fad2ee3ffdc"
+    }
+  },
+  "status": "PLANNED_PRE_FREEZE",
+  "variants": [
+    "B1",
+    "B2",
+    "B3_S",
+    "B3_R",
+    "B5"
+  ]
+}
