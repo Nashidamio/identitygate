@@ -1882,3 +1882,30 @@ OPEN PROTOCOL ITEM:
 NEXT:
 - Record and freeze the narrow A4 full-curve-failure handling amendment.
 - Close the remaining preregistration ambiguities before inspecting fresh-DEV tracking outcomes.
+
+## Amendment A9 - Supported matched-write-rate curve handling
+
+STATUS:
+- FROZEN WHEN THIS RECORD AND A9 ARTIFACT ARE COMMITTED.
+- Tracking-performance outcomes inspected before A9: false.
+- TEST evaluated: false.
+
+LOCKED:
+- r_star remains 0.30.
+- EXP050 headline thresholds remain frozen.
+- A4 tolerance remains 0.02.
+- MATCH curve rows are supported operating points.
+- UNMATCHED rows remain unsupported.
+- No fabricated/interpolated/extrapolated/additionally-refined operating point.
+- Primary comparative inference remains at r_star=0.30.
+- TEST threshold search remains forbidden.
+
+A9 SHA256:
+- 51e15129b396574c7326cd7a0b4d476760dc1acfcbdfea4a9e3f1edefddbea15
+
+OPEN BEFORE OUTCOMES:
+- exact ITR denominator;
+- F1 endpoint / co-primary-status contradiction.
+
+NEXT:
+- Freeze ITR denominator and endpoint status before fresh-DEV performance outcomes.

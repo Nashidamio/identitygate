@@ -1469,3 +1469,34 @@ docs/AMENDMENT_A8_DMS_LITE_WRITE_COMPARATOR.md
 
 SHA256:
 199b5630fb48bf3f1285683c3b1075476beb2e67d974b4d8199e1f4a7df80252
+
+## 76. Amendment A9 - Supported matched-write-rate curve handling
+
+A9 is frozen by the commit introducing this section and its amendment artifact.
+
+EXP050 selected r_star=0.30 before any tracking-performance outcome was
+computed or inspected.
+
+The requested 45 curve rows produced 19 MATCH and 26 UNMATCHED rows under
+the frozen A4 procedure.
+
+A9 narrowly changes full-curve handling:
+- requested 0.10-through-0.90 targets remain mandatory attempts/reporting rows;
+- MATCH rows are frozen supported operating points;
+- failed mappings remain explicitly unsupported;
+- no extra refinement, interpolation, extrapolation, tolerance relaxation, or
+  outcome-driven replacement is allowed;
+- headline inference remains at r_star=0.30;
+- A4 TEST RATE_MISMATCH and one-touch TEST rules remain unchanged.
+
+A9 does not claim unmatched targets are mathematically unreachable.
+
+Still OPEN:
+- exact ITR denominator;
+- F1 endpoint / co-primary-status contradiction.
+
+Artifact:
+docs/AMENDMENT_A9_SUPPORTED_MATCHED_RATE_CURVES.md
+
+SHA256:
+51e15129b396574c7326cd7a0b4d476760dc1acfcbdfea4a9e3f1edefddbea15
