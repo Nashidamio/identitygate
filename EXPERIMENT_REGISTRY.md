@@ -1351,3 +1351,55 @@ Artifacts:
 Protocol consequence:
 - Retain the observed headline r_star=0.3.
 - Full-curve requirement remains unresolved and requires a frozen narrow amendment before any tracking-performance outcome inspection.
+
+## EXP051 - Fresh DEV headline outcomes
+
+Status:
+- COMPLETE / OUTPUT CONTRACT VERIFIED.
+- Statistical inference pending.
+
+Freeze commit:
+- fcfbd23425ee1e4b31a969184bc37878970f954e
+
+Scope:
+- Fresh DEV: 40 videos / 233 primary events.
+- Headline r_star: 0.30.
+- TEST touched: false.
+
+Execution:
+- 440 trajectories.
+- Scratch cache hits: 111.
+- Scratch cache misses: 329.
+- Maximum peak VRAM: 13.843798160552979 GB.
+- Production resume log SHA256: 39aa2366bdeb2f5305e1b6b0e8727c8e1b902d4fbf119e2dd20c08a0b2c65132.
+
+Descriptive primary result:
+- B2 POR30: 0.7553648068669528.
+- B3-S POR30: 0.7639484978540773.
+- B3-S minus B2: 0.008583690987124
+  (0.858369 percentage points).
+- Paired video-clustered BCa inference: PENDING.
+- +0.08 practical-threshold interpretation: PENDING.
+
+Matched neutral descriptive results:
+- B1_NEUTRAL POR30: 0.7854077253218884.
+- B2_NEUTRAL POR30: 0.7854077253218884.
+- B3-S_NEUTRAL POR30: 0.7896995708154506.
+- B3-R_NEUTRAL POR30: 0.7854077253218884.
+- B5_NEUTRAL POR30: 0.7725321888412017.
+
+Artifacts:
+- event_outcomes.csv SHA256:
+  54999c8ccfc123179cd48577cd10dea6f3917ec49c60cb8439f4071a169ae534
+- trajectory_summary.csv SHA256:
+  03335611d2364e79e9ae4c36e4c9a7ddc701549c4d0537f074d78e3c3bd11a0b
+- headline_summary.csv SHA256:
+  97ad960dc93a60d3b097dec7c0caa09e12297991b882f5ce4a5c4ee588558bb9
+- summary.json SHA256:
+  e37d8962196b2adf7b6cc386716b9a05d3de9aeef6dda63ad592c1a828f31c31
+
+Interpretation boundary:
+- Headline values are descriptive until A10 paired video-clustered BCa
+  inference is executed.
+- No Fresh DEV outcome may trigger model, threshold, r_star, split, event,
+  or endpoint retuning.

@@ -1971,3 +1971,59 @@ STATUS:
 
 Failed sanity log SHA256:
 - 3ffa9bc89a3f6c7e38e807af37f77b0e4722a6c72ea15d54e534c593501ec323
+
+## EXP051 - Fresh DEV headline closed-loop outcomes
+
+STATUS:
+- EXECUTED / OUTPUT-CONTRACT VERIFIED / COMPLETE.
+- Frozen implementation commit:
+  fcfbd23425ee1e4b31a969184bc37878970f954e
+- Fresh DEV: 40 videos / 233 frozen primary events.
+- TEST touched: false.
+- Headline r_star: 0.30.
+- Trajectories: 440.
+- Scratch cache hits: 111.
+- Scratch cache misses: 329.
+- Maximum peak VRAM: 13.843798160552979 GB.
+
+DESCRIPTIVE HEADLINE RESULTS:
+- B0: POR30=0.721030042918455; ITR30=0.030042918454935622; write_rate=1.0.
+- B1: POR30=0.7467811158798283; ITR30=0.034334763948497854; write_rate=0.28367729831144467.
+- B2: POR30=0.7553648068669528; ITR30=0.034334763948497854; write_rate=0.3091932457786116.
+- B3-S: POR30=0.7639484978540773; ITR30=0.030042918454935622; write_rate=0.30393996247654786.
+- B3-R: POR30=0.7639484978540773; ITR30=0.030042918454935622; write_rate=0.2904315196998124.
+- B5: POR30=0.7424892703862661; ITR30=0.034334763948497854; write_rate=0.29812382739212007.
+- B1_NEUTRAL: POR30=0.7854077253218884; ITR30=0.030042918454935622.
+- B2_NEUTRAL: POR30=0.7854077253218884; ITR30=0.02575107296137339.
+- B3-S_NEUTRAL: POR30=0.7896995708154506; ITR30=0.034334763948497854.
+- B3-R_NEUTRAL: POR30=0.7854077253218884; ITR30=0.02145922746781116.
+- B5_NEUTRAL: POR30=0.7725321888412017; ITR30=0.02575107296137339.
+
+PRIMARY POINT ESTIMATE - DESCRIPTIVE ONLY:
+- POR30(B3-S) - POR30(B2) = 0.008583690987124.
+- Percentage-point difference = 0.858369 pp.
+- Paired video-clustered BCa 95% CI has NOT yet been computed.
+- No statistical-significance or +0.08 practical-threshold conclusion is made here.
+
+INTEGRITY:
+- event_outcomes.csv SHA256:
+  54999c8ccfc123179cd48577cd10dea6f3917ec49c60cb8439f4071a169ae534
+- trajectory_summary.csv SHA256:
+  03335611d2364e79e9ae4c36e4c9a7ddc701549c4d0537f074d78e3c3bd11a0b
+- headline_summary.csv SHA256:
+  97ad960dc93a60d3b097dec7c0caa09e12297991b882f5ce4a5c4ee588558bb9
+- summary.json SHA256:
+  e37d8962196b2adf7b6cc386716b9a05d3de9aeef6dda63ad592c1a828f31c31
+- Production resume log SHA256:
+  39aa2366bdeb2f5305e1b6b0e8727c8e1b902d4fbf119e2dd20c08a0b2c65132
+- event_outcomes rows: 2563 data rows = 233 events x 11 run labels.
+- trajectory_summary rows: 440 data rows.
+- headline_summary rows: 11 data rows.
+- Result status: FRESH_DEV_HEADLINE_OUTCOMES_COMPLETE.
+- TEST touched: false.
+
+NEXT:
+- Freeze and execute CPU-only paired video-clustered BCa inference for the
+  A10 primary contrast and preregistered secondary comparisons.
+- Do not retune models, thresholds, r_star, event cohort, or endpoints from
+  Fresh DEV outcomes.
