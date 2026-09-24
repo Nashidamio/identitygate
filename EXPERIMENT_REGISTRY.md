@@ -1403,3 +1403,56 @@ Interpretation boundary:
   inference is executed.
 - No Fresh DEV outcome may trigger model, threshold, r_star, split, event,
   or endpoint retuning.
+
+## EXP052 - Fresh DEV BCa inference
+
+Status:
+- COMPLETE / VERIFIED.
+
+Freeze commit:
+- 9426e8754507700d6c8ad991940ef81b29b17b01
+
+Inference:
+- 40 Fresh DEV video clusters.
+- 233 paired primary events.
+- 50,000 paired video-cluster bootstrap replicates.
+- BCa 95% CI using delete-one-video jackknife acceleration.
+- TEST touched: false.
+
+Primary result:
+- POR30(B3-S) - POR30(B2):
+  0.008583690987124415.
+- BCa 95% CI:
+  [-0.005681818181818121, 0.03056768558951961].
+- Frozen +0.08 practical threshold:
+  ruled out on Fresh DEV.
+- Interpretation:
+  NO_SUPPORTED_POSITIVE_AND_PRACTICAL_THRESHOLD_RULED_OUT.
+
+Artifacts:
+- comparison_summary.csv SHA256:
+  eb9d135de274c57ad71998050bc5b6739a640f58ebb0a4edf4e78eb267485f8c
+- primary_bootstrap_draws.csv SHA256:
+  aab3b14c37d914fc957d91fb201b30f75c9f39b394cb467441d6a5936beccb46
+- summary.json SHA256:
+  6c50e531457f39cdd13d77034a1693fd47fced940d0c9af6782d0d656b5eeeed
+- production log SHA256:
+  393655cc08ab0eacd73c648338c3885353a544d622aafce9e4500aa34ec1eb9f
+
+Next:
+- Final TEST execution freeze, then TEST exactly once.
+
+### EXP052 KNOWN METADATA DEFECT - ITR GROUP LABEL
+
+STATUS:
+- REPORTING/METADATA DEFECT ONLY.
+- Numerical POR30/ITR30 point estimates, bootstrap draws, BCa intervals,
+  and the primary POR30 inference are unaffected.
+- EXP052 reuses each configured comparison group for both POR30 and ITR30.
+- Therefore the ITR30 B3-S-minus-B2 row is incorrectly labelled
+  group=PRIMARY in the EXP052 comparison artifacts.
+- A10 remains authoritative: POR30 is the sole primary endpoint and ITR30
+  is secondary.
+- Do not rerun or reinterpret EXP052 because of this label-only defect.
+- Correct endpoint-specific group labelling before any TEST inference
+  implementation is frozen.

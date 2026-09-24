@@ -2027,3 +2027,78 @@ NEXT:
   A10 primary contrast and preregistered secondary comparisons.
 - Do not retune models, thresholds, r_star, event cohort, or endpoints from
   Fresh DEV outcomes.
+
+## EXP052 - Fresh DEV paired video-clustered BCa inference
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Frozen inference commit:
+  9426e8754507700d6c8ad991940ef81b29b17b01
+- Fresh DEV: 40 videos / 233 primary events.
+- Bootstrap replicates: 50,000.
+- Cluster unit: video.
+- Paired: true.
+- CI: BCa 95 percent.
+- TEST touched: false.
+
+PRIMARY:
+- Contrast: POR30(B3-S) - POR30(B2).
+- Observed delta: 0.008583690987124415.
+- BCa 95% CI:
+  [-0.005681818181818121, 0.03056768558951961].
+- Minimum practically important benefit: +0.08.
+- Frozen interpretation:
+  NO_SUPPORTED_POSITIVE_AND_PRACTICAL_THRESHOLD_RULED_OUT.
+- Fresh DEV therefore does not support a positive incremental identity
+  benefit, and the +0.08 practical benefit is ruled out on DEV.
+
+KEY SECONDARY DESCRIPTIVE/INFERENTIAL RESULTS:
+- B3-S minus B0:
+  +0.042918; BCa 95% CI [+0.004336, +0.099414].
+- B3-R minus B0:
+  +0.042918; BCa 95% CI [+0.004566, +0.099245].
+- B3-S minus B3-S_NEUTRAL:
+  -0.025751; BCa 95% CI [-0.095613, +0.005464].
+- B2 minus B2_NEUTRAL:
+  -0.030043; BCa 95% CI [-0.101209, +0.003610].
+- B1 minus B1_NEUTRAL:
+  -0.038627; BCa 95% CI [-0.085106, -0.009434].
+- B5 minus B3-S:
+  -0.021459; BCa 95% CI [-0.063499, -0.004831].
+- B5 minus B3-R:
+  -0.021459; BCa 95% CI [-0.051724, -0.006734].
+
+ITR30:
+- B3-S minus B2:
+  -0.004292; BCa 95% CI [-0.025907, 0.000000].
+- ITR remains secondary under A10.
+
+ARTIFACTS:
+- comparison_summary.csv SHA256:
+  eb9d135de274c57ad71998050bc5b6739a640f58ebb0a4edf4e78eb267485f8c
+- primary_bootstrap_draws.csv SHA256:
+  aab3b14c37d914fc957d91fb201b30f75c9f39b394cb467441d6a5936beccb46
+- summary.json SHA256:
+  6c50e531457f39cdd13d77034a1693fd47fced940d0c9af6782d0d656b5eeeed
+- production log SHA256:
+  393655cc08ab0eacd73c648338c3885353a544d622aafce9e4500aa34ec1eb9f
+
+NEXT:
+- Freeze final TEST execution with no DEV-driven model, threshold, r_star,
+  split, endpoint, or comparison changes.
+- Execute frozen TEST exactly once.
+
+### EXP052 KNOWN METADATA DEFECT - ITR GROUP LABEL
+
+STATUS:
+- REPORTING/METADATA DEFECT ONLY.
+- Numerical POR30/ITR30 point estimates, bootstrap draws, BCa intervals,
+  and the primary POR30 inference are unaffected.
+- EXP052 reuses each configured comparison group for both POR30 and ITR30.
+- Therefore the ITR30 B3-S-minus-B2 row is incorrectly labelled
+  group=PRIMARY in the EXP052 comparison artifacts.
+- A10 remains authoritative: POR30 is the sole primary endpoint and ITR30
+  is secondary.
+- Do not rerun or reinterpret EXP052 because of this label-only defect.
+- Correct endpoint-specific group labelling before any TEST inference
+  implementation is frozen.
