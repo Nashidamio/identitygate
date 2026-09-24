@@ -113,8 +113,11 @@
     "touch_marker": "/mnt/d/thesis_data/identitygate_scratch/EXP053_final_test/TEST_CAMPAIGN.json"
   },
   "sanity": {
+    "exposure_basis": "FRESH_DEV_ALREADY_OBSERVED_IN_EXP051_EXP052",
+    "primary_event_count": 26,
+    "selection_rule": "MAX_FROZEN_PRIMARY_EVENT_COUNT_WITHIN_FRESH_DEV_THEN_LEXICOGRAPHIC_VIDEO_ID",
     "test_scope_allowed": false,
-    "video": "0442a954"
+    "video": "mn4s0gi8"
   },
   "scope": {
     "dataset_root": "/mnt/d/thesis_data/mosev2/train",

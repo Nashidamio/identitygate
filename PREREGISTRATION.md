@@ -97,7 +97,7 @@ Status: FROZEN WHEN COMMITTED TO main WITH THE EXP053 IMPLEMENTATION
 
 ## Frozen implementation provenance
 
-- EXP053 config SHA256: 3869eb901f69bdebb854d105ec74c7cf0e596d19dc3436ec2dfd38f10896e791
+- EXP053 config SHA256: 4fdf582bb3427f9e78e09d41821f9a0947941760598f2eb92b6689e20ee8f445
 - EXP053 script SHA256: 875f90da8eae90c1642231dd2b7cb2256690ca90cca370abd426b1ddba1bb84b
 - EXP053 tests SHA256: f71fff99c078690075ae0bca0a5466bb055f29a56dedb138c2259bde6a002349
 - A12 SHA256: f254e8a4548ce6151295c413e0674b0db3bfa87cda39f5fc86bba26eb8556203
@@ -108,3 +108,19 @@ REPRESENTATIVE_TEST40. The Git freeze commit binds this pre-registration,
 A12, the config, runner, and tests before any final TEST prediction is generated.
 
 No post-TEST scientific retuning is permitted.
+
+## Pre-TEST engineering correction: sanity fixture
+
+After the initial EXP053 freeze, the TRAIN-exposed sanity fixture `0442a954`
+was found to have zero frozen primary events, so the GPU sanity stopped before
+executing any trajectory. No TEST prediction was generated and the TEST
+campaign marker remained absent.
+
+The replacement sanity fixture is `mn4s0gi8`, selected outcome-independently
+as the Fresh DEV video with the largest frozen primary-event count, with
+lexicographic video ID as the tie-break. It has 26 frozen primary events.
+Fresh DEV outcomes had already been observed in EXP051/EXP052, so this is a
+development-exposed engineering sanity fixture.
+
+This correction changes no method, threshold, r_star, TEST membership,
+endpoint, comparison, statistical rule, or practical-effect threshold.
