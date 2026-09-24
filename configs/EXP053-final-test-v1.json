@@ -1,0 +1,335 @@
+{
+  "boundary": {
+    "fresh_dev_outcomes_already_inspected": true,
+    "test_endpoint_change_allowed": false,
+    "test_predictions_already_generated": false,
+    "test_retuning_allowed": false,
+    "test_split_change_allowed": false,
+    "test_threshold_search_allowed": false,
+    "test_touched_before_execution": false
+  },
+  "endpoint": {
+    "itr_denominator": "QUALIFYING_PRIMARY_REAPPEARANCE_EVENTS",
+    "por_window": 30,
+    "qualifying_gap_frames": 5,
+    "recovery_iou_strictly_greater_than": 0.5,
+    "theft_consecutive_frames": 5,
+    "theft_other_iou_strictly_greater_than": 0.5,
+    "theft_target_iou_strictly_less_than": 0.3
+  },
+  "expected_supported_curve_points": 19,
+  "expected_unsupported_curve_points": 26,
+  "experiment": "EXP053",
+  "headline": {
+    "r_star": 0.3,
+    "taus": {
+      "B1": 0.1,
+      "B2": 0.1,
+      "B3_R": 0.2,
+      "B3_S": 0.2,
+      "B5": 0.7
+    }
+  },
+  "headline_direct_gated_comparisons": [
+    {
+      "a": "B3_S",
+      "b": "B2",
+      "group": "PRIMARY",
+      "name": "B3_S_minus_B2"
+    },
+    {
+      "a": "B3_R",
+      "b": "B3_S",
+      "group": "A10_SECONDARY",
+      "name": "B3_R_minus_B3_S"
+    },
+    {
+      "a": "B3_R",
+      "b": "B2",
+      "group": "A10_SECONDARY",
+      "name": "B3_R_minus_B2"
+    },
+    {
+      "a": "B2",
+      "b": "B1",
+      "group": "A10_SECONDARY",
+      "name": "B2_minus_B1"
+    },
+    {
+      "a": "B5",
+      "b": "B1",
+      "group": "A10_SECONDARY_B5",
+      "name": "B5_minus_B1"
+    },
+    {
+      "a": "B5",
+      "b": "B2",
+      "group": "A10_SECONDARY_B5",
+      "name": "B5_minus_B2"
+    },
+    {
+      "a": "B5",
+      "b": "B3_S",
+      "group": "A10_SECONDARY_B5",
+      "name": "B5_minus_B3_S"
+    },
+    {
+      "a": "B5",
+      "b": "B3_R",
+      "group": "A10_SECONDARY_B5",
+      "name": "B5_minus_B3_R"
+    }
+  ],
+  "neutral_control": {
+    "per_video_exact_k": true,
+    "schedule": "q_j=floor((j+0.5)*N/K), then frame_idx=q_j+1",
+    "uses_gt_or_outcome": false
+  },
+  "one_touch_campaign": {
+    "continuation_mode": "resume",
+    "do_not_inspect_partial_test_outcomes": true,
+    "initial_mode": "run",
+    "resume_allows_scientific_change": false,
+    "resume_requires_same_config_sha256": true,
+    "resume_requires_same_repo_commit": true
+  },
+  "purpose": "Frozen one-touch final TEST campaign on HARD_TEST80 and REPRESENTATIVE_TEST40 using headline matched-rate methods, exact-K neutral controls, and A9-supported hard-set curve points.",
+  "rate_mismatch": {
+    "absolute_pooled_rate_tolerance": 0.02,
+    "status_if_exceeded": "RATE_MISMATCH",
+    "status_if_within": "MATCHED_ON_TEST"
+  },
+  "reproducibility": {
+    "expected_hard_trajectories_per_video": 39,
+    "expected_representative_trajectories_per_video": 11,
+    "expected_total_trajectories": 3560,
+    "require_clean_committed_tree": true,
+    "write_rate_abs_tolerance": 1e-12
+  },
+  "runtime": {
+    "checkpoint_unit": "ONE_RUN_LABEL_VIDEO",
+    "output_dir": "experiments/EXP053_final_test",
+    "scratch_dir": "/mnt/d/thesis_data/identitygate_scratch/EXP053_final_test",
+    "touch_marker": "/mnt/d/thesis_data/identitygate_scratch/EXP053_final_test/TEST_CAMPAIGN.json"
+  },
+  "sanity": {
+    "test_scope_allowed": false,
+    "video": "0442a954"
+  },
+  "scope": {
+    "dataset_root": "/mnt/d/thesis_data/mosev2/train",
+    "event_pool_csv": "experiments/EXP044_event_pool/event_pool.csv",
+    "event_pool_csv_sha256": "d1c8bb0121796138e6f355fbb4a03d86dcc5103bbfff7d6612e40b950105d285"
+  },
+  "scopes": {
+    "HARD_TEST80": {
+      "curve_policy": "ALL_A9_SUPPORTED_POINTS",
+      "expected_primary_events": 506,
+      "expected_videos": 80,
+      "manifest_csv": "experiments/EXP049_final_split/hard_test.csv",
+      "manifest_csv_sha256": "f0469d9bf5cdc9f438b8262c626f52b4de5fa690ab7734da36052ff53495f881",
+      "membership_hash_label": "TEST80",
+      "membership_sha256": "6bf5a059c05d07f82e43fec9bd6b4c4b723bc551a21b72c988912e57b28ce582",
+      "partition": "HARD_TEST"
+    },
+    "REPRESENTATIVE_TEST40": {
+      "curve_policy": "HEADLINE_ONLY",
+      "expected_primary_events": 76,
+      "expected_videos": 40,
+      "manifest_csv": "experiments/EXP049_final_split/representative_test.csv",
+      "manifest_csv_sha256": "cbdf2e2f7896b326ec810ce0dbcd51722b63421f09a878aa89b0fcf2c926fe0b",
+      "membership_hash_label": "REPRESENTATIVE40",
+      "membership_sha256": "ba23def8c8d0de7a83af64c6f952544d5f3e44ad6ca018f9e4d2b6cd82ebfb66",
+      "partition": "REPRESENTATIVE_TEST"
+    }
+  },
+  "source_dependencies": {
+    "a10": {
+      "path": "docs/AMENDMENT_A10_ENDPOINT_AND_ITR_FREEZE.md",
+      "sha256": "465e2be4534bc2b4838b263841a5de1050158322665825ba0e93a504a8f875b2"
+    },
+    "a11": {
+      "path": "docs/AMENDMENT_A11_BCA_IMPLEMENTATION.md",
+      "sha256": "a46dd20f6e8fd2c1efab85c5b706f72ac7e045be9f9ec6073c8b740e0cf6d716"
+    },
+    "a9": {
+      "path": "docs/AMENDMENT_A9_SUPPORTED_MATCHED_RATE_CURVES.md",
+      "sha256": "51e15129b396574c7326cd7a0b4d476760dc1acfcbdfea4a9e3f1edefddbea15"
+    },
+    "curve_selection": {
+      "path": "experiments/EXP050_dev_rate_selection/curve_selection.csv",
+      "sha256": "9977e9589dfd8e22a69ee7812ba1a48cc89a37cfc56bfe087c1a5c40d9d1c0c2"
+    },
+    "event_pool": {
+      "path": "experiments/EXP044_event_pool/event_pool.csv",
+      "sha256": "d1c8bb0121796138e6f355fbb4a03d86dcc5103bbfff7d6612e40b950105d285"
+    },
+    "exp050_config": {
+      "path": "configs/EXP050-fresh-dev-rate-selection-v1.json",
+      "sha256": "1567e7b665e7e5f212af03780bf4b8ce21121bbbcc3e286a1aea9822d2bd9bc0"
+    },
+    "exp050_script": {
+      "path": "scripts/exp050_fresh_dev_rate_selection.py",
+      "sha256": "c3361f84c3f25f3dc5d5076f4935f0e2e56a7d626bcde74c23a66f35c2bd3e2d"
+    },
+    "exp051_script": {
+      "path": "scripts/exp051_fresh_dev_headline_outcomes.py",
+      "sha256": "18efa567b925ef8fbb3176b29c447f04464a9ac1133a197c426328a5fe4e59c6"
+    },
+    "final_operating_points": {
+      "path": "experiments/EXP050_dev_rate_selection/final_operating_points.json",
+      "sha256": "b924642245b722b8734e111b9ce4c60b24544f7d7e39defb4711120e74bcea46"
+    },
+    "hard_test": {
+      "path": "experiments/EXP049_final_split/hard_test.csv",
+      "sha256": "f0469d9bf5cdc9f438b8262c626f52b4de5fa690ab7734da36052ff53495f881"
+    },
+    "representative_test": {
+      "path": "experiments/EXP049_final_split/representative_test.csv",
+      "sha256": "cbdf2e2f7896b326ec810ce0dbcd51722b63421f09a878aa89b0fcf2c926fe0b"
+    }
+  },
+  "status": "PLANNED_PRE_FREEZE",
+  "supported_curve_points": [
+    {
+      "dev_absolute_rate_error": 0.007692307692307693,
+      "dev_realized_write_rate": 0.1076923076923077,
+      "target_rate": 0.1,
+      "tau": 0.4,
+      "variant": "B1"
+    },
+    {
+      "dev_absolute_rate_error": 0.015009380863039407,
+      "dev_realized_write_rate": 0.0849906191369606,
+      "target_rate": 0.1,
+      "tau": 0.9,
+      "variant": "B2"
+    },
+    {
+      "dev_absolute_rate_error": 0.001313320825515954,
+      "dev_realized_write_rate": 0.09868667917448405,
+      "target_rate": 0.1,
+      "tau": 0.9,
+      "variant": "B3_S"
+    },
+    {
+      "dev_absolute_rate_error": 0.0067542213883677316,
+      "dev_realized_write_rate": 0.09324577861163227,
+      "target_rate": 0.1,
+      "tau": 0.95,
+      "variant": "B3_R"
+    },
+    {
+      "dev_absolute_rate_error": 0.0033771106941838658,
+      "dev_realized_write_rate": 0.10337711069418387,
+      "target_rate": 0.1,
+      "tau": 0.925,
+      "variant": "B5"
+    },
+    {
+      "dev_absolute_rate_error": 0.001688555347091919,
+      "dev_realized_write_rate": 0.20168855534709193,
+      "target_rate": 0.2,
+      "tau": 0.2,
+      "variant": "B1"
+    },
+    {
+      "dev_absolute_rate_error": 0.005440900562851764,
+      "dev_realized_write_rate": 0.20544090056285177,
+      "target_rate": 0.2,
+      "tau": 0.5,
+      "variant": "B2"
+    },
+    {
+      "dev_absolute_rate_error": 0.011819887429643544,
+      "dev_realized_write_rate": 0.18818011257035647,
+      "target_rate": 0.2,
+      "tau": 0.6,
+      "variant": "B3_S"
+    },
+    {
+      "dev_absolute_rate_error": 0.00131332082551594,
+      "dev_realized_write_rate": 0.20131332082551595,
+      "target_rate": 0.2,
+      "tau": 0.7,
+      "variant": "B3_R"
+    },
+    {
+      "dev_absolute_rate_error": 0.017260787992495308,
+      "dev_realized_write_rate": 0.1827392120075047,
+      "target_rate": 0.2,
+      "tau": 0.8500000000000001,
+      "variant": "B5"
+    },
+    {
+      "dev_absolute_rate_error": 0.01632270168855532,
+      "dev_realized_write_rate": 0.28367729831144467,
+      "target_rate": 0.3,
+      "tau": 0.1,
+      "variant": "B1"
+    },
+    {
+      "dev_absolute_rate_error": 0.009193245778611636,
+      "dev_realized_write_rate": 0.3091932457786116,
+      "target_rate": 0.3,
+      "tau": 0.1,
+      "variant": "B2"
+    },
+    {
+      "dev_absolute_rate_error": 0.003939962476547876,
+      "dev_realized_write_rate": 0.30393996247654786,
+      "target_rate": 0.3,
+      "tau": 0.2,
+      "variant": "B3_S"
+    },
+    {
+      "dev_absolute_rate_error": 0.009568480300187587,
+      "dev_realized_write_rate": 0.2904315196998124,
+      "target_rate": 0.3,
+      "tau": 0.2,
+      "variant": "B3_R"
+    },
+    {
+      "dev_absolute_rate_error": 0.0018761726078799223,
+      "dev_realized_write_rate": 0.29812382739212007,
+      "target_rate": 0.3,
+      "tau": 0.7,
+      "variant": "B5"
+    },
+    {
+      "dev_absolute_rate_error": 0.017636022514071314,
+      "dev_realized_write_rate": 0.3823639774859287,
+      "target_rate": 0.4,
+      "tau": 0.0125,
+      "variant": "B2"
+    },
+    {
+      "dev_absolute_rate_error": 0.004878048780487809,
+      "dev_realized_write_rate": 0.3951219512195122,
+      "target_rate": 0.4,
+      "tau": 0.0125,
+      "variant": "B3_S"
+    },
+    {
+      "dev_absolute_rate_error": 0.0003752345215760067,
+      "dev_realized_write_rate": 0.399624765478424,
+      "target_rate": 0.4,
+      "tau": 0.00625,
+      "variant": "B3_R"
+    },
+    {
+      "dev_absolute_rate_error": 0.002063789868667898,
+      "dev_realized_write_rate": 0.4020637898686679,
+      "target_rate": 0.4,
+      "tau": 0.3,
+      "variant": "B5"
+    }
+  ],
+  "variants": [
+    "B1",
+    "B2",
+    "B3_S",
+    "B3_R",
+    "B5"
+  ]
+}
