@@ -2102,3 +2102,77 @@ STATUS:
 - Do not rerun or reinterpret EXP052 because of this label-only defect.
 - Correct endpoint-specific group labelling before any TEST inference
   implementation is frozen.
+
+
+## EXP053 - Final one-touch TEST execution
+
+STATUS:
+- EXECUTED / ARTIFACT-VERIFIED / COMPLETE.
+- Frozen execution commit:
+  5036c64950e7152adb76b560c7773cb3270f7cf4
+- TEST touched: true.
+- TEST campaign complete: true.
+- Trajectories: 3560 / 3560.
+- Final event_outcomes rows: 20570.
+
+COHORTS:
+- HARD_TEST80: 80 videos / 506 primary events.
+- REPRESENTATIVE_TEST40: 40 videos / 76 primary events.
+
+HARD TEST HEADLINE POR30:
+- B0: 0.741106719367589
+- B1: 0.7272727272727273
+- B2: 0.7569169960474308
+- B3-S: 0.7648221343873518
+- B3-R: 0.7648221343873518
+- B5: 0.7529644268774703
+
+REPRESENTATIVE TEST HEADLINE POR30:
+- B0: 0.5789473684210527
+- B1: 0.6710526315789473
+- B2: 0.7236842105263158
+- B3-S: 0.7236842105263158
+- B3-R: 0.7236842105263158
+- B5: 0.6973684210526315
+
+PRIMARY RATE INTEGRITY:
+- HARD_TEST80 B3-S rate: 0.29056540649046503
+- HARD_TEST80 B2 rate: 0.3232686517229843
+- Absolute difference: 0.032703245232519274
+- Frozen tolerance: 0.02
+- Status: RATE_MISMATCH.
+- Descriptive POR30(B3-S)-POR30(B2):
+  +0.007905138339920948, or +0.790514 percentage points.
+- Therefore the Hard TEST B3-S-vs-B2 result must NOT be interpreted
+  as a matched-rate primary effect.
+
+REPRESENTATIVE PRIMARY RATE INTEGRITY:
+- B3-S rate: 0.3581267217630854
+- B2 rate: 0.3738685556867375
+- Absolute difference: 0.015741833923652082
+- Status: MATCHED_ON_TEST.
+- Descriptive POR30(B3-S)-POR30(B2): 0.0.
+
+INFERENCE BOUNDARY:
+- Paired video-clustered BCa TEST inference is PENDING EXP054.
+- No TEST threshold search, interpolation, extrapolation, refinement,
+  model change, split change, or rerun is permitted.
+
+INTEGRITY:
+- artifact_manifest.json SHA256:
+  ffc913f67f3004ada3db4f6866adc64b1733dff24c3dcdc2354efd5fdf750127
+- event_outcomes.csv SHA256:
+  69461f23a6f1e3ce37d687cd01ce63ba94726148355365fe659976908bbdcd10
+- headline_summary.csv SHA256:
+  cfdca00cf5fd7bda584ec4ca91f6b52b62f2a0abf039268bc8455a53c533c79c
+- headline_rate_status.csv SHA256:
+  64bbdc464860a07c932fa017a803ddc8c774ad82b01b8fcaeab6d9d3be20671f
+- curve_summary.csv SHA256:
+  f32e3cc4d11a84ee9c0e28fc4343e14cbdbe2dca79b118c95d5812f20b072a08
+- trajectory_summary.csv SHA256:
+  d6d6e0d419ae071c54f0e5eddbd9dec1ae55b6384a9ae36b81570f29439f31a7
+- summary.json SHA256:
+  0575e6b2680bb90855072cd48eb11eb1e9375a97979c87ccd9354049616bf859
+
+NEXT:
+- Freeze EXP054 final TEST paired video-clustered BCa inference.

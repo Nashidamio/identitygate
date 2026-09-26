@@ -1,0 +1,14 @@
+{
+  "config_sha256": "4fdf582bb3427f9e78e09d41821f9a0947941760598f2eb92b6689e20ee8f445",
+  "experiment": "EXP053",
+  "files": {
+    "curve_summary.csv": "f32e3cc4d11a84ee9c0e28fc4343e14cbdbe2dca79b118c95d5812f20b072a08",
+    "event_outcomes.csv": "69461f23a6f1e3ce37d687cd01ce63ba94726148355365fe659976908bbdcd10",
+    "headline_rate_status.csv": "64bbdc464860a07c932fa017a803ddc8c774ad82b01b8fcaeab6d9d3be20671f",
+    "headline_summary.csv": "cfdca00cf5fd7bda584ec4ca91f6b52b62f2a0abf039268bc8455a53c533c79c",
+    "summary.json": "0575e6b2680bb90855072cd48eb11eb1e9375a97979c87ccd9354049616bf859",
+    "trajectory_summary.csv": "d6d6e0d419ae071c54f0e5eddbd9dec1ae55b6384a9ae36b81570f29439f31a7"
+  },
+  "repo_commit": "5036c64950e7152adb76b560c7773cb3270f7cf4",
+  "script_sha256": "875f90da8eae90c1642231dd2b7cb2256690ca90cca370abd426b1ddba1bb84b"
+}

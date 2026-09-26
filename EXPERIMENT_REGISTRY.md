@@ -1456,3 +1456,30 @@ STATUS:
 - Do not rerun or reinterpret EXP052 because of this label-only defect.
 - Correct endpoint-specific group labelling before any TEST inference
   implementation is frozen.
+
+
+## EXP053 - Final one-touch TEST execution
+
+- Status: COMPLETE / ARTIFACT-VERIFIED.
+- Frozen execution commit:
+  5036c64950e7152adb76b560c7773cb3270f7cf4
+- Dataset:
+  HARD_TEST80 = 80 videos / 506 primary events;
+  REPRESENTATIVE_TEST40 = 40 videos / 76 primary events.
+- Trajectories: 3560.
+- TEST touched: true.
+- HARD TEST POR30:
+  B0=0.741107, B1=0.727273, B2=0.756917,
+  B3-S=0.764822, B3-R=0.764822, B5=0.752964.
+- HARD primary B3-S-vs-B2 write-rate difference:
+  0.032703 > 0.02 => RATE_MISMATCH.
+- HARD descriptive B3-S-minus-B2 POR30:
+  +0.007905 (+0.791 pp).
+- REPRESENTATIVE B2 POR30 = 0.723684;
+  B3-S POR30 = 0.723684.
+- REPRESENTATIVE primary write-rate status: MATCHED_ON_TEST.
+- Final inference: PENDING EXP054.
+- event_outcomes.csv SHA256:
+  69461f23a6f1e3ce37d687cd01ce63ba94726148355365fe659976908bbdcd10
+- artifact_manifest.json SHA256:
+  ffc913f67f3004ada3db4f6866adc64b1733dff24c3dcdc2354efd5fdf750127
