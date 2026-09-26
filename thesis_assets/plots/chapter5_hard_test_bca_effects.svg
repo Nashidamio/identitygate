@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+<rect width="100%" height="100%" fill="white"/>
+<text x="600" y="32" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">Hard TEST POR@30 Effects with Video-Clustered BCa 95% CI</text>
+<line x1="395.0" y1="70" x2="395.0" y2="450" stroke="#dddddd"/>
+<text x="395.0" y="482" text-anchor="middle" font-family="Arial" font-size="13">-4</text>
+<line x1="485.0" y1="70" x2="485.0" y2="450" stroke="#dddddd"/>
+<text x="485.0" y="482" text-anchor="middle" font-family="Arial" font-size="13">-2</text>
+<line x1="575.0" y1="70" x2="575.0" y2="450" stroke="#dddddd"/>
+<text x="575.0" y="482" text-anchor="middle" font-family="Arial" font-size="13">0</text>
+<line x1="665.0" y1="70" x2="665.0" y2="450" stroke="#dddddd"/>
+<text x="665.0" y="482" text-anchor="middle" font-family="Arial" font-size="13">2</text>
+<line x1="755.0" y1="70" x2="755.0" y2="450" stroke="#dddddd"/>
+<text x="755.0" y="482" text-anchor="middle" font-family="Arial" font-size="13">4</text>
+<line x1="845.0" y1="70" x2="845.0" y2="450" stroke="#dddddd"/>
+<text x="845.0" y="482" text-anchor="middle" font-family="Arial" font-size="13">6</text>
+<line x1="935.0" y1="70" x2="935.0" y2="450" stroke="#dddddd"/>
+<text x="935.0" y="482" text-anchor="middle" font-family="Arial" font-size="13">8</text>
+<line x1="575.0" y1="70" x2="575.0" y2="450" stroke="#222222"/>
+<line x1="935.0" y1="70" x2="935.0" y2="450" stroke="#777777" stroke-dasharray="7,6"/>
+<text x="935.0" y="58" text-anchor="middle" font-family="Arial" font-size="12">+8 pp practical target</text>
+<text x="335" y="113.0" text-anchor="end" font-family="Arial" font-size="13">B3-S - B2</text>
+<line x1="565.835030549898" y1="108.0" x2="668.9675174013925" y2="108.0" stroke="#333333" stroke-width="2"/>
+<line x1="565.835030549898" y1="102.0" x2="565.835030549898" y2="114.0" stroke="#333333"/>
+<line x1="668.9675174013925" y1="102.0" x2="668.9675174013925" y2="114.0" stroke="#333333"/>
+<circle cx="610.5731225296445" cy="108.0" r="5" fill="#333333"/>
+<text x="1005" y="113.0" font-family="Arial" font-size="12">RATE MISMATCH</text>
+<text x="335" y="189.0" text-anchor="end" font-family="Arial" font-size="13">B3-R - B3-S</text>
+<line x1="524.2099322799099" y1="184.0" x2="639.3821665597643" y2="184.0" stroke="#333333" stroke-width="2"/>
+<line x1="524.2099322799099" y1="178.0" x2="524.2099322799099" y2="190.0" stroke="#333333"/>
+<line x1="639.3821665597643" y1="178.0" x2="639.3821665597643" y2="190.0" stroke="#333333"/>
+<circle cx="575.0" cy="184.0" r="5" fill="#333333"/>
+<text x="1005" y="189.0" font-family="Arial" font-size="12">MATCHED</text>
+<text x="335" y="265.0" text-anchor="end" font-family="Arial" font-size="13">B3-R - B2</text>
+<line x1="556.7813765182184" y1="260.0" x2="680.9862774158548" y2="260.0" stroke="#333333" stroke-width="2"/>
+<line x1="556.7813765182184" y1="254.0" x2="556.7813765182184" y2="266.0" stroke="#333333"/>
+<line x1="680.9862774158548" y1="254.0" x2="680.9862774158548" y2="266.0" stroke="#333333"/>
+<circle cx="610.5731225296445" cy="260.0" r="5" fill="#333333"/>
+<text x="1005" y="265.0" font-family="Arial" font-size="12">RATE MISMATCH</text>
+<text x="335" y="341.0" text-anchor="end" font-family="Arial" font-size="13">B2 - B1</text>
+<line x1="602.5510204081631" y1="336.0" x2="864.3569844789358" y2="336.0" stroke="#333333" stroke-width="2"/>
+<line x1="602.5510204081631" y1="330.0" x2="602.5510204081631" y2="342.0" stroke="#333333"/>
+<line x1="864.3569844789358" y1="330.0" x2="864.3569844789358" y2="342.0" stroke="#333333"/>
+<circle cx="708.3992094861658" cy="336.0" r="5" fill="#333333"/>
+<text x="1005" y="341.0" font-family="Arial" font-size="12">MATCHED</text>
+<text x="335" y="417.0" text-anchor="end" font-family="Arial" font-size="13">B5 - B2</text>
+<line x1="486.76470588235327" y1="412.0" x2="631.2499999999998" y2="412.0" stroke="#333333" stroke-width="2"/>
+<line x1="486.76470588235327" y1="406.0" x2="486.76470588235327" y2="418.0" stroke="#333333"/>
+<line x1="631.2499999999998" y1="406.0" x2="631.2499999999998" y2="418.0" stroke="#333333"/>
+<circle cx="557.213438735178" cy="412.0" r="5" fill="#333333"/>
+<text x="1005" y="417.0" font-family="Arial" font-size="12">MATCHED</text>
+<text x="665.0" y="510" text-anchor="middle" font-family="Arial" font-size="15">Paired POR@30 difference (percentage points)</text>
+</svg>

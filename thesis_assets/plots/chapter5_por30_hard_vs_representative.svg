@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="620" viewBox="0 0 1050 620">
+<rect width="100%" height="100%" fill="white"/>
+<text x="525" y="32" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold">POR@30 on Final Hard and Representative TEST Cohorts</text>
+<line x1="120" y1="530" x2="1010" y2="530" stroke="#dddddd"/>
+<text x="105" y="535" text-anchor="end" font-family="Arial" font-size="13">0.0</text>
+<line x1="120" y1="439.0" x2="1010" y2="439.0" stroke="#dddddd"/>
+<text x="105" y="444.0" text-anchor="end" font-family="Arial" font-size="13">0.2</text>
+<line x1="120" y1="348.0" x2="1010" y2="348.0" stroke="#dddddd"/>
+<text x="105" y="353.0" text-anchor="end" font-family="Arial" font-size="13">0.4</text>
+<line x1="120" y1="257.0" x2="1010" y2="257.0" stroke="#dddddd"/>
+<text x="105" y="262.0" text-anchor="end" font-family="Arial" font-size="13">0.6</text>
+<line x1="120" y1="166.0" x2="1010" y2="166.0" stroke="#dddddd"/>
+<text x="105" y="171.0" text-anchor="end" font-family="Arial" font-size="13">0.8</text>
+<line x1="120" y1="75.0" x2="1010" y2="75.0" stroke="#dddddd"/>
+<text x="105" y="80.0" text-anchor="end" font-family="Arial" font-size="13">1.0</text>
+<text x="35" y="302.5" transform="rotate(-90 35 302.5)" text-anchor="middle" font-family="Arial" font-size="16">POR@30</text>
+<rect x="148.66666666666669" y="192.796442687747" width="43" height="337.203557312253" fill="#4c78a8"/>
+<text x="170.16666666666669" y="185.796442687747" text-anchor="middle" font-family="Arial" font-size="11">0.741</text>
+<rect x="196.66666666666669" y="266.57894736842104" width="43" height="263.42105263157896" fill="#9ecae9"/>
+<text x="218.16666666666669" y="259.57894736842104" text-anchor="middle" font-family="Arial" font-size="11">0.579</text>
+<text x="194.16666666666669" y="570" text-anchor="middle" font-family="Arial" font-size="14">B0</text>
+<rect x="297.0" y="199.09090909090907" width="43" height="330.90909090909093" fill="#4c78a8"/>
+<text x="318.5" y="192.09090909090907" text-anchor="middle" font-family="Arial" font-size="11">0.727</text>
+<rect x="345.0" y="224.67105263157896" width="43" height="305.32894736842104" fill="#9ecae9"/>
+<text x="366.5" y="217.67105263157896" text-anchor="middle" font-family="Arial" font-size="11">0.671</text>
+<text x="342.5" y="570" text-anchor="middle" font-family="Arial" font-size="14">B1</text>
+<rect x="445.33333333333337" y="185.602766798419" width="43" height="344.397233201581" fill="#4c78a8"/>
+<text x="466.83333333333337" y="178.602766798419" text-anchor="middle" font-family="Arial" font-size="11">0.757</text>
+<rect x="493.33333333333337" y="200.7236842105263" width="43" height="329.2763157894737" fill="#9ecae9"/>
+<text x="514.8333333333334" y="193.7236842105263" text-anchor="middle" font-family="Arial" font-size="11">0.724</text>
+<text x="490.83333333333337" y="570" text-anchor="middle" font-family="Arial" font-size="14">B2</text>
+<rect x="593.6666666666667" y="182.00592885375494" width="43" height="347.99407114624506" fill="#4c78a8"/>
+<text x="615.1666666666667" y="175.00592885375494" text-anchor="middle" font-family="Arial" font-size="11">0.765</text>
+<rect x="641.6666666666667" y="200.7236842105263" width="43" height="329.2763157894737" fill="#9ecae9"/>
+<text x="663.1666666666667" y="193.7236842105263" text-anchor="middle" font-family="Arial" font-size="11">0.724</text>
+<text x="639.1666666666667" y="570" text-anchor="middle" font-family="Arial" font-size="14">B3-S</text>
+<rect x="742.0" y="182.00592885375494" width="43" height="347.99407114624506" fill="#4c78a8"/>
+<text x="763.5" y="175.00592885375494" text-anchor="middle" font-family="Arial" font-size="11">0.765</text>
+<rect x="790.0" y="200.7236842105263" width="43" height="329.2763157894737" fill="#9ecae9"/>
+<text x="811.5" y="193.7236842105263" text-anchor="middle" font-family="Arial" font-size="11">0.724</text>
+<text x="787.5" y="570" text-anchor="middle" font-family="Arial" font-size="14">B3-R</text>
+<rect x="890.3333333333334" y="187.401185770751" width="43" height="342.598814229249" fill="#4c78a8"/>
+<text x="911.8333333333334" y="180.401185770751" text-anchor="middle" font-family="Arial" font-size="11">0.753</text>
+<rect x="938.3333333333334" y="212.69736842105266" width="43" height="317.30263157894734" fill="#9ecae9"/>
+<text x="959.8333333333334" y="205.69736842105266" text-anchor="middle" font-family="Arial" font-size="11">0.697</text>
+<text x="935.8333333333334" y="570" text-anchor="middle" font-family="Arial" font-size="14">B5</text>
+<rect x="690" y="48" width="18" height="12" fill="#4c78a8"/>
+<text x="715" y="59" font-family="Arial" font-size="13">Hard TEST80</text>
+<rect x="820" y="48" width="18" height="12" fill="#9ecae9"/>
+<text x="845" y="59" font-family="Arial" font-size="13">Representative TEST40</text>
+</svg>
