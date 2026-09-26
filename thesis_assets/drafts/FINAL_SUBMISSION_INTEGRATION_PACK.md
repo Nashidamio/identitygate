@@ -19,7 +19,11 @@ Critical final interpretation:
 
 ## Recommended title
 
-SIGMA: Signal-Informed Gating of Memory Admission in Frozen SAM 3 Video Object Segmentation — Quality, Temporal, and Identity Evidence at Matched Write Rates
+SIGMA: Signal-Informed Memory-Write Gating in Frozen SAM 3 Video Object Segmentation
+
+### Suggested subtitle
+
+Evaluating Quality, Temporal, and Identity Signals under Controlled Write Budgets
 
 ## Abstract
 
