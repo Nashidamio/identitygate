@@ -23,7 +23,21 @@ acts only on memory-write admission. Signal families are introduced through a
 nested ladder so that each comparison asks an incremental information question
 rather than comparing unrelated tracker architectures.
 
-[FIGURE 3.X HERE: Experimental Pipeline for Controlled Memory-Write Evaluation]
+<!-- INTEGRATED_FIGURE:FIG3_1 -->
+
+The leakage-controlled experimental sequence is summarized in
+[Figure 3.1](#fig-3-1).
+
+<a id="fig-3-1"></a>
+
+![Experimental pipeline for controlled memory-write evaluation.](../plots/fig03_controlled_memory_write_evaluation_pipeline.png)
+
+**Figure 3.1 — Experimental pipeline for controlled memory-write evaluation.**
+Development data determine the frozen operating points without TEST outcome
+optimization. TEST comparisons use the pre-specified direct write-rate
+criterion between compared methods; a pooled absolute difference greater than
+0.02 is labelled `RATE_MISMATCH`. Primary uncertainty is quantified with
+paired video-clustered BCa inference for POR@30.
 
 ## 3.2 Frozen SAM 3 Substrate
 
@@ -133,9 +147,6 @@ videos, the final primary eligible population contained:
 This population is the source from which the final hard and representative
 evaluation cohorts were constructed.
 
-[FIGURE 5.X HERE: Leakage-Controlled Construction of Development and Test
-Cohorts]
-
 ## 3.7 Outcome-Independent Difficulty Index
 
 The primary held-out cohort was deliberately enriched for difficult recovery
@@ -223,6 +234,23 @@ It contains:
 
 Representative TEST is an external-validity anchor. It is not used to replace
 the primary Hard TEST cohort and is not used for model or threshold selection.
+
+<!-- INTEGRATED_FIGURE:FIG3_2 -->
+
+The final leakage-controlled cohort construction is summarized in
+[Figure 3.2](#fig-3-2).
+
+<a id="fig-3-2"></a>
+
+![Leakage-controlled construction of development and test cohorts from MOSEv2.](../plots/fig05_leakage_controlled_cohort_construction.png)
+
+**Figure 3.2 — Leakage-controlled construction of the final MOSEv2-derived
+cohorts.** The final primary population contains 1,170 development-unexposed
+videos and 2,701 primary events. Outcome-independent DI-v1 difficulty ranking
+and visual-diversity control define the 120-video hard pool, from which
+Fresh DEV and HARD_TEST80 are separated at video level. The independent
+REPRESENTATIVE_TEST40 cohort is sampled after excluding the complete hard
+pool.
 
 ## 3.10 Experimental Ladder
 
@@ -356,8 +384,6 @@ The two learned heads output drift and theft unsafe logits independently.
 A shared TRAIN-only feature normalizer is used where specified by the frozen
 training artifacts; the neural heads themselves are independent rather than a
 single shared neural backbone.
-
-[FIGURE 4.X HERE: Signal Composition and Memory-Write Decision Architecture]
 
 ## 3.13 Dual-Risk Safety Composition
 

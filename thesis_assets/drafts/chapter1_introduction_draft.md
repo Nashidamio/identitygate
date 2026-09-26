@@ -85,6 +85,23 @@ write-rate difference exceeded the frozen tolerance. The study therefore does
 not interpret that numerical ordering as evidence of a matched-rate
 self-identity effect.
 
+
+<!-- INTEGRATED_FIGURE:FIG1_1 -->
+
+The controlled intervention used throughout the thesis is summarized in
+[Figure 1.1](#fig-1-1).
+
+<a id="fig-1-1"></a>
+
+![Controlled memory-write admission in frozen SAM 3.](../plots/fig01_controlled_memory_write_admission.png)
+
+**Figure 1.1 — Controlled memory-write admission in frozen SAM 3.**
+Frozen SAM 3 produces candidate object predictions and native quality,
+temporal, and pointer-derived information. The evaluated policies determine
+whether an eligible non-conditioning frame is admitted to or blocked from the
+memory state. SAM 3 parameters remain frozen; the figure is a schematic of the
+experimental intervention rather than TEST-result evidence.
+
 ## 1.5 Signal-Family Ladder
 
 The final experimental ladder is:
@@ -155,33 +172,40 @@ post-occlusion recovery benefit beyond the learned quality-plus-temporal gate.
 
 ## 1.8 Contributions
 
-This thesis contributes:
+The thesis makes five bounded contributions:
 
-1. a controlled formulation of memory-write admission in frozen SAM 3 around
-   the question of what information a write gate should use;
+1. **A physically verified closed-loop memory-write intervention for frozen
+   SAM 3 VOS/PVS.** The study can admit or block eligible non-conditioning
+   memory writes without fine-tuning SAM 3, allowing write selection to be
+   evaluated as an actual state-changing intervention rather than as offline
+   classification.
 
-2. a physically verified closed-loop admit/block intervention in SAM 3
-   VOS/PVS without fine-tuning or architectural modification;
+2. **A nested signal-family comparison for memory-write admission.** B1, B2,
+   B3-S, and B3-R progressively expose manual quality-and-temporal evidence,
+   learned quality-plus-temporal evidence, native self-pointer identity, and
+   tracked-competitor identity. Prospective missing-identity routing preserves
+   this comparison without using pointer availability as a predictive feature.
 
-3. a nested comparison of manual quality/temporal rules, learned
-   quality-plus-temporal gating, self-identity, and tracked-competitor
-   relational identity;
+3. **A leakage-controlled evaluation construction for difficult
+   post-occlusion recovery.** The protocol combines final whole-scene labels,
+   video-level development-exposure exclusion, outcome-independent DI-v1
+   difficulty ranking, visual-diversity control, a frozen hard cohort, and a
+   separate representative cohort.
 
-4. leakage-controlled missing-identity routing that treats pointer validity
-   as availability rather than as a predictive feature;
+4. **A write-budget-controlled statistical evaluation protocol.** Signal
+   policies are evaluated with development-selected frozen operating points,
+   exact per-video neutral write-budget controls, mandatory supported
+   write-rate curves, POR@30 as the sole primary endpoint, ITR@30 as a
+   secondary endpoint, and paired video-clustered BCa inference. Direct TEST
+   comparisons outside the frozen 0.02 write-rate tolerance are explicitly
+   labelled `RATE_MISMATCH` rather than repaired after observing outcomes.
 
-5. a controlled write-budget protocol with development-only operating-point
-   selection, supported write-rate curves, exact per-video neutral controls,
-   explicit TEST rate-mismatch handling, and no TEST retuning;
-
-6. a dual drift/theft outcome framework with POR@30 as the sole primary
-   endpoint, ITR@30 as a secondary endpoint, and paired video-clustered BCa
-   inference; and
-
-7. an empirical result showing positive matched-rate evidence for learned
-   quality-plus-temporal gating over the manual rule, while the tested native
-   self and relational identity additions did not establish incremental
-   POR@30 benefit.
+5. **A bounded empirical answer to the research question.** On HARD_TEST80,
+   the learned quality-plus-temporal B2 gate exceeded the manual B1 rule at
+   matched TEST write rate, whereas the tested native self-identity and
+   tracked-competitor identity additions did not establish incremental
+   POR@30 benefit. The primary B3-S-versus-B2 contrast is retained as
+   `RATE_MISMATCH`, preventing an unsupported matched-rate identity claim.
 
 ## 1.9 Scope and Claim Boundaries
 

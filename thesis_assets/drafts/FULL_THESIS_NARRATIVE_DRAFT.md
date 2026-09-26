@@ -180,6 +180,23 @@ write-rate difference exceeded the frozen tolerance. The study therefore does
 not interpret that numerical ordering as evidence of a matched-rate
 self-identity effect.
 
+
+<!-- INTEGRATED_FIGURE:FIG1_1 -->
+
+The controlled intervention used throughout the thesis is summarized in
+[Figure 1.1](#fig-1-1).
+
+<a id="fig-1-1"></a>
+
+![Controlled memory-write admission in frozen SAM 3.](../plots/fig01_controlled_memory_write_admission.png)
+
+**Figure 1.1 — Controlled memory-write admission in frozen SAM 3.**
+Frozen SAM 3 produces candidate object predictions and native quality,
+temporal, and pointer-derived information. The evaluated policies determine
+whether an eligible non-conditioning frame is admitted to or blocked from the
+memory state. SAM 3 parameters remain frozen; the figure is a schematic of the
+experimental intervention rather than TEST-result evidence.
+
 ## 1.5 Signal-Family Ladder
 
 The final experimental ladder is:
@@ -250,33 +267,40 @@ post-occlusion recovery benefit beyond the learned quality-plus-temporal gate.
 
 ## 1.8 Contributions
 
-This thesis contributes:
+The thesis makes five bounded contributions:
 
-1. a controlled formulation of memory-write admission in frozen SAM 3 around
-   the question of what information a write gate should use;
+1. **A physically verified closed-loop memory-write intervention for frozen
+   SAM 3 VOS/PVS.** The study can admit or block eligible non-conditioning
+   memory writes without fine-tuning SAM 3, allowing write selection to be
+   evaluated as an actual state-changing intervention rather than as offline
+   classification.
 
-2. a physically verified closed-loop admit/block intervention in SAM 3
-   VOS/PVS without fine-tuning or architectural modification;
+2. **A nested signal-family comparison for memory-write admission.** B1, B2,
+   B3-S, and B3-R progressively expose manual quality-and-temporal evidence,
+   learned quality-plus-temporal evidence, native self-pointer identity, and
+   tracked-competitor identity. Prospective missing-identity routing preserves
+   this comparison without using pointer availability as a predictive feature.
 
-3. a nested comparison of manual quality/temporal rules, learned
-   quality-plus-temporal gating, self-identity, and tracked-competitor
-   relational identity;
+3. **A leakage-controlled evaluation construction for difficult
+   post-occlusion recovery.** The protocol combines final whole-scene labels,
+   video-level development-exposure exclusion, outcome-independent DI-v1
+   difficulty ranking, visual-diversity control, a frozen hard cohort, and a
+   separate representative cohort.
 
-4. leakage-controlled missing-identity routing that treats pointer validity
-   as availability rather than as a predictive feature;
+4. **A write-budget-controlled statistical evaluation protocol.** Signal
+   policies are evaluated with development-selected frozen operating points,
+   exact per-video neutral write-budget controls, mandatory supported
+   write-rate curves, POR@30 as the sole primary endpoint, ITR@30 as a
+   secondary endpoint, and paired video-clustered BCa inference. Direct TEST
+   comparisons outside the frozen 0.02 write-rate tolerance are explicitly
+   labelled `RATE_MISMATCH` rather than repaired after observing outcomes.
 
-5. a controlled write-budget protocol with development-only operating-point
-   selection, supported write-rate curves, exact per-video neutral controls,
-   explicit TEST rate-mismatch handling, and no TEST retuning;
-
-6. a dual drift/theft outcome framework with POR@30 as the sole primary
-   endpoint, ITR@30 as a secondary endpoint, and paired video-clustered BCa
-   inference; and
-
-7. an empirical result showing positive matched-rate evidence for learned
-   quality-plus-temporal gating over the manual rule, while the tested native
-   self and relational identity additions did not establish incremental
-   POR@30 benefit.
+5. **A bounded empirical answer to the research question.** On HARD_TEST80,
+   the learned quality-plus-temporal B2 gate exceeded the manual B1 rule at
+   matched TEST write rate, whereas the tested native self-identity and
+   tracked-competitor identity additions did not establish incremental
+   POR@30 benefit. The primary B3-S-versus-B2 contrast is retained as
+   `RATE_MISMATCH`, preventing an unsupported matched-rate identity claim.
 
 ## 1.9 Scope and Claim Boundaries
 
@@ -332,9 +356,6 @@ admission.
 The literature is therefore reviewed according to the information and
 decision role that each line contributes, rather than as a chronological list
 of leaderboard methods.
-
-[FIGURE 2.X HERE: Memory Management and Identity Reasoning in Video Object
-Segmentation]
 
 ## 2.2 Memory Representation and Retrieval in VOS
 
@@ -634,6 +655,22 @@ protocol: a frozen SAM 3 substrate, leakage-controlled MOSEv2 cohorts,
 pre-specified signal families and endpoints, controlled operating-point
 selection, and video-clustered statistical inference.
 
+<!-- INTEGRATED_FIGURE:FIG2_1 -->
+
+The relationship between this study and representative memory-management and
+identity-reasoning approaches is summarized in
+[Figure 2.1](#fig-2-1).
+
+<a id="fig-2-1"></a>
+
+![Memory management and identity reasoning in video object segmentation.](../plots/fig02_memory_management_related_work_landscape.png)
+
+**Figure 2.1 — Memory management and identity reasoning in video object
+segmentation.** The figure positions the thesis along the dimensions relevant
+to the research question: memory governance, reliability/quality evidence,
+temporal evidence, and identity reasoning. It is a conceptual literature map,
+not a claim of priority or a quantitative comparison.
+
 ---
 
 <!-- SOURCE: thesis_assets/drafts/chapter3_experimental_methodology_draft.md -->
@@ -663,7 +700,21 @@ acts only on memory-write admission. Signal families are introduced through a
 nested ladder so that each comparison asks an incremental information question
 rather than comparing unrelated tracker architectures.
 
-[FIGURE 3.X HERE: Experimental Pipeline for Controlled Memory-Write Evaluation]
+<!-- INTEGRATED_FIGURE:FIG3_1 -->
+
+The leakage-controlled experimental sequence is summarized in
+[Figure 3.1](#fig-3-1).
+
+<a id="fig-3-1"></a>
+
+![Experimental pipeline for controlled memory-write evaluation.](../plots/fig03_controlled_memory_write_evaluation_pipeline.png)
+
+**Figure 3.1 — Experimental pipeline for controlled memory-write evaluation.**
+Development data determine the frozen operating points without TEST outcome
+optimization. TEST comparisons use the pre-specified direct write-rate
+criterion between compared methods; a pooled absolute difference greater than
+0.02 is labelled `RATE_MISMATCH`. Primary uncertainty is quantified with
+paired video-clustered BCa inference for POR@30.
 
 ## 3.2 Frozen SAM 3 Substrate
 
@@ -773,9 +824,6 @@ videos, the final primary eligible population contained:
 This population is the source from which the final hard and representative
 evaluation cohorts were constructed.
 
-[FIGURE 5.X HERE: Leakage-Controlled Construction of Development and Test
-Cohorts]
-
 ## 3.7 Outcome-Independent Difficulty Index
 
 The primary held-out cohort was deliberately enriched for difficult recovery
@@ -863,6 +911,23 @@ It contains:
 
 Representative TEST is an external-validity anchor. It is not used to replace
 the primary Hard TEST cohort and is not used for model or threshold selection.
+
+<!-- INTEGRATED_FIGURE:FIG3_2 -->
+
+The final leakage-controlled cohort construction is summarized in
+[Figure 3.2](#fig-3-2).
+
+<a id="fig-3-2"></a>
+
+![Leakage-controlled construction of development and test cohorts from MOSEv2.](../plots/fig05_leakage_controlled_cohort_construction.png)
+
+**Figure 3.2 — Leakage-controlled construction of the final MOSEv2-derived
+cohorts.** The final primary population contains 1,170 development-unexposed
+videos and 2,701 primary events. Outcome-independent DI-v1 difficulty ranking
+and visual-diversity control define the 120-video hard pool, from which
+Fresh DEV and HARD_TEST80 are separated at video level. The independent
+REPRESENTATIVE_TEST40 cohort is sampled after excluding the complete hard
+pool.
 
 ## 3.10 Experimental Ladder
 
@@ -996,8 +1061,6 @@ The two learned heads output drift and theft unsafe logits independently.
 A shared TRAIN-only feature normalizer is used where specified by the frozen
 training artifacts; the neural heads themselves are independent rather than a
 single shared neural backbone.
-
-[FIGURE 4.X HERE: Signal Composition and Memory-Write Decision Architecture]
 
 ## 3.13 Dual-Risk Safety Composition
 
@@ -1482,6 +1545,22 @@ This distinction is important when interpreting the thesis figures: the gate
 controls future memory state, not whether the tracker is allowed to produce a
 current prediction.
 
+
+<!-- INTEGRATED_FIGURE:FIG4_2 -->
+
+A real development-exposed mechanism-sanity example of the closed-loop
+intervention is shown in [Figure 4.2](#fig-4-2).
+
+<a id="fig-4-2"></a>
+
+![Closed-loop memory-write intervention mechanism sanity example.](../videos/exp025_closed_loop_mechanism_contact_sheet.png)
+
+**Figure 4.2 — Closed-loop memory-write intervention mechanism sanity
+example.** This contact sheet documents the verified state-changing write
+intervention on development-exposed mechanism-sanity material. It is included
+as implementation evidence and is **not** a selected TEST success example or a
+performance claim.
+
 ## 4.7 Per-Object to Per-Frame Aggregation
 
 SAM 3 can track multiple objects simultaneously, while the implemented
@@ -1602,6 +1681,24 @@ training rows. A zero standard deviation is replaced by 1.0.
 
 No DEV or TEST examples are used to train the B2 weights or normalizer.
 
+
+<!-- INTEGRATED_FIGURE:FIG4_1 -->
+
+The implemented nested signal ladder and write-decision architecture are
+summarized in [Figure 4.1](#fig-4-1).
+
+<a id="fig-4-1"></a>
+
+![Signal composition and memory-write decision architecture.](../plots/fig04_signal_composition_and_write_decision_architecture.png)
+
+**Figure 4.1 — Signal composition and memory-write decision architecture.**
+B2 uses the frozen five-feature quality-plus-temporal input. B3-S adds native
+self-pointer similarity and B3-R adds tracked-competitor similarity.
+`pointer_valid` is used only for prospective availability routing. Independent
+drift and theft heads are composed conservatively through the minimum safe
+score, and object-level scores are aggregated by the frozen whole-frame
+minimum before physical memory admission.
+
 ## 4.11 B3-S Self-Identity Extension
 
 B3-S inherits the complete B2 feature vector and adds:
@@ -1693,7 +1790,6 @@ Thus either predicted failure type can veto the object-level write score.
 No additional post-hoc weighting coefficient, learned fusion layer, or TEST
 calibration stage is introduced.
 
-[FIGURE 4.X HERE: Signal Composition and Memory-Write Decision Architecture]
 
 ## 4.14 Base-Feature Missingness
 
@@ -2015,6 +2111,48 @@ On REPRESENTATIVE_TEST40, POR@30 was 0.5789 for B0, 0.6711 for B1,
 These representative-cohort results are reported descriptively as the
 development-untouched external-validity anchor.
 
+
+<!-- INTEGRATED_RESULTS:PERFORMANCE -->
+
+The two frozen evaluation cohorts are reported separately in
+[Table 5.1](#tab-5-1) and [Table 5.2](#tab-5-2). The corresponding POR@30
+comparison is visualized in [Figure 5.1](#fig-5-1).
+
+<a id="tab-5-1"></a>
+
+**Table 5.1 — HARD_TEST80 headline results.**
+
+| Method | POR@30 | ITR@30 | Write rate | Peak VRAM (GB) | Runtime (s) |
+| --- | --- | --- | --- | --- | --- |
+| B0 | 0.7411 | 0.0593 | 1.0000 | 15.81 | 2572.7 |
+| B1 | 0.7273 | 0.0514 | 0.3199 | 13.11 | 1852.5 |
+| B2 | 0.7569 | 0.0316 | 0.3233 | 13.06 | 1878.9 |
+| B3_S | 0.7648 | 0.0395 | 0.2906 | 13.06 | 1878.1 |
+| B3_R | 0.7648 | 0.0336 | 0.2923 | 13.06 | 1888.7 |
+| B5 | 0.7530 | 0.0336 | 0.3080 | 13.03 | 1845.7 |
+
+<a id="tab-5-2"></a>
+
+**Table 5.2 — REPRESENTATIVE_TEST40 headline results.**
+
+| Method | POR@30 | ITR@30 | Write rate | Peak VRAM (GB) | Runtime (s) |
+| --- | --- | --- | --- | --- | --- |
+| B0 | 0.5789 | 0.0000 | 1.0000 | 11.14 | 541.5 |
+| B1 | 0.6711 | 0.0132 | 0.3375 | 11.06 | 528.1 |
+| B2 | 0.7237 | 0.0132 | 0.3739 | 10.93 | 534.6 |
+| B3_S | 0.7237 | 0.0132 | 0.3581 | 10.94 | 536.1 |
+| B3_R | 0.7237 | 0.0000 | 0.3652 | 10.94 | 536.9 |
+| B5 | 0.6974 | 0.0132 | 0.3977 | 11.09 | 530.9 |
+
+<a id="fig-5-1"></a>
+
+![Hard versus Representative TEST POR@30.](../plots/chapter5_por30_hard_vs_representative.svg)
+
+**Figure 5.1 — POR@30 on HARD_TEST80 and REPRESENTATIVE_TEST40.**
+The two cohorts serve different roles: HARD_TEST80 is the frozen primary
+difficulty-focused evaluation, whereas REPRESENTATIVE_TEST40 provides a
+separate external-validity anchor.
+
 ## 5.2 Analysis of Design Solutions
 
 The learned quality-plus-temporal gate B2 improved over the manual B1 rule on
@@ -2082,6 +2220,41 @@ B3-S minus B2 was +0.791 percentage points, BCa 95% CI
 B3-R minus B3-S was -0.593 percentage points with BCa 95% CI
 [-2.283, +0.412] percentage points.
 
+
+<!-- INTEGRATED_RESULTS:STATISTICS -->
+
+The pre-specified inferential comparisons are summarized in
+[Table 5.3](#tab-5-3) and [Figure 5.2](#fig-5-2).
+
+<a id="tab-5-3"></a>
+
+**Table 5.3 — Key final inferential comparisons.**
+
+| group | endpoint | comparison | a | b | observed delta | ci lower | ci upper | bootstrap replicates | seed |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| PRIMARY | POR30 | B3_S_minus_B2 | B3_S | B2 | 0.007905138339921014 | -0.0020366598778004397 | 0.02088167053364276 | 50000 | 52 |
+| A10_SECONDARY | POR30 | B3_R_minus_B3_S | B3_R | B3_S | 0.0 | -0.011286681715575564 | 0.01430714812439207 | 50000 | 52 |
+| A10_SECONDARY | POR30 | B3_R_minus_B2 | B3_R | B2 | 0.007905138339921014 | -0.004048582995951455 | 0.023552506092412176 | 50000 | 52 |
+| A10_SECONDARY | POR30 | B2_minus_B1 | B2 | B1 | 0.029644268774703497 | 0.006122448979591799 | 0.06430155210643018 | 50000 | 52 |
+| A10_SECONDARY_B5 | POR30 | B5_minus_B2 | B5 | B2 | -0.0039525691699604515 | -0.019607843137254832 | 0.012499999999999956 | 50000 | 52 |
+| MATCHED_NEUTRAL_DIAGNOSTIC | POR30 | B1_minus_B1_NEUTRAL | B1 | B1_NEUTRAL | -0.017786561264822143 | -0.0467479674796748 | 0.005964214711729654 | 50000 | 52 |
+| MATCHED_NEUTRAL_DIAGNOSTIC | POR30 | B2_minus_B2_NEUTRAL | B2 | B2_NEUTRAL | -0.005928853754940788 | -0.028297804150365216 | 0.013157894736842146 | 50000 | 52 |
+| MATCHED_NEUTRAL_DIAGNOSTIC | POR30 | B3_S_minus_B3_S_NEUTRAL | B3_S | B3_S_NEUTRAL | 0.0 | -0.021452145214521434 | 0.022087867892874324 | 50000 | 52 |
+| MATCHED_NEUTRAL_DIAGNOSTIC | POR30 | B3_R_minus_B3_R_NEUTRAL | B3_R | B3_R_NEUTRAL | 0.0019762845849802257 | -0.021113243761996147 | 0.028704317346815725 | 50000 | 52 |
+| MATCHED_NEUTRAL_DIAGNOSTIC | POR30 | B5_minus_B5_NEUTRAL | B5 | B5_NEUTRAL | 0.0039525691699604515 | -0.017429193899782147 | 0.0260442787613098 | 50000 | 52 |
+| A10_SECONDARY_ITR | ITR30 | B3_S_minus_B2 | B3_S | B2 | 0.007905138339920952 | 0.0018726591760299637 | 0.024066073196459776 | 50000 | 52 |
+| A10_SECONDARY_ITR | ITR30 | B3_R_minus_B3_S | B3_R | B3_S | -0.005928853754940712 | -0.022831185995183582 | 0.004123711340206185 | 50000 | 52 |
+| A10_SECONDARY_ITR | ITR30 | B2_minus_B1 | B2 | B1 | -0.019762845849802375 | -0.04847703471757987 | -0.006802721088435375 | 50000 | 52 |
+
+<a id="fig-5-2"></a>
+
+![Hard TEST POR@30 effects with paired video-clustered BCa 95% confidence intervals.](../plots/chapter5_hard_test_bca_effects.svg)
+
+**Figure 5.2 — Hard TEST paired POR@30 effects with video-clustered BCa 95%
+confidence intervals.** The frozen +8 percentage-point practical-effect target
+is shown as context. Comparisons that violate the pre-specified write-rate
+tolerance remain explicitly identified as `RATE_MISMATCH`.
+
 ## 5.5 Comparisons and Relationships
 
 Outcome-independent exact-K neutral controls matched each signal method
@@ -2095,6 +2268,54 @@ The supported write-rate sweep also showed that method ordering was not
 constant across operating rates. Conclusions are therefore based on the
 pre-frozen headline operating point together with the supported curve rather
 than on a selectively chosen threshold.
+
+
+<!-- INTEGRATED_RESULTS:WRITE_RATE -->
+
+Realized write-rate status is summarized in
+[Table 5.4](#tab-5-4). Headline rates and the supported operating-point
+relationship are shown in [Figure 5.3](#fig-5-3) and
+[Figure 5.4](#fig-5-4).
+
+<a id="tab-5-4"></a>
+
+**Table 5.4 — Final write-rate status and comparison eligibility.**
+
+| scope | group | comparison | a | b | rate a | rate b | absolute rate difference | tolerance | rate status |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| HARD_TEST80 | PRIMARY | B3_S_minus_B2 | B3_S | B2 | 0.29056540649046503 | 0.3232686517229843 | 0.032703245232519274 | 0.02 | RATE_MISMATCH |
+| HARD_TEST80 | A10_SECONDARY | B3_R_minus_B3_S | B3_R | B3_S | 0.2923218467714955 | 0.29056540649046503 | 0.001756440281030447 | 0.02 | MATCHED_ON_TEST |
+| HARD_TEST80 | A10_SECONDARY | B3_R_minus_B2 | B3_R | B2 | 0.2923218467714955 | 0.3232686517229843 | 0.030946804951488827 | 0.02 | RATE_MISMATCH |
+| HARD_TEST80 | A10_SECONDARY | B2_minus_B1 | B2 | B1 | 0.3232686517229843 | 0.3199230511876882 | 0.0033456005352960894 | 0.02 | MATCHED_ON_TEST |
+| HARD_TEST80 | A10_SECONDARY_B5 | B5_minus_B1 | B5 | B1 | 0.3079625292740047 | 0.3199230511876882 | 0.01196052191368352 | 0.02 | MATCHED_ON_TEST |
+| HARD_TEST80 | A10_SECONDARY_B5 | B5_minus_B2 | B5 | B2 | 0.3079625292740047 | 0.3232686517229843 | 0.015306122448979609 | 0.02 | MATCHED_ON_TEST |
+| HARD_TEST80 | A10_SECONDARY_B5 | B5_minus_B3_S | B5 | B3_S | 0.3079625292740047 | 0.29056540649046503 | 0.017397122783539665 | 0.02 | MATCHED_ON_TEST |
+| HARD_TEST80 | A10_SECONDARY_B5 | B5_minus_B3_R | B5 | B3_R | 0.3079625292740047 | 0.2923218467714955 | 0.015640682502509218 | 0.02 | MATCHED_ON_TEST |
+| REPRESENTATIVE_TEST40 | PRIMARY | B3_S_minus_B2 | B3_S | B2 | 0.3581267217630854 | 0.3738685556867375 | 0.015741833923652082 | 0.02 | MATCHED_ON_TEST |
+| REPRESENTATIVE_TEST40 | A10_SECONDARY | B3_R_minus_B3_S | B3_R | B3_S | 0.36521054702872885 | 0.3581267217630854 | 0.00708382526564344 | 0.02 | MATCHED_ON_TEST |
+| REPRESENTATIVE_TEST40 | A10_SECONDARY | B3_R_minus_B2 | B3_R | B2 | 0.36521054702872885 | 0.3738685556867375 | 0.008658008658008642 | 0.02 | MATCHED_ON_TEST |
+| REPRESENTATIVE_TEST40 | A10_SECONDARY | B2_minus_B1 | B2 | B1 | 0.3738685556867375 | 0.33746556473829203 | 0.03640299094844546 | 0.02 | RATE_MISMATCH |
+| REPRESENTATIVE_TEST40 | A10_SECONDARY_B5 | B5_minus_B1 | B5 | B1 | 0.3976780794962613 | 0.33746556473829203 | 0.06021251475796929 | 0.02 | RATE_MISMATCH |
+| REPRESENTATIVE_TEST40 | A10_SECONDARY_B5 | B5_minus_B2 | B5 | B2 | 0.3976780794962613 | 0.3738685556867375 | 0.023809523809523836 | 0.02 | RATE_MISMATCH |
+| REPRESENTATIVE_TEST40 | A10_SECONDARY_B5 | B5_minus_B3_S | B5 | B3_S | 0.3976780794962613 | 0.3581267217630854 | 0.03955135773317592 | 0.02 | RATE_MISMATCH |
+| REPRESENTATIVE_TEST40 | A10_SECONDARY_B5 | B5_minus_B3_R | B5 | B3_R | 0.3976780794962613 | 0.36521054702872885 | 0.03246753246753248 | 0.02 | RATE_MISMATCH |
+
+<a id="fig-5-3"></a>
+
+![Hard TEST realized write rates.](../plots/chapter5_hard_test_write_rates.svg)
+
+**Figure 5.3 — Realized Hard TEST write rates.** B0 is shown at its native
+physical write rate and is not rate-matched. Direct gated-method
+interpretations follow the frozen absolute 0.02 pooled TEST write-rate
+tolerance.
+
+<a id="fig-5-4"></a>
+
+![POR@30 versus realized write rate.](../plots/chapter5_por30_vs_write_rate.svg)
+
+**Figure 5.4 — POR@30 versus realized write rate across development-supported
+Hard TEST operating points.** The curve is reported so that conclusions do not
+depend solely on a single threshold operating point.
 
 ## 5.6 Discussion
 
@@ -2404,4 +2625,3 @@ Status: DERIVED REPORTING ARTIFACT. The repository experimental record remains c
 - Final thesis-facing assets are stored under `thesis_assets/`.
 
 ---
-

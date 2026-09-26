@@ -1,0 +1,22 @@
+citation_key,canonical_title,identifier,source_type,identity_status
+STM,Video Object Segmentation Using Space-Time Memory Networks,ICCV 2019,venue,VERIFIED
+STCN,Rethinking Space-Time Networks with Improved Memory Coverage for Efficient Video Object Segmentation,NeurIPS 2021,venue,VERIFIED
+MiVOS,"Modular Interactive Video Object Segmentation: Interaction-to-Mask, Propagation and Difference-Aware Fusion",CVPR 2021,venue,VERIFIED
+XMem,XMem: Long-Term Video Object Segmentation with an Atkinson-Shiffrin Memory Model,2207.07115,arXiv,VERIFIED
+Cutie,Putting the Object Back into Video Object Segmentation,2310.12982,arXiv/CVPR 2024,VERIFIED
+AOT,Associating Objects with Transformers for Video Object Segmentation,2106.02638,arXiv/NeurIPS 2021,VERIFIED
+DeAOT,Decoupling Features in Hierarchical Propagation for Video Object Segmentation,2210.09782,arXiv/NeurIPS 2022,VERIFIED
+AOST,Scalable Video Object Segmentation with Identification Mechanism,2203.11442,arXiv/TPAMI,VERIFIED
+MOSEv2,MOSEv2: A More Challenging Dataset for Video Object Segmentation in Complex Scenes,2508.05630,arXiv,VERIFIED
+QDMN,Learning Quality-aware Dynamic Memory for Video Object Segmentation,2207.07922,arXiv,VERIFIED
+DAM4SAM,Distractor-Aware Memory-Based Visual Object Tracking,2509.13864,arXiv,VERIFIED
+SENTRY,SENTRY: SAM2-Enhanced Neighbor-Aware and Temporally Reasoned Memory for Visual Tracking,2606.24449,arXiv,VERIFIED
+SAM3-DMS,SAM3-DMS: Decoupled Memory Selection for Multi-target Video Segmentation of SAM3,2601.09699,arXiv,VERIFIED
+RethinkingMemory,Rethinking Memory Design in SAM-Based Visual Object Tracking,2512.22624,arXiv,VERIFIED
+SAMURAI,SAMURAI: Adapting Segment Anything Model for Zero-Shot Visual Tracking with Motion-Aware Memory,2411.11922,arXiv,VERIFIED
+ReMeDI-SAM3,Memory-Enhanced SAM3 for Occlusion-Robust Surgical Instrument Segmentation,2512.16880,arXiv,VERIFIED
+SurgSLOT,SurgSLOT: Segment Anything in Surgical Videos via Semantic Long-term Tracking,2511.16618,arXiv v2 audited,VERIFIED
+CMR,Competitive Memory Readout for Robust Video Object Segmentation: 2nd Place Technical Report for the MOSEv2 Track of the 8th LSVOS Challenge,2608.22064,arXiv,VERIFIED
+VOS-Agent,VOS-Agent: The 1st Place Solution for the 8th LSVOS Challenge (MOSEv2 Track),2608.12721,arXiv,VERIFIED
+OAMVOS,OAMVOS:2nd Report for 5th PVUW MOSE Track,2604.22837,arXiv,VERIFIED
+SAM3,SAM 3: Segment Anything with Concepts,2511.16719,arXiv,VERIFIED

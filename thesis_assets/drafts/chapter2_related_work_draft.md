@@ -23,9 +23,6 @@ The literature is therefore reviewed according to the information and
 decision role that each line contributes, rather than as a chronological list
 of leaderboard methods.
 
-[FIGURE 2.X HERE: Memory Management and Identity Reasoning in Video Object
-Segmentation]
-
 ## 2.2 Memory Representation and Retrieval in VOS
 
 Memory-based VOS predates foundation-model tracking. Earlier systems such as
@@ -323,3 +320,19 @@ Chapter 3 therefore converts this literature gap into an explicit experimental
 protocol: a frozen SAM 3 substrate, leakage-controlled MOSEv2 cohorts,
 pre-specified signal families and endpoints, controlled operating-point
 selection, and video-clustered statistical inference.
+
+<!-- INTEGRATED_FIGURE:FIG2_1 -->
+
+The relationship between this study and representative memory-management and
+identity-reasoning approaches is summarized in
+[Figure 2.1](#fig-2-1).
+
+<a id="fig-2-1"></a>
+
+![Memory management and identity reasoning in video object segmentation.](../plots/fig02_memory_management_related_work_landscape.png)
+
+**Figure 2.1 — Memory management and identity reasoning in video object
+segmentation.** The figure positions the thesis along the dimensions relevant
+to the research question: memory governance, reliability/quality evidence,
+temporal evidence, and identity reasoning. It is a conceptual literature map,
+not a claim of priority or a quantitative comparison.

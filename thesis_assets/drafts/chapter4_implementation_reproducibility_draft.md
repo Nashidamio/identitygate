@@ -142,6 +142,22 @@ This distinction is important when interpreting the thesis figures: the gate
 controls future memory state, not whether the tracker is allowed to produce a
 current prediction.
 
+
+<!-- INTEGRATED_FIGURE:FIG4_2 -->
+
+A real development-exposed mechanism-sanity example of the closed-loop
+intervention is shown in [Figure 4.2](#fig-4-2).
+
+<a id="fig-4-2"></a>
+
+![Closed-loop memory-write intervention mechanism sanity example.](../videos/exp025_closed_loop_mechanism_contact_sheet.png)
+
+**Figure 4.2 — Closed-loop memory-write intervention mechanism sanity
+example.** This contact sheet documents the verified state-changing write
+intervention on development-exposed mechanism-sanity material. It is included
+as implementation evidence and is **not** a selected TEST success example or a
+performance claim.
+
 ## 4.7 Per-Object to Per-Frame Aggregation
 
 SAM 3 can track multiple objects simultaneously, while the implemented
@@ -262,6 +278,24 @@ training rows. A zero standard deviation is replaced by 1.0.
 
 No DEV or TEST examples are used to train the B2 weights or normalizer.
 
+
+<!-- INTEGRATED_FIGURE:FIG4_1 -->
+
+The implemented nested signal ladder and write-decision architecture are
+summarized in [Figure 4.1](#fig-4-1).
+
+<a id="fig-4-1"></a>
+
+![Signal composition and memory-write decision architecture.](../plots/fig04_signal_composition_and_write_decision_architecture.png)
+
+**Figure 4.1 — Signal composition and memory-write decision architecture.**
+B2 uses the frozen five-feature quality-plus-temporal input. B3-S adds native
+self-pointer similarity and B3-R adds tracked-competitor similarity.
+`pointer_valid` is used only for prospective availability routing. Independent
+drift and theft heads are composed conservatively through the minimum safe
+score, and object-level scores are aggregated by the frozen whole-frame
+minimum before physical memory admission.
+
 ## 4.11 B3-S Self-Identity Extension
 
 B3-S inherits the complete B2 feature vector and adds:
@@ -353,7 +387,6 @@ Thus either predicted failure type can veto the object-level write score.
 No additional post-hoc weighting coefficient, learned fusion layer, or TEST
 calibration stage is introduced.
 
-[FIGURE 4.X HERE: Signal Composition and Memory-Write Decision Architecture]
 
 ## 4.14 Base-Feature Missingness
 
