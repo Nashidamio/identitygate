@@ -1483,3 +1483,32 @@ STATUS:
   69461f23a6f1e3ce37d687cd01ce63ba94726148355365fe659976908bbdcd10
 - artifact_manifest.json SHA256:
   ffc913f67f3004ada3db4f6866adc64b1733dff24c3dcdc2354efd5fdf750127
+
+
+## EXP054 - Final Hard TEST paired video-clustered BCa inference
+
+- Status: COMPLETE / VERIFIED.
+- Frozen inference commit:
+  0ff21ad4511d266c0c8d6991ea0a079f9e380ed0
+- Scope: HARD_TEST80, 80 videos / 506 paired primary events per label.
+- Inference: 50,000 paired video-clustered bootstrap replicates, BCa 95% CI,
+  seed 52.
+- Primary POR30 B3-S minus B2:
+  +0.007905 (+0.791 pp).
+- Primary BCa 95% CI:
+  [-0.002037, +0.020882].
+- Primary TEST write-rate difference:
+  0.032703 > 0.02.
+- Final primary status:
+  RATE_MISMATCH_NO_MATCHED_RATE_PRIMARY_INTERPRETATION.
+- Matched secondary B3-R minus B3-S:
+  0.000000; BCa 95% CI [-0.011287, +0.014307].
+- Matched secondary B2 minus B1:
+  +0.029644; BCa 95% CI [+0.006122, +0.064302].
+- ITR30 rows correctly reported as secondary.
+- comparison_summary.csv SHA256:
+  8b0fd076b8084ce2638f899f55bf9ae681bc9510fea3e59edda55b548fdb4c03
+- primary_bootstrap_draws.csv SHA256:
+  c8a4d834a96e86c03be97c54d784a294ce551ecece3527ce0990c72befe56098
+- summary.json SHA256:
+  68a97011d53a353b1612129d5d9a8603f6ab76b807fb5824f030c77d690d142a

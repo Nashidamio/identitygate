@@ -2176,3 +2176,99 @@ INTEGRITY:
 
 NEXT:
 - Freeze EXP054 final TEST paired video-clustered BCa inference.
+
+
+## EXP054 - Final Hard TEST paired video-clustered BCa inference
+
+STATUS:
+- EXECUTED / VERIFIED / COMPLETE.
+- Frozen inference commit:
+  0ff21ad4511d266c0c8d6991ea0a079f9e380ed0
+- Scope: HARD_TEST80.
+- Videos: 80.
+- Paired primary events per label: 506.
+- Bootstrap replicates: 50,000.
+- Seed: 52.
+- Cluster unit: video.
+- CI: BCa 95 percent.
+- Runtime: 1.30 s wall clock.
+- TEST touched: true; no additional SAM propagation performed.
+
+PRIMARY POR30:
+- Contrast: B3-S minus B2.
+- B3-S POR30: 0.7648221343873518.
+- B2 POR30: 0.7569169960474308.
+- Observed delta:
+  0.007905138339921014
+  (+0.790514 percentage points).
+- BCa 95% CI:
+  [-0.0020366598778004397, 0.02088167053364276].
+- Minimum practically important benefit: +0.08.
+- B3-S realized write rate:
+  0.29056540649046503.
+- B2 realized write rate:
+  0.3232686517229843.
+- Absolute write-rate difference:
+  0.032703245232519274.
+- Frozen tolerance: 0.02.
+- Rate status: RATE_MISMATCH.
+- matched_rate_interpretation_permitted: false.
+- Final frozen primary interpretation:
+  RATE_MISMATCH_NO_MATCHED_RATE_PRIMARY_INTERPRETATION.
+- If the rate-match condition had held, the frozen CI rule would have yielded:
+  NO_SUPPORTED_POSITIVE_AND_PRACTICAL_THRESHOLD_RULED_OUT.
+- Because the rate-match condition did not hold, that matched-rate primary
+  interpretation is not claimed.
+
+KEY MATCHED SECONDARY POR30 RESULTS:
+- B3-R minus B3-S:
+  delta = 0.0;
+  BCa 95% CI [-0.011286681715575564, 0.01430714812439207].
+  No supported incremental relational-identity POR advantage.
+- B2 minus B1:
+  delta = 0.029644268774703497;
+  BCa 95% CI [0.006122448979591799, 0.06430155210643018].
+  Positive secondary evidence for learned quality-temporal gating over the
+  manual quality-temporal rule.
+- B5 minus B2:
+  delta = -0.0039525691699604515;
+  BCa 95% CI [-0.019607843137254832, 0.012499999999999956].
+- B3-S minus B3-S_NEUTRAL:
+  delta = 0.0;
+  BCa 95% CI [-0.021452145214521434, 0.022087867892874324].
+- B3-R minus B3-R_NEUTRAL:
+  delta = 0.0019762845849802257;
+  BCa 95% CI [-0.021113243761996147, 0.028704317346815725].
+
+REPRESENTATIVE TEST CONTEXT FROM EXP053:
+- B2 POR30: 0.7236842105263158.
+- B3-S POR30: 0.7236842105263158.
+- B3-S minus B2: 0.0.
+- Primary representative write-rate status: MATCHED_ON_TEST.
+- Representative TEST remains an external-validity descriptive cohort rather
+  than the Hard TEST confirmatory inference cohort.
+
+ITR REPORTING CORRECTION:
+- EXP054 correctly labels ITR30 as secondary.
+- No ITR30 row is group=PRIMARY.
+- EXP052 label-only metadata defect is therefore corrected for final TEST
+  inference without changing the numerical BCa implementation.
+
+INTEGRITY:
+- comparison_summary.csv SHA256:
+  8b0fd076b8084ce2638f899f55bf9ae681bc9510fea3e59edda55b548fdb4c03
+- primary_bootstrap_draws.csv SHA256:
+  c8a4d834a96e86c03be97c54d784a294ce551ecece3527ce0990c72befe56098
+- summary.json SHA256:
+  68a97011d53a353b1612129d5d9a8603f6ab76b807fb5824f030c77d690d142a
+
+SCIENTIFIC BOUNDARY:
+- No TEST retuning, threshold refinement, model modification, subgroup search,
+  endpoint change, or TEST rerun is permitted.
+- Final thesis interpretation must preserve the Hard TEST primary RATE_MISMATCH.
+
+NEXT:
+- Commit EXP054 result artifacts and records.
+- Freeze final thesis-level interpretation.
+- Produce Chapter 5 result tables, statistical plots, write-rate curves,
+  qualitative/failure analysis, and Chapter 6 conclusion.
