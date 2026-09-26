@@ -1,0 +1,153 @@
+{
+  "experiment": "EXP054",
+  "purpose": "Final HARD_TEST80 paired video-clustered BCa inference using frozen A11 statistical implementation",
+  "input_csv": "experiments/EXP053_final_test/event_outcomes.csv",
+  "expected_input_sha256": "69461f23a6f1e3ce37d687cd01ce63ba94726148355365fe659976908bbdcd10",
+  "expected_rows": 5566,
+  "expected_videos": 80,
+  "expected_events_per_label": 506,
+  "run_labels": [
+    "B0",
+    "B1",
+    "B1_NEUTRAL",
+    "B2",
+    "B2_NEUTRAL",
+    "B3_S",
+    "B3_S_NEUTRAL",
+    "B3_R",
+    "B3_R_NEUTRAL",
+    "B5",
+    "B5_NEUTRAL"
+  ],
+  "bootstrap_replicates": 50000,
+  "seed": 52,
+  "confidence": 0.95,
+  "cluster_unit": "video",
+  "primary_comparison": "B3_S_minus_B2",
+  "minimum_practically_important_benefit": 0.08,
+  "require_clean_git": true,
+  "output_dir": "experiments/EXP054_final_test_bca_inference",
+  "comparisons": [
+    {
+      "group": "PRIMARY",
+      "name": "B3_S_minus_B2",
+      "a": "B3_S",
+      "b": "B2"
+    },
+    {
+      "group": "A10_SECONDARY",
+      "name": "B3_R_minus_B3_S",
+      "a": "B3_R",
+      "b": "B3_S"
+    },
+    {
+      "group": "A10_SECONDARY",
+      "name": "B3_R_minus_B2",
+      "a": "B3_R",
+      "b": "B2"
+    },
+    {
+      "group": "A10_SECONDARY",
+      "name": "B2_minus_B1",
+      "a": "B2",
+      "b": "B1"
+    },
+    {
+      "group": "A10_SECONDARY_B5",
+      "name": "B5_minus_B1",
+      "a": "B5",
+      "b": "B1"
+    },
+    {
+      "group": "A10_SECONDARY_B5",
+      "name": "B5_minus_B2",
+      "a": "B5",
+      "b": "B2"
+    },
+    {
+      "group": "A10_SECONDARY_B5",
+      "name": "B5_minus_B3_S",
+      "a": "B5",
+      "b": "B3_S"
+    },
+    {
+      "group": "A10_SECONDARY_B5",
+      "name": "B5_minus_B3_R",
+      "a": "B5",
+      "b": "B3_R"
+    },
+    {
+      "group": "A10_B0_PRACTICAL_REFERENCE",
+      "name": "B1_minus_B0",
+      "a": "B1",
+      "b": "B0"
+    },
+    {
+      "group": "A10_B0_PRACTICAL_REFERENCE",
+      "name": "B2_minus_B0",
+      "a": "B2",
+      "b": "B0"
+    },
+    {
+      "group": "A10_B0_PRACTICAL_REFERENCE",
+      "name": "B3_S_minus_B0",
+      "a": "B3_S",
+      "b": "B0"
+    },
+    {
+      "group": "A10_B0_PRACTICAL_REFERENCE",
+      "name": "B3_R_minus_B0",
+      "a": "B3_R",
+      "b": "B0"
+    },
+    {
+      "group": "A10_B0_PRACTICAL_REFERENCE",
+      "name": "B5_minus_B0",
+      "a": "B5",
+      "b": "B0"
+    },
+    {
+      "group": "MATCHED_NEUTRAL_DIAGNOSTIC",
+      "name": "B1_minus_B1_NEUTRAL",
+      "a": "B1",
+      "b": "B1_NEUTRAL"
+    },
+    {
+      "group": "MATCHED_NEUTRAL_DIAGNOSTIC",
+      "name": "B2_minus_B2_NEUTRAL",
+      "a": "B2",
+      "b": "B2_NEUTRAL"
+    },
+    {
+      "group": "MATCHED_NEUTRAL_DIAGNOSTIC",
+      "name": "B3_S_minus_B3_S_NEUTRAL",
+      "a": "B3_S",
+      "b": "B3_S_NEUTRAL"
+    },
+    {
+      "group": "MATCHED_NEUTRAL_DIAGNOSTIC",
+      "name": "B3_R_minus_B3_R_NEUTRAL",
+      "a": "B3_R",
+      "b": "B3_R_NEUTRAL"
+    },
+    {
+      "group": "MATCHED_NEUTRAL_DIAGNOSTIC",
+      "name": "B5_minus_B5_NEUTRAL",
+      "a": "B5",
+      "b": "B5_NEUTRAL"
+    }
+  ],
+  "bca_specification": {
+    "bias_correction": "midrank proportion of bootstrap replicates relative to observed statistic with finite-sample clipping",
+    "acceleration": "delete-one-video jackknife",
+    "resampling": "sample 80 HARD_TEST80 videos with replacement; retain all paired event rows from each selected video; duplicate entire cluster when sampled repeatedly",
+    "point_estimator": "pooled event-level rate difference with video-clustered uncertainty"
+  },
+  "test_touched": true,
+  "expected_input_rows": 20570,
+  "scope": "HARD_TEST80",
+  "rate_status_csv": "experiments/EXP053_final_test/headline_rate_status.csv",
+  "expected_rate_status_sha256": "64bbdc464860a07c932fa017a803ddc8c774ad82b01b8fcaeab6d9d3be20671f",
+  "expected_primary_rate_status": "RATE_MISMATCH",
+  "a11_source_commit": "9426e8754507700d6c8ad991940ef81b29b17b01"
+}
