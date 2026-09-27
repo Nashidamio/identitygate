@@ -1,34 +1,52 @@
-# Environment (frozen 2026-08-15, post-SAM3-install)
+# IdentityGate Environment
 
-## Host
-- Machine: Lab PC #27
+Status: FINAL PUBLIC-RELEASE RECORD
+
+## Reference machine
+
+- Host OS: Windows 11
+- Execution environment: WSL2 Ubuntu 22.04.5
 - CPU: Intel Core i7-14700K
-- GPU: NVIDIA GeForce RTX 4080 SUPER (16376 MiB, compute capability 8.9, Ada Lovelace)
-- RAM: 64 GB DDR5 (WSL2 cap: 56 GB, verified 54 Gi visible)
-- Storage: 1 TB SSD
+- GPU: NVIDIA GeForce RTX 4080 SUPER, 16 GB
+- System RAM: 64 GB
+- Conda environment: `identitygate`
 
-## OS
-- Host: Windows 11
-- WSL2 kernel: 6.18.33.2-microsoft-standard-WSL2
-- Distro: Ubuntu 22.04.5 LTS
+The reference hardware documents the environment used for the thesis. Equivalent hardware may be used where memory requirements are satisfied.
 
-## NVIDIA
-- Windows driver: 591.86
-- CUDA advertised by nvidia-smi: 13.1
-- CUDA used by PyTorch: 12.8
+## Core software stack
 
-## Python stack
-- Miniconda 26.5.3 at /home/user2/miniconda3
-- Env name: identitygate, Python 3.12.13
+- Python: 3.12.13
 - PyTorch: 2.10.0+cu128
 - torchvision: 0.25.0+cu128
-- Channel: conda-forge (strict priority)
+- CUDA used by PyTorch: 12.8
+- SAM source commit: `8f0b7f4d4e7eda2ed606ebde6702c93359ad01da`
+- Core SAM checkpoint: `facebook/sam3/sam3.pt`
 
-## Second-tier packages NOT YET installed
-Deferred until needed (opencv, pandas, hydra, scipy, scikit-learn, pyarrow, transformers).
-Add them in a single controlled pip install when the corresponding Week task requires them.
+Required SAM-related compatibility pins and installation notes are recorded in `docs/SAM3_INSTALL.md`.
 
 ## Reproducibility artifacts
-- `requirements.lock.txt` — full pip freeze
-- `environment.yml` — conda env spec (from-history)
-- `docs/SAM3_INSTALL.md` — SAM 3 clone commit + required upstream-dep pins
+
+- `environment.yml` records the Conda environment specification.
+- `requirements.lock.txt` records the realized Python package environment.
+- `docs/SAM3_INSTALL.md` records the SAM source pin and installation-specific dependency fixes.
+- `PREREGISTRATION.md` records the frozen confirmatory protocol.
+- `EXPERIMENT_REGISTRY.md` records experiment commands and result provenance.
+
+`requirements.lock.txt` is an audit snapshot of the realized environment. Environment-specific build paths can appear in package freezes, so it should be interpreted together with `environment.yml` and `docs/SAM3_INSTALL.md` rather than treated as the only installation source.
+
+## Numerical identity-similarity rule
+
+Identity cosine calculations use:
+
+- FP32
+- autocast disabled
+- CUDA TF32 disabled
+- `torch.set_float32_matmul_precision("highest")`
+
+These settings are part of the scientific protocol and are not optional performance tuning.
+
+## Data and weights
+
+MOSEv2 and SAM model weights are external dependencies and are not bundled into this repository.
+
+The experiment configuration and provenance records identify the dataset partition, checkpoint, source commit, and relevant hashes used by the thesis.

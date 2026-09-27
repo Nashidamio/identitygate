@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: If you use IdentityGate, please cite this repository and the associated thesis
+  or paper.
+title: IdentityGate
+type: software
+authors:
+- name: Nashidamio
+repository-code: https://github.com/Nashidamio/identitygate
+date-released: '2026-09-27'
+license: MIT
