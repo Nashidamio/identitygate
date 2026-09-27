@@ -5,6 +5,6 @@ title: IdentityGate
 type: software
 authors:
 - name: Nashidamio
-repository-code: https://github.com/Nashidamio/identitygate
+repository-code: https://github.com/Nashidamio/identitygate-sam3-memory-write-admission
 date-released: '2026-09-27'
 license: MIT
