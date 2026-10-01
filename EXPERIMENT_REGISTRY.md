@@ -1512,3 +1512,43 @@ STATUS:
   c8a4d834a96e86c03be97c54d784a294ce551ecece3527ce0990c72befe56098
 - summary.json SHA256:
   68a97011d53a353b1612129d5d9a8603f6ab76b807fb5824f030c77d690d142a
+
+
+## DEMO001 - Supplementary unseen real-world qualitative demonstration
+
+- Status: COMPLETE / QUALITATIVE-ONLY.
+- Frozen runner commit:
+  0d3ec7b.
+- Scope:
+  one unseen 10.01-second real-world corridor video;
+  120 extracted frames at 12 fps;
+  one target person with distractors, temporary occlusion/disappearance,
+  and reappearance.
+- Compared variants:
+  B0 native SAM 3 versus frozen B2.
+- B2 threshold:
+  tau = 0.1; no retraining and no threshold retuning.
+- B2 eligible non-conditioning frames: 119.
+- B2 ADMIT count: 90.
+- B2 BLOCK count: 29.
+- B2 realized write rate: 0.7563025210.
+- B2 write-suppression fraction: 0.2436974790.
+- Visual observation:
+  B0 and B2 tracking were approximately similar on this clip.
+- Interpretation:
+  the demonstration shows that physical memory-write suppression can occur
+  while frame-wise prediction continues.
+- Ground truth: none.
+- Claim boundary:
+  no IoU, POR@30, ITR@30, statistical-significance, real-world accuracy,
+  or generalization claim is permitted from DEMO001.
+- DEMO001 is not part of the frozen confirmatory TEST campaign and does not
+  alter EXP053/EXP054 conclusions.
+- Source video SHA256:
+  b8cfde69d59085f3d18383a9ea9a3ac27fb973f66029a0659289fbfe4166c5fb
+- summary.json SHA256:
+  8185f032d4212a768c2d58a2672a9c523f459be5fc08a81d70a33da98f534fad
+- b0_vs_b2.mp4 SHA256:
+  fd09091fb4e75b6f0d138658a0584e3af4376487dd01b25b15594b56ee300c5a
+- contact_sheet.png SHA256:
+  fed9ab8cd13f609d92c0a6d74a9a393ed504def1ee9f06be2d1abb8c43b28e8d

@@ -2272,3 +2272,23 @@ NEXT:
 - Freeze final thesis-level interpretation.
 - Produce Chapter 5 result tables, statistical plots, write-rate curves,
   qualitative/failure analysis, and Chapter 6 conclusion.
+
+
+DEMO001 SUPPLEMENTARY REAL-WORLD QUALITATIVE DEMONSTRATION:
+- Status: COMPLETE / QUALITATIVE-ONLY.
+- Frozen runner commit: 0d3ec7b.
+- One unseen 10.01-second real-world video was evaluated as 120 frames at
+  12 fps.
+- Comparison: B0 native SAM 3 versus frozen B2 at tau=0.1.
+- No retraining or threshold retuning occurred.
+- B2 admitted 90 of 119 eligible non-conditioning writes and blocked 29.
+- B2 realized write rate = 0.7563025210084033.
+- B2 write-suppression fraction = 29/119 = 0.24369747899159663.
+- Visual inspection found B0 and B2 tracking approximately similar.
+- Mechanism-level observation:
+  memory writes were physically blocked on 29 frames while frame-wise
+  prediction continued.
+- Ground truth was not annotated; therefore no quantitative tracking
+  performance or statistical inference is claimed.
+- DEMO001 is supplementary and does not reopen, modify, or reinterpret
+  the frozen EXP053/EXP054 TEST campaign.
