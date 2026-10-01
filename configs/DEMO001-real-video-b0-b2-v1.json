@@ -1,0 +1,14 @@
+{
+  "demo": "DEMO001",
+  "purpose": "Supplementary unseen real-world qualitative demonstration only; not confirmatory TEST evidence.",
+  "video_frames": "/mnt/d/thesis_data/real_demo/frames",
+  "output_dir": "/mnt/d/thesis_data/real_demo/b0_vs_b2",
+  "n_frames": 120,
+  "target": "yellow-top front person",
+  "prompt_normalized_xy": [0.44, 0.48],
+  "variants": ["B0", "B2"],
+  "b2_tau": 0.1,
+  "no_retraining": true,
+  "no_threshold_retuning": true,
+  "no_quantitative_endpoint_claim": true
+}
